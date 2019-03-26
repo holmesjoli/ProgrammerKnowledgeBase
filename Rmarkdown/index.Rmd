@@ -1,0 +1,10 @@
+---
+knit: "bookdown::rend_book"
+title: "Programmer Knowledge Base"
+author: ["Joli Holmes"]
+description: ""
+url: ""
+github-repo: holmesjoli/ProgrammerKnowledgeBase
+---
+
+# Preface {-}
