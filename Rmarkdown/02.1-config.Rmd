@@ -1,1 +1,56 @@
+# Configuration files
+
+One thing that programmers constantly face is a changing set of parameters that are used as inputs to any script. Whether this is new data, or a new title for a graph, it always seems to change. If these parameters are hardcoded into a script, the likelihood that you'll be able to remember where all those inputs are is low. Also, it can make debugging more challenging! An easy way to avoid these issues is to use a configuration file.
+
+## What is it?
+
+A configuration file is a file which contains all of our parameters that are likely to change of the lifecycle of the project. Things like paths, variable names, visualization titles, and captions are best stored in a configuration file and then loaded at the top of the script where they are used.
+
+Configuration files are also important to version control. Say that you changed the title of a visualization code, but not the actual function that creates the visualization. If title is hardcoded into the script, then when you go submit a pull request the other programmer reviewing the pull request will have to double-check that it's not the function that change, but just the text for the title. If that title were stored in a configuration file, and let's say you made many changes to many titles, then the other programmer only has to review the one file instead of a bunch, and the underlying code base stays unchanged.
+
+Using a config file, also makes it less likely that bugs will occur. If you path is embedded down in line 403, and you forget to update it to the most recent datafile, uh oh, wrong data gets used or produced!
+
+## What format is a configuration file?
+
+Different programmers have different configuration file preferences. The common ones are YAML, JSON, and CSV.
+
+My personal preference is a YAML file and that's because you can add comments, which you can't do with JSON, and you can create a nested format, which you can't do with a CSV. The nested format makes it easy to loop through different models or dataframes which are going to utilize the same functions.
+
+## Example config files
+
+### YAML
+
+```yaml
+## You can add comments to YAML!
+VAR1: 1
+VAR2: 2
+```
+Some YAML notes: 
+
+* If using nested yaml structure, make sure to indent with spaces, not tabs!
+* Add a final line to a yaml config file, or some software will have difficulty reading it in
+
+### JSON
+
+```json
+{
+"VAR1" = 1,
+"VAR2" = 2
+}
+```
+Some JSON notes:
+* JSON can't do comments
+* Web-developers will often use a JSON file because JSON stands for JavaScript Object Notation
+
+### CSV
+
+```csv
+VAR1    VAR2
+1       2
+```
+
+CSV notes:
+
+* CSV's can be really handy ways to organize script parameters, especially if you're working on a team with people who aren't used to working in a JSON or YAML file
+* One limitation of a CSV is their flat structure, it's often really nice to be able to nest attributes within other sections of a config file
 
