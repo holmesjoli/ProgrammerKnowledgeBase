@@ -1,0 +1,17 @@
+### Introduction {-}
+
+R is used primarily for data cleaning and modeling. R is also used to build simple applications and html files using Rmarkdown, Rshiny and Rshiny dashboards. R can also be used with for Bayesian analyses. 
+
+#### Installation {-}
+
+1. [Download R 3.5.2](https://cran.cnr.berkeley.edu/bin/windows/base/old/3.5.2)
+2. [Download Rstudio](https://www.rstudio.com/products/rstudio/download/#download)^[Note: download R before downloading Rstudio]
+3. [Download Rtools35](https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe)
+
+#### Package Repository {-}
+
+R's main package repository is CRAN 
+
+#### CRAN {-}
+
+CRAN (the Comprehensive R Archive Network) is a "network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R." Every package installed from CRAN has met the CRAN Repository Policy, been accepted into CRAN, and is currently housed there. Once a package is on CRAN, it is freely available for anyone in the world to install and use. 

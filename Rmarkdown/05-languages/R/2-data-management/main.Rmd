@@ -1,0 +1,14 @@
+### Data Management {-}
+
+#### Packages {-}
+
+|Package|	Description and Usage|
+|-------------|----------------------------------|
+|dplyr|	Tools for manipulating data frame|
+|reshape2|	Tools to reshape data frames|
+|tidyr|	Tools for creating "tidy" datasets|
+|data.table|	Enhanced `data.frame` for faster operations|
+|lubridate|	Tools to parse and manipulate dates|
+|stringr|	Tools to manipulate character strings|
+|Matrix|	Sparse and dense matrix classes|
+|abind|	Combines multi-dimenstional arrays| 

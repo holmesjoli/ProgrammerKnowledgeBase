@@ -1,0 +1,11 @@
+```{r child = "intro.Rmd"}
+```
+
+```{r child = "new-project.Rmd"}
+```
+
+```{r child = "style-guide.Rmd"}
+```
+
+```{r child = "debugging.Rmd"}
+```
