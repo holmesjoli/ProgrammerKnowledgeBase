@@ -1,0 +1,30 @@
+## Code Review
+
+A code review is the chance to walk-through and explain your code line-by-line to others involved with the project. Code reviews provide opportunities for other programmers or researchers to help catch bugs and improve overall code quality.  
+	
+### Review participants {-}
+
+* The original author(s) of the code being updated 
+* At least one more senior or programmer of an equivalent level  
+* People knowledgeable about the content area of your code
+* At least one person who is very familiar the programming language
+		
+### General tips for success {-}
+
+Before: 
+
+* If there are data involved and you wish to run the code line-by-line, pre-load the data (or at least a sample of the data)
+* Comment the code as this will make it easier to walk through or explain things on the spot
+* Make sure all the functions have documentation
+* Show that all the tests are passing
+* Modularize! Make functions, have multiple scripts, write a package. This will make it easier to walk through.
+
+During:
+
+* Take notes in the code when your reviewers give feedback, or ask one of the other people involved in the review to take notes for you.
+		
+After:
+
+* Ask for clarification, especially if you're new to the project or software you're using. More experienced programmers know what they're doing, but they may be unaware of your confidence in a language/project
+* Once you've incorporated the feedback, make sure to ask someone to review the changes
+

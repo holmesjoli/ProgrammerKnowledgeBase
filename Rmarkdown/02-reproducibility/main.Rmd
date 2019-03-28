@@ -1,0 +1,19 @@
+# Reproducibility
+
+```{r child="1-config/main.Rmd"}
+```
+
+```{r child="2-documentation/main.Rmd"}
+```
+
+```{r child="3-version-control/main.Rmd"}
+```
+
+```{r child="4-environments/main.Rmd"}
+```
+
+```{r child="5-packages/main.Rmd"}
+```
+
+```{r child="6-data-archiving/main.Rmd"}
+```

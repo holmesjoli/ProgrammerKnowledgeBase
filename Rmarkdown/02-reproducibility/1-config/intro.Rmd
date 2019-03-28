@@ -1,0 +1,7 @@
+### Introduction {-}
+
+A configuration file is a file which contains all of our parameters that are likely to change of the lifecycle of the project. Things like paths, variable names, visualization titles, and captions are best stored in a configuration file and then loaded at the top of the script where they are used.
+
+Configuration files are also important to version control. Say that you changed the title of a visualization code, but not the actual function that creates the visualization. If title is hardcoded into the script, then when you go submit a pull request the other programmer reviewing the pull request will have to double-check that it's not the function that change, but just the text for the title. If that title were stored in a configuration file, and let's say you made many changes to many titles, then the other programmer only has to review the one file instead of a bunch, and the underlying code base stays unchanged.
+
+Using a config file, also makes it less likely that bugs will occur. If you path is embedded down in line 403, and you forget to update it to the most recent datafile, uh oh, wrong data gets used or produced!

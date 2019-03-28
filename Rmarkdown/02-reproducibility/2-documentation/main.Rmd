@@ -1,0 +1,15 @@
+## Documentation
+
+Documentation is an important step to making code reproducible. Document your code and systems for yourself, other programmers/team members, and maybe most importantly: your future self. It's unlikely you'll remember the exact steps you took to produce some output a year from now, but that's what documentation is for!
+
+```{r child="repositories.Rmd"}
+```
+
+```{r child="code.Rmd"}
+```
+
+```{r child="data.Rmd"}
+```
+
+```{r child="systems.Rmd"}
+```

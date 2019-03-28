@@ -1,10 +1,29 @@
----
-knit: "bookdown::rend_book"
-title: "Programmer Knowledge Base"
-author: ["Joli Holmes"]
-description: ""
-url: ""
-github-repo: holmesjoli/ProgrammerKnowledgeBase
----
-
 # Preface {-}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE)
+```
+
+```{r child = "01-introduction/main.Rmd"}
+```
+
+```{r child = "02-reproducibility/main.Rmd"}
+```
+
+```{r child = "03-quality/main.Rmd"}
+```
+
+```{r child = "04-efficiency/main.Rmd"}
+```
+
+```{r child = "05-languages/main.Rmd"}
+```
+
+```{r child = "06-web/main.Rmd"}
+```
+
+```{r child = "07-data-visualization/main.Rmd"}
+```
+
+```{r child = "appendix/main.Rmd"}
+```

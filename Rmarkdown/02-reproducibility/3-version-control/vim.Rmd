@@ -1,0 +1,10 @@
+### VIM Editor {-}
+
+The VIM (Vi IMproved) editor is a text editor for unix/linux operating systems. However, sometimes when using git commands the editor will appear. Examples of when it appears are during merges, or editing commit messages.
+
+One of the only commands you need to know with the VIM editor is how to save and close. To do so: hit the Esc button on the keyboard. And then type `:wq` to save and exit. 
+
+Additional Resources:
+
+* [save and close](https://www.cyberciti.biz/faq/linux-unix-vim-save-and-quit-command/)
+* [cheatsheet](https://vim.rtorr.com/)

@@ -1,0 +1,33 @@
+Mistakes happen and bugs are introduced. It's something that's unavoidable, because we're human. However, we do want to catch those miskate to ensure high-quality code. Testing is one way to automate the discovery of such mistakes. While it's challenging to prevent any mistakes from occurring, it's important to shift the discovery of these issues from later to earlier. 
+
+Testing code results in:
+
+1. Fewer bugs
+	a. Testing makes it explicit how the code should behave
+2. Better code structure
+	a. Code that is easy to test is designed better
+	b. Testing forces the programmer to break up complicated parts of the code into separate parts that work in isolation
+3. Easier restarts and collaboration
+	a. Easier to pick-up where you left off if you know what's passing/failing
+	b. Other programmers can figure out the goals of the code based on the tests and feel more confident making changes and re-running the code because the tests are passing
+4. Robust code 
+	a. Adds confidence that you know what your code is doing
+
+### Best practices {-}
+
+Tests should be independent, chill, implementaiton agnostic, fast, and shareable.
+
+| Term | Definition                                                             | 
+|------|------------------------------------------------------------------------|
+|Independent|Tests shouldn’t depend on other tests, or auto-fail when other tests fail. This makes is hard to tell what code needs to be worked on.|
+|Chill|Tests shouldn’t be super strict on timing or require super precise output. Very relaxed tests are often still quite good.|
+|Implementation agnostic|Tests shouldn’t assume implementation details and test those details.|
+|Fast|These tests are meant to be run constantly, many times per day. Longer end to end testing should be done as a separate step.|
+|Shareable|Don’t  test with any sensitive data. You want to be able to communicate the results of your test without risk.|
+
+### Testing timeline {-}
+
+Testing is often one of those things that is thought of last not first, often after a bug has been discovered! A better strategy is to build testing time into the development timeline. And test as you program, don't leave it all until the end. Testing as you go along also helps to re-organize code in a more efficient way. 
+
+You would never submit a paper or report after the first draft. Code shouldn't be submitted after the first draft either! It needs to be edited and thoughtfully reorganized throughout the development process and testing can help encourage this practice. 
+

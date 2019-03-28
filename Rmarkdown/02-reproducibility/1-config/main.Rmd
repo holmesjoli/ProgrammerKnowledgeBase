@@ -1,0 +1,13 @@
+## Configuration files
+
+One thing that programmers constantly face is a changing set of parameters that are used as inputs to any script. Whether this is new data, or a new title for a graph, it always seems to change. If these parameters are hardcoded into a script, the likelihood that you'll be able to remember where all those inputs are is low. Also, it can make debugging more challenging! An easy way to avoid these issues is to use a configuration file.
+
+```{r child="intro.Rmd"}
+```
+
+```{r child="formats.Rmd"}
+```
+
+
+
+

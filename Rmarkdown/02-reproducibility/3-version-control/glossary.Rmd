@@ -1,0 +1,38 @@
+### Glossary {-}
+
+|  | Term | Definition                                                             | 
+|--|------|------------------------------------------------------------------------|
+|B|||
+||branch|An active line of development. More literally it is a local copy of the code. Branching off of the master branch preserves the stability of the code.|
+||bitbucket|An Atlassian another server used to host code|
+|C|||
+||checkout|The action of updating a branch|
+||clone|The action of copying the repository hosted on server to a local computer|
+||commit|A single point in the code's history. It contains a hash #, which is unique and a commit message which indicates why changes were made to the code base.|
+|F|||
+||fetch|To get the branch's head from the remote repository|
+|G|||
+||git|Version control system a tool to manage your source code history|
+||github|A public server to host vresion controlled code|
+||gitignore|A file used to indicate which file types should not be tracked by git|
+|L|||
+||local|The version of the code that exists on your computer; your local repository|
+|M|||
+||master|The default development branch! You can think of master as the stable version of your code. If you need to make updates/changes to the code, consider making  those changes on a branch and then merging  that branch into master once your code has been code reviewed and tested for bugs.|
+||merge|To bring the contents of a different branch into the current branch.|
+|O|||
+||origin|The upstream (original) repository.|
+|P|||
+||pull|To fetch a branch and merge it.|
+||push|To send the changes from the local branch to the remote branch.|
+|R|||
+||remote|The version of the code that exists on the server; i.e. the remote repository.|
+||repository (repo)|A collection of code, commits, branches, and tags.|
+|S|||
+||stage|Code must be staged before it can be committed.|
+|T|||
+||tag|A reference typically used to mark a particular point in the commit chair.|
+|U|||		
+||unstage||
+|V|||		
+||VIM||

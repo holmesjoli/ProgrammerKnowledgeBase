@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="dont.html">
+<link rel="next" href="high-performance-computing.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#high-quality-code"><i class="fa fa-check"></i><b>1.1</b> High-quality code</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#reproducibility"><i class="fa fa-check"></i><b>1.1.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#efficiency"><i class="fa fa-check"></i><b>1.1.2</b> Efficiency</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#whats-the-point"><i class="fa fa-check"></i><b>1.1.3</b> What’s the point?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducibility-1.html"><a href="reproducibility-1.html"><i class="fa fa-check"></i><b>2</b> Reproducibility</a></li>
+<li class="chapter" data-level="3" data-path="configuration-files.html"><a href="configuration-files.html"><i class="fa fa-check"></i><b>3</b> Configuration files</a><ul>
+<li class="chapter" data-level="3.1" data-path="configuration-files.html"><a href="configuration-files.html#what-is-it"><i class="fa fa-check"></i><b>3.1</b> What is it?</a></li>
+<li class="chapter" data-level="3.2" data-path="configuration-files.html"><a href="configuration-files.html#what-format-is-a-configuration-file"><i class="fa fa-check"></i><b>3.2</b> What format is a configuration file?</a></li>
+<li class="chapter" data-level="3.3" data-path="configuration-files.html"><a href="configuration-files.html#example-config-files"><i class="fa fa-check"></i><b>3.3</b> Example config files</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="configuration-files.html"><a href="configuration-files.html#yaml"><i class="fa fa-check"></i><b>3.3.1</b> YAML</a></li>
+<li class="chapter" data-level="3.3.2" data-path="configuration-files.html"><a href="configuration-files.html#json"><i class="fa fa-check"></i><b>3.3.2</b> JSON</a></li>
+<li class="chapter" data-level="3.3.3" data-path="configuration-files.html"><a href="configuration-files.html#csv"><i class="fa fa-check"></i><b>3.3.3</b> CSV</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>4</b> Documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="documentation.html"><a href="documentation.html#repositories"><i class="fa fa-check"></i><b>4.1</b> Repositories</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="documentation.html"><a href="documentation.html#readme"><i class="fa fa-check"></i><b>4.1.1</b> README</a></li>
+<li class="chapter" data-level="4.1.2" data-path="documentation.html"><a href="documentation.html#general-readme-structure"><i class="fa fa-check"></i><b>4.1.2</b> General README Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="documentation.html"><a href="documentation.html#code"><i class="fa fa-check"></i><b>4.2</b> Code</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="documentation.html"><a href="documentation.html#functions"><i class="fa fa-check"></i><b>4.2.1</b> Functions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="documentation.html"><a href="documentation.html#commenting-code"><i class="fa fa-check"></i><b>4.2.2</b> Commenting Code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="documentation.html"><a href="documentation.html#data"><i class="fa fa-check"></i><b>4.3</b> Data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="documentation.html"><a href="documentation.html#data-dictionaries"><i class="fa fa-check"></i><b>4.3.1</b> Data Dictionaries</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="documentation.html"><a href="documentation.html#systems"><i class="fa fa-check"></i><b>4.4</b> Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>5</b> Version Control</a></li>
+<li class="chapter" data-level="6" data-path="code-version-control.html"><a href="code-version-control.html"><i class="fa fa-check"></i><b>6</b> Code Version Control</a><ul>
+<li class="chapter" data-level="6.1" data-path="code-version-control.html"><a href="code-version-control.html#what-is-git"><i class="fa fa-check"></i><b>6.1</b> What is Git?</a></li>
+<li class="chapter" data-level="6.2" data-path="code-version-control.html"><a href="code-version-control.html#git-glossary"><i class="fa fa-check"></i><b>6.2</b> Git Glossary</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>7</b> Workflow</a><ul>
+<li class="chapter" data-level="7.1" data-path="workflow.html"><a href="workflow.html#git-repository-set-up"><i class="fa fa-check"></i><b>7.1</b> Git Repository Set-up</a></li>
+<li class="chapter" data-level="7.2" data-path="workflow.html"><a href="workflow.html#workflow-1"><i class="fa fa-check"></i><b>7.2</b> Workflow</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="workflow.html"><a href="workflow.html#programmer-i"><i class="fa fa-check"></i><b>7.2.1</b> Programmer I</a></li>
+<li class="chapter" data-level="7.2.2" data-path="workflow.html"><a href="workflow.html#programmer-ii"><i class="fa fa-check"></i><b>7.2.2</b> Programmer II</a></li>
+<li class="chapter" data-level="7.2.3" data-path="workflow.html"><a href="workflow.html#finalizing-code"><i class="fa fa-check"></i><b>7.2.3</b> Finalizing code</a></li>
+<li class="chapter" data-level="7.2.4" data-path="workflow.html"><a href="workflow.html#visualizing-git-flow-from-atlassian"><i class="fa fa-check"></i><b>7.2.4</b> Visualizing Git Flow (from Atlassian)</a></li>
+<li class="chapter" data-level="7.2.5" data-path="workflow.html"><a href="workflow.html#in-depth-development-workflow"><i class="fa fa-check"></i><b>7.2.5</b> In-depth development workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="workflow.html"><a href="workflow.html#resources"><i class="fa fa-check"></i><b>7.3</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="dont.html"><a href="dont.html"><i class="fa fa-check"></i><b>8</b> Don’t</a><ul>
+<li class="chapter" data-level="8.1" data-path="dont.html"><a href="dont.html#add-sensitive-data-or-piiphi-to-a-git-repository"><i class="fa fa-check"></i><b>8.1</b> Add sensitive data or PII/PHI to a git repository</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="dont.html"><a href="dont.html#this-a-security-concern"><i class="fa fa-check"></i><b>8.1.1</b> This a security concern</a></li>
+<li class="chapter" data-level="8.1.2" data-path="dont.html"><a href="dont.html#git-is-not-a-data-versioning-tool"><i class="fa fa-check"></i><b>8.1.2</b> Git is NOT a data versioning tool</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="dont.html"><a href="dont.html#add-binary-files"><i class="fa fa-check"></i><b>8.2</b> Add binary files</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="dont.html"><a href="dont.html#binary-files"><i class="fa fa-check"></i><b>8.2.1</b> Binary files</a></li>
+<li class="chapter" data-level="8.2.2" data-path="dont.html"><a href="dont.html#examples"><i class="fa fa-check"></i><b>8.2.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="dont.html"><a href="dont.html#add-temporary-files"><i class="fa fa-check"></i><b>8.3</b> Add temporary files</a></li>
+<li class="chapter" data-level="8.4" data-path="dont.html"><a href="dont.html#add-output-files"><i class="fa fa-check"></i><b>8.4</b> Add output files</a></li>
+<li class="chapter" data-level="8.5" data-path="dont.html"><a href="dont.html#use-name-versioning-for-files-tracked-by-git"><i class="fa fa-check"></i><b>8.5</b> Use name versioning for files tracked by git</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="do.html"><a href="do.html"><i class="fa fa-check"></i><b>9</b> Do</a><ul>
+<li class="chapter" data-level="9.1" data-path="do.html"><a href="do.html#write-concise-and-informative-commit-messages"><i class="fa fa-check"></i><b>9.1</b> Write concise and informative commit messages</a></li>
+<li class="chapter" data-level="9.2" data-path="do.html"><a href="do.html#try-to-make-each-commit-a-single-cohesive-change"><i class="fa fa-check"></i><b>9.2</b> Try to make each commit a single, cohesive change</a></li>
+<li class="chapter" data-level="9.3" data-path="do.html"><a href="do.html#review-all-your-changes-before-you-commit"><i class="fa fa-check"></i><b>9.3</b> Review all your changes before you commit</a></li>
+<li class="chapter" data-level="9.4" data-path="do.html"><a href="do.html#take-steps-to-avoid-tracking-files-we-dont-want"><i class="fa fa-check"></i><b>9.4</b> Take steps to avoid tracking files we don’t want</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>10</b> High Performance Computing</a></li>
+<li class="chapter" data-level="11" data-path="languages.html"><a href="languages.html"><i class="fa fa-check"></i><b>11</b> Languages</a></li>
+<li class="chapter" data-level="12" data-path="web.html"><a href="web.html"><i class="fa fa-check"></i><b>12</b> Web</a></li>
+<li class="chapter" data-level="13" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>13</b> Data Visualization</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="do" class="section level1">
+<h1><span class="header-section-number">9</span> Do</h1>
+<div id="write-concise-and-informative-commit-messages" class="section level2">
+<h2><span class="header-section-number">9.1</span> Write concise and informative commit messages</h2>
+<p>Commit messages are the easiest way for other collaborators and future versions of yourself to figure out what changes were made in each commit. This makes it easier to trace errors, keep track of features, and find explanations for changes.</p>
+</div>
+<div id="try-to-make-each-commit-a-single-cohesive-change" class="section level2">
+<h2><span class="header-section-number">9.2</span> Try to make each commit a single, cohesive change</h2>
+<p>Conceptually, each commit should be a single unit of work (e.g. “fixed bug X” or “added X section to report” or “changed working in section X”). This unit of work could be small (a couple lines of code, or even fixing a typo) or it could be large (adding an entire section to a program), but all changes/additions/deletions within a commit should be related. A quick rule is that you should rarely need to use the word “and” in a commit message—if you are, then you should probably make that commit into two or more commits. 1. Doing this helps everyone get a better sense of what each commit changed, but also makes it easier to inspect and roll back changes. We wouldn’t want to have to undo a change unrelated to the one that actually needs to be reversed 2. When adding files to be committed, use <code>git add [file/s]</code> to add only certain modified files to staging. Use <code>git reset</code> to unstage all files if you accidentally add too many</p>
+</div>
+<div id="review-all-your-changes-before-you-commit" class="section level2">
+<h2><span class="header-section-number">9.3</span> Review all your changes before you commit</h2>
+<p>This quick and simple step should make sure that you avoid all of the “do nots” above 99% of the time. 1. First add the files you want to commit: <code>git add [files]</code> or <code>git add .</code> to stage all files for commit 2. Review the changes: <code>git status</code> to see a list of all files that will be committed, and <code>git diff --cached</code> to see a detailed view of all changes to each staged file 3. Commit! <code>git commit -m [my concise and informative commit message]</code></p>
+</div>
+<div id="take-steps-to-avoid-tracking-files-we-dont-want" class="section level2">
+<h2><span class="header-section-number">9.4</span> Take steps to avoid tracking files we don’t want</h2>
+<pre><code>1. First, a good .gitignore file will help a lot. In this file, you can specify all file types that you don’t want git to track. Git will ignore any files that match patterns specified in the .gitignore.
+    a. Example .gitignore file
+2. Don&#39;t store data in your local project director on C:, but on N:. This is not always possible or practical, but it will help avoid some of the issues discussed above.</code></pre>
+<!-- ```{r child="02.4-environments/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+<!-- ```{r child="02.5-packages/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+<!-- ```{r child="02.6-testing/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+<!-- ```{r child="02.7-data-archiving/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="dont.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="high-performance-computing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

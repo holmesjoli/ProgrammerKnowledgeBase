@@ -1,0 +1,9 @@
+### Data {-}
+
+#### Data Dictionaries {-}
+
+Like code, it's important to document your data with a data dictionary. A data dictionary contains information about variable names and their corresponding meta data. A data dictionary should always contain labels, as variables often aren't easy to identify what data they represent. A data dictionary can also contain information such as: variable type (e.g. numeric, string, date, or integer, float if you want to get more specific), variable length, allowable values for descriptive variables, units of measure for numeric values. 
+
+Data Dictionary Resources:
+
+* [Best Practices](https://medium.com/@leapingllamas/data-dictionary-a-how-to-and-best-practices-a09a685dcd61)

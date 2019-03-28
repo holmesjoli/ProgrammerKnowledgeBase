@@ -1,0 +1,47 @@
+### Repositories {-}
+
+Repositories are documented with a README.md file and stored in repository root directory. 
+
+```
+my_repo\
+  README.md
+```
+
+The .md suffix indicates a markdown file. If you have used markdown before here are some resources:
+
+* [Example README](https://www.makeareadme.com/)
+* [Markdown syntax](https://daringfireball.net/projects/markdown/syntax)
+* [Markdown table formatting](http://pandoc.org/MANUAL.html#tables)
+* [Udacity Course on READMEs](https://www.udacity.com/course/writing-readmes--ud777)
+
+Markdown is an important skill to learn. Many technical documentation systems are created using markdown because it's easy to learn and can be version controlled with ease unlike other word processing software (e.g. Microsoft Word, or Google Docs).
+
+#### README {-}
+
+READMEs are documentation for any humans who will need to use that code, including:
+
+* Yourself
+* Your future self
+* Co-workers or other people who will contribute to your code
+* People who will use your code 
+* Clients if the code will be delivered to them at the end of the project (some code technically belongs to clients)
+
+On any version control system (e.g. Github, Bitbucket, TFS) the README will be rendered as HTML and displayed on the repository page. 
+
+#### General README Structure {-}
+
+In general, READMEs should follow this format, but they of course can deviate to provide more or less information where necessary.
+
+1. A paragraph describing the high-level purpose of the package
+2. An example showing how to use the package or repository of code to solve a simple solution
+3. Installation instructions
+4. An overview that describes the main components of the package
+
+General questions to answer in a README:
+
+* What are the exact steps that need to be taken to get up and running?
+* What should someone already have installed or configured?
+* What might someone have a hard time understanding right away?
+* Any known issues or bugs?
+* Where are the data for this analysis stored?
+* What do we expect those data to look like?

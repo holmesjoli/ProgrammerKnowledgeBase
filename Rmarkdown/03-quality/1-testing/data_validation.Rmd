@@ -1,0 +1,11 @@
+### Data validation tests {-}
+
+Some things to test for:
+
+* Column types
+* Column names
+* Null or NA values
+* Boolean values
+* Values within a certain range
+* Should character vectors be a certain length
+* Do we expect a certain range of values for a given categorical variable

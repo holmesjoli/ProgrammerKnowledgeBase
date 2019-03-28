@@ -1,0 +1,20 @@
+### Repository set-up {-}
+
+Each repository should start with these branches
+
+* master
+
+	* All code in this repository has been tested and is solid
+	* This code has been 'released'
+	
+* develop
+
+	* The develop branch is created from the master branch
+	* This code is has also been tested and is solid but is pre-release
+	
+* feature branches
+
+	* Feature branches are stored in the features/ folder
+	* Feature branches are created from the develop branch
+	* This code is in development
+	* It may be pre-tested right now and is still in progress

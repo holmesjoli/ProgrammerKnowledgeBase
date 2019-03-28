@@ -1,0 +1,24 @@
+## Technical Terminology {-}
+
+|  | Term | Definition                                                             | 
+|--|------|------------------------------------------------------------------------|
+|B|||
+||Binary package|A distribution methods to a developer who doesn't have package development tools. Also, a single file.|
+||Bundled package|A package that's been compressed into a single file|
+|C|||
+||Compiled|A program called a compiler, takes the plaintext source file and produces a native binary executable that the computer knows how to run intrinsically. When this happens it is called compile-time, and is distinct from run-time, which is when and executable is run and the program actually does things.
+|D|||
+||Dynamically typed|Variable types are not explicitly declared. Among dynamically typed languages are Python, R, and JavaScript.|
+|G|||
+||Global type inference|Types are inferred from context. Explicit type annotations are instead for the benefit of the programmers, and serve as machine-verified documentation.|
+|I|||
+||In memory package|A package which has been loaded into memory and then attaches it to the search path|
+||Installed package|Binary package that's been decompressed into a package library|
+||Interpreted|Interpreted languages have programs called interpreters that read plaintext source files and execute the instructions at the same moment. No native binary executable is created. Languages like Python and R are interpreted.|
+|L|||
+||Lazily evaluated|Values are not computed until required. This allows for functions to compose together in a performant way (no more work than necessary will be done), and allows for the use of infinite data structures (you could define the list of all prime numbers and only those you actually use will be computed). However, it also makes it more difficult to reason about performance, because it is sometimes not obvious when or if a particular computation will be performed.|
+|P|||
+||Purely functional|Every function is a function in the mathematical sense (IE pure). No squinting required. Rather than functions having side-effects, are first-class values governed by the type system. To put it another way, code has only expressions that are evaluated; it does not have statements that are executed.|
+|S|||
+||Source package|A directory with all the components|
+||Statically typed|Every expression has a type which is determined at compile-time. If the types of any expressions don’t match up appropriately, the compiler will reject your program -- there are guaranteed to be no type errors at run-time. Statically typed languages include C#, C++, TypeScript, and Java.|

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="reproducibility-1.html">
+<link rel="next" href="languages.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-scenarios"><i class="fa fa-check"></i><b>1.1</b> The Scenarios</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#some-solutions"><i class="fa fa-check"></i><b>1.2</b> Some solutions</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#reproducibility"><i class="fa fa-check"></i>Reproducibility</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#quality"><i class="fa fa-check"></i>Quality</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#efficiency"><i class="fa fa-check"></i>Efficiency</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducibility-1.html"><a href="reproducibility-1.html"><i class="fa fa-check"></i><b>2</b> Reproducibility</a><ul>
+<li class="chapter" data-level="2.1" data-path="reproducibility-1.html"><a href="reproducibility-1.html#configuration-files"><i class="fa fa-check"></i><b>2.1</b> Configuration files</a><ul>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#introduction-1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#formats"><i class="fa fa-check"></i>Formats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="reproducibility-1.html"><a href="reproducibility-1.html#documentation"><i class="fa fa-check"></i><b>2.2</b> Documentation</a><ul>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#repositories"><i class="fa fa-check"></i>Repositories</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#data"><i class="fa fa-check"></i>Data</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#systems"><i class="fa fa-check"></i>Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="reproducibility-1.html"><a href="reproducibility-1.html#git-version-control"><i class="fa fa-check"></i><b>2.3</b> Git Version Control</a><ul>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#introduction-2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#repository-set-up"><i class="fa fa-check"></i>Repository set-up</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#glossary"><i class="fa fa-check"></i>Glossary</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#workflow"><i class="fa fa-check"></i>WorkFlow</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#the-dos-and-the-donts"><i class="fa fa-check"></i>The Dos and the Don’ts</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#gitignore"><i class="fa fa-check"></i>Gitignore</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#common-commands"><i class="fa fa-check"></i>Common Commands</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#vim-editor"><i class="fa fa-check"></i>VIM Editor</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="reproducibility-1.html"><a href="reproducibility-1.html#environments"><i class="fa fa-check"></i><b>2.4</b> Environments</a><ul>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#introduction-3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="reproducibility-1.html"><a href="reproducibility-1.html#using-multiple-environments"><i class="fa fa-check"></i>Using Multiple Environments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="quality-1.html"><a href="quality-1.html"><i class="fa fa-check"></i><b>3</b> Quality</a><ul>
+<li class="chapter" data-level="3.1" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i><b>3.1</b> Testing</a><ul>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#best-practices"><i class="fa fa-check"></i>Best practices</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#testing-timeline"><i class="fa fa-check"></i>Testing timeline</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#types-of-tests"><i class="fa fa-check"></i>Types of tests</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#data-validation-tests"><i class="fa fa-check"></i>Data validation tests</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.2</b> Code Review</a><ul>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#review-participants"><i class="fa fa-check"></i>Review participants</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#general-tips-for-success"><i class="fa fa-check"></i>General tips for success</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="languages.html"><a href="languages.html"><i class="fa fa-check"></i><b>4</b> Languages</a><ul>
+<li class="chapter" data-level="4.1" data-path="languages.html"><a href="languages.html#python-1"><i class="fa fa-check"></i><b>4.1</b> Python</a></li>
+<li class="chapter" data-level="4.2" data-path="languages.html"><a href="languages.html#r-1"><i class="fa fa-check"></i><b>4.2</b> R</a><ul>
+<li class="chapter" data-level="" data-path="languages.html"><a href="languages.html#introduction-5"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="languages.html"><a href="languages.html#data-management-1"><i class="fa fa-check"></i>Data Management</a></li>
+<li class="chapter" data-level="" data-path="languages.html"><a href="languages.html#modeling-1"><i class="fa fa-check"></i>Modeling</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a><ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#technical-terminology"><i class="fa fa-check"></i>Technical Terminology</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#resources-1"><i class="fa fa-check"></i>Resources</a><ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#r-2"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#python-2"><i class="fa fa-check"></i>Python</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="quality-1" class="section level1">
+<h1><span class="header-section-number">3</span> Quality</h1>
+<div id="testing" class="section level2">
+<h2><span class="header-section-number">3.1</span> Testing</h2>
+<p>Mistakes happen and bugs are introduced. It’s something that’s unavoidable, because we’re human. However, we do want to catch those miskate to ensure high-quality code. Testing is one way to automate the discovery of such mistakes. While it’s challenging to prevent any mistakes from occurring, it’s important to shift the discovery of these issues from later to earlier.</p>
+<p>Testing code results in:</p>
+<ol style="list-style-type: decimal">
+<li>Fewer bugs
+<ol style="list-style-type: lower-alpha">
+<li>Testing makes it explicit how the code should behave</li>
+</ol></li>
+<li>Better code structure
+<ol style="list-style-type: lower-alpha">
+<li>Code that is easy to test is designed better</li>
+<li>Testing forces the programmer to break up complicated parts of the code into separate parts that work in isolation</li>
+</ol></li>
+<li>Easier restarts and collaboration
+<ol style="list-style-type: lower-alpha">
+<li>Easier to pick-up where you left off if you know what’s passing/failing</li>
+<li>Other programmers can figure out the goals of the code based on the tests and feel more confident making changes and re-running the code because the tests are passing</li>
+</ol></li>
+<li>Robust code
+<ol style="list-style-type: lower-alpha">
+<li>Adds confidence that you know what your code is doing</li>
+</ol></li>
+</ol>
+<div id="best-practices" class="section level3 unnumbered">
+<h3>Best practices</h3>
+<p>Tests should be independent, chill, implementaiton agnostic, fast, and shareable.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="8%" />
+<col width="91%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Independent</td>
+<td>Tests shouldn’t depend on other tests, or auto-fail when other tests fail. This makes is hard to tell what code needs to be worked on.</td>
+</tr>
+<tr class="even">
+<td>Chill</td>
+<td>Tests shouldn’t be super strict on timing or require super precise output. Very relaxed tests are often still quite good.</td>
+</tr>
+<tr class="odd">
+<td>Implementation agnostic</td>
+<td>Tests shouldn’t assume implementation details and test those details.</td>
+</tr>
+<tr class="even">
+<td>Fast</td>
+<td>These tests are meant to be run constantly, many times per day. Longer end to end testing should be done as a separate step.</td>
+</tr>
+<tr class="odd">
+<td>Shareable</td>
+<td>Don’t test with any sensitive data. You want to be able to communicate the results of your test without risk.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="testing-timeline" class="section level3 unnumbered">
+<h3>Testing timeline</h3>
+<p>Testing is often one of those things that is thought of last not first, often after a bug has been discovered! A better strategy is to build testing time into the development timeline. And test as you program, don’t leave it all until the end. Testing as you go along also helps to re-organize code in a more efficient way.</p>
+<p>You would never submit a paper or report after the first draft. Code shouldn’t be submitted after the first draft either! It needs to be edited and thoughtfully reorganized throughout the development process and testing can help encourage this practice.</p>
+</div>
+<div id="types-of-tests" class="section level3 unnumbered">
+<h3>Types of tests</h3>
+<div id="assertions" class="section level4 unnumbered">
+<h4>Assertions</h4>
+<p>An assertion is statement that evaluates to <code>true</code> or <code>false</code>. If the statement evaluates to <code>true</code> then the assertion passes. If the statement evaluates to <code>false</code> then it throws an assertion error.</p>
+<p>Assertions are the building blocks for unit tests and integration tests.</p>
+<p>At minimum, code should have strategically placed assertions throughout. However, it is much preferred to have an organized set of test files</p>
+</div>
+<div id="unit-tests" class="section level4 unnumbered">
+<h4>Unit Tests</h4>
+<p>A unit test is a test written by the programmer to verify that a relatively small piece of code is doing what it is intended to do. They are narrow in scope, they should be easy to write and execute, and their effectiveness depends on what the programmer considers to be useful. The tests are intended for the use of the programmer, they are not directly useful to anybody else, though, if they do their job, testers and users downstream should benefit from seeing fewer bugs.</p>
+<p>Part of being a unit test is the implication that things outside the code under test are mocked or stubbed out. Unit tests shouldn’t have dependencies on outside systems. They test internal consistency as opposed to proving that they play nicely with some outside system.</p>
+<p>Definition from <a href="https://stackoverflow.com/questions/5357601/whats-the-difference-between-unit-tests-and-integration-tests">Stack Overflow</a></p>
+</div>
+<div id="integration-tests" class="section level4 unnumbered">
+<h4>Integration Tests</h4>
+<p>An integration test is done to demonstrate that different pieces of the system work together. Integration tests cover whole applications, and they require much more effort to put together. They usually require resources like database instances and hardware to be allocated for them. The integration tests do a more convincing job of demonstrating the system works (especially to non-programmers) than a set of unit tests can, at least to the extent the integration test environment resembles production. Actually “integration test” gets used for a wide variety of things, from full-on system tests against an environment made to resemble production to any test that uses a resource (like a database or queue) that isn’t mocked out.</p>
+<p>Definition from <a href="https://stackoverflow.com/questions/5357601/whats-the-difference-between-unit-tests-and-integration-tests">Stack Overflow</a></p>
+</div>
+</div>
+<div id="data-validation-tests" class="section level3 unnumbered">
+<h3>Data validation tests</h3>
+<p>Some things to test for:</p>
+<ul>
+<li>Column types</li>
+<li>Column names</li>
+<li>Null or NA values</li>
+<li>Boolean values</li>
+<li>Values within a certain range</li>
+<li>Should character vectors be a certain length</li>
+<li>Do we expect a certain range of values for a given categorical variable</li>
+</ul>
+</div>
+</div>
+<div id="code-review" class="section level2">
+<h2><span class="header-section-number">3.2</span> Code Review</h2>
+<p>A code review is the chance to walk-through and explain your code line-by-line to others involved with the project. Code reviews provide opportunities for other programmers or researchers to help catch bugs and improve overall code quality.</p>
+<div id="review-participants" class="section level3 unnumbered">
+<h3>Review participants</h3>
+<ul>
+<li>The original author(s) of the code being updated</li>
+<li>At least one more senior or programmer of an equivalent level<br />
+</li>
+<li>People knowledgeable about the content area of your code</li>
+<li>At least one person who is very familiar the programming language</li>
+</ul>
+</div>
+<div id="general-tips-for-success" class="section level3 unnumbered">
+<h3>General tips for success</h3>
+<p>Before:</p>
+<ul>
+<li>If there are data involved and you wish to run the code line-by-line, pre-load the data (or at least a sample of the data)</li>
+<li>Comment the code as this will make it easier to walk through or explain things on the spot</li>
+<li>Make sure all the functions have documentation</li>
+<li>Show that all the tests are passing</li>
+<li>Modularize! Make functions, have multiple scripts, write a package. This will make it easier to walk through.</li>
+</ul>
+<p>During:</p>
+<ul>
+<li>Take notes in the code when your reviewers give feedback, or ask one of the other people involved in the review to take notes for you.</li>
+</ul>
+<p>After:</p>
+<ul>
+<li>Ask for clarification, especially if you’re new to the project or software you’re using. More experienced programmers know what they’re doing, but they may be unaware of your confidence in a language/project</li>
+<li>Once you’ve incorporated the feedback, make sure to ask someone to review the changes</li>
+</ul>
+<!-- # High Performance Computing -->
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="reproducibility-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="languages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="version-control.html">
+<link rel="next" href="high-performance-computing.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#high-quality-code"><i class="fa fa-check"></i><b>1.1</b> High-quality code</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#reproducibility"><i class="fa fa-check"></i><b>1.1.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#efficiency"><i class="fa fa-check"></i><b>1.1.2</b> Efficiency</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#whats-the-point"><i class="fa fa-check"></i><b>1.1.3</b> What’s the point?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducibility-1.html"><a href="reproducibility-1.html"><i class="fa fa-check"></i><b>2</b> Reproducibility</a><ul>
+<li class="chapter" data-level="2.1" data-path="reproducibility-1.html"><a href="reproducibility-1.html#configuration-files"><i class="fa fa-check"></i><b>2.1</b> Configuration files</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="reproducibility-1.html"><a href="reproducibility-1.html#what-is-it"><i class="fa fa-check"></i><b>2.1.1</b> What is it?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="reproducibility-1.html"><a href="reproducibility-1.html#what-format-is-a-configuration-file"><i class="fa fa-check"></i><b>2.1.2</b> What format is a configuration file?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="reproducibility-1.html"><a href="reproducibility-1.html#example-config-files"><i class="fa fa-check"></i><b>2.1.3</b> Example config files</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="reproducibility-1.html"><a href="reproducibility-1.html#documentation"><i class="fa fa-check"></i><b>2.2</b> Documentation</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="reproducibility-1.html"><a href="reproducibility-1.html#repositories"><i class="fa fa-check"></i><b>2.2.1</b> Repositories</a></li>
+<li class="chapter" data-level="2.2.2" data-path="reproducibility-1.html"><a href="reproducibility-1.html#code"><i class="fa fa-check"></i><b>2.2.2</b> Code</a></li>
+<li class="chapter" data-level="2.2.3" data-path="reproducibility-1.html"><a href="reproducibility-1.html#data"><i class="fa fa-check"></i><b>2.2.3</b> Data</a></li>
+<li class="chapter" data-level="2.2.4" data-path="reproducibility-1.html"><a href="reproducibility-1.html#data-dictionaries"><i class="fa fa-check"></i><b>2.2.4</b> Data Dictionaries</a></li>
+<li class="chapter" data-level="2.2.5" data-path="reproducibility-1.html"><a href="reproducibility-1.html#systems"><i class="fa fa-check"></i><b>2.2.5</b> Systems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3</b> Version Control</a><ul>
+<li class="chapter" data-level="3.1" data-path="version-control.html"><a href="version-control.html#git-overview"><i class="fa fa-check"></i><b>3.1</b> Git Overview</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="version-control.html"><a href="version-control.html#what-is-git"><i class="fa fa-check"></i><b>3.1.1</b> What is Git?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="version-control.html"><a href="version-control.html#git-glossary"><i class="fa fa-check"></i><b>3.1.2</b> Git Glossary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="version-control.html"><a href="version-control.html#repository-set-up"><i class="fa fa-check"></i><b>3.2</b> Repository Set-up</a></li>
+<li class="chapter" data-level="3.3" data-path="version-control.html"><a href="version-control.html#workflow"><i class="fa fa-check"></i><b>3.3</b> Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html"><i class="fa fa-check"></i><b>4</b> The Dos and the Don’ts</a><ul>
+<li class="chapter" data-level="4.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#dont"><i class="fa fa-check"></i><b>4.1</b> Don’t</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-sensitive-data"><i class="fa fa-check"></i><b>4.1.1</b> Version control sensitive data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-git-as-a-data-versioning-tool"><i class="fa fa-check"></i><b>4.1.2</b> Use git as a data versioning tool</a></li>
+<li class="chapter" data-level="4.1.3" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-binary-files"><i class="fa fa-check"></i><b>4.1.3</b> Version control binary files</a></li>
+<li class="chapter" data-level="4.1.4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-temporary-files"><i class="fa fa-check"></i><b>4.1.4</b> Version control temporary files</a></li>
+<li class="chapter" data-level="4.1.5" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-output-files"><i class="fa fa-check"></i><b>4.1.5</b> Version control output files</a></li>
+<li class="chapter" data-level="4.1.6" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-name-versioning-for-files-tracked-by-git"><i class="fa fa-check"></i><b>4.1.6</b> Use name versioning for files tracked by git</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#do"><i class="fa fa-check"></i><b>4.2</b> Do</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#write-concise-and-informative-commit-messages"><i class="fa fa-check"></i><b>4.2.1</b> Write concise and informative commit messages</a></li>
+<li class="chapter" data-level="4.2.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#try-to-make-each-commit-a-single-cohesive-change"><i class="fa fa-check"></i><b>4.2.2</b> Try to make each commit a single, cohesive change</a></li>
+<li class="chapter" data-level="4.2.3" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#review-all-changes-before-committing"><i class="fa fa-check"></i><b>4.2.3</b> Review all changes before committing</a></li>
+<li class="chapter" data-level="4.2.4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-a-.gitignore-file"><i class="fa fa-check"></i><b>4.2.4</b> Use a .gitignore file</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>5</b> High Performance Computing</a></li>
+<li class="chapter" data-level="6" data-path="languages.html"><a href="languages.html"><i class="fa fa-check"></i><b>6</b> Languages</a></li>
+<li class="chapter" data-level="7" data-path="web.html"><a href="web.html"><i class="fa fa-check"></i><b>7</b> Web</a></li>
+<li class="chapter" data-level="8" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>8</b> Data Visualization</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-dos-and-the-donts" class="section level1">
+<h1><span class="header-section-number">4</span> The Dos and the Don’ts</h1>
+<div id="dont" class="section level2">
+<h2><span class="header-section-number">4.1</span> Don’t</h2>
+<div id="version-control-sensitive-data" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Version control sensitive data</h3>
+<p>This is obviously a security concern. Servers which host remote repositories are not necessarily as secure as the network the data are stored on. Additionally, storing the data in more than one location increases the likelyhood that a data breach could occur.</p>
+</div>
+<div id="use-git-as-a-data-versioning-tool" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Use git as a data versioning tool</h3>
+<p>Git is not a data versioning tool. This book will discuss data versioning at a later point! Storing data on the git (even unsensitive data) will clutter the repository’s history.</p>
+<p>An exception to this rule may be storing static metadata (e.g. config file) or fake data used for unit testing, along with some other well thought-out special cases. Think very carefully about whether there’s a good reason to put data in the repository and seek guidance before doing so.</p>
+</div>
+<div id="version-control-binary-files" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Version control binary files</h3>
+<p>Any file that cannot be opened by a text editor (Notepad, Atom, Sublime, etc.). If you are unsure about whether a file is a binary file, just try to open it in Notepad—if you see a bunch of gibberish then it is! If you see a proper text representation of what you know the file contains, then it isn’t!</p>
+<p>Git is a version control tool, meaning that it tracks changes to the contents of a file. This works great for text files, but not at all for binary files. If you change a single character of a Word document, all of the contents of the binary file will change. This means that git will not be able to show you what changed about the file, only that the file changed.</p>
+<p>Please don’t version these file types:</p>
+<ul>
+<li>Word documents (.doc, .docx)</li>
+<li>Excel files (.xls, .xslsx, .xlsm, .xlsb, …)</li>
+<li>Images (.jpg, .png, …)</li>
+<li>Executables (.exe, .dll, …)</li>
+<li>SAS/Stata/other data files (.sas7bdat, .dta, .dat (sometimes), …)</li>
+</ul>
+<p>There can be exceptions, but generally it is bad practice to version control this type of file. They, like data, will bloat the repository for no good reason.</p>
+</div>
+<div id="version-control-temporary-files" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Version control temporary files</h3>
+<p>Windows and other programs often create temporary files when a file is in the process of being written or when a team member has the file open. They often have weird names starting with “~$” or extensions like “.bak”. Don’t version control these as they are temporary!</p>
+</div>
+<div id="version-control-output-files" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Version control output files</h3>
+<p>This includes log files and other direct program output. Like binary files, these files are likely to change a lot when they change, but they are also conceptually more like data than they are like code.</p>
+</div>
+<div id="use-name-versioning-for-files-tracked-by-git" class="section level3">
+<h3><span class="header-section-number">4.1.6</span> Use name versioning for files tracked by git</h3>
+<p>Code should never be names _v1 or _v2_final or _v3_final_final_JH. Git takes care versioning for you! The days of archiving code and renaming different versions are over! Just make your change and commit it. Then, to access the previous version, just use <code>git checkout</code> or use <code>git diff</code> or <code>git show</code> to view changes.</p>
+</div>
+</div>
+<div id="do" class="section level2">
+<h2><span class="header-section-number">4.2</span> Do</h2>
+<div id="write-concise-and-informative-commit-messages" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Write concise and informative commit messages</h3>
+<p>Commit messages are the easiest way for other collaborators and future versions of yourself to figure out what changes were made in each commit. This makes it easier to trace errors, keep track of features, and find explanations for changes. Remember the commit message should explain the why not the what.</p>
+</div>
+<div id="try-to-make-each-commit-a-single-cohesive-change" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Try to make each commit a single, cohesive change</h3>
+<p>Conceptually, each commit should be a single unit of work (e.g. “fixed bug X” or “added X section to report”&quot; or “changed working in section X”). This unit of work could be small (a couple lines of code, or even fixing a typo) or it could be large (adding an entire section to a program), but all changes/additions/deletions within a commit should be related. A quick rule is that you should rarely need to use the word “and” in a commit message—if you are, then you should probably make that commit into two or more commits.</p>
+<ol style="list-style-type: decimal">
+<li>Doing this helps everyone get a better sense of what each commit changed, but also makes it easier to inspect and roll back changes. We wouldn’t want to have to undo a change unrelated to the one that actually needs to be reversed</li>
+<li>When adding files to be committed, use <code>git add [file/s]</code> to add only certain modified files to staging. Use <code>git reset</code> to unstage all files if you accidentally add too many</li>
+</ol>
+</div>
+<div id="review-all-changes-before-committing" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Review all changes before committing</h3>
+<p>This quick and simple step should make sure that you avoid all of the “do nots” above 99% of the time.</p>
+<ol style="list-style-type: decimal">
+<li>First add the files you want to commit: <code>git add [files]</code> or <code>git add .</code> to stage all files for commit</li>
+<li>Review the changes: <code>git status</code> to see a list of all files that will be committed, and <code>git diff --cached</code> to see a detailed view of all changes to each staged file</li>
+<li>Commit! <code>git commit -m [my concise and informative commit message]</code></li>
+</ol>
+</div>
+<div id="use-a-.gitignore-file" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> Use a .gitignore file</h3>
+<p>A .gitignore file that tells git which file types not to track. Git will ignore any files that match patterns specified in the .gitignore.</p>
+<!-- ```{r child="02.4-environments/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+<!-- ```{r child="02.5-packages/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+<!-- ```{r child="02.6-testing/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+<!-- ```{r child="02.7-data-archiving/0-intro.Rmd", echo=FALSE} -->
+<!-- ``` -->
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="version-control.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="high-performance-computing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

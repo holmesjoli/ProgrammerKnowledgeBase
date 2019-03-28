@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="reproducibility-1.html">
+<link rel="next" href="the-dos-and-the-donts.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#high-quality-code"><i class="fa fa-check"></i><b>1.1</b> High-quality code</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#reproducibility"><i class="fa fa-check"></i><b>1.1.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#efficiency"><i class="fa fa-check"></i><b>1.1.2</b> Efficiency</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#whats-the-point"><i class="fa fa-check"></i><b>1.1.3</b> What’s the point?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducibility-1.html"><a href="reproducibility-1.html"><i class="fa fa-check"></i><b>2</b> Reproducibility</a><ul>
+<li class="chapter" data-level="2.1" data-path="reproducibility-1.html"><a href="reproducibility-1.html#configuration-files"><i class="fa fa-check"></i><b>2.1</b> Configuration files</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="reproducibility-1.html"><a href="reproducibility-1.html#what-is-it"><i class="fa fa-check"></i><b>2.1.1</b> What is it?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="reproducibility-1.html"><a href="reproducibility-1.html#what-format-is-a-configuration-file"><i class="fa fa-check"></i><b>2.1.2</b> What format is a configuration file?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="reproducibility-1.html"><a href="reproducibility-1.html#example-config-files"><i class="fa fa-check"></i><b>2.1.3</b> Example config files</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="reproducibility-1.html"><a href="reproducibility-1.html#documentation"><i class="fa fa-check"></i><b>2.2</b> Documentation</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="reproducibility-1.html"><a href="reproducibility-1.html#repositories"><i class="fa fa-check"></i><b>2.2.1</b> Repositories</a></li>
+<li class="chapter" data-level="2.2.2" data-path="reproducibility-1.html"><a href="reproducibility-1.html#code"><i class="fa fa-check"></i><b>2.2.2</b> Code</a></li>
+<li class="chapter" data-level="2.2.3" data-path="reproducibility-1.html"><a href="reproducibility-1.html#data"><i class="fa fa-check"></i><b>2.2.3</b> Data</a></li>
+<li class="chapter" data-level="2.2.4" data-path="reproducibility-1.html"><a href="reproducibility-1.html#data-dictionaries"><i class="fa fa-check"></i><b>2.2.4</b> Data Dictionaries</a></li>
+<li class="chapter" data-level="2.2.5" data-path="reproducibility-1.html"><a href="reproducibility-1.html#systems"><i class="fa fa-check"></i><b>2.2.5</b> Systems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3</b> Version Control</a><ul>
+<li class="chapter" data-level="3.1" data-path="version-control.html"><a href="version-control.html#git-overview"><i class="fa fa-check"></i><b>3.1</b> Git Overview</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="version-control.html"><a href="version-control.html#what-is-git"><i class="fa fa-check"></i><b>3.1.1</b> What is Git?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="version-control.html"><a href="version-control.html#git-glossary"><i class="fa fa-check"></i><b>3.1.2</b> Git Glossary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="version-control.html"><a href="version-control.html#repository-set-up"><i class="fa fa-check"></i><b>3.2</b> Repository Set-up</a></li>
+<li class="chapter" data-level="3.3" data-path="version-control.html"><a href="version-control.html#workflow"><i class="fa fa-check"></i><b>3.3</b> Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html"><i class="fa fa-check"></i><b>4</b> The Dos and the Don’ts</a><ul>
+<li class="chapter" data-level="4.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#dont"><i class="fa fa-check"></i><b>4.1</b> Don’t</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-sensitive-data"><i class="fa fa-check"></i><b>4.1.1</b> Version control sensitive data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-git-as-a-data-versioning-tool"><i class="fa fa-check"></i><b>4.1.2</b> Use git as a data versioning tool</a></li>
+<li class="chapter" data-level="4.1.3" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-binary-files"><i class="fa fa-check"></i><b>4.1.3</b> Version control binary files</a></li>
+<li class="chapter" data-level="4.1.4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-temporary-files"><i class="fa fa-check"></i><b>4.1.4</b> Version control temporary files</a></li>
+<li class="chapter" data-level="4.1.5" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-output-files"><i class="fa fa-check"></i><b>4.1.5</b> Version control output files</a></li>
+<li class="chapter" data-level="4.1.6" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-name-versioning-for-files-tracked-by-git"><i class="fa fa-check"></i><b>4.1.6</b> Use name versioning for files tracked by git</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#do"><i class="fa fa-check"></i><b>4.2</b> Do</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#write-concise-and-informative-commit-messages"><i class="fa fa-check"></i><b>4.2.1</b> Write concise and informative commit messages</a></li>
+<li class="chapter" data-level="4.2.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#try-to-make-each-commit-a-single-cohesive-change"><i class="fa fa-check"></i><b>4.2.2</b> Try to make each commit a single, cohesive change</a></li>
+<li class="chapter" data-level="4.2.3" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#review-all-changes-before-committing"><i class="fa fa-check"></i><b>4.2.3</b> Review all changes before committing</a></li>
+<li class="chapter" data-level="4.2.4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-a-.gitignore-file"><i class="fa fa-check"></i><b>4.2.4</b> Use a .gitignore file</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>5</b> High Performance Computing</a></li>
+<li class="chapter" data-level="6" data-path="languages.html"><a href="languages.html"><i class="fa fa-check"></i><b>6</b> Languages</a></li>
+<li class="chapter" data-level="7" data-path="web.html"><a href="web.html"><i class="fa fa-check"></i><b>7</b> Web</a></li>
+<li class="chapter" data-level="8" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>8</b> Data Visualization</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="version-control" class="section level1">
+<h1><span class="header-section-number">3</span> Version Control</h1>
+<div id="git-overview" class="section level2">
+<h2><span class="header-section-number">3.1</span> Git Overview</h2>
+<p>Version control systems allow for easy access to prior versions of code, branching for development, and easy of collaboration between programmers. Different version control systems exist across several industries, but it is considered best practice to use a git as your version control system for any coding task.</p>
+<p>Git is important to use to keep track of code version histories. Code isn’t static and just written once and executed, but is consistently changing. Version control is necessary to keep track of these updates.</p>
+<div id="what-is-git" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> What is Git?</h3>
+<ul>
+<li>Git is a distributed version control system for code</li>
+<li>Basic workflow</li>
+<li>Makes changes to code
+<ul>
+<li>Add code to git</li>
+<li>Make a commit! (A short comment about WHY you made those changes)</li>
+<li>Repeat</li>
+</ul></li>
+</ul>
+</div>
+<div id="git-glossary" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Git Glossary</h3>
+<table style="width:32%;">
+<colgroup>
+<col width="4%" />
+<col width="9%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>branch</td>
+<td>An active line of development. More literally it is a local copy of the code. Branching off of the master branch preserves the stability of the code.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>bitbucket</td>
+<td>An Atlassian another server used to host code</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>checkout</td>
+<td>The action of updating a branch</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>The action of copying the repository hosted on server to a local computer</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>commit</td>
+<td>A single point in the code’s history. It contains a hash #, which is unique and a commit message which indicates why changes were made to the code base.</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>fetch</td>
+<td>To get the branch’s head from the remote repository</td>
+</tr>
+<tr class="even">
+<td>G</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>git</td>
+<td>Version control system a tool to manage your source code history</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>github</td>
+<td>A public server to host vresion controlled code</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>gitignore</td>
+<td>A file used to indicate which file types should not be tracked by git</td>
+</tr>
+<tr class="even">
+<td>L</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>local</td>
+<td>The version of the code that exists on your computer; your local repository</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>master</td>
+<td>The default development branch! You can think of master as the stable version of your code. If you need to make updates/changes to the code, consider making those changes on a branch and then merging that branch into master once your code has been code reviewed and tested for bugs.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>merge</td>
+<td>To bring the contents of a different branch into the current branch.</td>
+</tr>
+<tr class="odd">
+<td>O</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>origin</td>
+<td>The upstream (original) repository.</td>
+</tr>
+<tr class="odd">
+<td>P</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>pull</td>
+<td>To fetch a branch and merge it.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>push</td>
+<td>To send the changes from the local branch to the remote branch.</td>
+</tr>
+<tr class="even">
+<td>R</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>remote</td>
+<td>The version of the code that exists on the server; i.e. the remote repository.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>repository (repo)</td>
+<td>A collection of code, commits, branches, and tags.</td>
+</tr>
+<tr class="odd">
+<td>S</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>stage</td>
+<td>Code must be staged before it can be committed.</td>
+</tr>
+<tr class="odd">
+<td>T</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>tag</td>
+<td>A reference typically used to mark a particular point in the commit chair.</td>
+</tr>
+<tr class="odd">
+<td>U</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>unstage</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>V</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>VIM</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="repository-set-up" class="section level2">
+<h2><span class="header-section-number">3.2</span> Repository Set-up</h2>
+<p>Each repository should start with these branches</p>
+<ul>
+<li><p>master</p>
+<ul>
+<li>All code in this repository has been tested and is solid</li>
+<li>This code has been ‘released’</li>
+</ul></li>
+<li><p>develop</p>
+<ul>
+<li>The develop branch is created from the master branch</li>
+<li>This code is has also been tested and is solid but is pre-release</li>
+</ul></li>
+<li><p>features branches</p>
+<ul>
+<li>This is a folder for feature code branches</li>
+<li>Feature branches are created from the develop branch</li>
+<li>This code is in development</li>
+<li>It may be pre-tested right now and is still in progress</li>
+</ul></li>
+</ul>
+</div>
+<div id="workflow" class="section level2">
+<h2><span class="header-section-number">3.3</span> Workflow</h2>
+<p><strong>Programmer I</strong></p>
+<ol style="list-style-type: decimal">
+<li>Create a feature branch from the develop branch
+<ol style="list-style-type: lower-alpha">
+<li>E.g. <code>git checkout -b features/NameOfFeature_JIRA#</code></li>
+<li>Notice that that a JIRA ticket number is attached at the end so it’s easy to link back to project management and see the initial development request</li>
+</ol></li>
+<li>Make changes and edits to code
+<ol style="list-style-type: lower-alpha">
+<li>Make commits whenever there’s a major change to the code</li>
+<li>Remember commits shouldn’t have ‘and’ in them</li>
+<li><p>Remember commits should explain the why not the what</p>
+<pre><code>git add name_of_file
+git commit -m &quot;commit explaining why not the what&quot;</code></pre></li>
+</ol></li>
+<li>Write unit tests</li>
+<li>Once code is written and tests are passing submit at Pull Request to the develop branch</li>
+</ol>
+<p><strong>Programmer II</strong></p>
+<ol style="list-style-type: decimal">
+<li>Review the Pull Request and suggest changes/edits or complete the request
+<ol style="list-style-type: lower-alpha">
+<li>Code gets merged into develop</li>
+</ol></li>
+<li><p>Pull the develop branch</p>
+<pre><code>git checkout develop
+git pull</code></pre></li>
+<li><p>Merge the develop branch into any feature branches currently being worked on</p></li>
+</ol>
+<p><strong>Finalizing code</strong></p>
+<ol style="list-style-type: decimal">
+<li>Once the iterative process between developers and the code is complete and tested it can be merged into the master branch</li>
+</ol>
+<p><strong>Visualizing Git Flow (from Atlassian)</strong></p>
+<div class="figure">
+<img src="C:/Users/jh111/Projects/ProgrammerKnowledgeBase/Rmarkdown/images/git/git_flow.png" alt="Git Flow" />
+<p class="caption">Git Flow</p>
+</div>
+<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">Image from Atlassian</a></p>
+<p>In-depth development workflow</p>
+<ol style="list-style-type: decimal">
+<li>A develop branch is created from master</li>
+<li>Feature branches are created from develop</li>
+<li>When a feature is complete a pull request is made for a potential merge into the develop branch</li>
+<li>This request goes through a code review and can be approved/rejected by the technical lead</li>
+<li>When develop branch is complete for a given cycle, a release branch is created from develop</li>
+<li>When the release branch is tested and deemed ready for production it is merged into develop and master</li>
+<li>If an issue in master is detected a hotfix branch is created from master</li>
+<li>Once the hotfix is complete a pull request is made for a potential merge to both the develop and master.</li>
+</ol>
+<p>Resources</p>
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">Atlassian Gitflow</a></li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="reproducibility-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-dos-and-the-donts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

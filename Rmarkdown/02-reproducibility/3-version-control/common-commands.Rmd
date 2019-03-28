@@ -1,0 +1,20 @@
+### Common Commands {-}
+
+|Action                         | Git Command                           |
+|-------------------------------|---------------------------------------|
+|Branching (like a Save As for code)|`git branch new_branch_name`|
+|To pull down a local version of a remote branch and switch to that branch|`git checkout --track origin/remote_branch_name`|
+|To fetch all branches|`git fetch --all`|
+|To rollback to an old Git commit on the repo. Revision is the commit hash.|`git checkout [revision] .`|
+|To create and checkout a branch|`git checkout -b branch_name`|
+|To undo the rollback to an old Git commit on the repo|`git reset --hard`|
+|To check which  tracked  files have been changed|`git status`|
+|Compare code changes between previous commit and current code|`git diff name_of_file`|
+|To stage a modified file to be committed|`git add name_of_file`|
+|To un-add a modified file|`git reset HEAD`|
+|To commit staged files to your local repo without opening VIM to write a commit message|`git commit -m 'commit message'`|
+|To push your local repo to the remote repository|`git push origin local_branch_name`|
+|Amend or change a commit message|`git commit --amend`|
+|To push the new branch to the remote|`git push --set-upstream origin <new_branch_name>`|
+|Delete a branch on remote (post-merge w/ master and post-code review!)|`git push --delete <remote_name> <branch_name>`|
+|Delete a branch locally (post-merge w/ master and post-code review!)|`git branch -d <branch_name>`|

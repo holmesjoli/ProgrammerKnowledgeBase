@@ -1,0 +1,25 @@
+## Python
+
+```{r child = "1-intro/main.Rmd"}
+```
+
+```{r child = "2-data-management/main.Rmd"}
+```
+
+```{r child = "3-modeling/main.Rmd"}
+```
+
+```{r child = "4-visualization/main.Rmd"}
+```
+
+```{r child = "5-web/main.Rmd"}
+```
+
+```{r child = "6-reproducibility/main.Rmd"}
+```
+
+```{r child = "7-quality/main.Rmd"}
+```
+
+```{r child = "8-efficiency/main.Rmd"}
+```

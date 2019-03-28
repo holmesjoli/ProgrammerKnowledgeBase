@@ -1,0 +1,13 @@
+### Code {-}
+
+#### Functions {-}
+
+Always document your functions. Include a short description about what the function does, what parameters the function takes, what the function returns, and even a short example!
+
+If you find yourself have trouble summarizing what the function does in a short description, this is a good indicator that you need to break that function into multiple parts. This is also very important for testing, which we'll get to later on!
+
+Code-specific documentation best practices will be discussed in the 03-languages section.
+
+#### Commenting Code {-}
+
+One of the first things many programmers learn is to comment their code, to provide information about the steps they are taking. While we want to encourage commenting code, we also want to be careful. Some programmers will write huge blocks of text before executing a number of steps. If this is you, we want to make things more modular. One line should be able to describe any function.

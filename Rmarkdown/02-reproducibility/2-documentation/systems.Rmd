@@ -1,0 +1,11 @@
+### Systems {-}
+
+One of the more challenging things to document is a system. Generally speaking, if we're talking about a system, then we're talking about a team of people responsible for developing and maintaing a code base, as well as other documentation.
+
+If possible, it's best to store code repositories at the project level. So all of the repositories that contribute to a system are stored under the same project. Then at the system-level create a README to document how the system works. 
+
+General questions to answer:
+* How the output from one repository used as an input in another repository? 
+* What tests are run in-between?
+* What are the necessary parameters for each section of a system to run?
+* What is the timeline of the system run? Hours, Days, Months?

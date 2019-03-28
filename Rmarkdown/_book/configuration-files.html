@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="reproducibility-1.html">
+<link rel="next" href="documentation.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#high-quality-code"><i class="fa fa-check"></i><b>1.1</b> High-quality code</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#reproducibility"><i class="fa fa-check"></i><b>1.1.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#efficiency"><i class="fa fa-check"></i><b>1.1.2</b> Efficiency</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#whats-the-point"><i class="fa fa-check"></i><b>1.1.3</b> What’s the point?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducibility-1.html"><a href="reproducibility-1.html"><i class="fa fa-check"></i><b>2</b> Reproducibility</a></li>
+<li class="chapter" data-level="3" data-path="configuration-files.html"><a href="configuration-files.html"><i class="fa fa-check"></i><b>3</b> Configuration files</a><ul>
+<li class="chapter" data-level="3.1" data-path="configuration-files.html"><a href="configuration-files.html#what-is-it"><i class="fa fa-check"></i><b>3.1</b> What is it?</a></li>
+<li class="chapter" data-level="3.2" data-path="configuration-files.html"><a href="configuration-files.html#what-format-is-a-configuration-file"><i class="fa fa-check"></i><b>3.2</b> What format is a configuration file?</a></li>
+<li class="chapter" data-level="3.3" data-path="configuration-files.html"><a href="configuration-files.html#example-config-files"><i class="fa fa-check"></i><b>3.3</b> Example config files</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="configuration-files.html"><a href="configuration-files.html#yaml"><i class="fa fa-check"></i><b>3.3.1</b> YAML</a></li>
+<li class="chapter" data-level="3.3.2" data-path="configuration-files.html"><a href="configuration-files.html#json"><i class="fa fa-check"></i><b>3.3.2</b> JSON</a></li>
+<li class="chapter" data-level="3.3.3" data-path="configuration-files.html"><a href="configuration-files.html#csv"><i class="fa fa-check"></i><b>3.3.3</b> CSV</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>4</b> Documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="documentation.html"><a href="documentation.html#repositories"><i class="fa fa-check"></i><b>4.1</b> Repositories</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="documentation.html"><a href="documentation.html#readme"><i class="fa fa-check"></i><b>4.1.1</b> README</a></li>
+<li class="chapter" data-level="4.1.2" data-path="documentation.html"><a href="documentation.html#general-readme-structure"><i class="fa fa-check"></i><b>4.1.2</b> General README Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="documentation.html"><a href="documentation.html#code"><i class="fa fa-check"></i><b>4.2</b> Code</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="documentation.html"><a href="documentation.html#functions"><i class="fa fa-check"></i><b>4.2.1</b> Functions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="documentation.html"><a href="documentation.html#commenting-code"><i class="fa fa-check"></i><b>4.2.2</b> Commenting Code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="documentation.html"><a href="documentation.html#data"><i class="fa fa-check"></i><b>4.3</b> Data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="documentation.html"><a href="documentation.html#data-dictionaries"><i class="fa fa-check"></i><b>4.3.1</b> Data Dictionaries</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="documentation.html"><a href="documentation.html#systems"><i class="fa fa-check"></i><b>4.4</b> Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>5</b> Version Control</a><ul>
+<li class="chapter" data-level="5.1" data-path="version-control.html"><a href="version-control.html#git-overview"><i class="fa fa-check"></i><b>5.1</b> Git Overview</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="version-control.html"><a href="version-control.html#what-is-git"><i class="fa fa-check"></i><b>5.1.1</b> What is Git?</a></li>
+<li class="chapter" data-level="5.1.2" data-path="version-control.html"><a href="version-control.html#git-glossary"><i class="fa fa-check"></i><b>5.1.2</b> Git Glossary</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="version-control.html"><a href="version-control.html#repository-set-up"><i class="fa fa-check"></i><b>5.2</b> Repository Set-up</a></li>
+<li class="chapter" data-level="5.3" data-path="version-control.html"><a href="version-control.html#workflow"><i class="fa fa-check"></i><b>5.3</b> Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html"><i class="fa fa-check"></i><b>6</b> The Dos and the Don’ts</a><ul>
+<li class="chapter" data-level="6.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#dont"><i class="fa fa-check"></i><b>6.1</b> Don’t</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-sensitive-data"><i class="fa fa-check"></i><b>6.1.1</b> Version control sensitive data</a></li>
+<li class="chapter" data-level="6.1.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-git-as-a-data-versioning-tool"><i class="fa fa-check"></i><b>6.1.2</b> Use git as a data versioning tool</a></li>
+<li class="chapter" data-level="6.1.3" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-binary-files"><i class="fa fa-check"></i><b>6.1.3</b> Version control binary files</a></li>
+<li class="chapter" data-level="6.1.4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-temporary-files"><i class="fa fa-check"></i><b>6.1.4</b> Version control temporary files</a></li>
+<li class="chapter" data-level="6.1.5" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#version-control-output-files"><i class="fa fa-check"></i><b>6.1.5</b> Version control output files</a></li>
+<li class="chapter" data-level="6.1.6" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-name-versioning-for-files-tracked-by-git"><i class="fa fa-check"></i><b>6.1.6</b> Use name versioning for files tracked by git</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#do"><i class="fa fa-check"></i><b>6.2</b> Do</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#write-concise-and-informative-commit-messages"><i class="fa fa-check"></i><b>6.2.1</b> Write concise and informative commit messages</a></li>
+<li class="chapter" data-level="6.2.2" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#try-to-make-each-commit-a-single-cohesive-change"><i class="fa fa-check"></i><b>6.2.2</b> Try to make each commit a single, cohesive change</a></li>
+<li class="chapter" data-level="6.2.3" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#review-all-changes-before-committing"><i class="fa fa-check"></i><b>6.2.3</b> Review all changes before committing</a></li>
+<li class="chapter" data-level="6.2.4" data-path="the-dos-and-the-donts.html"><a href="the-dos-and-the-donts.html#use-a-.gitignore-file"><i class="fa fa-check"></i><b>6.2.4</b> Use a .gitignore file</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>7</b> High Performance Computing</a></li>
+<li class="chapter" data-level="8" data-path="languages.html"><a href="languages.html"><i class="fa fa-check"></i><b>8</b> Languages</a></li>
+<li class="chapter" data-level="9" data-path="web.html"><a href="web.html"><i class="fa fa-check"></i><b>9</b> Web</a></li>
+<li class="chapter" data-level="10" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>10</b> Data Visualization</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="configuration-files" class="section level1">
+<h1><span class="header-section-number">3</span> Configuration files</h1>
+<p>One thing that programmers constantly face is a changing set of parameters that are used as inputs to any script. Whether this is new data, or a new title for a graph, it always seems to change. If these parameters are hardcoded into a script, the likelihood that you’ll be able to remember where all those inputs are is low. Also, it can make debugging more challenging! An easy way to avoid these issues is to use a configuration file.</p>
+<div id="what-is-it" class="section level2">
+<h2><span class="header-section-number">3.1</span> What is it?</h2>
+<p>A configuration file is a file which contains all of our parameters that are likely to change of the lifecycle of the project. Things like paths, variable names, visualization titles, and captions are best stored in a configuration file and then loaded at the top of the script where they are used.</p>
+<p>Configuration files are also important to version control. Say that you changed the title of a visualization code, but not the actual function that creates the visualization. If title is hardcoded into the script, then when you go submit a pull request the other programmer reviewing the pull request will have to double-check that it’s not the function that change, but just the text for the title. If that title were stored in a configuration file, and let’s say you made many changes to many titles, then the other programmer only has to review the one file instead of a bunch, and the underlying code base stays unchanged.</p>
+<p>Using a config file, also makes it less likely that bugs will occur. If you path is embedded down in line 403, and you forget to update it to the most recent datafile, uh oh, wrong data gets used or produced!</p>
+</div>
+<div id="what-format-is-a-configuration-file" class="section level2">
+<h2><span class="header-section-number">3.2</span> What format is a configuration file?</h2>
+<p>Different programmers have different configuration file preferences. The common ones are YAML, JSON, and CSV.</p>
+<p>My personal preference is a YAML file and that’s because you can add comments, which you can’t do with JSON, and you can create a nested format, which you can’t do with a CSV. The nested format makes it easy to loop through different models or dataframes which are going to utilize the same functions.</p>
+</div>
+<div id="example-config-files" class="section level2">
+<h2><span class="header-section-number">3.3</span> Example config files</h2>
+<div id="yaml" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> YAML</h3>
+<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="co">## You can add comments to YAML!</span>
+<span class="fu">VAR1:</span><span class="at"> 1</span>
+<span class="fu">VAR2:</span><span class="at"> 2</span></code></pre></div>
+<p>Some YAML notes:</p>
+<ul>
+<li>If using nested yaml structure, make sure to indent with spaces, not tabs!</li>
+<li>Add a final line to a yaml config file, or some software will have difficulty reading it in</li>
+</ul>
+</div>
+<div id="json" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> JSON</h3>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+<span class="dt">&quot;VAR1&quot;</span> <span class="er">=</span> <span class="er">1</span><span class="fu">,</span>
+<span class="dt">&quot;VAR2&quot;</span> <span class="er">=</span> <span class="er">2</span>
+<span class="fu">}</span></code></pre></div>
+<p>Some JSON notes:</p>
+<ul>
+<li>JSON can’t do comments</li>
+<li>Web-developers will often use a JSON file because JSON stands for JavaScript Object Notation</li>
+</ul>
+</div>
+<div id="csv" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> CSV</h3>
+<pre class="csv"><code>VAR1    VAR2
+1       2</code></pre>
+<p>CSV notes:</p>
+<ul>
+<li>CSV files can be really handy ways to organize script parameters, especially if you’re working on a team with people who aren’t used to working in a JSON or YAML file</li>
+<li>One limitation of a CSV is their flat structure, it’s often really nice to be able to nest attributes within other sections of a config file</li>
+</ul>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="reproducibility-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="documentation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

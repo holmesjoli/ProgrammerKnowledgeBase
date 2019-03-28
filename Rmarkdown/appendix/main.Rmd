@@ -1,0 +1,7 @@
+# Appendix {-}
+
+```{r child = "technical-terminology.Rmd"}
+```
+
+```{r child = "resources.Rmd"}
+```

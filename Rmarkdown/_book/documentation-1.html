@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>7 Documentation | Programmer Knowledge Base</title>
+  <meta name="description" content="7 Documentation | Programmer Knowledge Base">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="7 Documentation | Programmer Knowledge Base" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="holmesjoli/ProgrammerKnowledgeBase" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Documentation | Programmer Knowledge Base" />
+  
+  
+  
+
+<meta name="author" content="Joli Holmes">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="configuration-files-1.html">
+<link rel="next" href="code-version-control-1.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#high-quality-code"><i class="fa fa-check"></i><b>1.1</b> High-quality code</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#reproducibility"><i class="fa fa-check"></i><b>1.1.1</b> Reproducibility</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#efficiency"><i class="fa fa-check"></i><b>1.1.2</b> Efficiency</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#whats-the-point"><i class="fa fa-check"></i><b>1.2</b> What’s the point?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="program-like-a-pro.html"><a href="program-like-a-pro.html"><i class="fa fa-check"></i><b>2</b> Program Like a Pro</a></li>
+<li class="chapter" data-level="3" data-path="configuration-files.html"><a href="configuration-files.html"><i class="fa fa-check"></i><b>3</b> Configuration files</a><ul>
+<li class="chapter" data-level="3.1" data-path="configuration-files.html"><a href="configuration-files.html#what-is-it"><i class="fa fa-check"></i><b>3.1</b> What is it?</a></li>
+<li class="chapter" data-level="3.2" data-path="configuration-files.html"><a href="configuration-files.html#what-format-is-a-configuration-file"><i class="fa fa-check"></i><b>3.2</b> What format is a configuration file?</a></li>
+<li class="chapter" data-level="3.3" data-path="configuration-files.html"><a href="configuration-files.html#example-config-files"><i class="fa fa-check"></i><b>3.3</b> Example config files</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="configuration-files.html"><a href="configuration-files.html#yaml"><i class="fa fa-check"></i><b>3.3.1</b> YAML</a></li>
+<li class="chapter" data-level="3.3.2" data-path="configuration-files.html"><a href="configuration-files.html#json"><i class="fa fa-check"></i><b>3.3.2</b> JSON</a></li>
+<li class="chapter" data-level="3.3.3" data-path="configuration-files.html"><a href="configuration-files.html#csv"><i class="fa fa-check"></i><b>3.3.3</b> CSV</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>4</b> Documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="documentation.html"><a href="documentation.html#documenting-repositories"><i class="fa fa-check"></i><b>4.1</b> Documenting Repositories</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="documentation.html"><a href="documentation.html#readme"><i class="fa fa-check"></i><b>4.1.1</b> README</a></li>
+<li class="chapter" data-level="4.1.2" data-path="documentation.html"><a href="documentation.html#general-readme-structure"><i class="fa fa-check"></i><b>4.1.2</b> General README Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="documentation.html"><a href="documentation.html#documenting-code"><i class="fa fa-check"></i><b>4.2</b> Documenting Code</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="documentation.html"><a href="documentation.html#documenting-functions"><i class="fa fa-check"></i><b>4.2.1</b> Documenting Functions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="documentation.html"><a href="documentation.html#commenting-code"><i class="fa fa-check"></i><b>4.2.2</b> Commenting Code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="documentation.html"><a href="documentation.html#documenting-data"><i class="fa fa-check"></i><b>4.3</b> Documenting Data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="documentation.html"><a href="documentation.html#data-dictionaries"><i class="fa fa-check"></i><b>4.3.1</b> Data Dictionaries</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="documentation.html"><a href="documentation.html#documenting-systems"><i class="fa fa-check"></i><b>4.4</b> Documenting Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="code-version-control.html"><a href="code-version-control.html"><i class="fa fa-check"></i><b>5</b> Code Version Control</a><ul>
+<li class="chapter" data-level="5.1" data-path="code-version-control.html"><a href="code-version-control.html#what-is-git"><i class="fa fa-check"></i><b>5.1</b> What is Git?</a></li>
+<li class="chapter" data-level="5.2" data-path="code-version-control.html"><a href="code-version-control.html#git-glossary"><i class="fa fa-check"></i><b>5.2</b> Git Glossary</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="configuration-files-1.html"><a href="configuration-files-1.html"><i class="fa fa-check"></i><b>6</b> Configuration files</a><ul>
+<li class="chapter" data-level="6.1" data-path="configuration-files-1.html"><a href="configuration-files-1.html#what-is-it-1"><i class="fa fa-check"></i><b>6.1</b> What is it?</a></li>
+<li class="chapter" data-level="6.2" data-path="configuration-files-1.html"><a href="configuration-files-1.html#what-format-is-a-configuration-file-1"><i class="fa fa-check"></i><b>6.2</b> What format is a configuration file?</a></li>
+<li class="chapter" data-level="6.3" data-path="configuration-files-1.html"><a href="configuration-files-1.html#example-config-files-1"><i class="fa fa-check"></i><b>6.3</b> Example config files</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="configuration-files-1.html"><a href="configuration-files-1.html#yaml-1"><i class="fa fa-check"></i><b>6.3.1</b> YAML</a></li>
+<li class="chapter" data-level="6.3.2" data-path="configuration-files-1.html"><a href="configuration-files-1.html#json-1"><i class="fa fa-check"></i><b>6.3.2</b> JSON</a></li>
+<li class="chapter" data-level="6.3.3" data-path="configuration-files-1.html"><a href="configuration-files-1.html#csv-1"><i class="fa fa-check"></i><b>6.3.3</b> CSV</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="documentation-1.html"><a href="documentation-1.html"><i class="fa fa-check"></i><b>7</b> Documentation</a><ul>
+<li class="chapter" data-level="7.1" data-path="documentation-1.html"><a href="documentation-1.html#documenting-repositories-1"><i class="fa fa-check"></i><b>7.1</b> Documenting Repositories</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="documentation-1.html"><a href="documentation-1.html#readme-1"><i class="fa fa-check"></i><b>7.1.1</b> README</a></li>
+<li class="chapter" data-level="7.1.2" data-path="documentation-1.html"><a href="documentation-1.html#general-readme-structure-1"><i class="fa fa-check"></i><b>7.1.2</b> General README Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="documentation-1.html"><a href="documentation-1.html#documenting-code-1"><i class="fa fa-check"></i><b>7.2</b> Documenting Code</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="documentation-1.html"><a href="documentation-1.html#documenting-functions-1"><i class="fa fa-check"></i><b>7.2.1</b> Documenting Functions</a></li>
+<li class="chapter" data-level="7.2.2" data-path="documentation-1.html"><a href="documentation-1.html#commenting-code-1"><i class="fa fa-check"></i><b>7.2.2</b> Commenting Code</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="documentation-1.html"><a href="documentation-1.html#documenting-data-1"><i class="fa fa-check"></i><b>7.3</b> Documenting Data</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="documentation-1.html"><a href="documentation-1.html#data-dictionaries-1"><i class="fa fa-check"></i><b>7.3.1</b> Data Dictionaries</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="documentation-1.html"><a href="documentation-1.html#documenting-systems-1"><i class="fa fa-check"></i><b>7.4</b> Documenting Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="code-version-control-1.html"><a href="code-version-control-1.html"><i class="fa fa-check"></i><b>8</b> Code Version Control</a><ul>
+<li class="chapter" data-level="8.1" data-path="code-version-control-1.html"><a href="code-version-control-1.html#what-is-git-1"><i class="fa fa-check"></i><b>8.1</b> What is Git?</a></li>
+<li class="chapter" data-level="8.2" data-path="code-version-control-1.html"><a href="code-version-control-1.html#git-glossary-1"><i class="fa fa-check"></i><b>8.2</b> Git Glossary</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>9</b> Workflow</a><ul>
+<li class="chapter" data-level="9.1" data-path="workflow.html"><a href="workflow.html#git-repository-set-up"><i class="fa fa-check"></i><b>9.1</b> Git Repository Set-up</a></li>
+<li class="chapter" data-level="9.2" data-path="workflow.html"><a href="workflow.html#workflow-1"><i class="fa fa-check"></i><b>9.2</b> Workflow</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="workflow.html"><a href="workflow.html#programmer-i"><i class="fa fa-check"></i><b>9.2.1</b> Programmer I</a></li>
+<li class="chapter" data-level="9.2.2" data-path="workflow.html"><a href="workflow.html#programmer-ii"><i class="fa fa-check"></i><b>9.2.2</b> Programmer II</a></li>
+<li class="chapter" data-level="9.2.3" data-path="workflow.html"><a href="workflow.html#finalizing-code"><i class="fa fa-check"></i><b>9.2.3</b> Finalizing code</a></li>
+<li class="chapter" data-level="9.2.4" data-path="workflow.html"><a href="workflow.html#visualizing-git-flow-from-atlassian"><i class="fa fa-check"></i><b>9.2.4</b> Visualizing Git Flow (from Atlassian)</a></li>
+<li class="chapter" data-level="9.2.5" data-path="workflow.html"><a href="workflow.html#in-depth-development-workflow"><i class="fa fa-check"></i><b>9.2.5</b> In-depth development workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="workflow.html"><a href="workflow.html#resources"><i class="fa fa-check"></i><b>9.3</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="dont.html"><a href="dont.html"><i class="fa fa-check"></i><b>10</b> Don’t</a><ul>
+<li class="chapter" data-level="10.1" data-path="dont.html"><a href="dont.html#add-sensitive-data-or-piiphi-to-a-git-repository"><i class="fa fa-check"></i><b>10.1</b> Add sensitive data or PII/PHI to a git repository</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="dont.html"><a href="dont.html#this-a-security-concern"><i class="fa fa-check"></i><b>10.1.1</b> This a security concern</a></li>
+<li class="chapter" data-level="10.1.2" data-path="dont.html"><a href="dont.html#git-is-not-a-data-versioning-tool"><i class="fa fa-check"></i><b>10.1.2</b> Git is NOT a data versioning tool</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="dont.html"><a href="dont.html#add-binary-files"><i class="fa fa-check"></i><b>10.2</b> Add binary files</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="dont.html"><a href="dont.html#binary-files"><i class="fa fa-check"></i><b>10.2.1</b> Binary files</a></li>
+<li class="chapter" data-level="10.2.2" data-path="dont.html"><a href="dont.html#examples"><i class="fa fa-check"></i><b>10.2.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="dont.html"><a href="dont.html#add-temporary-files"><i class="fa fa-check"></i><b>10.3</b> Add temporary files</a></li>
+<li class="chapter" data-level="10.4" data-path="dont.html"><a href="dont.html#add-output-files"><i class="fa fa-check"></i><b>10.4</b> Add output files</a></li>
+<li class="chapter" data-level="10.5" data-path="dont.html"><a href="dont.html#use-name-versioning-for-files-tracked-by-git"><i class="fa fa-check"></i><b>10.5</b> Use name versioning for files tracked by git</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="do.html"><a href="do.html"><i class="fa fa-check"></i><b>11</b> Do</a><ul>
+<li class="chapter" data-level="11.1" data-path="do.html"><a href="do.html#write-concise-and-informative-commit-messages"><i class="fa fa-check"></i><b>11.1</b> Write concise and informative commit messages</a></li>
+<li class="chapter" data-level="11.2" data-path="do.html"><a href="do.html#try-to-make-each-commit-a-single-cohesive-change"><i class="fa fa-check"></i><b>11.2</b> Try to make each commit a single, cohesive change</a></li>
+<li class="chapter" data-level="11.3" data-path="do.html"><a href="do.html#review-all-your-changes-before-you-commit"><i class="fa fa-check"></i><b>11.3</b> Review all your changes before you commit</a></li>
+<li class="chapter" data-level="11.4" data-path="do.html"><a href="do.html#take-steps-to-avoid-tracking-files-we-dont-want"><i class="fa fa-check"></i><b>11.4</b> Take steps to avoid tracking files we don’t want</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>12</b> High Performance Computing</a></li>
+<li class="chapter" data-level="13" data-path="languages.html"><a href="languages.html"><i class="fa fa-check"></i><b>13</b> Languages</a></li>
+<li class="chapter" data-level="14" data-path="web.html"><a href="web.html"><i class="fa fa-check"></i><b>14</b> Web</a></li>
+<li class="chapter" data-level="15" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>15</b> Data Visualization</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programmer Knowledge Base</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="documentation-1" class="section level1">
+<h1><span class="header-section-number">7</span> Documentation</h1>
+<p>Documentation is an important step to making code reproducible. Document your code and systems for yourself, other programmers/team members, and maybe most importantly: your future self. It’s unlikely you’ll remember the exact steps you took to produce some output a year from now, but that’s what documentation is for!</p>
+<div id="documenting-repositories-1" class="section level2">
+<h2><span class="header-section-number">7.1</span> Documenting Repositories</h2>
+<p>Repositories are documented with a README.md file and stored in repository root directory.</p>
+<pre><code>my_repo\
+  README.md</code></pre>
+<p>The .md suffix indicates a markdown file. If you have used markdown before here are some resources:</p>
+<ul>
+<li><a href="https://www.makeareadme.com/">Example README</a></li>
+<li><a href="https://daringfireball.net/projects/markdown/syntax">Markdown syntax</a></li>
+<li><a href="http://pandoc.org/MANUAL.html#tables">Markdown table formatting</a></li>
+<li><a href="https://www.udacity.com/course/writing-readmes--ud777">Udacity Course on READMEs</a></li>
+</ul>
+<p>Markdown is an important skill to learn. Many technical documentation systems are created using markdown because it’s easy to learn and can be version controlled with ease unlike other word processing software (e.g. Microsoft Word, or Google Docs).</p>
+<div id="readme-1" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> README</h3>
+<p>READMEs are documentation for any humans who will need to use that code, including: * Yourself * Your future self * Co-workers or other people who will contribute to your code * People who will use your code * Clients if the code will be delivered to them at the end of the project (some code technically belongs to clients)</p>
+<p>On any version control system (e.g. Github, Bitbucket, TFS) the README will be rendered as HTML and displayed on the repository page.</p>
+</div>
+<div id="general-readme-structure-1" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> General README Structure</h3>
+<p>In general, READMEs should follow this format, but they of course can deviate to provide more or less information where necessary.</p>
+<pre><code>1. A paragraph describing the high-level purpose of the package
+2. An example showing how to use the package or repository of code to solve a simple solution
+3. Installation instructions
+4. An overview that describes the main components of the package</code></pre>
+<p>General questions to answer in a README:</p>
+<ul>
+<li>What are the exact steps that need to be taken to get up and running?</li>
+<li>What should someone already have installed or configured?</li>
+<li>What might someone have a hard time understanding right away?</li>
+<li>Any known issues or bugs?</li>
+<li>Where are the data for this analysis stored?</li>
+<li>What do we expect those data to look like?</li>
+</ul>
+</div>
+</div>
+<div id="documenting-code-1" class="section level2">
+<h2><span class="header-section-number">7.2</span> Documenting Code</h2>
+<div id="documenting-functions-1" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Documenting Functions</h3>
+<p>Always document your functions. Include a short description about what the function does, what parameters the function takes, what the function returns, and even a short example!</p>
+<p>If you find yourself have trouble summarizing what the function does in a short description, this is a good indicator that you need to break that function into multiple parts. This is also very important for testing, which we’ll get to later on!</p>
+<p>Code-specific documentation best practices will be discussed in the 03-languages section.</p>
+</div>
+<div id="commenting-code-1" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Commenting Code</h3>
+<p>One of the first things many programmers learn is to comment their code, to provide information about the steps they are taking. While we want to encourage commenting code, we also want to be careful. Some programmers will write huge blocks of text before executing a number of steps. If this is you, we want to make things more modular. One line should be able to describe any function.</p>
+</div>
+</div>
+<div id="documenting-data-1" class="section level2">
+<h2><span class="header-section-number">7.3</span> Documenting Data</h2>
+<div id="data-dictionaries-1" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Data Dictionaries</h3>
+<p>Like code, it’s important to document your data with a data dictionary. A data dictionary contains information about variable names and their corresponding meta data. A data dictionary should always contain labels, as variables often aren’t easy to identify what data they represent. A data dictionary can also contain information such as: variable type (e.g. numeric, string, date, or integer, float if you want to get more specific), variable length, allowable values for descriptive variables, units of measure for numeric values.</p>
+<p>Data Dictionary Resources:</p>
+<ul>
+<li><a href="https://medium.com/@leapingllamas/data-dictionary-a-how-to-and-best-practices-a09a685dcd61">Best Practices</a></li>
+</ul>
+</div>
+</div>
+<div id="documenting-systems-1" class="section level2">
+<h2><span class="header-section-number">7.4</span> Documenting Systems</h2>
+<p>One of the more challenging things to document is a system. Generally speaking, if we’re talking about a system, then we’re talking about a team of people responsible for developing and maintaing a code base, as well as other documentation.</p>
+<p>If possible, it’s best to store code repositories at the project level. So all of the repositories that contribute to a system are stored under the same project. Then at the system-level create a README to document how the system works.</p>
+<p>General questions to answer: * How the output from one repository used as an input in another repository? * What tests are run in-between? * What are the necessary parameters for each section of a system to run? * What is the timeline of the system run? Hours, Days, Months?</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="configuration-files-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="code-version-control-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

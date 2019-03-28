@@ -1,0 +1,47 @@
+### Gitignore {-}
+ 
+A .gitignore file tells git which files should not be tracked by version control. Common files extensions to inlucde data file extensions, binary files, executables etc.
+
+If a .gitignore is included in the working directory the command `git add .` will only add files where the file extensions do NOT appear in the gitignore. 
+
+#### Create a .gitignore {-}
+
+In the command line/terminal type `echo > .gitignore`
+
+To create the file manually, save the files and folders that start with a period with a trailing period. E.g `.gitignore.` 
+
+#### Where to put the .gitignore {-}
+
+Generally, you want the file location to be at the root directory of the project, in the same directory as the `.git` folder
+
+#### Extensions often included in a .gitignore {-}
+
+##### Data {-}
+
+* `*.csv`
+* `*.xlsx`
+* `*.docx`
+
+##### R {-}
+
+* `*.Rdata`
+* `*.RDS`
+
+##### Python {-}
+
+* [Good python suggestions](https://github.com/github/gitignore/blob/master/Python.gitignore)
+
+##### SAS {-}
+
+* `*.sas7bdat`
+
+##### Stata {-}
+
+* `*.dta`
+
+#### Git still tracking files marked in gitignore {-}
+
+This happens because these files were originally add to git. Even if the files are removed from git and added into the .gitignore, git still wants to track the files. 
+
+Here's the [stack solution](https://stackoverflow.com/questions/18418718/git-still-adds-and-tracks-folders-marked-in-gitignore).
+
