@@ -1,0 +1,23 @@
+### Reshaping {-}
+
+#### Wide to Long {-}
+
+```
+import pandas as pd
+
+df_long = pd.melt(df, id_vars = 'state', value_vars = cols)
+```
+[Stack Overflow](https://stackoverflow.com/questions/36537945/reshape-wide-to-long-in-pandas)
+
+#### Long to Wide {-}
+
+```
+import pandas as pd
+df_wide = df.pivot(index, columns, values)
+```
+
+* Index is the column of columns to keep in long format
+* Columns are the columns that will go from long to wide
+* Values are the values which will populate the columns
+	
+[Stack Overflow](https://stackoverflow.com/questions/22798934/pandas-long-to-wide-reshape-by-two-variables)

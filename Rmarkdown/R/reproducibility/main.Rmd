@@ -1,0 +1,10 @@
+## Reproducibility
+
+```{r child="config.Rmd"}
+```
+
+```{r child="documentation.Rmd"}
+```
+
+```{r child="packrat.Rmd"}
+```

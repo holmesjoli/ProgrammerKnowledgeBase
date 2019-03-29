@@ -1,0 +1,49 @@
+### Documentation {-}
+
+#### Documenting Functions {-}
+
+Document all functions with roxygen comments. Roxygen is a Hadley Wickham package which makes the process of function documentation much easier. Roxygen comments, added to each function, can automatically be updated in the .Rd files. Programmers only have to keep documentation up-to-date in one place and the rest is automated.
+
+##### Roxygen Comments {-}
+
+Example roxygen comments below:
+
+```
+
+func_y <- function(x, y) {
+
+#' Short title
+#'
+#' Longer description, e.g. this functions adds x and y
+#' 
+#' @param x the integer x
+#' @param y the integer y
+#' @return what the function returns
+#' @examples
+#' func_y(x, y)
+
+return(x + y)
+
+}
+```
+
+It's important to keep these comments up-to-date, because running `devtools::document()` will copy what exists from the roxygen comments into package documentation.
+
+Each function should be documented with three tags at minimum: `@param`, `@examples` and `@return`
+
+* `@param` appears as many times in the documentation as there are parameters in the function
+* `@examples` appears once and documents an example of how the function can be used
+* `@return` appears once and documents what the function returns
+	
+#### Vignettes {-}
+
+A vignette is a long-form guide to a package. Like a book chapter or academic paper that describes the problem that your package is designed to solve and then shows the reader how to solve it.
+
+Adopt a beginners mindset, and teach the vignette in person to get feedback.
+
+```
+install.packages("rmarkdown")
+usethis::use_vignette("vignette_name")
+```
+
+This will automatically create a vignettes folder

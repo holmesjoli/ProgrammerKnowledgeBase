@@ -1,0 +1,29 @@
+## Modeling
+
+### Packages
+
+|Package|	Description and Usage|
+|-------------|----------------------------------|
+|survey|Analysis of complex survey samples|
+|twang|Toolkit for weighting and analysis of nonequivalent groups|
+|Matching|Multivariate and propensity score matching with balance|
+|forecast|Forecasting functions for time series and linear models|
+|boot|Functions for bootstrap analysis|
+|multcomp|Tools for multiple comparison testing|
+|rstan|R interface to Stan for Bayesian analysis|
+|rjags|Just another Gibbs sampler in R|
+|survival|Survival analysis|
+|nnet|Neural networks and multinomial log-linear models|
+|lme4|Linear and non-linear mixed effects models|
+|nlme|Linear and non-linear mixed effects models|
+|mgcv|Generalized additive models|
+|refund|Regression with functional data|
+|spatial|Functions for kriging and point pattern analysis|
+|KernSmooth|Functions for kernel smoothing|
+|lars|Least angle regression, lasso, and forward stagewise|
+|glmnet|Lasso and elastic-net regression methods|
+|caret|Classification and regression training|
+|rpart|Recursive partitioning for classification and regression trees|
+|randomForest|Random forest methods from machine learning|
+|cluster|	Cluster analysis|
+

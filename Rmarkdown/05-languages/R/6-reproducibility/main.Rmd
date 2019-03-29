@@ -1,3 +1,0 @@
-#### Reproducibility {-}
-
-```{r child = "config.Rmd"}

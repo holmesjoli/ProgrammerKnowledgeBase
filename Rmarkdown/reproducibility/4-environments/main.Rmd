@@ -1,0 +1,22 @@
+## Environments
+
+Note this section is only application to users of open-source software. SAS and Stata users, you can skip this section, unless of course you're interested in learning more!
+
+### Introduction {-}
+
+The cool thing about open-source software is that anyone with a knowledge of that software can help build packages for the software community. Open source software is amazing, because there's a huge community of programmers out there trying to achieve similar goals given similar constraints. 
+
+There are however, some big downsides to utilizing open source software. One of the biggest is that developers of packages churn out updates that may or may not be backwards compatible with older versions of their packages. Packages are rolled-out continuously and aren't built as part of one central, commercialized system, which can result in version control issues for software users. 
+
+And it goes beyond packages! Python rolled out version 3 of the language in 2008.^[https://learntocodewith.me/programming/python/python-2-vs-python-3/#history-of-python2-vs-3] Yet, a lot of Stack Overflow answers are still written using Python 2. When I try to run Python 2, I get errors, which then have to be debugged.^[99% of the time this is related to the print statement and takes 2 seconds to change, but the example of why this is an issue remains!]  
+
+Fortunately, there's a simple solution: multiple development environments! To make code reproducible across time and across machines, it's best to work with multiple environments. An environment takes a snapshot of the user's system at that point in time. Others can then generate the same environment and still be able to run code, even as packages and languages continue to change and develop over time. 
+	
+### Using Multiple Environments {-}
+
+* Code that doesn't break
+* Ease of collaboration
+* Client deliverables
+
+Read [this article](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c) to learn more!
+

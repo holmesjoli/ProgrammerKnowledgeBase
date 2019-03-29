@@ -1,0 +1,32 @@
+### Other common data management functions {-}
+
+#### Rename columns {-}
+
+```
+import pandas as pd
+df.rename(columns = {"old_name": "new_name"}, inplace = True)
+
+# OR
+
+df = df.rename(columns = {"old_name": "new_name"})
+
+```
+
+#### Drop duplicates {-}
+
+```
+import pandas as pd
+
+df.drop_duplicates(inplace = True)
+
+# OR
+
+df = df.drop_duplicates()
+```
+
+#### If else {-}
+
+```
+import numpy as np
+df['monthly'] = np.where((df['X'] == 1) | (df['Y'] == 1), 1, 0)
+```

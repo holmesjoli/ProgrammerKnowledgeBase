@@ -1,0 +1,71 @@
+### Web testing {-}
+
+#### Install selenium with conda {-}
+
+	1. Open Anaconda Prompt 
+	2. `conda install selenium`
+	
+Additional information about the install can be found in the Python Installation docs
+
+#### Launching a selenium driver {-}
+
+1. The python distribution of selenium relies on downloadable webdrivers^[If the webdriver download in a zipped file, be sure to upzip the file]. Chrome and Firefox drivers are preferred, though good web-testers will test across all platforms!
+
+* [Chrome](http://chromedriver.chromium.org/downloads)
+* [Firefox](https://github.com/mozilla/geckodriver/releases)
+* [Edge](https://download.microsoft.com/download/F/8/A/F8AF50AB-3C3A-4BC4-8773-DC27B32988DD/MicrosoftWebDriver.exe)
+* [Internet Explorer](https://goo.gl/fzqqyZ)
+* Safari^[Cannot be downloaded on a Windows computer]
+		
+2. Test to see if selenium is set-up properly
+	
+Open python and run the following
+	
+```
+from selenium import webdriver
+
+cpath =  'path_to_downloaded_and_unzipped_chrome_driver'
+fpath =  'path_to_downloaded_and_unzipped_firefox_driver'
+
+chrome_driver = webdriver.Chrome(executable_path = cpath)
+#OR
+firefox_driver = webdriver.Firefox(executable_path = fpath)
+```
+	
+A chrome driver and firefox driver should launch with the execution of these lines
+
+#### Version controlling drivers {-}
+
+Like any software, drivers are updated and change over time, and the way in which the selenium package interacts with these drivers is subject to change over time. A good practice, especially if others will be utilizing the same code is to version control the drivers. Otherwise other users of the code will have to go download their own drivers, which could results in different driver versions and cause issues. Drivers can be added to TFS the same way any other file is added to git. 
+
+#### Waits {-}
+
+* Explicit waits are better to use than implicit waits
+* http://toolsqa.com/selenium-webdriver/implicit-explicit-n-fluent-wait/
+
+##### Expected Conditions Waits {-}
+
+* title_is
+* title_contains
+* presence_of_element_located
+* visibility_of_element_located
+* visibility_of
+* presence_of_all_elements_located
+* text_to_be_present_in_element
+* text_to_be_present_in_element_value
+* frame_to_be_available_and_switch_to_it
+* invisibility_of_element_located
+* element_to_be_clickable
+* staleness_of
+* element_to_be_selected
+* element_located_to_be_selected
+* element_selection_state_to_be
+* element_located_selection_state_to_be
+* alert_is_present
+
+From <https://selenium-python.readthedocs.io/waits.html> 
+
+#### Speed {-}
+
+* http://letztest.blogspot.com/2016/03/10-tips-for-improving-speed-of.html
+

@@ -1,7 +1,0 @@
-# Languages
-
-```{r, child = "Python/main.Rmd"}
-```
-
-```{r, child = "R/main.Rmd"}
-```

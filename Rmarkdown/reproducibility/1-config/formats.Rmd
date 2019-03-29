@@ -1,0 +1,42 @@
+### Formats {-}
+
+Different programmers have different configuration file preferences. The common ones are YAML, JSON, and CSV.
+
+My personal preference is a YAML file and that's because you can add comments, which you can't do with JSON, and you can create a nested format, which you can't do with a CSV. The nested format makes it easy to loop through different models or dataframes which are going to utilize the same functions.
+
+#### YAML {-}
+
+```yaml
+## YAML files can be commented!
+VAR1: 1
+VAR2: 2
+```
+Some YAML notes: 
+
+* If using nested yaml structure, make sure to indent with spaces, not tabs!
+* Add a final line to a yaml config file, or some software will have difficulty reading it in
+
+#### JSON {-}
+
+```json
+{
+"VAR1": 1,
+"VAR2": 2
+}
+```
+Some JSON notes:
+
+* JSON can't do comments
+* Web-developers will often use a JSON file because JSON stands for JavaScript Object Notation
+
+#### CSV {-}
+
+```csv
+VAR1    VAR2
+1       2
+```
+
+CSV notes:
+
+* CSV files can be really handy ways to organize script parameters, especially if you're working on a team with people who aren't used to working in a JSON or YAML file
+* One limitation of a CSV is their flat structure, it's often really nice to be able to nest attributes within other sections of a config file

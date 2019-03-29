@@ -1,0 +1,22 @@
+### Converting column types {-}
+
+#### Integer to string {-}
+
+```
+df["col_str"] = df["col_int"].apply(str)
+```
+
+#### String to numeric {-}
+
+```
+import pandas as pd
+
+df["col_num"] = pd.to_numeric(df["col_str"])
+```
+
+#### String to datetime {-}
+
+```
+df["datetime"] = pd.to_datetime(df["datetime"], format="%m/%d/%Y %I:%M%p")
+df["date"] = df["datetime"].dt.date
+```

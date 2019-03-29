@@ -1,0 +1,13 @@
+## Data Management
+
+```{r child = "import_export.Rmd"}
+```
+
+```{r child = "reshape.Rmd"}
+```
+
+```{r child = "convert_columns.Rmd"}
+```
+
+```{r child = "other_dm.Rmd"}
+```

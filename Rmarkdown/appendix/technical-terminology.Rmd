@@ -3,6 +3,7 @@
 |  | Term | Definition                                                             | 
 |--|------|------------------------------------------------------------------------|
 |B|||
+||Backwards compatibility|Packages that get updated are still compatible with code developed from an earlier version of that package.|
 ||Binary package|A distribution methods to a developer who doesn't have package development tools. Also, a single file.|
 ||Bundled package|A package that's been compressed into a single file|
 |C|||

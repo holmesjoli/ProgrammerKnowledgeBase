@@ -1,0 +1,41 @@
+### Environments {#pyenvironment} {-}
+
+#### Package and environment managers {-}
+
+Most popular python tools for virtual environments:
+
+* [PIP](https://pip.pypa.io/en/stable/): Python package manager; funnily enough, it stands for "Pip Installs Packages"") 
+* [Conda](https://conda.io/): Package and environment manager
+
+```{r echo = FALSE, out.width = "75%"}
+knitr::include_graphics("./images/python_environments/conda_env.png")
+```
+
+#### Conda Environment {-}
+
+A conda environment is container that holds a specific version of the source software and packages.
+
+#### Setting Up a Conda Environment {-}
+
+1. Open Git Bash
+2. Create a new environment by typing `conda create --name NAME_OF_ENVIRONMENT`. Adding `python=3.7` or `python=2.7` specificies which python to install. If No version is specified, the root version will be used.		3. Install the packages into the environment. Type `conda install numpy`. Package versions can be specified by adding `numpy==1.11` or` numpy>=1.11`
+4. Save the environment so others can replicate it. Type `conda list -e > requirements.txt`. Version control the requirements file. Now others be able to build your exact environment, helping to mitigate python and package version issues 
+
+#### Use an already created conda environment {-}
+
+1. To see what environments exist type `conda env list`. The asterisk (*) indicates the current active environment 
+2. Activate the environment of interest. `source activate NAME_OF_ENVIRONMENT`. Activating the environment allows access to the version of python and all the packages installed in that environment
+	
+#### Copy an environment {-}
+
+1. Using the requirements.text file type `conda create --name NAME_OF_ENVIRONMENT --file requirements.txt`
+2. Activate the environment by typing `source activate NAME_OF_ENVIRONMENT`
+
+#### Deleting an environment {-}
+
+1. `conda remove --name NAME_OF_ENVIRONMENT --all`
+
+#### Resources {-}
+
+* [Anaconda commands cheat sheet](https://conda.io/docs/_downloads/conda-cheatsheet.pdf)
+* [Have you installed a Python package, but now you can't import it?](http://takluyver.github.io/posts/i-cant-import-it.html)

@@ -1,0 +1,69 @@
+### Environments {-}
+
+There are several different methods to use environments with R:
+
+* [Packrat](https://rstudio.github.io/packrat/)
+* [Anaconda](http://docs.anaconda.com/anaconda/user-guide/tasks/use-r-language/)
+* the appDependencies() function from RSConnect 
+* [checkpoint](https://github.com/RevolutionAnalytics/checkpoint)
+
+This section will primarily focus on Packrat, which is maintained by RStudio. However, if you've read the [pyenvironment] section and found that method preferable, the same method can be applied to R. 
+
+### Packrat {-}
+
+Packrat is one way R users have developed to manage packages and R versions.
+
+Packrat is:
+
+* **Isolated**: Installing a new or updated package for one project won’t break your other projects, and vice versa. That’s because packrat gives each project its own private package library.
+* **Portable**: Easily transport your projects from one computer to another, even across different platforms. Packrat makes it easy to install the packages your project depends on.
+* **Reproducible**: Packrat records the exact package versions you depend on, and ensures those exact versions are the ones that get installed wherever you go.
+
+#### Initialize packrat with a current project {-}
+
+```r
+install.packages("memoise")
+devtools::install_github("rstudio/packrat")
+packrat::init(infer.dependencies = F)
+```
+
+Note: the github version is more up-to-date than the version of packrat on CRAN
+
+#### Initialize packrat with a new package {-}
+
+While building your new package be sure to check the option highlighted in red:
+
+```{r echo = FALSE, out.width = "75%"}
+knitr::include_graphics("./images/R_environments/new_r_package.png")
+```
+
+#### Where are my project packages? {-}
+
+Packrat downloads the project-packages into several locations
+
+Base R packages: `Packrat/lib-R/32_or_64_bit_r/version_of_r`
+
+Other packages: `Packrat/lib/32_or_64_bit_r/version_of_r`
+
+### Sharing package libraries {-}
+
+There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.
+
+#### Bundling {-}
+
+1. Run `packrat::bundle()`
+2. Share the bundle with collaborators who have R. Collaborators will have to run `packrat::unbundle()` to access the code
+	
+#### Git {-}
+
+Version control these files.^[Sources: https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat, https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ, https://www.joelnitta.com/post/packrat/]
+
+1. `packrat/init.R`
+2. `packrat/packrat.lock`
+3. `packrat/packrat.opts`
+4. `packrat/src`
+5. `.Rprofile`
+
+#### Resources {-}
+
+* https://bconnelly.net/2014/07/creating-reproducible-software-environments-with-packrat/

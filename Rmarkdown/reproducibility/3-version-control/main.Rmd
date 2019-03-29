@@ -1,0 +1,28 @@
+## Git version control
+
+```{r child="intro.Rmd"}
+```
+
+```{r child="repo_setup.Rmd"}
+```
+
+```{r child="git-workflow.Rmd"}
+```
+
+```{r child="dos-and-donts.Rmd"}
+```
+
+```{r child="gitignore.Rmd"}
+```
+
+```{r child="common-commands.Rmd"}
+```
+
+```{r child="vim.Rmd"}
+```
+
+```{r child="practice.Rmd"}
+```
+
+```{r child="glossary.Rmd"}
+```

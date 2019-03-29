@@ -4,25 +4,34 @@
 knitr::opts_chunk$set(echo = FALSE, eval = TRUE)
 ```
 
-```{r child = "01-introduction/main.Rmd"}
+# (PART) Robust, Quality Code {-}
+
+```{r child = "introduction/main.Rmd"}
 ```
 
-```{r child = "02-reproducibility/main.Rmd"}
+```{r child = "reproducibility/main.Rmd"}
 ```
 
-```{r child = "03-quality/main.Rmd"}
+```{r child = "quality/main.Rmd"}
 ```
 
-```{r child = "04-efficiency/main.Rmd"}
+```{r child = "efficiency/main.Rmd"}
 ```
 
-```{r child = "05-languages/main.Rmd"}
+# (PART) Languages {-}
+
+```{r, child = "Python/main.Rmd"}
 ```
 
-```{r child = "06-web/main.Rmd"}
+```{r, child = "R/main.Rmd"}
 ```
 
-```{r child = "07-data-visualization/main.Rmd"}
+# (PART) Other {-}
+
+```{r child = "web/main.Rmd"}
+```
+
+```{r child = "data-visualization/main.Rmd"}
 ```
 
 ```{r child = "appendix/main.Rmd"}

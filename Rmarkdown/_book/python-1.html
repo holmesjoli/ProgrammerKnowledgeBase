@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="reproducibility-1.html">
+<link rel="prev" href="quality-1.html">
+<link rel="next" href="r-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -225,95 +225,290 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<p>Welcome to the Programmer Knowledge Base. Over the last few years, I’ve noticed that young data scientists are often very statistically advanced, but are sometimes programmatically beginners. The goal of this book is to introduce some best programming practices to produce high-quality code.</p>
-<p>The best practices are first introduced as concept and then are exemplied for several different languages.</p>
-<div id="the-scenarios" class="section level2">
-<h2><span class="header-section-number">1.1</span> The scenarios</h2>
-<p>Imagine that you worked on a project a year, or even several months ago. While you were working on that project you knew everything about it, the ins and outs and all the fine print. Now several weeks, months, or maybe even a year has passed and someone comes to you to ask how you generated the result.</p>
-<p>You go back to the code to look it up and give them some more details, but then you remember that you left the project folder a little messier than intended and never had to the time to go back and clean it up. In fact, it was a mad scramble until the end, so things are definitely messy. As you’re looking over the output, you try to recall if you turned in final_final_final_v2 or final_final_v3 report. And which code created that output, create_df1_final or create_df2.2? But wasn’t there a bug in create_df2.2 that you found right before the output was due, so you actually used create_df1_final_JH? But maybe another programmer worked on that part with you, so did you use their version or yours? Wow, you wish you had updated the documentation to tell you how to run the program in the first place. Because you vagually recall there was some other script you had to run befor eyou could run create_df1_final_JH. And once you think you’ve maybe figured out which code was used to create which output, you realize all the packages you used have been updated since, so some of the functions you wrote have stopped working correctly.</p>
-<p>Or maybe this is the scenario. Another programmer left the company a week ago and you’re responsible for picking up the pieces. You open the folder. There’s a word document with a few vague guidelines about how the program is supposed to run that was updated 3 months ago, when the code as updated 1 month ago. Scripts are poorly named, and you’re really unsure where to start. You open the first script that says <em>main</em> and it’s 4000 lines long. There are some functions in that script, but none of the functions have any documentation. Well this is going to be fun you think as you see for-loops nested in for-loops nested in for-loops …</p>
-<p>Or maybe it’s this scenario. You’re trying to re-create summarized tables from a code base. The numbers just seem a little off and you want to verify the results make sense. But the code wasn’t version controlled, and the data that were used to create the aggregate tables were overwritten several times because the name was hardcoded and there wasn’t a date or anything else that changed. Any attempt of tracing back the original code to create the original output is gone.</p>
-<p>Or maybe this scenario. You shipped the output to the client/partner. Hallelujah! You reviewed the output and your co-workers did too. Several weeks later your recoding something and you notice some of the numbers seem really off, like magnitudes different than the output your sent before. Oh no, you’ve discovered the bug in the code after it gets shipped to the client/partner. Or maybe you discover just before you ship the output to the client/partner, but it’s a mad scramble and everyone has to re-run their individual piece of the pipeline. Yikes!!</p>
-<p>STOPPPPPP!</p>
-<p>I think a lot of folks working on teams with data have come across at least one, if not multiple of these scenarios. Even teams that really stress QA/QC can find themselves in these situations. They’re uncomfortable, stressful, and often result in some later work nights than intended. I have personally come across all of these and contributed to several when I didn’t have guidance on how to do things better. Thankfully a lot of smart people, who have spent a longer time than myself thinking about and dealing with these issues, have come up with some great solutions!</p>
+<div id="python-1" class="section level1">
+<h1><span class="header-section-number">4</span> Python</h1>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">4.1</span> Introduction</h2>
+<p>Python is primary used for web testing, pipelining, data management, data science, and visualization.</p>
+<div id="installation" class="section level3 unnumbered">
+<h3>Installation</h3>
+<ol style="list-style-type: decimal">
+<li>Download <a href="https://www.anaconda.com/distribution/">Python 3.7.0</a> from Anaconda</li>
+<li>Open Bash and check that Python is saved to the AppData folder
+<ol style="list-style-type: lower-alpha">
+<li><code>where python</code> should return something like <code>C:\Users\jh111\AppData\Local\Continuum\anaconda3\python.exe</code></li>
+<li><code>where pip</code> should return something like <code>C:\Users\jh111\AppData\Local\Continuum\anaconda3\Scripts\pip.exe</code></li>
+</ol></li>
+<li>If either of these throw an error, like “could not find files…”, python and pip need to be added to the PATH environment variable</li>
+</ol>
 </div>
-<div id="some-solutions" class="section level2">
-<h2><span class="header-section-number">1.2</span> Some solutions</h2>
-<p>The simple solution is this: lets build robust high-quality code.</p>
-<p>What do we mean by ‘robust high-quality code’?</p>
-<p>In my mind, there are several parts to robust high-quality code. High-quality code a) is reproducible across three dimensions: people, time, and machines and b) efficient c) tested.</p>
-<div id="reproducibility" class="section level3 unnumbered">
-<h3>Reproducibility</h3>
-<p>“There’s always at least two people on a project, you and future you”.</p>
+<div id="anaconda-background" class="section level3 unnumbered">
+<h3>Anaconda Background</h3>
+<p>We use the Anaconda distribution of python. There are several advantages to using Anaconda over base python, including:</p>
 <ul>
-<li><strong>People</strong>: code should be reproducible across multiple programmers. Programmer B should be able to run Programmer A’s output and return the same output.</li>
-<li><strong>Time</strong>: code should be reproducible across time. Code run today should still be able to be run a year from now and return the same output.</li>
-<li><strong>Software/Machines</strong>: Code should not be machine specific! This is an especially important concept for those using open-source software. Open-source software can change extremely quickly, and functions or packages that were used a month ago, may no longer work in the same way or have the same functions today.</li>
-</ul>
-<p>There’s no one way to maintain reproducible code bases across these three dimensions, but there are several best practices that the broader data science, statistics, and computer science communities seem be in consensus on.</p>
-<p>Specificially we’ll talk about<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>:</p>
-<ul>
-<li>Configuration files</li>
-<li>Documentation</li>
-<li>Code version control and the software development lifecycle</li>
-<li>Virtual environments and package managers</li>
-<li>Building packages</li>
-<li>Data Archiving</li>
-</ul>
-<div id="repetition-vs.replication-vs.reproduction" class="section level4 unnumbered">
-<h4>Repetition vs. Replication vs. Reproduction</h4>
-<table>
-<thead>
-<tr class="header">
-<th>Repetition</th>
-<th>Replication</th>
-<th>Reproduction</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Same Lab</td>
-<td>Different Lab</td>
-<td>Different Lab</td>
-</tr>
-<tr class="even">
-<td>Same Methods</td>
-<td>Same Methods</td>
-<td>Different Methods</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="quality" class="section level3 unnumbered">
-<h3>Quality</h3>
-<p>Testing is an integral part to being a good programmer, whether you’re building software for an application or building software for data analysis, it is integral to test code.</p>
-<p>Specifically we’ll talk about:</p>
-<ul>
-<li>Code Review</li>
-<li>Assertions</li>
-<li>Unit testing</li>
-<li>Integration testing</li>
+<li>An Anaconda installation comes with pre-built binaries for many popular packages, including several that we use frequently (numpy, pandas). Installing some of these (e.g. numpy) without Anaconda is very tricky and requires administrator permissions.</li>
+<li>Anaconda comes with very nice environment management tools, which not only allow you to manage your package dependencies per-project, but also your python version.</li>
 </ul>
 </div>
-<div id="efficiency" class="section level3 unnumbered">
-<h3>Efficiency</h3>
-<p>Specifically we’ll talk about:</p>
+</div>
+<div id="reproducibility-2" class="section level2">
+<h2><span class="header-section-number">4.2</span> Reproducibility</h2>
+<div id="environments-pyenvironment" class="section level3 unnumbered">
+<h3>Environments {#pyenvironment}</h3>
+<div id="package-and-environment-managers" class="section level4 unnumbered">
+<h4>Package and environment managers</h4>
+<p>Most popular python tools for virtual environments:</p>
 <ul>
-<li>Benchmarking</li>
-<li>Profiling</li>
-<li>Parallel processing</li>
-<li>Computing resources (Azure, AWS, etc.)</li>
+<li><a href="https://pip.pypa.io/en/stable/">PIP</a>: Python package manager; funnily enough, it stands for “Pip Installs Packages”“)</li>
+<li><a href="https://conda.io/">Conda</a>: Package and environment manager</li>
 </ul>
+<p><img src="images/python_environments/conda_env.png" width="75%" /></p>
+</div>
+<div id="conda-environment" class="section level4 unnumbered">
+<h4>Conda Environment</h4>
+<p>A conda environment is container that holds a specific version of the source software and packages.</p>
+</div>
+<div id="setting-up-a-conda-environment" class="section level4 unnumbered">
+<h4>Setting Up a Conda Environment</h4>
+<ol style="list-style-type: decimal">
+<li>Open Git Bash</li>
+<li>Create a new environment by typing <code>conda create --name NAME_OF_ENVIRONMENT</code>. Adding <code>python=3.7</code> or <code>python=2.7</code> specificies which python to install. If No version is specified, the root version will be used. 3. Install the packages into the environment. Type <code>conda install numpy</code>. Package versions can be specified by adding <code>numpy==1.11</code> or<code>numpy&gt;=1.11</code></li>
+<li>Save the environment so others can replicate it. Type <code>conda list -e &gt; requirements.txt</code>. Version control the requirements file. Now others be able to build your exact environment, helping to mitigate python and package version issues</li>
+</ol>
+</div>
+<div id="use-an-already-created-conda-environment" class="section level4 unnumbered">
+<h4>Use an already created conda environment</h4>
+<ol style="list-style-type: decimal">
+<li>To see what environments exist type <code>conda env list</code>. The asterisk (*) indicates the current active environment</li>
+<li>Activate the environment of interest. <code>source activate NAME_OF_ENVIRONMENT</code>. Activating the environment allows access to the version of python and all the packages installed in that environment</li>
+</ol>
+</div>
+<div id="copy-an-environment" class="section level4 unnumbered">
+<h4>Copy an environment</h4>
+<ol style="list-style-type: decimal">
+<li>Using the requirements.text file type <code>conda create --name NAME_OF_ENVIRONMENT --file requirements.txt</code></li>
+<li>Activate the environment by typing <code>source activate NAME_OF_ENVIRONMENT</code></li>
+</ol>
+</div>
+<div id="deleting-an-environment" class="section level4 unnumbered">
+<h4>Deleting an environment</h4>
+<ol style="list-style-type: decimal">
+<li><code>conda remove --name NAME_OF_ENVIRONMENT --all</code></li>
+</ol>
+</div>
+<div id="resources-1" class="section level4 unnumbered">
+<h4>Resources</h4>
+<ul>
+<li><a href="https://conda.io/docs/_downloads/conda-cheatsheet.pdf">Anaconda commands cheat sheet</a></li>
+<li><a href="http://takluyver.github.io/posts/i-cant-import-it.html">Have you installed a Python package, but now you can’t import it?</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="quality-2" class="section level2">
+<h2><span class="header-section-number">4.3</span> Quality</h2>
+</div>
+<div id="efficiency-1" class="section level2">
+<h2><span class="header-section-number">4.4</span> Efficiency</h2>
+</div>
+<div id="data-management" class="section level2">
+<h2><span class="header-section-number">4.5</span> Data Management</h2>
+<div id="import" class="section level3 unnumbered">
+<h3>Import</h3>
+<div id="sas-1" class="section level4 unnumbered">
+<h4>SAS</h4>
+<pre><code>import pandas as pd
+
+df = pd.read_sas(file, format = &quot;sas7bdat&quot;, encoding = &quot;iso-8859-1&quot;)</code></pre>
+<p>Pandas 0.23.4+ works better</p>
+</div>
+<div id="excel" class="section level4 unnumbered">
+<h4>Excel</h4>
+<pre><code>import pandas as pd 
+
+xl = pd.ExcelFile(file)
+df = xl.parse(&#39;SHEET_NAME&#39;)</code></pre>
+</div>
+<div id="csv-1" class="section level4 unnumbered">
+<h4>CSV</h4>
+<pre><code>import pandas as pd
+
+df = pd.read_csv(file, encoding=&quot;ISO-8859-1&quot;)</code></pre>
+</div>
+</div>
+<div id="export" class="section level3 unnumbered">
+<h3>Export</h3>
+<div id="csv-2" class="section level4 unnumbered">
+<h4>CSV</h4>
+<pre><code>import pandas as pd
+
+df.to_csv(&quot;path/name_of_file.csv&quot;)</code></pre>
+</div>
+<div id="excel-1" class="section level4 unnumbered">
+<h4>Excel</h4>
+<pre><code>import pandas as pd
+
+df.to_excel(&quot;df.xlsx&quot;, sheet_name = &quot;Sheet 1&quot;)</code></pre>
+</div>
+</div>
+<div id="reshaping" class="section level3 unnumbered">
+<h3>Reshaping</h3>
+<div id="wide-to-long" class="section level4 unnumbered">
+<h4>Wide to Long</h4>
+<pre><code>import pandas as pd
+
+df_long = pd.melt(df, id_vars = &#39;state&#39;, value_vars = cols)</code></pre>
+<p><a href="https://stackoverflow.com/questions/36537945/reshape-wide-to-long-in-pandas">Stack Overflow</a></p>
+</div>
+<div id="long-to-wide" class="section level4 unnumbered">
+<h4>Long to Wide</h4>
+<pre><code>import pandas as pd
+df_wide = df.pivot(index, columns, values)</code></pre>
+<ul>
+<li>Index is the column of columns to keep in long format</li>
+<li>Columns are the columns that will go from long to wide</li>
+<li>Values are the values which will populate the columns</li>
+</ul>
+<p><a href="https://stackoverflow.com/questions/22798934/pandas-long-to-wide-reshape-by-two-variables">Stack Overflow</a></p>
+</div>
+</div>
+<div id="converting-column-types" class="section level3 unnumbered">
+<h3>Converting column types</h3>
+<div id="integer-to-string" class="section level4 unnumbered">
+<h4>Integer to string</h4>
+<pre><code>df[&quot;col_str&quot;] = df[&quot;col_int&quot;].apply(str)</code></pre>
+</div>
+<div id="string-to-numeric" class="section level4 unnumbered">
+<h4>String to numeric</h4>
+<pre><code>import pandas as pd
+
+df[&quot;col_num&quot;] = pd.to_numeric(df[&quot;col_str&quot;])</code></pre>
+</div>
+<div id="string-to-datetime" class="section level4 unnumbered">
+<h4>String to datetime</h4>
+<pre><code>df[&quot;datetime&quot;] = pd.to_datetime(df[&quot;datetime&quot;], format=&quot;%m/%d/%Y %I:%M%p&quot;)
+df[&quot;date&quot;] = df[&quot;datetime&quot;].dt.date</code></pre>
+</div>
+</div>
+<div id="other-common-data-management-functions" class="section level3 unnumbered">
+<h3>Other common data management functions</h3>
+<div id="rename-columns" class="section level4 unnumbered">
+<h4>Rename columns</h4>
+<pre><code>import pandas as pd
+df.rename(columns = {&quot;old_name&quot;: &quot;new_name&quot;}, inplace = True)
+
+# OR
+
+df = df.rename(columns = {&quot;old_name&quot;: &quot;new_name&quot;})
+</code></pre>
+</div>
+<div id="drop-duplicates" class="section level4 unnumbered">
+<h4>Drop duplicates</h4>
+<pre><code>import pandas as pd
+
+df.drop_duplicates(inplace = True)
+
+# OR
+
+df = df.drop_duplicates()</code></pre>
+</div>
+<div id="if-else" class="section level4 unnumbered">
+<h4>If else</h4>
+<pre><code>import numpy as np
+df[&#39;monthly&#39;] = np.where((df[&#39;X&#39;] == 1) | (df[&#39;Y&#39;] == 1), 1, 0)</code></pre>
+</div>
+</div>
+</div>
+<div id="modeling" class="section level2">
+<h2><span class="header-section-number">4.6</span> Modeling</h2>
+</div>
+<div id="visualization" class="section level2">
+<h2><span class="header-section-number">4.7</span> Visualization</h2>
+</div>
+<div id="web" class="section level2">
+<h2><span class="header-section-number">4.8</span> Web</h2>
+<div id="web-testing" class="section level3 unnumbered">
+<h3>Web testing</h3>
+<div id="install-selenium-with-conda" class="section level4 unnumbered">
+<h4>Install selenium with conda</h4>
+<pre><code>1. Open Anaconda Prompt 
+2. `conda install selenium`</code></pre>
+<p>Additional information about the install can be found in the Python Installation docs</p>
+</div>
+<div id="launching-a-selenium-driver" class="section level4 unnumbered">
+<h4>Launching a selenium driver</h4>
+<ol style="list-style-type: decimal">
+<li>The python distribution of selenium relies on downloadable webdrivers<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>. Chrome and Firefox drivers are preferred, though good web-testers will test across all platforms!</li>
+</ol>
+<ul>
+<li><a href="http://chromedriver.chromium.org/downloads">Chrome</a></li>
+<li><a href="https://github.com/mozilla/geckodriver/releases">Firefox</a></li>
+<li><a href="https://download.microsoft.com/download/F/8/A/F8AF50AB-3C3A-4BC4-8773-DC27B32988DD/MicrosoftWebDriver.exe">Edge</a></li>
+<li><a href="https://goo.gl/fzqqyZ">Internet Explorer</a></li>
+<li>Safari<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Test to see if selenium is set-up properly</li>
+</ol>
+<p>Open python and run the following</p>
+<pre><code>from selenium import webdriver
+
+cpath =  &#39;path_to_downloaded_and_unzipped_chrome_driver&#39;
+fpath =  &#39;path_to_downloaded_and_unzipped_firefox_driver&#39;
+
+chrome_driver = webdriver.Chrome(executable_path = cpath)
+#OR
+firefox_driver = webdriver.Firefox(executable_path = fpath)</code></pre>
+<p>A chrome driver and firefox driver should launch with the execution of these lines</p>
+</div>
+<div id="version-controlling-drivers" class="section level4 unnumbered">
+<h4>Version controlling drivers</h4>
+<p>Like any software, drivers are updated and change over time, and the way in which the selenium package interacts with these drivers is subject to change over time. A good practice, especially if others will be utilizing the same code is to version control the drivers. Otherwise other users of the code will have to go download their own drivers, which could results in different driver versions and cause issues. Drivers can be added to TFS the same way any other file is added to git.</p>
+</div>
+<div id="waits" class="section level4 unnumbered">
+<h4>Waits</h4>
+<ul>
+<li>Explicit waits are better to use than implicit waits</li>
+<li><a href="http://toolsqa.com/selenium-webdriver/implicit-explicit-n-fluent-wait/" class="uri">http://toolsqa.com/selenium-webdriver/implicit-explicit-n-fluent-wait/</a></li>
+</ul>
+<div id="expected-conditions-waits" class="section level5 unnumbered">
+<h5>Expected Conditions Waits</h5>
+<ul>
+<li>title_is</li>
+<li>title_contains</li>
+<li>presence_of_element_located</li>
+<li>visibility_of_element_located</li>
+<li>visibility_of</li>
+<li>presence_of_all_elements_located</li>
+<li>text_to_be_present_in_element</li>
+<li>text_to_be_present_in_element_value</li>
+<li>frame_to_be_available_and_switch_to_it</li>
+<li>invisibility_of_element_located</li>
+<li>element_to_be_clickable</li>
+<li>staleness_of</li>
+<li>element_to_be_selected</li>
+<li>element_located_to_be_selected</li>
+<li>element_selection_state_to_be</li>
+<li>element_located_selection_state_to_be</li>
+<li>alert_is_present</li>
+</ul>
+<p>From <a href="https://selenium-python.readthedocs.io/waits.html" class="uri">https://selenium-python.readthedocs.io/waits.html</a></p>
+</div>
+</div>
+<div id="speed" class="section level4 unnumbered">
+<h4>Speed</h4>
+<ul>
+<li><a href="http://letztest.blogspot.com/2016/03/10-tips-for-improving-speed-of.html" class="uri">http://letztest.blogspot.com/2016/03/10-tips-for-improving-speed-of.html</a></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>note: these topics are not listed in order of importance, they are all very important!<a href="introduction.html#fnref1">↩</a></p></li>
+<ol start="4">
+<li id="fn4"><p>If the webdriver download in a zipped file, be sure to upzip the file<a href="python-1.html#fnref4">↩</a></p></li>
+<li id="fn5"><p>Cannot be downloaded on a Windows computer<a href="python-1.html#fnref5">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -321,8 +516,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="reproducibility-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="quality-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

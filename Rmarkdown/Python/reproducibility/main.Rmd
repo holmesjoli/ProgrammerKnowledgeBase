@@ -1,0 +1,4 @@
+## Reproducibility
+
+```{r child="environments.Rmd"}
+```
