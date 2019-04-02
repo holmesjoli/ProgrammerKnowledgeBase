@@ -9,17 +9,11 @@
 ```{r child = "quality/main.Rmd"}
 ```
 
-```{r child = "efficiency/main.Rmd"}
-```
-
 ```{r child = "data-management/main.Rmd"}
 ```
 
 ```{r child = "modeling/main.Rmd"}
 ```
 
-```{r child = "visualization/main.Rmd"}
-```
-
-```{r child = "web/main.Rmd"}
+```{r child = "resources.Rmd"}
 ```

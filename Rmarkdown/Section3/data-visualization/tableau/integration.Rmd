@@ -1,0 +1,33 @@
+### Integration with Statistical Software {-}
+
+Tableau can integrate with both Python and R, such that Python or R code can be evaluated from within a Tableau workbook. This allows for the use of a number of machine learning packages and model predictions to be executed inside Tableau. Instead of writing an R or Python script outside of Tableau, running the model, exporting the results as data, importing those data back into Tableau, everything can be done in one software, which simplifies things significantly!
+
+Tableau relies on two packages the [Rserve](https://cran.r-project.org/web/packages/Rserve/Rserve.pdf) package for R-users and the [TabPy](https://github.com/tableau/TabPy) package for python-users. 
+
+#### Tableau Script Functions {-}
+
+There are 4 script function in Tableau, which are used to return vectors from R/Python of specific types.
+
+* SCRIPT_REAL() Returns real, or decimal, numbers
+* SCRIPT_INT() Returns integer, or whole, numbers
+* SCRIPT_STR() Returns strings (words and text)
+* SCRIPT_BOOL() Returns booleans (true/false)
+
+#### Helpful tips {-}
+
+* All input vectors and the output vector must be of the same length
+* External service connections can only return one vector at a time
+* [Parameters] need some special treatment: .argn[1] instead of .argn
+* Calculation scope is defined by the addressing & partitioning settings of the Table Calculation
+
+#### Resources {-}
+
+**Accelerate Your Advanced Analytics R, Python & MATLAB**
+
+* [Video](https://www.youtube.com/watch?v=i3zU7ufn1-8&feature=youtu.be)
+* [Powerpoint](https://tc18.tableau.com/sites/default/files/session/assets/18BI-002-R1_Accelerate%20Your%20Advanced%20Analytics%20R%2C%20Python%20%26%20MATLAB%20%28.pdf)
+
+**Data Science Applications with TabPy/R**
+
+* [Video](https://www.youtube.com/watch?v=nRtOMTnBz_Y&feature=youtu.be)
+* [Powerpoint](https://tc18.tableau.com/sites/default/files/session/assets/18BI-009_Building_Data_Science_Applications_in_Tableau.pdf)

@@ -1,0 +1,25 @@
+### Package Development {-}
+
+If you're going to be developing packages, I would strongly suggest reading Hadley Wickham's [R-packages](http://r-pkgs.had.co.nz/r.html). It's a great place to start learning how to develop a package. 
+
+#### General Guidelines {-}
+
+* NEVER use `library(foo)` or `require(foo)`
+	* Code in a package is only executed when the package is built. It doesn't get re-executed when the package is loaded, so the code won't work when a user of the package loads a function that requires foo
+	* Put dependencies in the DEPENDENCIES file of the R package
+* NEVER use `source("script.R")`
+	* The source call modifies the current environment
+	* Instead use `devtools::load_all()`
+* When relying on other packages, refer to the these through `package::function()`
+
+#### Documentation {-}
+
+* Add Roxygen comments to add functions
+* `devtools::document()` will take Roxygen comments and turn them into .Rd files
+  * An Rd file is a documentation for a single R function that can be accessed from the console using `?function_name`
+
+#### Resources {-}
+
+* https://masalmon.eu/2017/12/11/goodrpackages/
+* [R extensions manual](https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages)
+

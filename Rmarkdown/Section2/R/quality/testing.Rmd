@@ -1,0 +1,20 @@
+### Testing {-}
+
+The most popular testing library in R is probably Hadley Wickham's testthat package.
+
+Run the following code to automatically generate the `tests/testthat` directory. Test files like in the `tests/testthat` directory.
+
+```
+usethis::use_testthat()
+```
+
+The name of the file must start with test, e.g. `test_package.R`
+
+Tests are organized hierarchically, expectations are grouping into tests which are organized into files
+
+Tests should have descriptive names, so that the message associated with the test helps you to quickly identify the problem
+
+#### Resources {-}
+
+* http://r-pkgs.had.co.nz/tests.html#test-workflow
+* https://journal.r-project.org/archive/2011/RJ-2011-002/RJ-2011-002.pdf

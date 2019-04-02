@@ -4,15 +4,23 @@ Welcome to the Programmer Knowledge Base. Over the last few years, I've noticed 
 
 The best practices are first introduced as concept and then are exemplied for several different languages.
 
-## The scenarios 
+## Some scenarios 
+
+
+### Scenario 1 {-}
 
 Imagine that you worked on a project a year, or even several months ago. While you were working on that project you knew everything about it, the ins and outs and all the fine print. Now several weeks, months, or maybe even a year has passed and someone comes to you to ask how you generated the result. 
 
 You go back to the code to look it up and give them some more details, but then you remember that you left the project folder a little messier than intended and never had to the time to go back and clean it up. In fact, it was a mad scramble until the end, so things are definitely messy. As you're looking over the output, you try to recall if you turned in final_final_final_v2 or final_final_v3 report. And which code created that output, create_df1_final or create_df2.2? But wasn't there a bug in create_df2.2 that you found right before the output was due, so you actually used create_df1_final_JH? But maybe another programmer worked on that part with you, so did you use their version or yours? Wow, you wish you had updated the documentation to tell you how to run the program in the first place. Because you vagually recall there was some other script you had to run befor eyou could run create_df1_final_JH. And once you think you've maybe figured out which code was used to create which output, you realize all the packages you used have been updated since, so some of the functions you wrote have stopped working correctly.  
 
-Or maybe this is the scenario. Another programmer left the company a week ago and you're responsible for picking up the pieces. You open the folder. There's a word document with a few vague guidelines about how the program is supposed to run that was updated 3 months ago, when the code as updated 1 month ago. Scripts are poorly named, and you're really unsure where to start. You open the first script that says *main* and it's 4000 lines long. There are some functions in that script, but none of the functions have any documentation. Well this is going to be fun you think as you see for-loops nested in for-loops nested in for-loops ...
+### Scenario 2 {-}
 
-Or maybe it's this scenario. You're trying to re-create summarized tables from a code base. The numbers just seem a little off and you want to verify the results make sense. But the code wasn't version controlled, and the data that were used to create the aggregate tables were overwritten several times because the name was hardcoded and there wasn't a date or anything else that changed. Any attempt of tracing back the original code to create the original output is gone. 
+Another programmer left the company a week ago and you're responsible for picking up the pieces. You open the folder. There's a word document with a few vague guidelines about how the program is supposed to run that was updated 3 months ago, when the code as updated 1 month ago. Scripts are poorly named, and you're really unsure where to start. You open the first script that says *main* and it's 4000 lines long. There are some functions in that script, but none of the functions have any documentation. Well this is going to be fun you think as you see for-loops nested in for-loops nested in for-loops ...
+
+### Scenario 3 {-}
+
+You're trying to re-create summarized tables from a code base. The numbers just seem a little off and you want to verify the results make sense. But the code wasn't version controlled, and the data that were used to create the aggregate tables were overwritten several times because the name was hardcoded and there wasn't a date or anything else that changed. Any attempt of tracing back the original code to create the original output is gone. 
+### Scenario 4 {-}
 
 Or maybe this scenario. You shipped the output to the client/partner. Hallelujah! You reviewed the output and your co-workers did too. Several weeks later your recoding something and you notice some of the numbers seem really off, like magnitudes different than the output your sent before. Oh no, you've discovered the bug in the code after it gets shipped to the client/partner. Or maybe you discover just before you ship the output to the client/partner, but it's a mad scramble and everyone has to re-run their individual piece of the pipeline. Yikes!! 
 

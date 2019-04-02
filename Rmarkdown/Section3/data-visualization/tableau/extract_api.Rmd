@@ -1,0 +1,40 @@
+### Tableau Extract API {-}
+
+The Tableau Extract API is for ...
+
+#### Set-up {-}
+
+1. Download the [Tableau Extract API](https://downloads.tableau.com/tssoftware/extractapi-py-x64-10-5-3.zip)
+2. Extract the contents of the zip file to your repositories folder, and rename the folder tableausdk
+3. Create and activate new python environment 
+```
+conda create --name Tableau python = 3.6.5
+source activate Tableau
+```
+
+4. Build the library from the command line
+```
+python setup.py build
+python setup.py install
+```
+
+5. Write the python script
+
+```{python, eval = FALSE}
+from tableausdk import *
+from tableausdk.HyperExtract import *
+
+def main():
+  """
+  """
+  
+if __name__ == "main":
+  main()
+```
+
+#### Resources {-}
+
+**Leveraging the Extract API to build sophisticated data models**
+
+* [Video](https://www.youtube.com/watch?v=kk01bWEALXs&feature=youtu.be)
+* [Powerpoint](https://tc18.tableau.com/sites/default/files/session/assets/18BI-081_Leveraging%20the%20Extract%20API%20to%20build%20sophisticated%20data%20models.pdf)

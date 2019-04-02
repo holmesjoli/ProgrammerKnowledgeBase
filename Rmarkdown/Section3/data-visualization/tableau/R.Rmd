@@ -1,0 +1,40 @@
+### R {-}
+
+#### Connect R and Tableau {-}
+
+#### In R {-}
+
+1. Install the Rserve package `install.packages("Rserve")`
+2. In the R console type `Rserve::Rserve(port = 6311)`
+
+#### In Tableau {-}
+
+1. Connect Tableau to R Server
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/tableau/connecting_to_server.png")
+```
+
+2. Choose R settings
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/tableau/connect_to_rserve.png")
+```
+
+3. Test the connection to makes sure it says "successfully connected to the external service"
+
+#### Workflow {-}
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/tableau/R_tableau_workflow.png")
+```
+
+[Source](https://tc18.tableau.com/learn/sessions/32353)
+
+#### Resources {-}
+
+* [Using R and Tableau Whitepaper](https://www.tableau.com/learn/whitepapers/using-r-and-tableau)
+* [Integrate R and Tableau Tutorial](https://www.tableau.com/learn/tutorials/on-demand/how-integrate-r-and-tableau)
+* [Using R within Tableau Tutorial](https://www.tableau.com/learn/tutorials/on-demand/using-r-within-tableau?product=tableau_desktop&version=tableau_desktop_2019_1&topic=calculations)
+* [R and Tableau Data Science Speed](https://www.tableau.com/learn/webinars/r-and-tableau-data-science-speed-thought-Asia?__src=liftigniter&__widget=learn-recs-li&li_source=LI&li_medium=learn-recs-li)
+

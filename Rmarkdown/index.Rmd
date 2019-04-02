@@ -1,38 +1,44 @@
 # Preface {-}
 
+I started thinking about how to be a better programmer while I worked for Mathematica Policy Research. Mathematica is a mid-size company, with 100s of on-going projects, and at Mathematica every project did it differently. 
+
+However, within the programmer community at Mathematica, there was a strong push, by myself and others, to make best practices more systematic, standardized, to make code efficient, high-quality, and more robust to errors. It is from many of their senior programmers, who invested there time to teach me, that I learned these techniques. It was with these folks, that I started to develop the ideas and methods for this book. A big thanks to Eva Ward, Brian Hunscher, Linus Marco, Michael Sisti, and many others! 
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, eval = TRUE)
 ```
 
 # (PART) Robust, Quality Code {-}
 
-```{r child = "introduction/main.Rmd"}
+```{r child = "Section1/introduction/main.Rmd"}
 ```
 
-```{r child = "reproducibility/main.Rmd"}
+```{r child = "Section1/reproducibility/main.Rmd"}
 ```
 
-```{r child = "quality/main.Rmd"}
+```{r child = "Section1/quality/main.Rmd"}
 ```
 
-```{r child = "efficiency/main.Rmd"}
+```{r child = "Section1/efficiency/main.Rmd"}
 ```
 
 # (PART) Languages {-}
 
-```{r, child = "Python/main.Rmd"}
+```{r, child = "Section2/Python/main.Rmd"}
 ```
 
-```{r, child = "R/main.Rmd"}
+```{r, child = "Section2/R/main.Rmd"}
 ```
 
 # (PART) Other {-}
 
-```{r child = "web/main.Rmd"}
+```{r child = "Section3/web/main.Rmd"}
 ```
 
-```{r child = "data-visualization/main.Rmd"}
+```{r child = "Section3/data-visualization/main.Rmd"}
 ```
 
-```{r child = "appendix/main.Rmd"}
+# (PART) Appendix {-}
+```{r child = "Appendix/main.Rmd"}
 ```

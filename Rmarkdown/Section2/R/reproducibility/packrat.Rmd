@@ -22,7 +22,6 @@ Packrat is:
 #### Initialize packrat with a current project {-}
 
 ```r
-install.packages("memoise")
 devtools::install_github("rstudio/packrat")
 packrat::init(infer.dependencies = F)
 ```
@@ -45,7 +44,7 @@ Base R packages: `Packrat/lib-R/32_or_64_bit_r/version_of_r`
 
 Other packages: `Packrat/lib/32_or_64_bit_r/version_of_r`
 
-### Sharing package libraries {-}
+#### Sharing package libraries {-}
 
 There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.
 

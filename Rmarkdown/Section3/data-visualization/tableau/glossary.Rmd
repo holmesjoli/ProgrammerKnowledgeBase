@@ -1,0 +1,20 @@
+### Glossary {-}
+
+|  |Term  |Definition     |
+|--|------|------------------------------------------------------------------------|
+|D|||		
+||Data blend|Combining data from multiple data sources into one view. Sends separate queries to the different data sources and then aggregates the data in Tableau.| 
+||Data source|A connection to a database or other place where data are stored.|
+||Dimension|A dimension is a field that is independent. By default, Tableau treats any field containing qualitative, categorical information as a dimension.|
+||Drilling down|Expanding out a hierarchy; 'drilling down' to the next level of detail.|
+|E|||		
+||Extract|A snapshot of the data (.tde or .hyper file)|
+|L|||		
+||Live connection|A data source that contains a direct connection to underlying data which provides real-time or near real-time data|
+|M|||
+||Measure|A variable that is a dependnet variable. Tableau treats any field containing numeric information as a measure.
+|P|||
+||Parameter||
+|T|||		
+||TDE|A .tde file is a Tableau Data Extract File. A TDE is a compressed snapshot of the data stored on disk and loaded into memory as required to render a Tableau visualization.|
+

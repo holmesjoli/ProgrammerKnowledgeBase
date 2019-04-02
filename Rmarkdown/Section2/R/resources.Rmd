@@ -1,0 +1,31 @@
+## Resources
+
+### General {-}
+
+* [Advanced R](http://adv-r.had.co.nz/) - Hadley Wickham
+* [Swirl Courses](http://swirlstats.com/scn/title.htmls)
+* [Swirl Courses Git Repo](https://github.com/swirldev/swirl_courses)
+* [Quick R](https://www.statmethods.net/) - Rob Kabacoff
+
+### Style Guides {-}
+
+* [R Style Guide](http://adv-r.had.co.nz/Style.html) - Hadley Wickham
+* [Google Style Guide](https://google.github.io/styleguide/Rguide.xml) - Google
+
+### Data Management {-}
+
+* [Data wrangling cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) - Rstudio
+
+### Package Development {-}
+
+* [R Packages](http://r-pkgs.had.co.nz/) - Hadley Wickham
+
+### Data Science {-}
+
+* [R for Data Science](https://r4ds.had.co.nz/) - Hadley Wickham
+
+### Visualization {-}
+
+* [ggplot2](https://www.amazon.com/dp/0387981403/ref=cm_sw_su_dp?tag=ggplot2-20) - Hadley Wickham
+* [R Graphics Cookbook](https://www.amazon.com/dp/1449316956/ref=cm_sw_su_dp?tag=ggplot2-20) - Winston Chang
+* [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) - Rstudio

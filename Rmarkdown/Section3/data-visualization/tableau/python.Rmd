@@ -1,0 +1,74 @@
+### Python {-}
+
+#### Connect Python and Tableau {-}
+
+##### In IDE {-}
+
+1. Clone the [TabPy repo](https://github.com/tableau/TabPy)
+2. Install the TabPy packages
+	a. `pip install ./tabpy-server`
+	b. `pip install ./tabpy-tools`
+	c. Install python 3.6.5 into the environment `conda install python==3.6.5`
+3. Navigate to the Tabpy repository and type `./startup.cmd` to initiate the server
+
+##### In Tableau {-}
+
+1. Connect Tableau to Python Server
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/tableau/connecting_to_server.png")
+```
+
+2. Choose Python settings
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/tableau/connect_to_tabpy.png")
+```
+
+3. In a browser type localhost::9004 and the Tableau logo should appear
+4. Test the connection to makes sure it says "successfully connected to the external service"
+
+#### Starter Script {-}
+
+##### Python {-}
+
+```{python, eval = FALSE, echo = TRUE}
+import pandas as pd
+def loanclassifierfull(_arg1, _arg2):
+    """
+    """
+  d = {"1-grade": _arg1, "2-grade": _arg2}
+  df = pd.DataFrame(data = d)
+  probs = model.predict_proba(df)
+  return [loan[1] for loan in probs]
+
+client = tabpy_client.Client("http://localhost:9004")
+client.deploy("loanclassifierfull", loanclassifierfull, "Description of the function")
+```
+
+##### Tableau {-}
+
+```{r, eval = FALSE, echo = TRUE}
+SCRIPT_REAL("return tabpy.query('loancliassifierfull', _arg1, _arg2)['response']", ([Arg1]), ([Arg2]))
+```
+
+#### Resources {-}
+
+**Automating production with Python and Tableau APIs**
+
+  * [Video](https://www.youtube.com/watch?v=FqXu7OslQDM&feature=youtu.be)
+  * [Powerpoint](https://tc18.tableau.com/sites/default/files/session/assets/18BC-040_Forecast5%20Analytics_Automating%20production%20with%20Python%20and%20Tableau%20APIs.pdf)
+
+**Building Data Science Applications in Tableau**
+
+  * [Video](https://www.youtube.com/watch?v=nRtOMTnBz_Y&feature=youtu.be)
+  * [Powerpoint](https://tc18.tableau.com/sites/default/files/session/assets/18BI-009_Building_Data_Science_Applications_in_Tableau.pdf)
+  
+**Additional Resources**
+
+* [Leveraging the power of Python Blog](https://www.tableau.com/about/blog/2016/11/leverage-power-python-tableau-tabpy-62077)
+* [Building advanced analytics applications Blog](https://www.tableau.com/about/blog/2017/1/building-advanced-analytics-applications-tabpy-64916)
+* [Forecasting with Python and Tableau](https://towardsdatascience.com/forecasting-with-python-and-tableau-dd37a218a1e5)
+
+
+

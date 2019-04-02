@@ -101,7 +101,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="part"><span><b>I Robust, Quality Code</b></span></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#the-scenarios"><i class="fa fa-check"></i><b>1.1</b> The scenarios</a></li>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#some-scenarios"><i class="fa fa-check"></i><b>1.1</b> Some scenarios</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#scenario-1"><i class="fa fa-check"></i>Scenario 1</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#scenario-2"><i class="fa fa-check"></i>Scenario 2</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#scenario-3"><i class="fa fa-check"></i>Scenario 3</a></li>
+</ul></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#some-solutions"><i class="fa fa-check"></i><b>1.2</b> Some solutions</a><ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#reproducibility"><i class="fa fa-check"></i>Reproducibility</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#quality"><i class="fa fa-check"></i>Quality</a></li>
@@ -187,7 +191,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#documentation-1"><i class="fa fa-check"></i>Documentation</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#environments-1"><i class="fa fa-check"></i>Environments</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packrat"><i class="fa fa-check"></i>Packrat</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#sharing-package-libraries"><i class="fa fa-check"></i>Sharing package libraries</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#package-development"><i class="fa fa-check"></i>Package Development</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="r-1.html"><a href="r-1.html#quality-3"><i class="fa fa-check"></i><b>5.3</b> Quality</a></li>
 <li class="chapter" data-level="5.4" data-path="r-1.html"><a href="r-1.html#efficiency-2"><i class="fa fa-check"></i><b>5.4</b> Efficiency</a></li>
@@ -195,7 +199,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages"><i class="fa fa-check"></i>Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="r-1.html"><a href="r-1.html#modeling-1"><i class="fa fa-check"></i><b>5.6</b> Modeling</a><ul>
-<li class="chapter" data-level="5.6.1" data-path="r-1.html"><a href="r-1.html#packages-1"><i class="fa fa-check"></i><b>5.6.1</b> Packages</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages-1"><i class="fa fa-check"></i>Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="5.7" data-path="r-1.html"><a href="r-1.html#visualization-1"><i class="fa fa-check"></i><b>5.7</b> Visualization</a></li>
 <li class="chapter" data-level="5.8" data-path="r-1.html"><a href="r-1.html#web-1"><i class="fa fa-check"></i><b>5.8</b> Web</a></li>
@@ -203,7 +207,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="part"><span><b>III Other</b></span></li>
 <li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a><ul>
 <li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#technical-terminology"><i class="fa fa-check"></i>Technical Terminology</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#resources-3"><i class="fa fa-check"></i>Resources</a><ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#resources-4"><i class="fa fa-check"></i>Resources</a><ul>
 <li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#r-2"><i class="fa fa-check"></i>R</a></li>
 <li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#python-2"><i class="fa fa-check"></i>Python</a></li>
 </ul></li>
@@ -250,95 +254,100 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 <tr class="even">
 <td></td>
+<td>Backwards compatibility</td>
+<td>Packages that get updated are still compatible with code developed from an earlier version of that package.</td>
+</tr>
+<tr class="odd">
+<td></td>
 <td>Binary package</td>
 <td>A distribution methods to a developer who doesn’t have package development tools. Also, a single file.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Bundled package</td>
 <td>A package that’s been compressed into a single file</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>C</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Compiled</td>
 <td>A program called a compiler, takes the plaintext source file and produces a native binary executable that the computer knows how to run intrinsically. When this happens it is called compile-time, and is distinct from run-time, which is when and executable is run and the program actually does things.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>D</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Dynamically typed</td>
 <td>Variable types are not explicitly declared. Among dynamically typed languages are Python, R, and JavaScript.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>G</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Global type inference</td>
 <td>Types are inferred from context. Explicit type annotations are instead for the benefit of the programmers, and serve as machine-verified documentation.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>I</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>In memory package</td>
 <td>A package which has been loaded into memory and then attaches it to the search path</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td></td>
 <td>Installed package</td>
 <td>Binary package that’s been decompressed into a package library</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Interpreted</td>
 <td>Interpreted languages have programs called interpreters that read plaintext source files and execute the instructions at the same moment. No native binary executable is created. Languages like Python and R are interpreted.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>L</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Lazily evaluated</td>
 <td>Values are not computed until required. This allows for functions to compose together in a performant way (no more work than necessary will be done), and allows for the use of infinite data structures (you could define the list of all prime numbers and only those you actually use will be computed). However, it also makes it more difficult to reason about performance, because it is sometimes not obvious when or if a particular computation will be performed.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>P</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Purely functional</td>
 <td>Every function is a function in the mathematical sense (IE pure). No squinting required. Rather than functions having side-effects, are first-class values governed by the type system. To put it another way, code has only expressions that are evaluated; it does not have statements that are executed.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>S</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Source package</td>
 <td>A directory with all the components</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td></td>
 <td>Statically typed</td>
 <td>Every expression has a type which is determined at compile-time. If the types of any expressions don’t match up appropriately, the compiler will reject your program – there are guaranteed to be no type errors at run-time. Statically typed languages include C#, C++, TypeScript, and Java.</td>
@@ -346,7 +355,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tbody>
 </table>
 </div>
-<div id="resources-3" class="section level2 unnumbered">
+<div id="resources-4" class="section level2 unnumbered">
 <h2>Resources</h2>
 <div id="r-2" class="section level3 unnumbered">
 <h3>R</h3>
@@ -356,7 +365,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://adv-r.had.co.nz/">Advanced R</a> - Hadley Wickam</li>
 </ul>
 </div>
-<div id="package-development" class="section level5 unnumbered">
+<div id="package-development-1" class="section level5 unnumbered">
 <h5>Package Development</h5>
 <ul>
 <li><a href="http://r-pkgs.had.co.nz/">R Packages</a> - Hadley Wickham</li>

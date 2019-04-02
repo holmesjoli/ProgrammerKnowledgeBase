@@ -1,0 +1,19 @@
+## Tableau
+
+```{r child="intro.Rmd"}
+```
+
+```{r child="extract_api.Rmd"}
+```
+
+```{r child="integration.Rmd"}
+```
+
+```{r child="R.Rmd"}
+```
+
+```{r child="python.Rmd"}
+```
+
+```{r child="glossary.Rmd"}
+```

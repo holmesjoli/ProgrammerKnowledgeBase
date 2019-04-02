@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
+<link rel="prev" href="data-visualization.html">
 
-<link rel="next" href="introduction.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -241,23 +241,231 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>I started thinking about how to be a better programmer while I worked for Mathematica Policy Research. Mathematica is a mid-size company, with 100s of on-going projects, and at Mathematica every project did it differently.</p>
-<p>However, within the programmer community at Mathematica, there was a strong push, by myself and others, to make best practices more systematic, standardized, to make code efficient, high-quality, and more robust to errors. It is from many of their senior programmers, who invested there time to teach me, that I learned these techniques. It was with these folks, that I started to develop the ideas and methods for this book. A big thanks to Eva Ward, Brian Hunscher, Linus Marco, Michael Sisti, and many others!</p>
+<div id="technical-terminology" class="section level1 unnumbered">
+<h1>Technical Terminology</h1>
+<table style="width:100%;">
+<colgroup>
+<col width="3%" />
+<col width="7%" />
+<col width="14%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Term</th>
+<th>Abbreviation</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Backwards compatibility</td>
+<td></td>
+<td>Packages that get updated are still compatible with code developed from an earlier version of that package.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Binary package</td>
+<td></td>
+<td>A distribution methods to a developer who doesn’t have package development tools. Also, a single file.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Bundled package</td>
+<td></td>
+<td>A package that’s been compressed into a single file</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Compiled</td>
+<td></td>
+<td>A program called a compiler, takes the plaintext source file and produces a native binary executable that the computer knows how to run intrinsically. When this happens it is called compile-time, and is distinct from run-time, which is when and executable is run and the program actually does things.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Coverage</td>
+<td></td>
+<td>Code coverage is a percentage which indicates the amount of code (lines, functions, and branches) in the project that is tested. It’s an indicator of how well maintained and stable the project is.<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a></td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Dynamically typed</td>
+<td></td>
+<td>Variable types are not explicitly declared. Among dynamically typed languages are Python, R, and JavaScript.</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Extract, transform, load</td>
+<td>ETL</td>
+<td>the pipeline of data from it’s raw state into a clean, useable state.</td>
+</tr>
+<tr class="even">
+<td>G</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Global type inference</td>
+<td></td>
+<td>Types are inferred from context. Explicit type annotations are instead for the benefit of the programmers, and serve as machine-verified documentation.</td>
+</tr>
+<tr class="even">
+<td>I</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>In memory package</td>
+<td></td>
+<td>A package which has been loaded into memory and then attaches it to the search path</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Installed package</td>
+<td></td>
+<td>Binary package that’s been decompressed into a package library</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Integrated Development Environment</td>
+<td>IDE</td>
+<td>An IDE is a software editor that provides additional facilities to developers that aren’t available through traditional text editors (E.g. Notepad).</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Interpreted</td>
+<td></td>
+<td>Interpreted languages have programs called interpreters that read plaintext source files and execute the instructions at the same moment. No native binary executable is created. Languages like Python and R are interpreted.</td>
+</tr>
+<tr class="odd">
+<td>L</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Lazily evaluated</td>
+<td></td>
+<td>Values are not computed until required. This allows for functions to compose together in a performant way (no more work than necessary will be done), and allows for the use of infinite data structures (you could define the list of all prime numbers and only those you actually use will be computed). However, it also makes it more difficult to reason about performance, because it is sometimes not obvious when or if a particular computation will be performed.</td>
+</tr>
+<tr class="odd">
+<td>P</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Purely functional</td>
+<td></td>
+<td>Every function is a function in the mathematical sense (IE pure). No squinting required. Rather than functions having side-effects, are first-class values governed by the type system. To put it another way, code has only expressions that are evaluated; it does not have statements that are executed.</td>
+</tr>
+<tr class="odd">
+<td>R</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Representation State Transfer</td>
+<td>REST</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>S</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Source package</td>
+<td></td>
+<td>A directory with all the components.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Statically typed</td>
+<td></td>
+<td>Every expression has a type which is determined at compile-time. If the types of any expressions don’t match up appropriately, the compiler will reject your program – there are guaranteed to be no type errors at run-time. Statically typed languages include C#, C++, TypeScript, and Java.</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Test-driven development</td>
+<td>TDD</td>
+<td>Software development process that requires developers to write tests for code, before writing the actual code itself.<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a></td>
+</tr>
+</tbody>
+</table>
+
 </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="9">
+<li id="fn9"><p><a href="https://www.gregjs.com/javascript/2016/how-to-get-a-shiny-coverage-badge-for-your-github-project/" class="uri">https://www.gregjs.com/javascript/2016/how-to-get-a-shiny-coverage-badge-for-your-github-project/</a><a href="technical-terminology.html#fnref9">↩</a></p></li>
+<li id="fn10"><p><a href="https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2" class="uri">https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2</a><a href="technical-terminology.html#fnref10">↩</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="data-visualization.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

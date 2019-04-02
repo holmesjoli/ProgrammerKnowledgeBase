@@ -1,0 +1,37 @@
+### Introduction {-}
+
+Tableau is a data visualization software. It's a very popular tool for data and business analysts because it's easy to learn and doesn't require the developer of the tool programming background. It has powerful capabilities for creating dashboards and story boards which can be used for exploratory analysis or to lead end users through a particular story in the data.
+
+#### Pros and Cons {-}
+
+Anyone who has created a dashboard before knows that it takes a long time, even a simple one using software like Rshiny. A complex one using Javascript's visualization library, D3, takes even longer. The other issue with creating a custom dashboard in a software like R or JavaScript, is that the dashboard has to be maintained by a programmer who knows the language(s) used to build the dashboard. 
+
+So, there are a lot of reasons to use Tableau. However, as a risk-averse programmer there are several things I would NEVER use Tableau for, even though Tableau has the capability to do so. The most important one is data management. A lot of the examples and use cases of Tableau use very clean, ready-to-use data, or the data needs to have one or two very simple changes, such as splitting the column of changing the column type. 
+
+In my world, the data are never clean like that. They almost always have to be a) validated and b) managed. Although, there are some capabilities that allow a user to clean data in Tableau, I would strongly advise against that. There isn't an easy way to track changes made to the data. As programmers, we use version control to track all our changes and then submit pull requests to have those changes approved. I would recommend maintaining this workflow for quality assurance purposes.
+
+#### Beginner Resources {-}
+
+**Tableau tips for beginners**
+
+  * [Video](https://www.youtube.com/watch?v=D8qitKdsaKw&feature=youtu.be)
+  * [Powerpoint](https://tc18.tableau.com/sites/default/files/session/assets/18BI-028_Tableau%20tips%20for%20beginners.pdf)
+
+#### Tableau Versions {-}
+
+Like any software or application, Tableau has changed and been updated overtime. However, specific functionalities, especially development functionalities, such as integration with R, Python, and Matlab and use of the Extract API depend on the version of Tableau install. 
+
+Make sure that development you're interested in doing is compatible with the version of Tableau that you have installed.^[Tableau changed their version naming convention in 2018. Older versions are named 4.0, or 5.0, or 10.1. These go all the way from 4.0 to 10.5. In 2018, they started naming their versions after the year they released the version in. The lastest versions are named 2018.2, 2019.1, etc.] To check the version go to Help > About Tableau. 
+
+#### Recommended Workflow {-}
+
+Although, Tableau does not require a programming background, much of what we'll do does require a lot of programming. 
+
+1. Write data validation checks in Python
+  a. Utilize all the tools discussed in Section 1 to write robust, quality code
+2. Write data management steps in Python
+  a. Utilize all the tools discussed in Section 1 to write robust, quality code
+3. Use Tableau Extract API to create data extract
+4. Load data extract in Tableau
+5. Train model in Python and save to server
+6. Integrate trained model into Tableau

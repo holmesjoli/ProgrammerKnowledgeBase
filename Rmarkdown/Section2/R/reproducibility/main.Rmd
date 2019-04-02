@@ -8,3 +8,6 @@
 
 ```{r child="packrat.Rmd"}
 ```
+
+```{r child="package-development.Rmd"}
+```

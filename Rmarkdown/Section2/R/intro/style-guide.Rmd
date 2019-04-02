@@ -36,10 +36,6 @@
 * Comments should explain the why not the what
 * Comments that are too lengthy indicate a function should probably be used to break up the code chunk
 
-#### Other Style Guides {-}
-
-* [Google's style guide](https://google.github.io/styleguide/Rguide.xml)
-
 ### Styling Packages {-}
 
 #### formatR {-}
