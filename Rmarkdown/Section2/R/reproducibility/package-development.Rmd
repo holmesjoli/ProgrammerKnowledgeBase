@@ -23,9 +23,3 @@ If you're going to be developing packages, I would strongly suggest reading Hadl
 ```
 install.packages("path_to_package", repos = NULL, type = "source")
 ```
-
-#### Resources {-}
-
-* https://masalmon.eu/2017/12/11/goodrpackages/
-* [R extensions manual](https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages)
-

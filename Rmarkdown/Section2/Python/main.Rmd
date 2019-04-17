@@ -15,3 +15,5 @@
 ```{r child = "web/main.Rmd"}
 ```
 
+```{r child = "resources.Rmd"}
+```

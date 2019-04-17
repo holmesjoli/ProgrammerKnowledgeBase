@@ -36,9 +36,3 @@ A conda environment is container that holds a specific version of the source sof
 #### Deleting an environment {-}
 
 1. `conda remove --name NAME_OF_ENVIRONMENT --all`
-
-#### Resources {-}
-
-* [Anaconda commands cheat sheet](https://conda.io/docs/_downloads/conda-cheatsheet.pdf)
-* [Have you installed a Python package, but now you can't import it?](http://takluyver.github.io/posts/i-cant-import-it.html)
-* [Why you need Python environments and how to manage them with Conda](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c)

@@ -6,8 +6,9 @@
 * [Swirl Courses](http://swirlstats.com/scn/title.htmls)
 * [Swirl Courses Git Repo](https://github.com/swirldev/swirl_courses)
 * [Quick R](https://www.statmethods.net/) - Rob Kabacoff
+* [R Studio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) - Rstudio
 
-### Style Guides {-}
+#### Style Guides {-}
 
 * [R Style Guide](http://adv-r.had.co.nz/Style.html) - Hadley Wickham
 * [Google Style Guide](https://google.github.io/styleguide/Rguide.xml) - Google
@@ -16,11 +17,24 @@
 
 * [Data wrangling cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) - Rstudio
 
-### Package Development {-}
+### Reproducibility {-}
+
+* [Packaging data analytical work reproducibly
+using R (and friends)](https://peerj.com/preprints/3192.pdf) - Marwick, Boettiger, Mullen
+
+#### Package Development {-}
 
 * [R Packages](http://r-pkgs.had.co.nz/) - Hadley Wickham
+* [R extensions manual](https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages)
+* [goodrpackages](https://masalmon.eu/2017/12/11/goodrpackages/) - Maelle Salmon
 
-### Data Science {-}
+#### Environments {-}
+
+* [Creating Reproducible Software Environments with Packrat](https://bconnelly.net/2014/07/creating-reproducible-software-environments-with-packrat/) - Brian Connelly
+
+### Modeling {-}
+
+#### Data Science {-}
 
 * [R for Data Science](https://r4ds.had.co.nz/) - Hadley Wickham
 
@@ -29,3 +43,11 @@
 * [ggplot2](https://www.amazon.com/dp/0387981403/ref=cm_sw_su_dp?tag=ggplot2-20) - Hadley Wickham
 * [R Graphics Cookbook](https://www.amazon.com/dp/1449316956/ref=cm_sw_su_dp?tag=ggplot2-20) - Winston Chang
 * [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) - Rstudio
+
+#### Quality {-}
+
+### Testing {-}
+
+* [Getting Started with Testthat](https://journal.r-project.org/archive/2011/RJ-2011-002/RJ-2011-002.pdf) - Hadley Wickham
+* [R packages](http://r-pkgs.had.co.nz/tests.html#test-workflow) - Hadley Wickham
+

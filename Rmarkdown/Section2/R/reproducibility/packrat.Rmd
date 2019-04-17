@@ -62,7 +62,3 @@ Version control these files.^[Sources: https://stackoverflow.com/questions/36187
 3. `packrat/packrat.opts`
 4. `packrat/src`
 5. `.Rprofile`
-
-#### Resources {-}
-
-* https://bconnelly.net/2014/07/creating-reproducible-software-environments-with-packrat/

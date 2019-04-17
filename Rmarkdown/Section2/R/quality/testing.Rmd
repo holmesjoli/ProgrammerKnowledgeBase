@@ -13,8 +13,3 @@ The name of the file must start with test, e.g. `test_package.R`
 Tests are organized hierarchically, expectations are grouping into tests which are organized into files
 
 Tests should have descriptive names, so that the message associated with the test helps you to quickly identify the problem
-
-#### Resources {-}
-
-* http://r-pkgs.had.co.nz/tests.html#test-workflow
-* https://journal.r-project.org/archive/2011/RJ-2011-002/RJ-2011-002.pdf
