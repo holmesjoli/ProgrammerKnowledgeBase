@@ -1,0 +1,30 @@
+## Resources 
+
+### General {-}
+
+#### Style Guides {-}
+
+* [Pep 8](https://www.python.org/dev/peps/pep-0008/)
+
+### Reproducibility {-}
+
+#### Environments {-}
+
+##### Conda Environments {-}
+
+* [Anaconda commands cheat sheet](https://conda.io/docs/_downloads/conda-cheatsheet.pdf)
+* [Why you need Python environments and how to manage them with Conda](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c) - Gergely Szerovay
+* [Have you installed a Python package, but now you can't import it?](http://takluyver.github.io/posts/i-cant-import-it.html) - Thomas Kluyver
+
+### Quality {-}
+
+#### Testing {-}
+
+#### Resources {-}
+
+* [Improve Your Python: Understanding Unit Testing](https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/) - Jeff Knupp
+* [Testing Your Code](https://docs.python-guide.org/writing/tests/) - The Hitchhikers Guide to Python
+* [Beyond Unit Tests: Taking Your Testing to the Next Level](https://www.youtube.com/watch?v=MYucYon2-lk) - Hillel Wayne
+* [What the mock?—A cheatsheet for mocking in Python](https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832) - Yeray Diaz
+
+
