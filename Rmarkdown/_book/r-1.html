@@ -170,6 +170,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#anaconda-background"><i class="fa fa-check"></i>Anaconda Background</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="python-1.html"><a href="python-1.html#reproducibility-2"><i class="fa fa-check"></i><b>4.2</b> Reproducibility</a><ul>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#pyenvironment"><i class="fa fa-check"></i>Environments</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#data-archiving-1"><i class="fa fa-check"></i>Data Archiving</a></li>
 </ul></li>
@@ -177,7 +178,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i>Testing</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="python-1.html"><a href="python-1.html#data-management"><i class="fa fa-check"></i><b>4.4</b> Data Management</a><ul>
-<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#import"><i class="fa fa-check"></i>Import</a></li>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#import-3"><i class="fa fa-check"></i>Import</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#export"><i class="fa fa-check"></i>Export</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#reshaping"><i class="fa fa-check"></i>Reshaping</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#converting-column-types"><i class="fa fa-check"></i>Converting column types</a></li>
@@ -204,7 +205,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>5.2</b> Reproducibility</a><ul>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#config-files-1"><i class="fa fa-check"></i>Config files</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#documentation-1"><i class="fa fa-check"></i>Documentation</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#environments-2"><i class="fa fa-check"></i>Environments</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packrat"><i class="fa fa-check"></i>Packrat</a></li>
@@ -482,69 +483,86 @@ lm(speed ~ dist(data=cars))</code></pre>
 </div>
 <div id="reproducibility-4" class="section level2">
 <h2><span class="header-section-number">5.2</span> Reproducibility</h2>
-<div id="config-files" class="section level3 unnumbered">
+<div id="config-files-1" class="section level3 unnumbered">
 <h3>Config files</h3>
-<div id="yaml-1" class="section level4 unnumbered">
+<div id="yaml-2" class="section level4 unnumbered">
 <h4>YAML</h4>
-<pre><code>## You can add comments to YAML!
-VAR1: 1
-VAR2: 2</code></pre>
-<div id="read-in" class="section level5 unnumbered">
-<h5>Read in</h5>
-<pre><code>
-library(yaml)
-config &lt;- yaml.load_file(&quot;path_to_config&quot;)
-
-var1 &lt;- config$VAR1
-var2 &lt;- config$VAR2</code></pre>
-<p>Note: to avoid warnings make sure the config file has a final line without any spaces or indents in it!</p>
+<p>Below is example code of how to read in and write out yaml files. The same functions, documented and tested, can be found in the <a href="https://github.com/holmesjoli/utilsR">utilsR</a> package.</p>
+<div id="example-file-3" class="section level5 unnumbered">
+<h5>Example file</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## You can add comments to YAML!
+VAR1<span class="op">:</span><span class="st"> </span><span class="dv">1</span>
+VAR2<span class="op">:</span><span class="st"> </span><span class="dv">2</span></code></pre></div>
 </div>
-<div id="update" class="section level5 unnumbered">
-<h5>Update</h5>
-<pre><code>library(yaml)
+<div id="import-4" class="section level5 unnumbered">
+<h5>Import</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(yaml)
 
-config$var3 &lt;- &quot;VAR3&quot;
-write_yaml(config, &quot;../config.yaml&quot;)</code></pre>
-<!-- ##### JSON {-} -->
-<!-- ```json -->
-<!-- { -->
-<!-- "VAR1" = 1, -->
-<!-- "VAR2" = 2 -->
-<!-- } -->
-<!-- ``` -->
-<!-- ###### Read in {-} -->
-<!-- ``` -->
-<!-- library(json) -->
-<!-- ``` -->
-<!-- ###### Update {-} -->
-<!-- ``` -->
-<!-- ``` -->
-</div>
-<div id="csv-3" class="section level5 unnumbered">
-<h5>CSV</h5>
-<pre class="csv"><code>|VAR1 | VAR2|
-|-----|-----|
-|  1  |  2  |</code></pre>
-</div>
-<div id="read-in-1" class="section level5 unnumbered">
-<h5>Read in</h5>
-<pre><code>config &lt;- read.csv(&quot;path_to_config&quot;)
+config &lt;-<span class="st"> </span><span class="kw">yaml.load_file</span>(<span class="st">&quot;./config.yaml&quot;</span>)
 
-#OR
-
-library(readr)
-
-config &lt;- read_csv(&quot;path_to_config&quot;)
-
-var1 &lt;- config$VAR1
-var2 &lt;- config$VAR2
-</code></pre>
+var1 &lt;-<span class="st"> </span>config<span class="op">$</span>VAR1
+var2 &lt;-<span class="st"> </span>config<span class="op">$</span>VAR2</code></pre></div>
+<p>Note: Avoid warnings by adding a final line without any spaces or indents in it!</p>
 </div>
 <div id="update-1" class="section level5 unnumbered">
 <h5>Update</h5>
-<pre><code>config$var3 &lt;- &quot;VAR3&quot;
-write.csv(config, &quot;path_to_config&quot;, row.names = FALSE)
-</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(yaml)
+
+config<span class="op">$</span>var3 &lt;-<span class="st"> &quot;VAR3&quot;</span>
+yml &lt;-<span class="st"> </span>yaml<span class="op">::</span><span class="kw">as.yaml</span>(config)
+<span class="kw">write</span>(yml, <span class="st">&quot;./config.yaml&quot;</span>)</code></pre></div>
+</div>
+</div>
+<div id="json-2" class="section level4 unnumbered">
+<h4>JSON</h4>
+<p>Below is example code of how to read in and write out json files. The same functions, documented and tested, can be found in the <a href="https://github.com/holmesjoli/utilsR">utilsR</a> package.</p>
+<div id="example-file-4" class="section level5 unnumbered">
+<h5>Example file</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">{
+<span class="st">&quot;VAR1&quot;</span> =<span class="st"> </span><span class="dv">1</span>,
+<span class="st">&quot;VAR2&quot;</span> =<span class="st"> </span><span class="dv">2</span>
+}</code></pre></div>
+</div>
+<div id="import-5" class="section level5 unnumbered">
+<h5>Import</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rjson)
+
+config &lt;-<span class="st"> </span>rjson<span class="op">::</span><span class="kw">fromJSON</span>(<span class="dt">file =</span> <span class="st">&quot;./config.json&quot;</span>)</code></pre></div>
+</div>
+<div id="update-2" class="section level5 unnumbered">
+<h5>Update</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rjson)
+<span class="kw">library</span>(jsonlite)
+
+json &lt;-<span class="st"> </span>rjson<span class="op">::</span><span class="kw">toJSON</span>(config)
+jsonlist<span class="op">::</span><span class="kw">write_json</span>(config, <span class="dt">file =</span> <span class="st">&quot;./config.json&quot;</span>)</code></pre></div>
+</div>
+</div>
+<div id="csv-4" class="section level4 unnumbered">
+<h4>CSV</h4>
+<div id="example-file-5" class="section level5 unnumbered">
+<h5>Example file</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">|</span>VAR1 <span class="op">|</span><span class="st"> </span>VAR2<span class="op">|</span>
+<span class="er">|</span><span class="op">-----</span><span class="er">|</span><span class="op">-----</span><span class="er">|</span>
+<span class="er">|</span><span class="st">  </span><span class="dv">1</span>  <span class="op">|</span><span class="st">  </span><span class="dv">2</span>  <span class="op">|</span></code></pre></div>
+</div>
+<div id="import-6" class="section level5 unnumbered">
+<h5>Import</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">config &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;./config.csv&quot;</span>)
+
+<span class="co">#OR</span>
+
+<span class="kw">library</span>(readr)
+
+config &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./config.csv&quot;</span>)
+
+var1 &lt;-<span class="st"> </span>config<span class="op">$</span>VAR1
+var2 &lt;-<span class="st"> </span>config<span class="op">$</span>VAR2</code></pre></div>
+</div>
+<div id="update-3" class="section level5 unnumbered">
+<h5>Update</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">config<span class="op">$</span>var3 &lt;-<span class="st"> &quot;VAR3&quot;</span>
+<span class="kw">write.csv</span>(config, <span class="st">&quot;./config.csv&quot;</span>, <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</code></pre></div>
 </div>
 </div>
 </div>

@@ -2,83 +2,98 @@
 
 #### YAML {-}
 
-```
+Below is example code of how to read in and write out yaml files. The same functions, documented and tested, can be found in the [utilsR](https://github.com/holmesjoli/utilsR) package. 
+
+##### Example file {-}
+
+```{r, echo = TRUE, eval = FALSE}
 ## You can add comments to YAML!
 VAR1: 1
 VAR2: 2
 ```
 
-##### Read in {-}
+##### Import {-}
 
-```
-
+```{r, echo = TRUE, eval = FALSE}
 library(yaml)
-config <- yaml.load_file("path_to_config")
+
+config <- yaml.load_file("./config.yaml")
 
 var1 <- config$VAR1
 var2 <- config$VAR2
 ```
-Note: to avoid warnings make sure the config file has a final line without any spaces or indents in it!
+
+Note: Avoid warnings by adding a final line without any spaces or indents in it!
 
 ##### Update {-}
 
-```
+```{r, echo = TRUE, eval = FALSE}
 library(yaml)
 
 config$var3 <- "VAR3"
-write_yaml(config, "../config.yaml")
+yml <- yaml::as.yaml(config)
+write(yml, "./config.yaml")
 ```
 
-<!-- ##### JSON {-} -->
+#### JSON {-}
 
-<!-- ```json -->
-<!-- { -->
-<!-- "VAR1" = 1, -->
-<!-- "VAR2" = 2 -->
-<!-- } -->
+Below is example code of how to read in and write out json files. The same functions, documented and tested, can be found in the [utilsR](https://github.com/holmesjoli/utilsR) package. 
 
-<!-- ``` -->
+##### Example file {-}
 
-<!-- ###### Read in {-} -->
+```{r, echo = TRUE, eval = FALSE}
+{
+"VAR1" = 1,
+"VAR2" = 2
+}
+```
 
-<!-- ``` -->
-<!-- library(json) -->
+##### Import {-}
 
-<!-- ``` -->
+```{r, echo = TRUE, eval = FALSE}
+library(rjson)
 
-<!-- ###### Update {-} -->
+config <- rjson::fromJSON(file = "./config.json")
+```
 
-<!-- ``` -->
-<!-- ``` -->
+##### Update {-}
 
-##### CSV {-}
+```{r, echo = TRUE, eval = FALSE}
+library(rjson)
+library(jsonlite)
 
-```csv
+json <- rjson::toJSON(config)
+jsonlist::write_json(config, file = "./config.json")
+```
+
+#### CSV {-}
+
+##### Example file {-}
+
+```{r, eval = FALSE, echo = TRUE}
 |VAR1 | VAR2|
 |-----|-----|
 |  1  |  2  |
 ```
 
-##### Read in {-}
+##### Import {-}
 
-```
-config <- read.csv("path_to_config")
+```{r, echo = TRUE, eval = FALSE}
+config <- read.csv("./config.csv")
 
 #OR
 
 library(readr)
 
-config <- read_csv("path_to_config")
+config <- read_csv("./config.csv")
 
 var1 <- config$VAR1
 var2 <- config$VAR2
-
 ```
 
 ##### Update {-}
 
-```
+```{r, echo = TRUE, eval = FALSE}
 config$var3 <- "VAR3"
-write.csv(config, "path_to_config", row.names = FALSE)
-
+write.csv(config, "./config.csv", row.names = FALSE)
 ```

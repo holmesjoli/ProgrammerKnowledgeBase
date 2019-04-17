@@ -170,6 +170,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#anaconda-background"><i class="fa fa-check"></i>Anaconda Background</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="python-1.html"><a href="python-1.html#reproducibility-2"><i class="fa fa-check"></i><b>4.2</b> Reproducibility</a><ul>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#pyenvironment"><i class="fa fa-check"></i>Environments</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#data-archiving-1"><i class="fa fa-check"></i>Data Archiving</a></li>
 </ul></li>
@@ -177,7 +178,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i>Testing</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="python-1.html"><a href="python-1.html#data-management"><i class="fa fa-check"></i><b>4.4</b> Data Management</a><ul>
-<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#import"><i class="fa fa-check"></i>Import</a></li>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#import-3"><i class="fa fa-check"></i>Import</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#export"><i class="fa fa-check"></i>Export</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#reshaping"><i class="fa fa-check"></i>Reshaping</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#converting-column-types"><i class="fa fa-check"></i>Converting column types</a></li>
@@ -204,7 +205,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>5.2</b> Reproducibility</a><ul>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#config-files-1"><i class="fa fa-check"></i>Config files</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#documentation-1"><i class="fa fa-check"></i>Documentation</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#environments-2"><i class="fa fa-check"></i>Environments</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packrat"><i class="fa fa-check"></i>Packrat</a></li>
@@ -286,6 +287,81 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="reproducibility-2" class="section level2">
 <h2><span class="header-section-number">4.2</span> Reproducibility</h2>
+<div id="config-files" class="section level3 unnumbered">
+<h3>Config files</h3>
+<div id="yaml-1" class="section level4 unnumbered">
+<h4>YAML</h4>
+<p>Below is example code of how to read in and write out yaml files. The same functions, documented and tested, can be found in the <a href="https://github.com/holmesjoli/utilsPy">utilsPy</a> package.</p>
+<div id="example-file" class="section level5 unnumbered">
+<h5>Example file</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## You can add comments to YAML!
+VAR1<span class="op">:</span><span class="st"> </span><span class="dv">1</span>
+VAR2<span class="op">:</span><span class="st"> </span><span class="dv">2</span></code></pre></div>
+</div>
+<div id="install" class="section level5 unnumbered">
+<h5>Install</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">conda install pyyaml</code></pre></div>
+</div>
+<div id="import" class="section level5 unnumbered">
+<h5>Import</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> yaml
+
+<span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;config.yaml&quot;</span>, <span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> cf:
+    config <span class="op">=</span> yaml.load(cf)</code></pre></div>
+</div>
+<div id="update" class="section level5 unnumbered">
+<h5>Update</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> yaml
+
+config[<span class="st">&quot;var3&quot;</span>] <span class="op">=</span> <span class="st">&quot;VAR3&quot;</span>
+
+<span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;config.yaml&#39;</span>, <span class="st">&#39;w&#39;</span>) <span class="im">as</span> fp:
+    yaml.dump(config, fp)</code></pre></div>
+<p><a href="https://stackoverflow.com/questions/28557626/how-to-update-yaml-file-using-python">Source</a></p>
+</div>
+</div>
+<div id="json-1" class="section level4 unnumbered">
+<h4>JSON</h4>
+<p>Below is example code of how to read in and write out json files. The same functions, documented and tested, can be found in the <a href="https://github.com/holmesjoli/utilsPy">utilsPy</a> package.</p>
+<div id="example-file-1" class="section level5 unnumbered">
+<h5>Example file</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">{
+<span class="st">&quot;VAR1&quot;</span> =<span class="st"> </span><span class="dv">1</span>,
+<span class="st">&quot;VAR2&quot;</span> =<span class="st"> </span><span class="dv">2</span>
+}</code></pre></div>
+</div>
+<div id="install-1" class="section level5 unnumbered">
+<h5>Install</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">conda install json</code></pre></div>
+</div>
+<div id="import-1" class="section level5 unnumbered">
+<h5>Import</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> json
+
+<span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;config.json&#39;</span>) <span class="im">as</span> cf:
+    config <span class="op">=</span> json.load(cf)</code></pre></div>
+</div>
+</div>
+<div id="csv-1" class="section level4 unnumbered">
+<h4>CSV</h4>
+<div id="example-file-2" class="section level5 unnumbered">
+<h5>Example file</h5>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">|</span>VAR1 <span class="op">|</span><span class="st"> </span>VAR2<span class="op">|</span>
+<span class="er">|</span><span class="op">-----</span><span class="er">|</span><span class="op">-----</span><span class="er">|</span>
+<span class="er">|</span><span class="st">  </span><span class="dv">1</span>  <span class="op">|</span><span class="st">  </span><span class="dv">2</span>  <span class="op">|</span></code></pre></div>
+</div>
+<div id="install-2" class="section level5 unnumbered">
+<h5>Install</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">conda install pandas</code></pre></div>
+</div>
+<div id="import-2" class="section level5 unnumbered">
+<h5>Import</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pandas <span class="im">as</span> pd
+
+config <span class="op">=</span> pd.read_csv(<span class="st">&quot;path_to_csv&quot;</span>)</code></pre></div>
+</div>
+</div>
+</div>
 <div id="pyenvironment" class="section level3 unnumbered">
 <h3>Environments</h3>
 <div id="package-and-environment-managers" class="section level4 unnumbered">
@@ -438,7 +514,7 @@ python <span class="op">-</span>m pytest tests<span class="op">/</span>test_spam
 </div>
 <div id="data-management" class="section level2">
 <h2><span class="header-section-number">4.4</span> Data Management</h2>
-<div id="import" class="section level3 unnumbered">
+<div id="import-3" class="section level3 unnumbered">
 <h3>Import</h3>
 <div id="sas-1" class="section level4 unnumbered">
 <h4>SAS</h4>
@@ -454,7 +530,7 @@ df = pd.read_sas(file, format = &quot;sas7bdat&quot;, encoding = &quot;iso-8859-
 xl = pd.ExcelFile(file)
 df = xl.parse(&#39;SHEET_NAME&#39;)</code></pre>
 </div>
-<div id="csv-1" class="section level4 unnumbered">
+<div id="csv-2" class="section level4 unnumbered">
 <h4>CSV</h4>
 <pre><code>import pandas as pd
 
@@ -463,7 +539,7 @@ df = pd.read_csv(file, encoding=&quot;ISO-8859-1&quot;)</code></pre>
 </div>
 <div id="export" class="section level3 unnumbered">
 <h3>Export</h3>
-<div id="csv-2" class="section level4 unnumbered">
+<div id="csv-3" class="section level4 unnumbered">
 <h4>CSV</h4>
 <pre><code>import pandas as pd
 
@@ -664,7 +740,7 @@ firefox_driver = webdriver.Firefox(executable_path = fpath)</code></pre>
 <li><a href="https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/">Improve Your Python: Understanding Unit Testing</a> - Jeff Knupp</li>
 <li><a href="https://docs.python-guide.org/writing/tests/">Testing Your Code</a> - The Hitchhikers Guide to Python</li>
 <li><a href="https://www.youtube.com/watch?v=MYucYon2-lk">Beyond Unit Tests: Taking Your Testing to the Next Level</a> - Hillel Wayne</li>
-<li>[What the mock?—A cheatsheet for mocking in Python] (<a href="https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832" class="uri">https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832</a>) - Yeray Diaz</li>
+<li><a href="https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832">What the mock?—A cheatsheet for mocking in Python</a> - Yeray Diaz</li>
 </ul>
 </div>
 </div>

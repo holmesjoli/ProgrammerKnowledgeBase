@@ -1,5 +1,8 @@
 ## Reproducibility
 
+```{r child = "config.Rmd"}
+```
+
 ```{r child="environments.Rmd"}
 ```
 

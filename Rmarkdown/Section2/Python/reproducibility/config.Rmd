@@ -1,0 +1,94 @@
+### Config files {-}
+
+#### YAML {-}
+
+Below is example code of how to read in and write out yaml files. The same functions, documented and tested, can be found in the [utilsPy](https://github.com/holmesjoli/utilsPy) package.
+
+##### Example file {-}
+
+```{r, echo = TRUE, eval = FALSE}
+## You can add comments to YAML!
+VAR1: 1
+VAR2: 2
+```
+
+##### Install {-}
+
+```{python, eval = FALSE, echo = TRUE}
+conda install pyyaml
+```
+
+##### Import {-}
+
+```{python, eval = FALSE, echo = TRUE}
+import yaml
+
+with open("config.yaml", "r", encoding="utf-8") as cf:
+	config = yaml.load(cf)
+```
+
+##### Update {-}
+
+```{python, eval = FALSE, echo = TRUE}
+import yaml
+
+config["var3"] = "VAR3"
+
+with open('config.yaml', 'w') as fp:
+    yaml.dump(config, fp)
+```
+
+[Source](https://stackoverflow.com/questions/28557626/how-to-update-yaml-file-using-python)
+
+#### JSON {-}
+
+Below is example code of how to read in and write out json files. The same functions, documented and tested, can be found in the [utilsPy](https://github.com/holmesjoli/utilsPy) package. 
+
+##### Example file {-}
+
+```{r, echo = TRUE, eval = FALSE}
+{
+"VAR1" = 1,
+"VAR2" = 2
+}
+```
+
+##### Install {-}
+
+```{python, eval = FALSE, echo = TRUE}
+conda install json
+```
+
+##### Import {-}
+
+```{python, eval = FALSE, echo = TRUE}
+
+import json
+
+with open('config.json') as cf:
+	config = json.load(cf)
+```
+
+#### CSV {-}
+
+##### Example file {-}
+
+```{r, eval = FALSE, echo = TRUE}
+|VAR1 | VAR2|
+|-----|-----|
+|  1  |  2  |
+```
+
+##### Install {-}
+
+```{python, eval = FALSE, echo = TRUE}
+conda install pandas
+```
+
+##### Import {-}
+
+```{python, eval = FALSE, echo = TRUE}
+import pandas as pd
+
+config = pd.read_csv("path_to_csv")
+```
