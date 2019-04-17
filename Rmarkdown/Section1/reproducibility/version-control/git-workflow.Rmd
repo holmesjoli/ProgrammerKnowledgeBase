@@ -77,9 +77,6 @@ knitr::include_graphics("./images/git/git_flow.png")
 7. If an issue in master is detected a hotfix branch is created from master
 8. Once the hotfix is complete a pull request is made for a potential merge to both the develop and master.
 
-#### Resources {-}
-
-* [Atlassian Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 
 	

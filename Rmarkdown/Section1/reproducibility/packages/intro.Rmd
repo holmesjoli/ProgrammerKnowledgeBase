@@ -1,0 +1,7 @@
+### Introduction {-}
+
+Have you noticed yourself recycling code? Maybe you go back to an older project and copy a bunch of the functions over to the new script you're working in. If this is you, it's time to write a package!
+
+Developing packages is an important skill because it saves time, but also reduces the likelihood of introducing bugs into the code. All code should be tested, \@ref(testing), but it should really only need to be tested once. Packages are also a great way to update code utilized across multiple projects. Say you optimized a function, and now it runs in half the time it took before, well we don't want to copy and paste that code to all the projects that used that original function. Instead, we just update the package, and it also long as there we're any major developments to the package it should be smooth sailing. 
+
+Many new programmers fear writing packages because they assume it's a very advanced technique. Although, it is more advanced, it's really not very different than writing scripts. It's just a very nicely packaged bundle of all those scripts. 

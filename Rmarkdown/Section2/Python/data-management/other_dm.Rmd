@@ -30,3 +30,7 @@ df = df.drop_duplicates()
 import numpy as np
 df['monthly'] = np.where((df['X'] == 1) | (df['Y'] == 1), 1, 0)
 ```
+
+#### Resources {-}
+
+* [Cheatsheat](https://www.dataquest.io/blog/pandas-cheat-sheet/)

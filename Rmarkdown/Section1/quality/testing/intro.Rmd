@@ -1,6 +1,10 @@
-Mistakes happen and bugs are introduced. It's something that's unavoidable, because we're human. However, we do want to catch those miskate to ensure high-quality code. Testing is one way to automate the discovery of such mistakes. While it's challenging to prevent any mistakes from occurring, it's important to shift the discovery of these issues from later to earlier. 
+### Introduction {-}
 
-Testing code results in:
+Very recently, I was trying to compare two lists with numpys `nan` object in both lists. I forgot that in python np.nan == np.nan returns False^[Nan stands for not a number.]. However, I didn't remember this when I was writing my code. I remembered that when I was testing my code.
+
+It's fairly easy to assume you know the behavior of a function, as I did above and accidentally introduce bugs into the code. Testing is an important way to automate the discovery of such mistakes, and shift the timeline of bug discover from later to earlier. Most programmers I know do test there code, but they often do it in an adhoc way. To ensure that we're creating output from derived from quality code, we want to test our code in consistent and standardized way.^[There's a term on github called coverage, which refers to the percent of functions which are tested in the repository. A high coverage percent is often an indicator of stable, high quality code.] 
+
+#### Testing Pros {-}
 
 1. Fewer bugs
 	a. Testing makes it explicit how the code should behave
@@ -30,4 +34,3 @@ Tests should be independent, chill, implementaiton agnostic, fast, and shareable
 Testing is often one of those things that is thought of last not first, often after a bug has been discovered! A better strategy is to build testing time into the development timeline. And test as you program, don't leave it all until the end. Testing as you go along also helps to re-organize code in a more efficient way. 
 
 You would never submit a paper or report after the first draft. Code shouldn't be submitted after the first draft either! It needs to be edited and thoughtfully reorganized throughout the development process and testing can help encourage this practice. 
-

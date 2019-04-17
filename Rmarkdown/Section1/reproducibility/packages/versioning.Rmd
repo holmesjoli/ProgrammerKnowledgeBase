@@ -1,0 +1,18 @@
+### Versioning {-}
+
+Packages have versions, with smaller numbers signaling earlier versions of the package.
+
+The in-development package has 4 numbers: major.minor.path.dev
+Released packages don't have a dev component
+
+#### Patch Versions {-}
+
+A patch is used when bugs are fixed without the additional of any new significant features. However, most releases will have a patch number of zero. This could look like (0.8.0 to 0.8.2)
+
+#### Minor Release {-}
+
+A minor release can include bug fixes, new features, and changes in backward compatibility. Minor releases can have two or even three digits. This could be (1.17.0 to 1.20.0)
+
+#### Major Release {-}
+
+A major release includes changes that are not backward compatible and are likely to affect many users. 

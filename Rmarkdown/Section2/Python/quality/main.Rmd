@@ -1,1 +1,4 @@
 ## Quality
+
+```{r child = "testing.Rmd"}
+```

@@ -1,8 +1,18 @@
 # Preface {-}
 
-I started thinking about how to be a better programmer while I worked for Mathematica Policy Research. Mathematica is a mid-size company, with 100s of on-going projects, and at Mathematica every project did it differently. 
+I started thinking about how to be a better programmer while I worked for Mathematica Policy Research. I had the raw technical skills, but I wasn't actually a very good programmer. My early code broke frequently, contained bugs, and wasn't easily adaptable when we had to implement changes, which was often and always. As Data Scientists, we're constantly challenged because we live at the intersection of some many worlds: math, statistics, computer science, subject-matter expertise, data visualization and design. Because we intersect so many different fields and there's so much to know within each of these specific fields, I've found that the raw technical skills of many junior data scientists are often underdeveloped. The goal of this book is to help other junior programmers develop those skills so they too can write, quality, efficient, robust code. 
 
-However, within the programmer community at Mathematica, there was a strong push, by myself and others, to make best practices more systematic, standardized, to make code efficient, high-quality, and more robust to errors. It is from many of their senior programmers, who invested there time to teach me, that I learned these techniques. It was with these folks, that I started to develop the ideas and methods for this book. A big thanks to Eva Ward, Brian Hunscher, Linus Marco, Michael Sisti, and many others! 
+But before we dive in, first a big thanks to Eva Ward, Brian Hunscher, Linus Marco, Charlie Hanley, Michael Sisti, and many others! These folks, and many others invested their time to teach me and it was with them that I started to develop the ideas, methods, and content for this book. 
+
+# About {-}
+
+Joli Holmes is a Data Scientist at the Texas Policy Lab, Rice University. She has a BA in Economics with a minor in data analysis from Wesleyan University in Connecticut. She loves data. And even more than her love of data is her love for teaching all things data and making complex (or not complex!) concepts more accessible. She currently lives and works in Houston, TX, but is originally from Seattle, WA area. 
+
+Her favorite programming language is R, but Python is a very close second! Her stretch interests include: data ethics^[My two favorite data ethics books are Cathy O'Neill's Weapons of Math Destruction and Safiya Umoja Nobel's Algorithms of Oppression] and data art!
+
+She wrote this book in [bookdown](https://bookdown.org/yihui/bookdown/usage.html). R programmers never cease to amaze!
+
+Happy Coding Y'all!
 
 
 ```{r setup, include=FALSE}

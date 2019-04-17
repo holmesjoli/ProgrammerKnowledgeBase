@@ -18,6 +18,12 @@ If you're going to be developing packages, I would strongly suggest reading Hadl
 * `devtools::document()` will take Roxygen comments and turn them into .Rd files
   * An Rd file is a documentation for a single R function that can be accessed from the console using `?function_name`
 
+#### Install local package {-}
+
+```
+install.packages("path_to_package", repos = NULL, type = "source")
+```
+
 #### Resources {-}
 
 * https://masalmon.eu/2017/12/11/goodrpackages/

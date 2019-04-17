@@ -1,0 +1,7 @@
+### Rest API {-}
+
+Used to manage and publish content to Tableau server.
+
+#### Set-UP {-}
+
+1. Clone the [repo](https://github.com/tableau/server-client-python)

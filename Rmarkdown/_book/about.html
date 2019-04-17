@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="about.html">
-<link rel="next" href="reproducibility-1.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="introduction.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -253,107 +253,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<p>Welcome to the Programmer Knowledge Base. Over the last few years, I’ve noticed that young data scientists are often very statistically advanced, but are sometimes programmatically beginners. The goal of this book is to introduce some best programming practices to produce high-quality code.</p>
-<p>The best practices are first introduced as concept and then are exemplied for several different languages.</p>
-<div id="some-scenarios" class="section level2">
-<h2><span class="header-section-number">1.1</span> Some scenarios</h2>
-<div id="scenario-1" class="section level3 unnumbered">
-<h3>Scenario 1</h3>
-<p>Imagine that you worked on a project a year, or even several months ago. While you were working on that project you knew everything about it, the ins and outs and all the fine print. Now several weeks, months, or maybe even a year has passed and someone comes to you to ask how you generated the result.</p>
-<p>You go back to the code to look it up and give them some more details, but then you remember that you left the project folder a little messier than intended and never had to the time to go back and clean it up. In fact, it was a mad scramble until the end, so things are definitely messy. As you’re looking over the output, you try to recall if you turned in final_final_final_v2 or final_final_v3 report. And which code created that output, create_df1_final or create_df2.2? But wasn’t there a bug in create_df2.2 that you found right before the output was due, so you actually used create_df1_final_JH? But maybe another programmer worked on that part with you, so did you use their version or yours? Wow, you wish you had updated the documentation to tell you how to run the program in the first place. Because you vagually recall there was some other script you had to run befor eyou could run create_df1_final_JH. And once you think you’ve maybe figured out which code was used to create which output, you realize all the packages you used have been updated since, so some of the functions you wrote have stopped working correctly.</p>
+<div id="about" class="section level1 unnumbered">
+<h1>About</h1>
+<p>Joli Holmes is a Data Scientist at the Texas Policy Lab, Rice University. She has a BA in Economics with a minor in data analysis from Wesleyan University in Connecticut. She loves data. And even more than her love of data is her love for teaching all things data and making complex (or not complex!) concepts more accessible. She currently lives and works in Houston, TX, but is originally from Seattle, WA area.</p>
+<p>Her favorite programming language is R, but Python is a very close second! Her stretch interests include: data ethics<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> and data art!</p>
+<p>She wrote this book in <a href="https://bookdown.org/yihui/bookdown/usage.html">bookdown</a>. R programmers never cease to amaze!</p>
+<p>Happy Coding Y’all!</p>
 </div>
-<div id="scenario-2" class="section level3 unnumbered">
-<h3>Scenario 2</h3>
-<p>Another programmer left the company a week ago and you’re responsible for picking up the pieces. You open the folder. There’s a word document with a few vague guidelines about how the program is supposed to run that was updated 3 months ago, when the code as updated 1 month ago. Scripts are poorly named, and you’re really unsure where to start. You open the first script that says <em>main</em> and it’s 4000 lines long. There are some functions in that script, but none of the functions have any documentation. Well this is going to be fun you think as you see for-loops nested in for-loops nested in for-loops …</p>
-</div>
-<div id="scenario-3" class="section level3 unnumbered">
-<h3>Scenario 3</h3>
-<p>You’re trying to re-create summarized tables from a code base. The numbers just seem a little off and you want to verify the results make sense. But the code wasn’t version controlled, and the data that were used to create the aggregate tables were overwritten several times because the name was hardcoded and there wasn’t a date or anything else that changed. Any attempt of tracing back the original code to create the original output is gone.</p>
-</div>
-<div id="scenario-4" class="section level3 unnumbered">
-<h3>Scenario 4</h3>
-<p>Or maybe this scenario. You shipped the output to the client/partner. Hallelujah! You reviewed the output and your co-workers did too. Several weeks later your recoding something and you notice some of the numbers seem really off, like magnitudes different than the output your sent before. Oh no, you’ve discovered the bug in the code after it gets shipped to the client/partner. Or maybe you discover just before you ship the output to the client/partner, but it’s a mad scramble and everyone has to re-run their individual piece of the pipeline. Yikes!!</p>
-<p>STOPPPPPP!</p>
-<p>I think a lot of folks working on teams with data have come across at least one, if not multiple of these scenarios. Even teams that really stress QA/QC can find themselves in these situations. They’re uncomfortable, stressful, and often result in some later work nights than intended. I have personally come across all of these and contributed to several when I didn’t have guidance on how to do things better. Thankfully a lot of smart people, who have spent a longer time than myself thinking about and dealing with these issues, have come up with some great solutions!</p>
-</div>
-</div>
-<div id="some-solutions" class="section level2">
-<h2><span class="header-section-number">1.2</span> Some solutions</h2>
-<p>The simple solution is this: lets build robust high-quality code.</p>
-<p>What do we mean by ‘robust high-quality code’?</p>
-<p>In my mind, there are several parts to robust high-quality code. High-quality code a) is reproducible across three dimensions: people, time, and machines and b) efficient c) tested.</p>
-<div id="reproducibility" class="section level3 unnumbered">
-<h3>Reproducibility</h3>
-<p>“There’s always at least two people on a project, you and future you”.</p>
-<ul>
-<li><strong>People</strong>: code should be reproducible across multiple programmers. Programmer B should be able to run Programmer A’s output and return the same output.</li>
-<li><strong>Time</strong>: code should be reproducible across time. Code run today should still be able to be run a year from now and return the same output.</li>
-<li><strong>Software/Machines</strong>: Code should not be machine specific! This is an especially important concept for those using open-source software. Open-source software can change extremely quickly, and functions or packages that were used a month ago, may no longer work in the same way or have the same functions today.</li>
-</ul>
-<p>There’s no one way to maintain reproducible code bases across these three dimensions, but there are several best practices that the broader data science, statistics, and computer science communities seem be in consensus on.</p>
-<p>Specificially we’ll talk about<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>:</p>
-<ul>
-<li>Configuration files</li>
-<li>Documentation</li>
-<li>Code version control and the software development lifecycle</li>
-<li>Virtual environments and package managers</li>
-<li>Building packages</li>
-<li>Data Archiving</li>
-</ul>
-<div id="repetition-vs.replication-vs.reproduction" class="section level4 unnumbered">
-<h4>Repetition vs. Replication vs. Reproduction</h4>
-<table>
-<thead>
-<tr class="header">
-<th>Repetition</th>
-<th>Replication</th>
-<th>Reproduction</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Same Lab</td>
-<td>Different Lab</td>
-<td>Different Lab</td>
-</tr>
-<tr class="even">
-<td>Same Methods</td>
-<td>Same Methods</td>
-<td>Different Methods</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="quality" class="section level3 unnumbered">
-<h3>Quality</h3>
-<p>Testing is an integral part to being a good programmer, whether you’re building software for an application or building software for data analysis, it is integral to test code.</p>
-<p>Specifically we’ll talk about:</p>
-<ul>
-<li>Code Review</li>
-<li>Assertions</li>
-<li>Unit testing</li>
-<li>Integration testing</li>
-</ul>
-</div>
-<div id="efficiency" class="section level3 unnumbered">
-<h3>Efficiency</h3>
-<p>Specifically we’ll talk about:</p>
-<ul>
-<li>Benchmarking</li>
-<li>Profiling</li>
-<li>Parallel processing</li>
-<li>Computing resources (Azure, AWS, etc.)</li>
-</ul>
-</div>
-</div>
-</div>
+
+
+
 <div class="footnotes">
 <hr />
-<ol start="2">
-<li id="fn2"><p>note: these topics are not listed in order of importance, they are all very important!<a href="introduction.html#fnref2">↩</a></p></li>
+<ol start="1">
+<li id="fn1"><p>My two favorite data ethics books are Cathy O’Neill’s Weapons of Math Destruction and Safiya Umoja Nobel’s Algorithms of Oppression<a href="about.html#fnref1">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -361,8 +274,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="about.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="reproducibility-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

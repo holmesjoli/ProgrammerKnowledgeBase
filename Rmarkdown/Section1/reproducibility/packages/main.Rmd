@@ -1,0 +1,7 @@
+## Packages
+
+```{r child = "intro.Rmd"}
+```
+
+```{r child = "versioning.Rmd"}
+```

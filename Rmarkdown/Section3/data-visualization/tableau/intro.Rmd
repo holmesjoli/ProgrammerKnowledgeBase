@@ -17,6 +17,11 @@ In my world, the data are never clean like that. They almost always have to be a
   * [Video](https://www.youtube.com/watch?v=D8qitKdsaKw&feature=youtu.be)
   * [Powerpoint](https://tc18.tableau.com/sites/default/files/session/assets/18BI-028_Tableau%20tips%20for%20beginners.pdf)
 
+**Tableau Developer Advanced**
+
+* [Tableau Github](https://github.com/tableau)
+* [Tableau Developer Conference Materials](https://www.dropbox.com/sh/lztdogubf20498e/AAAPptLIxaAPLdBGmwUtMVJba?dl=0)
+
 #### Tableau Versions {-}
 
 Like any software or application, Tableau has changed and been updated overtime. However, specific functionalities, especially development functionalities, such as integration with R, Python, and Matlab and use of the Extract API depend on the version of Tableau install. 

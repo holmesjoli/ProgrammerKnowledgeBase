@@ -25,7 +25,7 @@
 |P||||
 ||Purely functional||Every function is a function in the mathematical sense (IE pure). No squinting required. Rather than functions having side-effects, are first-class values governed by the type system. To put it another way, code has only expressions that are evaluated; it does not have statements that are executed.|
 |R||||
-||Representation State Transfer|REST||
+||Representation State Transfer|REST|Defines a set of rules for messages sent from the client to be interpretted by the server.|
 |S||||
 ||Source package||A directory with all the components.|
 ||Statically typed||Every expression has a type which is determined at compile-time. If the types of any expressions don’t match up appropriately, the compiler will reject your program -- there are guaranteed to be no type errors at run-time. Statically typed languages include C#, C++, TypeScript, and Java.|

@@ -1,4 +1,4 @@
-### Environments {#pyenvironment} {-}
+### Environments {- #pyenvironment}
 
 #### Package and environment managers {-}
 
@@ -11,7 +11,9 @@ Most popular python tools for virtual environments:
 knitr::include_graphics("./images/python_environments/conda_env.png")
 ```
 
-#### Conda Environment {-}
+[Img Source](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c)
+
+#### Conda Environment {- #condaenvironment}
 
 A conda environment is container that holds a specific version of the source software and packages.
 
@@ -39,3 +41,4 @@ A conda environment is container that holds a specific version of the source sof
 
 * [Anaconda commands cheat sheet](https://conda.io/docs/_downloads/conda-cheatsheet.pdf)
 * [Have you installed a Python package, but now you can't import it?](http://takluyver.github.io/posts/i-cant-import-it.html)
+* [Why you need Python environments and how to manage them with Conda](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c)

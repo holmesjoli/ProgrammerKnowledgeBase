@@ -26,3 +26,6 @@
 
 ```{r child="glossary.Rmd"}
 ```
+
+```{r child="resources.Rmd"}
+```

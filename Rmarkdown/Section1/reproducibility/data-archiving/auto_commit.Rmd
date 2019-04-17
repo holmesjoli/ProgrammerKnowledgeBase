@@ -1,0 +1,46 @@
+### Automated Commits {-}
+
+If we follow the structure outlined above, out data archiving system is going to be great. But it can actually still be improved. There is still one issue that we haven't solved and that's linking the code that creates the data which creates the output.
+
+Say we have a question about why a specific variable in summary_data.csv is coded in version 20180917.zip. But of course since then, the code used to create those data may have changed. We can probably trace the code back, since we're of course using version control, and figure out how the code changed between 20180917 and 20180922. But then we sent multiple versions of the output to the client/partner and they would like to know exactly how each was created. 
+
+What's the solution? 
+
+The solution is to include a commit hash in all of the Archiving names. So when we update the code, we make a commit to the remote repository. This commit hash is a unique identifier that points to a version of the code at a specific point in time. That hash then gets used to link the code to the data and the data to the output. 
+
+Now our Data and Output folders look like this:
+
+```
+Data/
+  Processed/
+    Current/
+      data.csv
+      summary_data.csv
+      summary_stats.csv
+      log.txt
+    Archive/
+      master_t5o985_042018.zip
+      master_5986j6_052018.zip
+      master_9jfd86_062018.zip
+  Raw/
+```
+
+```
+Output/
+  Processed/
+    Current/
+      fig1.png
+      fig2.png
+      fig3.png
+    Archive/
+      master_t5o985_042018.zip
+      master_5986j6_052018.zip
+      master_9jfd86_062018.zip
+  Raw/
+```
+
+If we send the client/partner `master_t5o985_042018.zip` and there's a question about how data or a figure got created, it's super easy for us to back track to both the data and the code. 
+
+It's recommended to set-up the archive folders as the in following format: `branchName + _ + commit hash + _ + date/description`. The date/description part makes it easy for you to find a specific version of the data/output without knowing the exact date or why the output was created.^[I worked on a project one time where we produced data from the client each month, and we named all our files as with the description as "master_commit hash_May Monthly", "master_commit hash_June Monthly", etc. Then if I need data from Jan - June, it was very easy for me to go in and figure out which data were created when.]
+
+Both R and Python have the ability to make automatted commits. 

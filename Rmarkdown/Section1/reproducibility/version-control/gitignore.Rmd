@@ -22,14 +22,17 @@ Generally, you want the file location to be at the root directory of the project
 * `*.xlsx`
 * `*.docx`
 
+##### Julia {-}
+
+* [Github Julia suggestions](https://github.com/github/gitignore/blob/master/Julia.gitignore)
+
 ##### R {-}
 
-* `*.Rdata`
-* `*.RDS`
+* [Github R suggestions](https://github.com/github/gitignore/blob/master/R.gitignore)
 
 ##### Python {-}
 
-* [Good python suggestions](https://github.com/github/gitignore/blob/master/Python.gitignore)
+* [Github Python suggestions](https://github.com/github/gitignore/blob/master/Python.gitignore)
 
 ##### SAS {-}
 

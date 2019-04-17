@@ -1,0 +1,111 @@
+### Testing {-}
+
+#### Rules of thumb {-}
+
+* Unit tests should have descriptive function names (often long!)
+
+#### Directory structure {-}
+
+Set-up the directory this way.
+
+For each python module there should be an equivalent `test_XXX.py` or `XXX_test.py` module, to test the functions in the python module. 
+
+```
+
+dir\
+	spam.py
+	__init__.py
+	
+	tests\
+		test_spam.py
+		__init__.py
+```
+
+#### Testing Libraries {-}
+
+##### Unittest {-}
+
+###### Python Module {-}
+
+Example from Jeff Knupp
+
+```{python, eval = FALSE} 
+##primes.py
+def is_prime(number):
+    """Return True if *number* is prime."""
+    for element in range(number):
+        if number % element == 0:
+            return False
+        return True
+def print_next_prime(number):
+    """Print the closest prime number larger than *number*."""
+    index = number
+    while True:
+        index += 1
+        if is_prime(index):
+            print(index)
+```
+
+###### Python Test Module
+
+Import the module to test as the beginning of the script. If the functions to test are contained in an object then make an instance of the object and call the functions using dot notation.
+
+```{python, eval = FALSE}
+## test_primes.py
+import unittest
+from primes import is_prime
+class PrimesTestCase(unittest.TestCase):
+    """Tests for `primes.py`."""
+	def test_is_five_prime(self):
+        """Is five successfully determined to be prime?"""
+        self.assertTrue(is_prime(5))
+if __name__ == '__main__':
+    unittest.main()
+```
+
+###### Running the tests {-}
+
+Navigate to the python module directory and run the following
+
+**Run all the tests for all modules** 
+
+```
+conda install pytest
+python -m pytest tests
+```
+
+**Run all tests for one module**
+
+```
+conda install pytest
+python -m pytest tests/test_spam.py
+```
+
+###### Testing column types {-}
+
+**Test if column is an integer**
+
+```
+self.assertIsInstance(df.col, int)
+```
+ 
+**Test if column is a string**
+
+```
+self.assertIsInstance(df.col, str)
+```
+
+###### Helpful Asserts to Know {-}
+
+https://kapeli.com/cheat_sheets/Python_unittest_Assertions.docset/Contents/Resources/Documents/index
+
+##### Hypothesis {-}
+
+#### Resources {-}
+
+* https://www.youtube.com/watch?v=MYucYon2-lk
+* https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832
+* https://docs.python-guide.org/writing/tests/
+* https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/
+
+

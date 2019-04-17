@@ -1,0 +1,26 @@
+# Workflow
+
+1. Start a new project
+
+  * Check out the language-specific start-up pages
+  * Remember to set-up an environment/package manager for any new project
+  * Set-up a config file to make your code easily adaptable
+  
+2. Develop code
+
+  * As you develop, version control your code
+  * Use git branches correctly and never push to master
+  * Write good documentation for your functions
+  * Use linters and formatters to help keep your code looking clean and pretty
+  * Test the code during the development phase
+  * Profile and benchmark code to see if there's room for optimization
+  * Once the code is "finalized", aka passing all your tests, submit a pull request to another programmer
+  * Do a code review to walk through the pull request and then finally merge the code into master
+  * Update the repositories README to account for any changes
+
+3. Develop data/output
+  
+  * Version any output and data that is going to go to the client/partner
+
+If you're made it this far, and are practicing all the best practices from Section 1, then you're writing high-quality, robust, efficient code! Congrats!! Not only is your code looking great, but your workflow is very sleek. Any question that clients/partners have should be able to be answered easily. One last thing to remember, code like any other piece of writing needs to be edited and updated. It's never going to be the final product on your first attempt, so keep going back, and eventually you'll end up with a piece of work that's turn-in ready!
+

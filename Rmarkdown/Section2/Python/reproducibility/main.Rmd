@@ -2,3 +2,6 @@
 
 ```{r child="environments.Rmd"}
 ```
+
+```{r child="data_archiving.Rmd"}
+```

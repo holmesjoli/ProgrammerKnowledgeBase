@@ -1,0 +1,11 @@
+### Data Archiving {-}
+
+Please use the [dataArchivePy](https://github.com/holmesjoli/dataArchivePy) library. The dataArchivePy library is a library to help analysts link data and content. 
+
+#### Workflow {-}
+
+Develop code normally. Add and commit code to bitbucket/TFS and do pull requests. When it comes time to deliver content to a client/partner then use the dataArchivePy library. At this point the code should be code reviewed and tested and be ready to merge into master.
+
+1. Pull request development branch to master
+2. Checkout the master branch
+3. Use the [Sample code](https://github.com/holmesjoli/dataArchivePy/blob/master/dataArchivePy/sample_code.py) and auto_commit modules and archive_files modules to commit and archive data and other content. 

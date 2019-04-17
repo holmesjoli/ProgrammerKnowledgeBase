@@ -1,0 +1,5 @@
+### Introduction {-}
+
+Version control systems allow for easy access to prior versions of code, branching for development, and easy of collaboration between programmers. Different version control systems exist across several industries, but it is considered best practice to use a git as your version control system for any coding task. 
+
+Git is important to use to keep track of code version histories. Code isn't static and just written once and executed, but is consistently changing. Version control is necessary to keep track of these updates.  
