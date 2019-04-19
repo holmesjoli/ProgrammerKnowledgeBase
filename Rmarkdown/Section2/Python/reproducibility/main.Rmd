@@ -3,6 +3,9 @@
 ```{r child = "config.Rmd"}
 ```
 
+```{r child = "documentation.Rmd"}
+```
+
 ```{r child = "environments.Rmd"}
 ```
 
