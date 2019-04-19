@@ -1,1 +1,57 @@
+### Documentation {-}
 
+#### Project /task-level {-}
+
+1. Each project's code should live in a repository (see GIT section)
+2. Each repository should have a README
+* What are the exact steps that need to be taken to get up and running?
+* What should someone already have installed or configured?
+* What might someone have a hard time understanding right away?
+* Any known issues or bugs?
+			
+3. Each repository should be laid out in a way that makes sense. For best practices on Python projects, see Cookiecutter. This is a package that will help you set up a coherent folder structure.
+4. File names should be all lowercase 
+
+#### Package-level {-}
+
+1. Packages should be documented in the module docstring of the __init__.py file in the package directory. Include in the __init__.py file a comment string like:
+	
+```{python, eval = FALSE, echo = TRUE}
+"""
+This is the xyz package.
+"""
+```
+	
+#### Code-level {-}
+
+Code-level documentation comes in the form of a document string, which is a string literal that occurs as the first statement in a module, function, class, or method definition. The docstring becomes the __doc__ special attribute of that object.
+
+Classes, modules, and functions all use docustrings. 
+
+Best practices for docstrings can be found in Python's [PEP 257](https://www.python.org/dev/peps/pep-0257/) -- Docstring Conventions guide. 
+a. Summaries of this best practice can also be found in the Document Strings section of Python's [PEP 8](https://www.python.org/dev/peps/pep-0008/#documentation-strings) Style Guide.
+
+##### Rules of thumb {-}
+
+* ALWAYS use `"""triple double quotes"""` around docstrings
+* ALWAYS include
+  * Inputs
+	* Outputs
+	* A summary of the object's functionalities
+		
+##### Example {-}
+
+```{python, echo = TRUE, eval = FALSE}
+def new_func(x, y, z):
+	"""
+	The docstring indicates the purpose of the function
+	:param x: a real number
+	:type x: int
+	:param y: a string
+	:type y: str
+	:param z: a boolean 
+	:type z:
+	
+	
+	:returns: str --a concatenation of x, y, and z"""
+```
