@@ -11,3 +11,6 @@
 
 ```{r child="package-development.Rmd"}
 ```
+
+```{r child="data-archiving.Rmd"}
+```
