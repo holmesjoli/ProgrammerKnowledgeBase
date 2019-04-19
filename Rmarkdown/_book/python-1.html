@@ -171,6 +171,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="python-1.html"><a href="python-1.html#reproducibility-2"><i class="fa fa-check"></i><b>4.2</b> Reproducibility</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#documentation-1"><i class="fa fa-check"></i>Documentation</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#pyenvironment"><i class="fa fa-check"></i>Environments</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#package-development"><i class="fa fa-check"></i>Package Development</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#data-archiving-1"><i class="fa fa-check"></i>Data Archiving</a></li>
@@ -209,7 +210,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>6.2</b> Reproducibility</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#config-files-1"><i class="fa fa-check"></i>Config files</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#documentation-1"><i class="fa fa-check"></i>Documentation</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#documentation-2"><i class="fa fa-check"></i>Documentation</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#environments-2"><i class="fa fa-check"></i>Environments</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packrat"><i class="fa fa-check"></i>Packrat</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#package-development-2"><i class="fa fa-check"></i>Package Development</a></li>
@@ -376,6 +377,68 @@ config <span class="op">=</span> pd.read_csv(<span class="st">&quot;path_to_csv&
 </div>
 </div>
 </div>
+<div id="documentation-1" class="section level3 unnumbered">
+<h3>Documentation</h3>
+<div id="project-task-level" class="section level4 unnumbered">
+<h4>Project /task-level</h4>
+<ol style="list-style-type: decimal">
+<li>Each project’s code should live in a repository (see GIT section)</li>
+<li>Each repository should have a README</li>
+</ol>
+<ul>
+<li>What are the exact steps that need to be taken to get up and running?</li>
+<li>What should someone already have installed or configured?</li>
+<li>What might someone have a hard time understanding right away?</li>
+<li>Any known issues or bugs?</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Each repository should be laid out in a way that makes sense. For best practices on Python projects, see Cookiecutter. This is a package that will help you set up a coherent folder structure.</li>
+<li>File names should be all lowercase</li>
+</ol>
+</div>
+<div id="package-level" class="section level4 unnumbered">
+<h4>Package-level</h4>
+<ol style="list-style-type: decimal">
+<li>Packages should be documented in the module docstring of the <strong>init</strong>.py file in the package directory. Include in the <strong>init</strong>.py file a comment string like:</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">&quot;&quot;&quot;</span>
+<span class="co">This is the xyz package.</span>
+<span class="co">&quot;&quot;&quot;</span></code></pre></div>
+</div>
+<div id="code-level" class="section level4 unnumbered">
+<h4>Code-level</h4>
+<p>Code-level documentation comes in the form of a document string, which is a string literal that occurs as the first statement in a module, function, class, or method definition. The docstring becomes the <strong>doc</strong> special attribute of that object.</p>
+<p>Classes, modules, and functions all use docustrings.</p>
+<p>Best practices for docstrings can be found in Python’s <a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a> – Docstring Conventions guide. a. Summaries of this best practice can also be found in the Document Strings section of Python’s <a href="https://www.python.org/dev/peps/pep-0008/#documentation-strings">PEP 8</a> Style Guide.</p>
+<div id="rules-of-thumb" class="section level5 unnumbered">
+<h5>Rules of thumb</h5>
+<ul>
+<li>ALWAYS use <code>&quot;&quot;&quot;triple double quotes&quot;&quot;&quot;</code> around docstrings</li>
+<li>ALWAYS include</li>
+<li>Inputs
+<ul>
+<li>Outputs</li>
+<li>A summary of the object’s functionalities</li>
+</ul></li>
+</ul>
+</div>
+<div id="example" class="section level5 unnumbered">
+<h5>Example</h5>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> new_func(x, y, z):
+    <span class="co">&quot;&quot;&quot;</span>
+<span class="co">    The docstring indicates the purpose of the function</span>
+<span class="co">    :param x: a real number</span>
+<span class="co">    :type x: int</span>
+<span class="co">    :param y: a string</span>
+<span class="co">    :type y: str</span>
+<span class="co">    :param z: a boolean </span>
+<span class="co">    :type z:</span>
+<span class="co">    </span>
+<span class="co">    </span>
+<span class="co">    :returns: str --a concatenation of x, y, and z&quot;&quot;&quot;</span></code></pre></div>
+</div>
+</div>
+</div>
 <div id="pyenvironment" class="section level3 unnumbered">
 <h3>Environments</h3>
 <div id="package-and-environment-managers" class="section level4 unnumbered">
@@ -462,7 +525,7 @@ config <span class="op">=</span> pd.read_csv(<span class="st">&quot;path_to_csv&
 <h2><span class="header-section-number">4.3</span> Quality</h2>
 <div id="testing" class="section level3 unnumbered">
 <h3>Testing</h3>
-<div id="rules-of-thumb" class="section level4 unnumbered">
+<div id="rules-of-thumb-1" class="section level4 unnumbered">
 <h4>Rules of thumb</h4>
 <ul>
 <li>Unit tests should have descriptive function names (often long!)</li>

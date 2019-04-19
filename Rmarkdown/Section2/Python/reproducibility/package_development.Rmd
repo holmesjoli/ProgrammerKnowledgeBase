@@ -9,12 +9,50 @@ package_name
 		Module1.py
 		tests
 			module1_test.py
+	.gitignore
 	LICENSE
 	README.md
 	setup.py
 	config.yaml
 ```
 
+The above folder shows how a simple python package can be setup. All python scripts should live in the `package_name` subfolder of the overall package. Tests live in a `tests` file which is nested in the `package_name` folder.
+
+##### LICENSE {-}
+
+A file that specifies the type of license. This can just be written in plaintext.
+
+##### README.md {-}
+
+The README for the package. Learn more about the README in the Documentation section of this book. 
+
+#### setup.py
+
+Below is a sample `setup.py` file. The `setup.py` is a required package for python package development. It contains metadata about the package as well as some build information. 
+
+```{python, eval = FALSE, echo = TRUE}
+from setuptools import setup
+
+with open("README.md", "r") as fh:
+  long_description = fh.read()
+
+setup(
+   name='foo',
+   version='1.0.0',
+   author = "Joli Holmes",
+   author_email = "holmesjoli@gmail.com",
+   description='A useful module',
+   long_description = long_description,
+   url = "https://github.com/holmesjoli/programmerKnowledgeBase"
+   packages= setuptools.find_packages(),  
+   install_requires=[]
+)
+```
+
+#### config.yaml
+
+You may wish to include a config file in the package. See more in the config files section. 
+ 
 #### Install locally packages {-}
 
 1. Navigate to the package directory (the upper most package folder, which contains the setup.py file)
