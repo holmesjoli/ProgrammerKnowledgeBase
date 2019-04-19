@@ -1,0 +1,1 @@
+https://github.com/PovertyAction/github-training/blob/master/resources/Integrating%20Git%20and%20Stata.md

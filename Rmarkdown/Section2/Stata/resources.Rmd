@@ -1,0 +1,6 @@
+## Resources
+
+### General {-}
+
+* [Stata video tutorials](https://www.stata.com/links/video-tutorials/)
+* [UCLA data analysis examples](https://stats.idre.ucla.edu/other/dae/)

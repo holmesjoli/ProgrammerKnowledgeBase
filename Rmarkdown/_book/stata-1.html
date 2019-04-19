@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="reproducibility-1.html">
-<link rel="next" href="python-1.html">
+<link rel="prev" href="r-1.html">
+<link rel="next" href="data-visualization.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -273,168 +273,32 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="quality-1" class="section level1">
-<h1><span class="header-section-number">3</span> Quality</h1>
-<div id="testing" class="section level2">
-<h2><span class="header-section-number">3.1</span> Testing</h2>
-<div id="introduction-6" class="section level3 unnumbered">
-<h3>Introduction</h3>
-<p>Very recently, I was trying to compare two lists with numpys <code>nan</code> object in both lists. I forgot that in python np.nan == np.nan returns False<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>. However, I didn’t remember this when I was writing my code. I remembered that when I was testing my code.</p>
-<p>It’s fairly easy to assume you know the behavior of a function, as I did above and accidentally introduce bugs into the code. Testing is an important way to automate the discovery of such mistakes, and shift the timeline of bug discover from later to earlier. Most programmers I know do test there code, but they often do it in an adhoc way. To ensure that we’re creating output from derived from quality code, we want to test our code in consistent and standardized way.<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a></p>
-<div id="testing-pros" class="section level4 unnumbered">
-<h4>Testing Pros</h4>
-<ol style="list-style-type: decimal">
-<li>Fewer bugs
-<ol style="list-style-type: lower-alpha">
-<li>Testing makes it explicit how the code should behave</li>
-</ol></li>
-<li>Better code structure
-<ol style="list-style-type: lower-alpha">
-<li>Code that is easy to test is designed better</li>
-<li>Testing forces the programmer to break up complicated parts of the code into separate parts that work in isolation</li>
-</ol></li>
-<li>Easier restarts and collaboration
-<ol style="list-style-type: lower-alpha">
-<li>Easier to pick-up where you left off if you know what’s passing/failing</li>
-<li>Other programmers can figure out the goals of the code based on the tests and feel more confident making changes and re-running the code because the tests are passing</li>
-</ol></li>
-<li>Robust code
-<ol style="list-style-type: lower-alpha">
-<li>Adds confidence that you know what your code is doing</li>
-</ol></li>
-</ol>
-</div>
-</div>
-<div id="best-practices" class="section level3 unnumbered">
-<h3>Best practices</h3>
-<p>Tests should be independent, chill, implementaiton agnostic, fast, and shareable.</p>
-<table style="width:100%;">
-<colgroup>
-<col width="8%" />
-<col width="91%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Term</th>
-<th>Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Independent</td>
-<td>Tests shouldn’t depend on other tests, or auto-fail when other tests fail. This makes is hard to tell what code needs to be worked on.</td>
-</tr>
-<tr class="even">
-<td>Chill</td>
-<td>Tests shouldn’t be super strict on timing or require super precise output. Very relaxed tests are often still quite good.</td>
-</tr>
-<tr class="odd">
-<td>Implementation agnostic</td>
-<td>Tests shouldn’t assume implementation details and test those details.</td>
-</tr>
-<tr class="even">
-<td>Fast</td>
-<td>These tests are meant to be run constantly, many times per day. Longer end to end testing should be done as a separate step.</td>
-</tr>
-<tr class="odd">
-<td>Shareable</td>
-<td>Don’t test with any sensitive data. You want to be able to communicate the results of your test without risk.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="testing-timeline" class="section level3 unnumbered">
-<h3>Testing timeline</h3>
-<p>Testing is often one of those things that is thought of last not first, often after a bug has been discovered! A better strategy is to build testing time into the development timeline. And test as you program, don’t leave it all until the end. Testing as you go along also helps to re-organize code in a more efficient way.</p>
-<p>You would never submit a paper or report after the first draft. Code shouldn’t be submitted after the first draft either! It needs to be edited and thoughtfully reorganized throughout the development process and testing can help encourage this practice.</p>
-</div>
-<div id="types-of-tests" class="section level3 unnumbered">
-<h3>Types of tests</h3>
-<div id="assertions" class="section level4 unnumbered">
-<h4>Assertions</h4>
-<p>An assertion is statement that evaluates to <code>true</code> or <code>false</code>. If the statement evaluates to <code>true</code> then the assertion passes. If the statement evaluates to <code>false</code> then it throws an assertion error.</p>
-<p>Assertions are the building blocks for unit tests and integration tests.</p>
-<p>At minimum, code should have strategically placed assertions throughout. However, it is much preferred to have an organized set of test files</p>
-</div>
-<div id="unit-tests" class="section level4 unnumbered">
-<h4>Unit Tests</h4>
-<p>A unit test is a test written by the programmer to verify that a relatively small piece of code is doing what it is intended to do. They are narrow in scope, they should be easy to write and execute, and their effectiveness depends on what the programmer considers to be useful. The tests are intended for the use of the programmer, they are not directly useful to anybody else, though, if they do their job, testers and users downstream should benefit from seeing fewer bugs.</p>
-<p>Part of being a unit test is the implication that things outside the code under test are mocked or stubbed out. Unit tests shouldn’t have dependencies on outside systems. They test internal consistency as opposed to proving that they play nicely with some outside system.</p>
-<p>Definition from <a href="https://stackoverflow.com/questions/5357601/whats-the-difference-between-unit-tests-and-integration-tests">Stack Overflow</a></p>
-</div>
-<div id="integration-tests" class="section level4 unnumbered">
-<h4>Integration Tests</h4>
-<p>An integration test is done to demonstrate that different pieces of the system work together. Integration tests cover whole applications, and they require much more effort to put together. They usually require resources like database instances and hardware to be allocated for them. The integration tests do a more convincing job of demonstrating the system works (especially to non-programmers) than a set of unit tests can, at least to the extent the integration test environment resembles production. Actually “integration test” gets used for a wide variety of things, from full-on system tests against an environment made to resemble production to any test that uses a resource (like a database or queue) that isn’t mocked out.</p>
-<p>Definition from <a href="https://stackoverflow.com/questions/5357601/whats-the-difference-between-unit-tests-and-integration-tests">Stack Overflow</a></p>
-</div>
-</div>
-<div id="data-validation-tests" class="section level3 unnumbered">
-<h3>Data validation tests</h3>
-<p>Some things to test for:</p>
+<div id="stata-1" class="section level1">
+<h1><span class="header-section-number">7</span> Stata</h1>
+<p>Stata is primarily used for statistical analysis and visualization. It is one of the most popular statistical softwares in Economics.</p>
+<p>Unlike R and Python, Stata is not open-source. The the majority of Stata packages are maintained by <a href="https://www.stata.com/">Stata</a>, although some users do build packages for Stata as well. There are several pros and cons because of this. One con is that, Stata isn’t free like R and Python. Another con is that the online community isn’t as active as R and Python communities. However, Stata maintains lots of online help and resources for their users.</p>
+<div id="resources-5" class="section level2">
+<h2><span class="header-section-number">7.1</span> Resources</h2>
+<div id="general-2" class="section level3 unnumbered">
+<h3>General</h3>
 <ul>
-<li>Column types</li>
-<li>Column names</li>
-<li>Null or NA values</li>
-<li>Boolean values</li>
-<li>Values within a certain range</li>
-<li>Should character vectors be a certain length</li>
-<li>Do we expect a certain range of values for a given categorical variable</li>
+<li><a href="https://www.stata.com/links/video-tutorials/">Stata Video tutorials</a></li>
+<li><a href="https://stats.idre.ucla.edu/other/dae/">UCLA Data Analysis Examples</a></li>
 </ul>
-</div>
-</div>
-<div id="code-review" class="section level2">
-<h2><span class="header-section-number">3.2</span> Code Review</h2>
-<p>A code review is the chance to walk-through and explain your code line-by-line to others involved with the project. Code reviews provide opportunities for other programmers or researchers to help catch bugs and improve overall code quality.</p>
-<div id="review-participants" class="section level3 unnumbered">
-<h3>Review participants</h3>
-<ul>
-<li>The original author(s) of the code being updated</li>
-<li>At least one more senior or programmer of an equivalent level<br />
-</li>
-<li>People knowledgeable about the content area of your code</li>
-<li>At least one person who is very familiar the programming language</li>
-</ul>
-</div>
-<div id="general-tips-for-success" class="section level3 unnumbered">
-<h3>General tips for success</h3>
-<p>Before:</p>
-<ul>
-<li>If there are data involved and you wish to run the code line-by-line, pre-load the data (or at least a sample of the data)</li>
-<li>Comment the code as this will make it easier to walk through or explain things on the spot</li>
-<li>Make sure all the functions have documentation</li>
-<li>Show that all the tests are passing</li>
-<li>Modularize! Make functions, have multiple scripts, write a package. This will make it easier to walk through.</li>
-</ul>
-<p>During:</p>
-<ul>
-<li>Take notes in the code when your reviewers give feedback, or ask one of the other people involved in the review to take notes for you.</li>
-</ul>
-<p>After:</p>
-<ul>
-<li>Ask for clarification, especially if you’re new to the project or software you’re using. More experienced programmers know what they’re doing, but they may be unaware of your confidence in a language/project</li>
-<li>Once you’ve incorporated the feedback, make sure to ask someone to review the changes</li>
-</ul>
-<!-- # High Performance Computing -->
 </div>
 </div>
 </div>
 
 
 
-<div class="footnotes">
-<hr />
-<ol start="7">
-<li id="fn7"><p>Nan stands for not a number.<a href="quality-1.html#fnref7">↩</a></p></li>
-<li id="fn8"><p>There’s a term on github called coverage, which refers to the percent of functions which are tested in the repository. A high coverage percent is often an indicator of stable, high quality code.<a href="quality-1.html#fnref8">↩</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="reproducibility-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="python-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

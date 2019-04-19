@@ -1,0 +1,10 @@
+# Stata
+
+Stata is primarily used for statistical analysis and visualization. It is one of the most popular statistical softwares in Economics. 
+
+Unlike R and Python, Stata is not open-source. The the majority of Stata packages are maintained by [Stata](https://www.stata.com/), although some users do build packages for Stata as well. There are several pros and cons because of this. One con is that, Stata isn't free like R and Python. Another con is that the online community isn't as active as R and Python communities. However, Stata maintains lots of online help and resources for their users. 
+
+```{r child = "resources.Rmd"}
+```
+
+
