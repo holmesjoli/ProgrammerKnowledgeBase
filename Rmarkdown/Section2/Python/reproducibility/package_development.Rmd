@@ -1,1 +1,21 @@
+### Package Development {-}
 
+#### Folder Structure {-}
+
+```
+package_name
+	package_name
+	    __init__.py
+		Module1.py
+		tests
+			module1_test.py
+	LICENSE
+	README.md
+	setup.py
+	config.yaml
+```
+
+#### Install locally packages {-}
+
+1. Navigate to the package directory (the upper most package folder, which contains the setup.py file)
+2. Type `pip install -e .`

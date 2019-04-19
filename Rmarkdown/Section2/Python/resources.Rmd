@@ -16,6 +16,15 @@
 * [Why you need Python environments and how to manage them with Conda](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c) - Gergely Szerovay
 * [Have you installed a Python package, but now you can't import it?](http://takluyver.github.io/posts/i-cant-import-it.html) - Thomas Kluyver
 
+##### Package Development {-}
+
+# Additional Resources
+	
+* [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/)
+* [Minimal Package Structure](https://python-packaging.readthedocs.io/en/latest/minimal.html#)
+* [Packaging and Testing](https://python-textbok.readthedocs.io/en/1.0/Packaging_and_Testing.html)
+* [Packaging and distributing projects](https://packaging.python.org/guides/distributing-packages-using-setuptools/)
+
 ### Quality {-}
 
 #### Testing {-}
@@ -26,5 +35,6 @@
 * [Testing Your Code](https://docs.python-guide.org/writing/tests/) - The Hitchhikers Guide to Python
 * [Beyond Unit Tests: Taking Your Testing to the Next Level](https://www.youtube.com/watch?v=MYucYon2-lk) - Hillel Wayne
 * [What the mock?—A cheatsheet for mocking in Python](https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832) - Yeray Diaz
-
+* [Let there be tests](https://python-packaging.readthedocs.io/en/latest/testing.html)
+* [unittest](https://docs.python.org/3/library/test.html)
 

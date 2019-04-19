@@ -1,0 +1,11 @@
+## Command Line Interface (CLI)
+
+### Running R Scripts 
+
+R can be run from the command line.
+
+```
+Rscript path_to_R_script.R
+```
+
+### Adding Command Line Arguments

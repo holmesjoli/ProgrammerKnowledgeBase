@@ -1,1 +1,11 @@
+### Data Archiving {-}
 
+Please use the [dataArchiveR](https://github.com/holmesjoli/dataArchiveR) library. The dataArchiveR library is a library to help analysts link data and content. 
+
+#### Workflow {-}
+
+Develop code normally. Add and commit code to bitbucket/TFS and do pull requests. When it comes time to deliver content to a client/partner then use the dataArchiveR library. At this point the code should be code reviewed and tested and be ready to merge into master.
+
+1. Pull request development branch to master
+2. Checkout the master branch
+3. Use the [Sample code](https://github.com/holmesjoli/dataArchiveR/blob/master/dataArchiveR/R/sample_code.py) to get started. Also, checkout the README and vignette for more information about the package and how the dataArchiveR packge can be integrated into a pipeline. 

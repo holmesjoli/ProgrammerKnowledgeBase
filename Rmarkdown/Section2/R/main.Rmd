@@ -15,5 +15,8 @@
 ```{r child = "modeling/main.Rmd"}
 ```
 
+```{r child = "cli/main.Rmd"}
+```
+
 ```{r child = "resources.Rmd"}
 ```

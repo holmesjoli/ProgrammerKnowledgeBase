@@ -3,8 +3,11 @@
 ```{r child = "config.Rmd"}
 ```
 
-```{r child="environments.Rmd"}
+```{r child = "environments.Rmd"}
 ```
 
-```{r child="data_archiving.Rmd"}
+```{r child = "package_development.Rmd"}
+```
+
+```{r child = "data_archiving.Rmd"}
 ```

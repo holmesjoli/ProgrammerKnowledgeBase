@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="r-1.html">
-<link rel="next" href="technical-terminology.html">
+<link rel="prev" href="python-1.html">
+<link rel="next" href="r-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -267,355 +267,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-visualization" class="section level1">
-<h1><span class="header-section-number">7</span> Data Visualization</h1>
-<div id="tableau" class="section level2">
-<h2><span class="header-section-number">7.1</span> Tableau</h2>
-<div id="introduction-9" class="section level3 unnumbered">
-<h3>Introduction</h3>
-<p>Tableau is a data visualization software. It’s a very popular tool for data and business analysts because it’s easy to learn and doesn’t require the developer of the tool programming background. It has powerful capabilities for creating dashboards and story boards which can be used for exploratory analysis or to lead end users through a particular story in the data.</p>
-<div id="pros-and-cons" class="section level4 unnumbered">
-<h4>Pros and Cons</h4>
-<p>Anyone who has created a dashboard before knows that it takes a long time, even a simple one using software like Rshiny. A complex one using Javascript’s visualization library, D3, takes even longer. The other issue with creating a custom dashboard in a software like R or JavaScript, is that the dashboard has to be maintained by a programmer who knows the language(s) used to build the dashboard.</p>
-<p>So, there are a lot of reasons to use Tableau. However, as a risk-averse programmer there are several things I would NEVER use Tableau for, even though Tableau has the capability to do so. The most important one is data management. A lot of the examples and use cases of Tableau use very clean, ready-to-use data, or the data needs to have one or two very simple changes, such as splitting the column of changing the column type.</p>
-<p>In my world, the data are never clean like that. They almost always have to be a) validated and b) managed. Although, there are some capabilities that allow a user to clean data in Tableau, I would strongly advise against that. There isn’t an easy way to track changes made to the data. As programmers, we use version control to track all our changes and then submit pull requests to have those changes approved. I would recommend maintaining this workflow for quality assurance purposes.</p>
-</div>
-<div id="beginner-resources" class="section level4 unnumbered">
-<h4>Beginner Resources</h4>
-<p><strong>Tableau tips for beginners</strong></p>
+<div id="additional-resources" class="section level1">
+<h1><span class="header-section-number">5</span> Additional Resources</h1>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=D8qitKdsaKw&amp;feature=youtu.be">Video</a></li>
-<li><a href="https://tc18.tableau.com/sites/default/files/session/assets/18BI-028_Tableau%20tips%20for%20beginners.pdf">Powerpoint</a></li>
+<li><a href="https://packaging.python.org/tutorials/packaging-projects/">Packaging Python Projects</a></li>
+<li><a href="https://python-packaging.readthedocs.io/en/latest/minimal.html#">Minimal Package Structure</a></li>
+<li><a href="https://python-textbok.readthedocs.io/en/1.0/Packaging_and_Testing.html">Packaging and Testing</a></li>
+<li><a href="https://packaging.python.org/guides/distributing-packages-using-setuptools/">Packaging and distributing projects</a></li>
 </ul>
-<p><strong>Tableau Developer Advanced</strong></p>
-<ul>
-<li><a href="https://github.com/tableau">Tableau Github</a></li>
-<li><a href="https://www.dropbox.com/sh/lztdogubf20498e/AAAPptLIxaAPLdBGmwUtMVJba?dl=0">Tableau Developer Conference Materials</a></li>
-</ul>
+<div id="quality-3" class="section level3 unnumbered">
+<h3>Quality</h3>
+<div id="testing-1" class="section level4 unnumbered">
+<h4>Testing</h4>
 </div>
-<div id="tableau-versions" class="section level4 unnumbered">
-<h4>Tableau Versions</h4>
-<p>Like any software or application, Tableau has changed and been updated overtime. However, specific functionalities, especially development functionalities, such as integration with R, Python, and Matlab and use of the Extract API depend on the version of Tableau install.</p>
-<p>Make sure that development you’re interested in doing is compatible with the version of Tableau that you have installed.<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a> To check the version go to Help &gt; About Tableau.</p>
-</div>
-<div id="recommended-workflow" class="section level4 unnumbered">
-<h4>Recommended Workflow</h4>
-<p>Although, Tableau does not require a programming background, much of what we’ll do does require a lot of programming.</p>
-<ol style="list-style-type: decimal">
-<li>Write data validation checks in Python</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>Utilize all the tools discussed in Section 1 to write robust, quality code</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li>Write data management steps in Python</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>Utilize all the tools discussed in Section 1 to write robust, quality code</li>
-</ol>
-<ol start="3" style="list-style-type: decimal">
-<li>Use Tableau Extract API to create data extract</li>
-<li>Load data extract in Tableau</li>
-<li>Train model in Python and save to server</li>
-<li>Integrate trained model into Tableau</li>
-</ol>
-</div>
-</div>
-<div id="tableau-extract-api" class="section level3 unnumbered">
-<h3>Tableau Extract API</h3>
-<p>The Tableau Extract API is for …</p>
-<div id="set-up" class="section level4 unnumbered">
-<h4>Set-up</h4>
-<ol style="list-style-type: decimal">
-<li>Download the <a href="https://downloads.tableau.com/tssoftware/extractapi-py-x64-2019-1-2.zip">Tableau Extract API</a></li>
-<li>Extract the contents of the zip file to your repositories folder, and rename the folder tableausdk</li>
-<li>Create and activate new python environment</li>
-</ol>
-<pre><code>conda create --name Tableau python==3.7
-source activate Tableau</code></pre>
-<ol start="4" style="list-style-type: decimal">
-<li>Build the library from the command line</li>
-</ol>
-<pre><code>python setup.py build
-python setup.py install</code></pre>
-<ol start="5" style="list-style-type: decimal">
-<li>Write the python script</li>
-</ol>
-</div>
-<div id="resources-5" class="section level4 unnumbered">
-<h4>Resources</h4>
-<p><strong>Leveraging the Extract API to build sophisticated data models</strong></p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=kk01bWEALXs&amp;feature=youtu.be">Video</a></li>
-<li><a href="https://tc18.tableau.com/sites/default/files/session/assets/18BI-081_Leveraging%20the%20Extract%20API%20to%20build%20sophisticated%20data%20models.pdf">Powerpoint</a></li>
-<li><a href="https://www.dropbox.com/sh/lztdogubf20498e/AADJJpb_KO4g2m_CF1-SSc_Sa/TC18%20-%20Developer%20Track/Leveraging%20the%20Extract%20API%20to%20build%20sophisticated%20data%20models?dl=0&amp;subfolder_nav_tracking=1">Code</a></li>
-</ul>
-</div>
-</div>
-<div id="integration-with-statistical-software" class="section level3 unnumbered">
-<h3>Integration with Statistical Software</h3>
-<p>Tableau can integrate with both Python and R, such that Python or R code can be evaluated from within a Tableau workbook. This allows for the use of a number of machine learning packages and model predictions to be executed inside Tableau. Instead of writing an R or Python script outside of Tableau, running the model, exporting the results as data, importing those data back into Tableau, everything can be done in one software, which simplifies things significantly!</p>
-<p>Tableau relies on two packages the <a href="https://cran.r-project.org/web/packages/Rserve/Rserve.pdf">Rserve</a> package for R-users and the <a href="https://github.com/tableau/TabPy">TabPy</a> package for python-users.</p>
-<div id="tableau-script-functions" class="section level4 unnumbered">
-<h4>Tableau Script Functions</h4>
-<p>There are 4 script function in Tableau, which are used to return vectors from R/Python of specific types.</p>
-<ul>
-<li>SCRIPT_REAL() Returns real, or decimal, numbers</li>
-<li>SCRIPT_INT() Returns integer, or whole, numbers</li>
-<li>SCRIPT_STR() Returns strings (words and text)</li>
-<li>SCRIPT_BOOL() Returns booleans (true/false)</li>
-</ul>
-</div>
-<div id="helpful-tips" class="section level4 unnumbered">
-<h4>Helpful tips</h4>
-<ul>
-<li>All input vectors and the output vector must be of the same length</li>
-<li>External service connections can only return one vector at a time</li>
-<li>[Parameters] need some special treatment: .argn[1] instead of .argn</li>
-<li>Calculation scope is defined by the addressing &amp; partitioning settings of the Table Calculation</li>
-</ul>
-</div>
-<div id="resources-6" class="section level4 unnumbered">
-<h4>Resources</h4>
-<p><strong>Accelerate Your Advanced Analytics R, Python &amp; MATLAB</strong></p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=i3zU7ufn1-8&amp;feature=youtu.be">Video</a></li>
-<li><a href="https://tc18.tableau.com/sites/default/files/session/assets/18BI-002-R1_Accelerate%20Your%20Advanced%20Analytics%20R%2C%20Python%20%26%20MATLAB%20%28.pdf">Powerpoint</a></li>
-</ul>
-<p><strong>Data Science Applications with TabPy/R</strong></p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=nRtOMTnBz_Y&amp;feature=youtu.be">Video</a></li>
-<li><a href="https://tc18.tableau.com/sites/default/files/session/assets/18BI-009_Building_Data_Science_Applications_in_Tableau.pdf">Powerpoint</a></li>
-</ul>
-</div>
-</div>
-<div id="r-2" class="section level3 unnumbered">
-<h3>R</h3>
-<div id="connect-r-and-tableau" class="section level4 unnumbered">
-<h4>Connect R and Tableau</h4>
-</div>
-<div id="in-r" class="section level4 unnumbered">
-<h4>In R</h4>
-<ol style="list-style-type: decimal">
-<li>Install the Rserve package <code>install.packages(&quot;Rserve&quot;)</code></li>
-<li>In the R console type <code>Rserve::Rserve(port = 6311)</code></li>
-</ol>
-</div>
-<div id="in-tableau" class="section level4 unnumbered">
-<h4>In Tableau</h4>
-<ol style="list-style-type: decimal">
-<li>Connect Tableau to R Server</li>
-</ol>
-<p><img src="images/tableau/connecting_to_server.png" /><!-- --></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Choose R settings</li>
-</ol>
-<p><img src="images/tableau/connect_to_rserve.png" /><!-- --></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Test the connection to makes sure it says “successfully connected to the external service”</li>
-</ol>
-</div>
-<div id="workflow-2" class="section level4 unnumbered">
-<h4>Workflow</h4>
-<p><img src="images/tableau/R_tableau_workflow.png" /><!-- --></p>
-<p><a href="https://tc18.tableau.com/learn/sessions/32353">Source</a></p>
-</div>
-<div id="resources-7" class="section level4 unnumbered">
+<div id="resources-3" class="section level4 unnumbered">
 <h4>Resources</h4>
 <ul>
-<li><a href="https://www.tableau.com/learn/whitepapers/using-r-and-tableau">Using R and Tableau Whitepaper</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/how-integrate-r-and-tableau">Integrate R and Tableau Tutorial</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/using-r-within-tableau?product=tableau_desktop&amp;version=tableau_desktop_2019_1&amp;topic=calculations">Using R within Tableau Tutorial</a></li>
-<li><a href="https://www.tableau.com/learn/webinars/r-and-tableau-data-science-speed-thought-Asia?__src=liftigniter&amp;__widget=learn-recs-li&amp;li_source=LI&amp;li_medium=learn-recs-li">R and Tableau Data Science Speed</a></li>
+<li><a href="https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/">Improve Your Python: Understanding Unit Testing</a> - Jeff Knupp</li>
+<li><a href="https://docs.python-guide.org/writing/tests/">Testing Your Code</a> - The Hitchhikers Guide to Python</li>
+<li><a href="https://www.youtube.com/watch?v=MYucYon2-lk">Beyond Unit Tests: Taking Your Testing to the Next Level</a> - Hillel Wayne</li>
+<li><a href="https://medium.com/@yeraydiazdiaz/what-the-mock-cheatsheet-mocking-in-python-6a71db997832">What the mock?—A cheatsheet for mocking in Python</a> - Yeray Diaz</li>
+<li><a href="https://python-packaging.readthedocs.io/en/latest/testing.html">Let there be tests</a></li>
+<li><a href="https://docs.python.org/3/library/test.html">unittest</a></li>
 </ul>
 </div>
 </div>
-<div id="python-2" class="section level3 unnumbered">
-<h3>Python</h3>
-<div id="connect-python-and-tableau" class="section level4 unnumbered">
-<h4>Connect Python and Tableau</h4>
-<div id="in-ide" class="section level5 unnumbered">
-<h5>In IDE</h5>
-<ol style="list-style-type: decimal">
-<li>Clone the <a href="https://github.com/tableau/TabPy">TabPy repo</a></li>
-<li>Install the TabPy packages
-<ol style="list-style-type: lower-alpha">
-<li><code>pip install ./tabpy-server</code></li>
-<li><code>pip install ./tabpy-tools</code></li>
-<li>Install python 3.6.5 into the environment <code>conda install python==3.6.5</code></li>
-</ol></li>
-<li>Navigate to the Tabpy repository and type <code>./startup.cmd</code> to initiate the server</li>
-</ol>
-</div>
-<div id="in-tableau-1" class="section level5 unnumbered">
-<h5>In Tableau</h5>
-<ol style="list-style-type: decimal">
-<li>Connect Tableau to Python Server</li>
-</ol>
-<p><img src="images/tableau/connecting_to_server.png" /><!-- --></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Choose Python settings</li>
-</ol>
-<p><img src="images/tableau/connect_to_tabpy.png" /><!-- --></p>
-<ol start="3" style="list-style-type: decimal">
-<li>In a browser type localhost::9004 and the Tableau logo should appear</li>
-<li>Test the connection to makes sure it says “successfully connected to the external service”</li>
-</ol>
-</div>
-</div>
-<div id="starter-script" class="section level4 unnumbered">
-<h4>Starter Script</h4>
-<div id="python-3" class="section level5 unnumbered">
-<h5>Python</h5>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pandas <span class="im">as</span> pd
-<span class="kw">def</span> loanclassifierfull(_arg1, _arg2):
-    <span class="co">&quot;&quot;&quot;</span>
-<span class="co">    &quot;&quot;&quot;</span>
-  d <span class="op">=</span> {<span class="st">&quot;1-grade&quot;</span>: _arg1, <span class="st">&quot;2-grade&quot;</span>: _arg2}
-  df <span class="op">=</span> pd.DataFrame(data <span class="op">=</span> d)
-  probs <span class="op">=</span> model.predict_proba(df)
-  <span class="cf">return</span> [loan[<span class="dv">1</span>] <span class="cf">for</span> loan <span class="kw">in</span> probs]
-
-client <span class="op">=</span> tabpy_client.Client(<span class="st">&quot;http://localhost:9004&quot;</span>)
-client.deploy(<span class="st">&quot;loanclassifierfull&quot;</span>, loanclassifierfull, <span class="st">&quot;Description of the function&quot;</span>)</code></pre></div>
-</div>
-<div id="tableau-1" class="section level5 unnumbered">
-<h5>Tableau</h5>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">SCRIPT_REAL</span>(<span class="st">&quot;return tabpy.query(&#39;loancliassifierfull&#39;, _arg1, _arg2)[&#39;response&#39;]&quot;</span>, ([Arg1]), ([Arg2]))</code></pre></div>
-</div>
-</div>
-<div id="resources-8" class="section level4 unnumbered">
-<h4>Resources</h4>
-<p><strong>Automating production with Python and Tableau APIs</strong></p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=FqXu7OslQDM&amp;feature=youtu.be">Video</a></li>
-<li><a href="https://tc18.tableau.com/sites/default/files/session/assets/18BC-040_Forecast5%20Analytics_Automating%20production%20with%20Python%20and%20Tableau%20APIs.pdf">Powerpoint</a></li>
-</ul>
-<p><strong>Building Data Science Applications in Tableau</strong></p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=nRtOMTnBz_Y&amp;feature=youtu.be">Video</a></li>
-<li><a href="https://tc18.tableau.com/sites/default/files/session/assets/18BI-009_Building_Data_Science_Applications_in_Tableau.pdf">Powerpoint</a></li>
-</ul>
-<p><strong>Additional Resources</strong></p>
-<ul>
-<li><a href="https://www.tableau.com/about/blog/2016/11/leverage-power-python-tableau-tabpy-62077">Leveraging the power of Python Blog</a></li>
-<li><a href="https://www.tableau.com/about/blog/2017/1/building-advanced-analytics-applications-tabpy-64916">Building advanced analytics applications Blog</a></li>
-<li><a href="https://towardsdatascience.com/forecasting-with-python-and-tableau-dd37a218a1e5">Forecasting with Python and Tableau</a></li>
-</ul>
-</div>
-</div>
-<div id="glossary-1" class="section level3 unnumbered">
-<h3>Glossary</h3>
-<table>
-<colgroup>
-<col width="3%" />
-<col width="8%" />
-<col width="87%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Term</th>
-<th>Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Data blend</td>
-<td>Combining data from multiple data sources into one view. Sends separate queries to the different data sources and then aggregates the data in Tableau.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Data source</td>
-<td>A connection to a database or other place where data are stored.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Dimension</td>
-<td>A dimension is a field that is independent. By default, Tableau treats any field containing qualitative, categorical information as a dimension.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Drilling down</td>
-<td>Expanding out a hierarchy; ‘drilling down’ to the next level of detail.</td>
-</tr>
-<tr class="even">
-<td>E</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Extract</td>
-<td>A snapshot of the data (.tde or .hyper file)</td>
-</tr>
-<tr class="even">
-<td>L</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Live connection</td>
-<td>A data source that contains a direct connection to underlying data which provides real-time or near real-time data</td>
-</tr>
-<tr class="even">
-<td>M</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Measure</td>
-<td>A variable that is a dependnet variable. Tableau treats any field containing numeric information as a measure.</td>
-</tr>
-<tr class="even">
-<td>P</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Parameter</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>T</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>TDE</td>
-<td>A .tde file is a Tableau Data Extract File. A TDE is a compressed snapshot of the data stored on disk and loaded into memory as required to render a Tableau visualization.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-
-
-<div class="footnotes">
-<hr />
-<ol start="13">
-<li id="fn13"><p>Tableau changed their version naming convention in 2018. Older versions are named 4.0, or 5.0, or 10.1. These go all the way from 4.0 to 10.5. In 2018, they started naming their versions after the year they released the version in. The lastest versions are named 2018.2, 2019.1, etc.<a href="data-visualization.html#fnref13">↩</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="technical-terminology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="python-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

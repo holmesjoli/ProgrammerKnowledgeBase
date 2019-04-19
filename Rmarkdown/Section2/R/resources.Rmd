@@ -44,10 +44,13 @@ using R (and friends)](https://peerj.com/preprints/3192.pdf) - Marwick, Boettige
 * [R Graphics Cookbook](https://www.amazon.com/dp/1449316956/ref=cm_sw_su_dp?tag=ggplot2-20) - Winston Chang
 * [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) - Rstudio
 
-#### Quality {-}
+### Quality {-}
 
-### Testing {-}
+#### Testing {-}
 
 * [Getting Started with Testthat](https://journal.r-project.org/archive/2011/RJ-2011-002/RJ-2011-002.pdf) - Hadley Wickham
 * [R packages](http://r-pkgs.had.co.nz/tests.html#test-workflow) - Hadley Wickham
 
+### Command Line Interface {-}
+
+* [Passing arguments to an R script from command lines](https://www.r-bloggers.com/passing-arguments-to-an-r-script-from-command-lines/)

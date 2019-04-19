@@ -20,6 +20,15 @@ If you're going to be developing packages, I would strongly suggest reading Hadl
 
 #### Install local package {-}
 
-```
+```{r, echo = TRUE, eval = FALSE}
 install.packages("path_to_package", repos = NULL, type = "source")
+```
+
+#### Update local package {-}
+
+```{r, echo = TRUE, eval = FALSE}
+
+detach("package:package_name", unload=TRUE)
+install.packages("path_to_package", repos = NULL, type = "source")
+
 ```
