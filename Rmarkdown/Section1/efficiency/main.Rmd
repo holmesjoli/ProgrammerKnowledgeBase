@@ -1,1 +1,10 @@
-<!-- # High Performance Computing -->
+# High Performance Computing
+
+```{r child = "profiling/main.Rmd"}
+```
+
+```{r child = "parellel-processing/main.Rmd"}
+```
+
+```{r child = "computing-resources/main.Rmd"}
+```

@@ -1,0 +1,31 @@
+##### Set-Up {-}
+
+Before getting started communicate with the person setting-up the instance what your needs. Things to think about before setting-up the instance:
+
+* **Software**: E.g. does the instance need R, Python, Julia, Git? If it needs Julia, do you also need Atom? 
+* **Computational**: What are the computation needs? Will you be using parallel processing and utilizing multiple cores?
+* **Storage**: How big are the data that will be analyzed? How much space with the output take up?
+* **Memory**: What are your estimated memory requirements? How big are the data to be analyzed? What type of models will you be performing?
+
+##### Workflow {-}
+
+These are the basic steps one will need to run an analysis on AWS. These steps are detailed in greater detail in the subsections of this section. 
+
+1. Create an instance 
+2. Start an instance
+3. Connect to the instance
+4. Migrate data locally to the instance
+5. Develop analysis code
+* This can be done locally using a random sample of the data if the data are too large
+* Develop code on a small AWS instance using a random sample of the data 
+6. Change instance to a larger instance for analysis
+7. Run analysis
+8. Move output from instance to local computer
+9. Disconnect the instance
+10. Stop the instance
+11. Terminate the instance
+
+```{r child = "start_instance.Rmd"}
+```
+
+

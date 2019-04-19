@@ -3,11 +3,11 @@
 #### Folder Structure {-}
 
 ```
-package_name
-	package_name
+package_name\
+	package_name\
 	    __init__.py
 		Module1.py
-		tests
+		tests\
 			module1_test.py
 	.gitignore
 	LICENSE
@@ -26,7 +26,7 @@ A file that specifies the type of license. This can just be written in plaintext
 
 The README for the package. Learn more about the README in the Documentation section of this book. 
 
-#### setup.py
+#### setup.py {-}
 
 Below is a sample `setup.py` file. The `setup.py` is a required package for python package development. It contains metadata about the package as well as some build information. 
 

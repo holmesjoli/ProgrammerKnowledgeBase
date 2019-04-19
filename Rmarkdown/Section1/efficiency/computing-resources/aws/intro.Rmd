@@ -1,0 +1,18 @@
+AWS instances are virtual computers. The benefit of a virtual computer like an AWS is that the instance isn't physically owned, but instead "rented" by the user from Amazon. We pay for the time that we are physically using the computer, rather than buying an expensive resource that wouldn't be utilized 100% of the time.
+
+#### Instance Types {-}
+ 
+There are many instances available for use. The CPU on the instances ranges from 2 to 96. The memory on each instance ranges from .5 GB to 488 GB. Similarly the amount of storage on an instance differs vastly across instance. More detail on different instance types can be found [here](https://aws.amazon.com/ec2/instance-types/). 
+
+Increases in computational power (CPU) and memory cost more, so it's important to choose an instance that will satisfy the memory and power requirements for the analysis, while minimizing cost. 
+
+#### Instance Pricing {-}
+
+Amazon instances are priced in four ways: On-Demand, Reserved Instances, Spot Instances, and Dedicated Hosts. More detail about different pricing types can be found [here](https://aws.amazon.com/ec2/pricing/). Verify that the pricing for the instance is On-Demand with the person that set-up the instance prior to usage.
+
+This [link](https://aws.amazon.com/ec2/pricing/on-demand/) (On-Demand pricing) details how much an instance costs to use per hour. 
+
+#### Use Cases {-}
+
+* Custom configation of a computer in terms of your needs
+* Calling scripts from AWS preserves local computer's memory and CPU resources

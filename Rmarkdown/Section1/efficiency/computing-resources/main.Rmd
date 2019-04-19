@@ -1,0 +1,6 @@
+## Computing Resources
+
+There comes a point where even if your code is optimized and parallelized you may still run into memory issues. The data are just too big, or the model is too complex. It may be time to think about spinning up an install on a rented computer such as AWS (Amazon) or Azure (Microsoft). 
+
+```{r child = "aws/main.Rmd"}
+```

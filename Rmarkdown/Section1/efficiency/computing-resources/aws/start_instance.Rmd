@@ -1,0 +1,30 @@
+##### Start Instance {-}
+
+1. Log in to your AWS account at this [link](https://signin.amazonaws-us-gov.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAKRR57OXBZ66K46GA&X-Amz-Date=2019-04-19T21%3A06%3A40.188Z&X-Amz-Signature=c62b5face735d16cf0dca5678a86d50db975c6fdb365a6d765255c6111307e29&X-Amz-SignedHeaders=host&client_id=arn%3Aaws-us-gov%3Aiam%3A%3A464433863101%3Auser%2Fhomepage&redirect_uri=https%3A%2F%2Fconsole.amazonaws-us-gov.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&response_type=code&state=hashArgs%23)
+2. Search for or Click on **EC2**
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/aws/search.png")
+```
+
+3. Under Resources click on Running Instances
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/aws/resources.png")
+```
+
+4. Start the instance be selecting the instance of interest (in this example 1B). Then under Actions, under Instance State click Start. 
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/aws/start_instance.png")
+```
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/aws/start_instance2.png")
+```
+
+5. Verify the instance startedby checking the instance State and Status Checks
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/aws/check_instance_started.png")
+```

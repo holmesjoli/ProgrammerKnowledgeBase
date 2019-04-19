@@ -16,9 +16,7 @@
 * [Why you need Python environments and how to manage them with Conda](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c) - Gergely Szerovay
 * [Have you installed a Python package, but now you can't import it?](http://takluyver.github.io/posts/i-cant-import-it.html) - Thomas Kluyver
 
-##### Package Development {-}
-
-# Additional Resources
+#### Package Development {-}
 	
 * [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/)
 * [Minimal Package Structure](https://python-packaging.readthedocs.io/en/latest/minimal.html#)
@@ -29,8 +27,6 @@
 
 #### Testing {-}
 
-#### Resources {-}
-
 * [Improve Your Python: Understanding Unit Testing](https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/) - Jeff Knupp
 * [Testing Your Code](https://docs.python-guide.org/writing/tests/) - The Hitchhikers Guide to Python
 * [Beyond Unit Tests: Taking Your Testing to the Next Level](https://www.youtube.com/watch?v=MYucYon2-lk) - Hillel Wayne
@@ -38,3 +34,6 @@
 * [Let there be tests](https://python-packaging.readthedocs.io/en/latest/testing.html)
 * [unittest](https://docs.python.org/3/library/test.html)
 
+### Data Management {-}
+
+* [Cheatsheat](https://www.dataquest.io/blog/pandas-cheat-sheet/)
