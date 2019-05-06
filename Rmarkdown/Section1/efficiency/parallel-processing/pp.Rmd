@@ -1,0 +1,30 @@
+Most modern day computers are equiped with multiple processors (CPUs), which are in-turn equipped with multiple cores. Parallel computing makes use of these multiple processors by splitting computationally, memory, or time intensive jobs into independent parts which can run in parallel across the multiple cores of a computer.^[Note optimal parallelism doesn't always mean using all the cores available, as compute power may be necessary for other processes, running simultaneously. Often times, analysts will set the cores in use to be `nC - 1` to leave compute resources for other processes.] The basic process is the split the job into discrete independent parts, parallelize these jobs across the computer's multiple process, then combine the results back together. This technique is known as 'split-apply-combine' and illustrated in the image below.
+
+```{r, eval = TRUE}
+knitr::include_graphics("./images/efficiency/split_apply_combine.png")
+```
+[Image Source](https://ljdursi.github.io/beyond-single-core-R/#/16)
+
+Adding additional processors doesn't reduce the job run-time linearly. If the job takes 1 hour to run on 1 processor, it won't necessarily take 30 min to run on 2 processors. This is because it takes time to copy the code to different processers, in addition to splitting the process in the beginning and combining the results back together in the end. Setting up a parallel processing job also takes a little bit more time, so it's up to the analyst to determine if it's worth the extra effort to set-up a parallel processing job to save time or if running the program serially will suffice.
+
+### Hardware Terminology
+
+|Node|Processor/Socket/CPU|Core|
+|----|--------------------|----|
+|A single motherboard, with possibly multiple sockets|the silicon containing likely multiple cores|the unit of computation|
+
+### When to parallelize
+
+* The job is too slow
+* The job is too large
+* The job has many computations, one task is reasonable, but there are many tasks
+* Each task/job can easily be divided into discrete parts that are completely independent of the other parts
+
+#### Concrete examples
+
+* Reading in very large data that is in multiple datasets
+* Writing out very large data that is in multiple datasets
+* Bootstrapping or any sampling that requires many multiple random runs
+* Fitting models with very large data. If the data are large enough, the data maybe able to be split into random partitions, modelled, and then knit back together.
+* Fitting multiple models with different outcomes
+* Cross-validation

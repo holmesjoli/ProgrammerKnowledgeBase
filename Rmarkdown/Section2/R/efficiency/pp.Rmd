@@ -1,0 +1,33 @@
+### Parallelization {-}
+
+There are several different libraries in R which are used to parallelize processes: `foreach` and `parallel`.
+
+### Detecting Cores
+
+To detect the number of CPU cores
+```{r, eval = F, echo = TRUE}
+nC <- parallel::detectCores()
+print(nC)
+```
+
+### To slow {-}
+
+#### Parallel/multicore {-}
+
+#### Rdsm {-}
+
+#### GPUs {-}
+
+### To big {-}
+
+#### Parallel/snow {-}
+
+#### pdbR {-}
+
+### Many computations
+
+#### gnu-parallel {-}
+
+#### parallel {-}
+
+#### job queues

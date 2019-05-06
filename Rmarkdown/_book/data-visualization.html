@@ -164,7 +164,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
-<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.1</b> Computing Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#profiling"><i class="fa fa-check"></i><b>4.1</b> Profiling</a></li>
+<li class="chapter" data-level="4.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#parallel-processing"><i class="fa fa-check"></i><b>4.2</b> Parallel Processing</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#hardware-terminology"><i class="fa fa-check"></i><b>4.2.1</b> Hardware Terminology</a></li>
+<li class="chapter" data-level="4.2.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#when-to-parallelize"><i class="fa fa-check"></i><b>4.2.2</b> When to parallelize</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.3</b> Computing Resources</a><ul>
 <li class="chapter" data-level="" data-path="high-performance-computing.html"><a href="high-performance-computing.html#aws"><i class="fa fa-check"></i>AWS</a></li>
 </ul></li>
 </ul></li>
@@ -241,6 +246,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#visualization"><i class="fa fa-check"></i>Visualization</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#quality-5"><i class="fa fa-check"></i>Quality</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#command-line-interface"><i class="fa fa-check"></i>Command Line Interface</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#efficiency-1"><i class="fa fa-check"></i>Efficiency</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="stata-1.html"><a href="stata-1.html"><i class="fa fa-check"></i><b>7</b> Stata</a><ul>
@@ -307,7 +313,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="tableau-versions" class="section level4 unnumbered">
 <h4>Tableau Versions</h4>
 <p>Like any software or application, Tableau has changed and been updated overtime. However, specific functionalities, especially development functionalities, such as integration with R, Python, and Matlab and use of the Extract API depend on the version of Tableau install.</p>
-<p>Make sure that development you’re interested in doing is compatible with the version of Tableau that you have installed.<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a> To check the version go to Help &gt; About Tableau.</p>
+<p>Make sure that development you’re interested in doing is compatible with the version of Tableau that you have installed.<a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a> To check the version go to Help &gt; About Tableau.</p>
 </div>
 <div id="recommended-workflow" class="section level4 unnumbered">
 <h4>Recommended Workflow</h4>
@@ -532,6 +538,16 @@ client.deploy(<span class="st">&quot;loanclassifierfull&quot;</span>, loanclassi
 </thead>
 <tbody>
 <tr class="odd">
+<td>A</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Annotations</td>
+<td>Text boxes used to call out a specific mark point or an entire area in the view. Mark annotation stays with the mark</td>
+</tr>
+<tr class="odd">
 <td>D</td>
 <td></td>
 <td></td>
@@ -594,14 +610,19 @@ client.deploy(<span class="st">&quot;loanclassifierfull&quot;</span>, loanclassi
 <tr class="odd">
 <td></td>
 <td>Parameter</td>
-<td></td>
+<td>Provide a single output to be used by another element. Only useful when the other element is in use. Parameters support a variety of data types.</td>
 </tr>
 <tr class="even">
+<td></td>
+<td>Pil</td>
+<td>A pill refers to a measure or dimension. It derives it’s name from the pill shape in the Tableau UI.</td>
+</tr>
+<tr class="odd">
 <td>T</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>TDE</td>
 <td>A .tde file is a Tableau Data Extract File. A TDE is a compressed snapshot of the data stored on disk and loaded into memory as required to render a Tableau visualization.</td>
@@ -616,8 +637,8 @@ client.deploy(<span class="st">&quot;loanclassifierfull&quot;</span>, loanclassi
 
 <div class="footnotes">
 <hr />
-<ol start="13">
-<li id="fn13"><p>Tableau changed their version naming convention in 2018. Older versions are named 4.0, or 5.0, or 10.1. These go all the way from 4.0 to 10.5. In 2018, they started naming their versions after the year they released the version in. The lastest versions are named 2018.2, 2019.1, etc.<a href="data-visualization.html#fnref13">↩</a></p></li>
+<ol start="14">
+<li id="fn14"><p>Tableau changed their version naming convention in 2018. Older versions are named 4.0, or 5.0, or 10.1. These go all the way from 4.0 to 10.5. In 2018, they started naming their versions after the year they released the version in. The lastest versions are named 2018.2, 2019.1, etc.<a href="data-visualization.html#fnref14">↩</a></p></li>
 </ol>
 </div>
             </section>

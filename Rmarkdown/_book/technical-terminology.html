@@ -164,7 +164,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
-<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.1</b> Computing Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#profiling"><i class="fa fa-check"></i><b>4.1</b> Profiling</a></li>
+<li class="chapter" data-level="4.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#parallel-processing"><i class="fa fa-check"></i><b>4.2</b> Parallel Processing</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#hardware-terminology"><i class="fa fa-check"></i><b>4.2.1</b> Hardware Terminology</a></li>
+<li class="chapter" data-level="4.2.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#when-to-parallelize"><i class="fa fa-check"></i><b>4.2.2</b> When to parallelize</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.3</b> Computing Resources</a><ul>
 <li class="chapter" data-level="" data-path="high-performance-computing.html"><a href="high-performance-computing.html#aws"><i class="fa fa-check"></i>AWS</a></li>
 </ul></li>
 </ul></li>
@@ -241,6 +246,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#visualization"><i class="fa fa-check"></i>Visualization</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#quality-5"><i class="fa fa-check"></i>Quality</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#command-line-interface"><i class="fa fa-check"></i>Command Line Interface</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#efficiency-1"><i class="fa fa-check"></i>Efficiency</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="stata-1.html"><a href="stata-1.html"><i class="fa fa-check"></i><b>7</b> Stata</a><ul>
@@ -328,123 +334,159 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 <tr class="even">
 <td></td>
+<td>Central processing unit</td>
+<td>CPU</td>
+<td>Primary component of a computer that processes instructions. Contains at least one processor which is the actual chip inside the CPU which performs calculations. For many years, most CPUs had only one processor, but now it is common for a single CPU to have at least two processors of “processing cores”</td>
+</tr>
+<tr class="odd">
+<td></td>
 <td>Compiled</td>
 <td></td>
 <td>A program called a compiler, takes the plaintext source file and produces a native binary executable that the computer knows how to run intrinsically. When this happens it is called compile-time, and is distinct from run-time, which is when and executable is run and the program actually does things.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Coverage</td>
 <td></td>
-<td>Code coverage is a percentage which indicates the amount of code (lines, functions, and branches) in the project that is tested. It’s an indicator of how well maintained and stable the project is.<a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a></td>
+<td>Code coverage is a percentage which indicates the amount of code (lines, functions, and branches) in the project that is tested. It’s an indicator of how well maintained and stable the project is.<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>D</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Dynamically typed</td>
 <td></td>
 <td>Variable types are not explicitly declared. Among dynamically typed languages are Python, R, and JavaScript.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>E</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Extract, transform, load</td>
 <td>ETL</td>
 <td>the pipeline of data from it’s raw state into a clean, useable state.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>G</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Global type inference</td>
 <td></td>
 <td>Types are inferred from context. Explicit type annotations are instead for the benefit of the programmers, and serve as machine-verified documentation.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>I</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>In memory package</td>
 <td></td>
 <td>A package which has been loaded into memory and then attaches it to the search path</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td></td>
 <td>Installed package</td>
 <td></td>
 <td>Binary package that’s been decompressed into a package library</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td></td>
 <td>Integrated Development Environment</td>
 <td>IDE</td>
 <td>An IDE is a software editor that provides additional facilities to developers that aren’t available through traditional text editors (E.g. Notepad).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td></td>
 <td>Interpreted</td>
 <td></td>
 <td>Interpreted languages have programs called interpreters that read plaintext source files and execute the instructions at the same moment. No native binary executable is created. Languages like Python and R are interpreted.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>L</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td></td>
 <td>Lazily evaluated</td>
 <td></td>
 <td>Values are not computed until required. This allows for functions to compose together in a performant way (no more work than necessary will be done), and allows for the use of infinite data structures (you could define the list of all prime numbers and only those you actually use will be computed). However, it also makes it more difficult to reason about performance, because it is sometimes not obvious when or if a particular computation will be performed.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>P</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
+<tr class="odd">
+<td></td>
+<td>Parallel processing</td>
+<td></td>
+<td>A type of processing where multiple tasks are completed at a time by different processors.</td>
+</tr>
 <tr class="even">
+<td></td>
+<td>Processor</td>
+<td></td>
+<td>See Central processing unit</td>
+</tr>
+<tr class="odd">
 <td></td>
 <td>Purely functional</td>
 <td></td>
 <td>Every function is a function in the mathematical sense (IE pure). No squinting required. Rather than functions having side-effects, are first-class values governed by the type system. To put it another way, code has only expressions that are evaluated; it does not have statements that are executed.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>R</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td></td>
 <td>Representation State Transfer</td>
 <td>REST</td>
 <td>Defines a set of rules for messages sent from the client to be interpretted by the server.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>S</td>
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Serial</td>
+<td></td>
+<td>A process in which one task is completed at a given point in time and all the tasks are run by a processor in sequence. The alternative is parallel processing. Also known as sequential processing.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Sequential processing</td>
+<td></td>
+<td>See Serial processing.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Single-threaded</td>
+<td></td>
+<td>Utilization of a single processor.</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -468,7 +510,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td></td>
 <td>Test-driven development</td>
 <td>TDD</td>
-<td>Software development process that requires developers to write tests for code, before writing the actual code itself.<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a></td>
+<td>Software development process that requires developers to write tests for code, before writing the actual code itself.<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a></td>
 </tr>
 </tbody>
 </table>
@@ -494,11 +536,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 
+
 <div class="footnotes">
 <hr />
-<ol start="14">
-<li id="fn14"><p><a href="https://www.gregjs.com/javascript/2016/how-to-get-a-shiny-coverage-badge-for-your-github-project/" class="uri">https://www.gregjs.com/javascript/2016/how-to-get-a-shiny-coverage-badge-for-your-github-project/</a><a href="technical-terminology.html#fnref14">↩</a></p></li>
-<li id="fn15"><p><a href="https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2" class="uri">https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2</a><a href="technical-terminology.html#fnref15">↩</a></p></li>
+<ol start="15">
+<li id="fn15"><p><a href="https://www.gregjs.com/javascript/2016/how-to-get-a-shiny-coverage-badge-for-your-github-project/" class="uri">https://www.gregjs.com/javascript/2016/how-to-get-a-shiny-coverage-badge-for-your-github-project/</a><a href="technical-terminology.html#fnref15">↩</a></p></li>
+<li id="fn16"><p><a href="https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2" class="uri">https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2</a><a href="technical-terminology.html#fnref16">↩</a></p></li>
 </ol>
 </div>
             </section>

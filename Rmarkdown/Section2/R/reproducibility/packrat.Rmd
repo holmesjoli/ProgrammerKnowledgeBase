@@ -36,6 +36,14 @@ While building your new package be sure to check the option highlighted in red:
 knitr::include_graphics("./images/R_environments/new_r_package.png")
 ```
 
+#### Save snapshot {-}
+
+Once all the necessary packages have been downloaded save a snapshot of the packages. Periodically update the snapshot when new dependencies are added.
+
+```{r, eval = F, echo = T}
+packrat::snapshot()
+```
+
 #### Where are my project packages? {-}
 
 Packrat downloads the project-packages into several locations
@@ -60,5 +68,8 @@ Version control these files.^[Sources: https://stackoverflow.com/questions/36187
 1. `packrat/init.R`
 2. `packrat/packrat.lock`
 3. `packrat/packrat.opts`
-4. `packrat/src`
-5. `.Rprofile`
+4. `.Rprofile`
+
+#### Ignoring local repositories {-}
+
+Unfortunately, packrat will throw an error for local packages which cannot be found on CRAN. 

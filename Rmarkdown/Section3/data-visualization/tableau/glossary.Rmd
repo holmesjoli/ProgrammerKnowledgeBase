@@ -2,6 +2,8 @@
 
 |  |Term  |Definition     |
 |--|------|------------------------------------------------------------------------|
+|A|||
+||Annotations|Text boxes used to call out a specific mark point or an entire area in the view. Mark annotation stays with the mark|
 |D|||		
 ||Data blend|Combining data from multiple data sources into one view. Sends separate queries to the different data sources and then aggregates the data in Tableau.| 
 ||Data source|A connection to a database or other place where data are stored.|
@@ -14,7 +16,8 @@
 |M|||
 ||Measure|A variable that is a dependnet variable. Tableau treats any field containing numeric information as a measure.
 |P|||
-||Parameter||
+||Parameter|Provide a single output to be used by another element. Only useful when the other element is in use. Parameters support a variety of data types.|
+||Pil|A pill refers to a measure or dimension. It derives it's name from the pill shape in the Tableau UI.|
 |T|||		
 ||TDE|A .tde file is a Tableau Data Extract File. A TDE is a compressed snapshot of the data stored on disk and loaded into memory as required to render a Tableau visualization.|
 

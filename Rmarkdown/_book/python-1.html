@@ -164,7 +164,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
-<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.1</b> Computing Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#profiling"><i class="fa fa-check"></i><b>4.1</b> Profiling</a></li>
+<li class="chapter" data-level="4.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#parallel-processing"><i class="fa fa-check"></i><b>4.2</b> Parallel Processing</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#hardware-terminology"><i class="fa fa-check"></i><b>4.2.1</b> Hardware Terminology</a></li>
+<li class="chapter" data-level="4.2.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#when-to-parallelize"><i class="fa fa-check"></i><b>4.2.2</b> When to parallelize</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.3</b> Computing Resources</a><ul>
 <li class="chapter" data-level="" data-path="high-performance-computing.html"><a href="high-performance-computing.html#aws"><i class="fa fa-check"></i>AWS</a></li>
 </ul></li>
 </ul></li>
@@ -241,6 +246,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#visualization"><i class="fa fa-check"></i>Visualization</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#quality-5"><i class="fa fa-check"></i>Quality</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#command-line-interface"><i class="fa fa-check"></i>Command Line Interface</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#efficiency-1"><i class="fa fa-check"></i>Efficiency</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="stata-1.html"><a href="stata-1.html"><i class="fa fa-check"></i><b>7</b> Stata</a><ul>
@@ -771,14 +777,14 @@ df[&#39;monthly&#39;] = np.where((df[&#39;X&#39;] == 1) | (df[&#39;Y&#39;] == 1)
 <div id="launching-a-selenium-driver" class="section level4 unnumbered">
 <h4>Launching a selenium driver</h4>
 <ol style="list-style-type: decimal">
-<li>The python distribution of selenium relies on downloadable webdrivers<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a>. Chrome and Firefox drivers are preferred, though good web-testers will test across all platforms!</li>
+<li>The python distribution of selenium relies on downloadable webdrivers<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a>. Chrome and Firefox drivers are preferred, though good web-testers will test across all platforms!</li>
 </ol>
 <ul>
 <li><a href="http://chromedriver.chromium.org/downloads">Chrome</a></li>
 <li><a href="https://github.com/mozilla/geckodriver/releases">Firefox</a></li>
 <li><a href="https://download.microsoft.com/download/F/8/A/F8AF50AB-3C3A-4BC4-8773-DC27B32988DD/MicrosoftWebDriver.exe">Edge</a></li>
 <li><a href="https://goo.gl/fzqqyZ">Internet Explorer</a></li>
-<li>Safari<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a></li>
+<li>Safari<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>Test to see if selenium is set-up properly</li>
@@ -894,9 +900,9 @@ firefox_driver = webdriver.Firefox(executable_path = fpath)</code></pre>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="9">
-<li id="fn9"><p>If the webdriver download in a zipped file, be sure to upzip the file<a href="python-1.html#fnref9">↩</a></p></li>
-<li id="fn10"><p>Cannot be downloaded on a Windows computer<a href="python-1.html#fnref10">↩</a></p></li>
+<ol start="10">
+<li id="fn10"><p>If the webdriver download in a zipped file, be sure to upzip the file<a href="python-1.html#fnref10">↩</a></p></li>
+<li id="fn11"><p>Cannot be downloaded on a Windows computer<a href="python-1.html#fnref11">↩</a></p></li>
 </ol>
 </div>
             </section>

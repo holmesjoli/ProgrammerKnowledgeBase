@@ -164,7 +164,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
-<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.1</b> Computing Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#profiling"><i class="fa fa-check"></i><b>4.1</b> Profiling</a></li>
+<li class="chapter" data-level="4.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#parallel-processing"><i class="fa fa-check"></i><b>4.2</b> Parallel Processing</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#hardware-terminology"><i class="fa fa-check"></i><b>4.2.1</b> Hardware Terminology</a></li>
+<li class="chapter" data-level="4.2.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#when-to-parallelize"><i class="fa fa-check"></i><b>4.2.2</b> When to parallelize</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.3</b> Computing Resources</a><ul>
 <li class="chapter" data-level="" data-path="high-performance-computing.html"><a href="high-performance-computing.html#aws"><i class="fa fa-check"></i>AWS</a></li>
 </ul></li>
 </ul></li>
@@ -241,6 +246,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#visualization"><i class="fa fa-check"></i>Visualization</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#quality-5"><i class="fa fa-check"></i>Quality</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#command-line-interface"><i class="fa fa-check"></i>Command Line Interface</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#efficiency-1"><i class="fa fa-check"></i>Efficiency</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="stata-1.html"><a href="stata-1.html"><i class="fa fa-check"></i><b>7</b> Stata</a><ul>
@@ -287,7 +293,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3>Installation</h3>
 <ol style="list-style-type: decimal">
 <li><a href="https://cran.cnr.berkeley.edu/bin/windows/base/old/3.5.2">Download R 3.5.2</a></li>
-<li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download Rstudio</a><a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a></li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download Rstudio</a><a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a></li>
 <li><a href="https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe">Download Rtools35</a></li>
 </ol>
 </div>
@@ -677,7 +683,7 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 </div>
 <div id="git" class="section level4 unnumbered">
 <h4>Git</h4>
-<p>Version control these files.<a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a></p>
+<p>Version control these files.<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a></p>
 <ol style="list-style-type: decimal">
 <li><code>packrat/init.R</code></li>
 <li><code>packrat/packrat.lock</code></li>
@@ -991,13 +997,24 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 <li><a href="https://www.r-bloggers.com/passing-arguments-to-an-r-script-from-command-lines/">Passing arguments to an R script from command lines</a></li>
 </ul>
 </div>
+<div id="efficiency-1" class="section level3 unnumbered">
+<h3>Efficiency</h3>
+<div id="parallelization" class="section level4 unnumbered">
+<h4>Parallelization</h4>
+<ul>
+<li><a href="https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html">Quick Intro to Parallel Computing in R</a> - Matt Jones</li>
+<li><a href="https://blog.dominodatalab.com/multicore-data-science-r-python/">Multicode Data Science with R and Python</a></li>
+<li><a href="https://ljdursi.github.io/beyond-single-core-R/#/16">Beyond Single-Core R</a> - Jonathan Dursi</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="11">
-<li id="fn11"><p>Note: download R before downloading Rstudio<a href="r-1.html#fnref11">↩</a></p></li>
-<li id="fn12"><p>Sources: <a href="https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat" class="uri">https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat</a>, <a href="https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ" class="uri">https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ</a>, <a href="https://www.joelnitta.com/post/packrat/" class="uri">https://www.joelnitta.com/post/packrat/</a><a href="r-1.html#fnref12">↩</a></p></li>
+<ol start="12">
+<li id="fn12"><p>Note: download R before downloading Rstudio<a href="r-1.html#fnref12">↩</a></p></li>
+<li id="fn13"><p>Sources: <a href="https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat" class="uri">https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat</a>, <a href="https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ" class="uri">https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ</a>, <a href="https://www.joelnitta.com/post/packrat/" class="uri">https://www.joelnitta.com/post/packrat/</a><a href="r-1.html#fnref13">↩</a></p></li>
 </ol>
 </div>
             </section>

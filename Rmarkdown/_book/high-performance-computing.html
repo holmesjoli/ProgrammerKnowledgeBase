@@ -164,7 +164,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
-<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.1</b> Computing Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#profiling"><i class="fa fa-check"></i><b>4.1</b> Profiling</a></li>
+<li class="chapter" data-level="4.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#parallel-processing"><i class="fa fa-check"></i><b>4.2</b> Parallel Processing</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="high-performance-computing.html"><a href="high-performance-computing.html#hardware-terminology"><i class="fa fa-check"></i><b>4.2.1</b> Hardware Terminology</a></li>
+<li class="chapter" data-level="4.2.2" data-path="high-performance-computing.html"><a href="high-performance-computing.html#when-to-parallelize"><i class="fa fa-check"></i><b>4.2.2</b> When to parallelize</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="high-performance-computing.html"><a href="high-performance-computing.html#computing-resources"><i class="fa fa-check"></i><b>4.3</b> Computing Resources</a><ul>
 <li class="chapter" data-level="" data-path="high-performance-computing.html"><a href="high-performance-computing.html#aws"><i class="fa fa-check"></i>AWS</a></li>
 </ul></li>
 </ul></li>
@@ -241,6 +246,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#visualization"><i class="fa fa-check"></i>Visualization</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#quality-5"><i class="fa fa-check"></i>Quality</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#command-line-interface"><i class="fa fa-check"></i>Command Line Interface</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#efficiency-1"><i class="fa fa-check"></i>Efficiency</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="stata-1.html"><a href="stata-1.html"><i class="fa fa-check"></i><b>7</b> Stata</a><ul>
@@ -280,12 +286,66 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="high-performance-computing" class="section level1">
 <h1><span class="header-section-number">4</span> High Performance Computing</h1>
+<div id="profiling" class="section level2">
+<h2><span class="header-section-number">4.1</span> Profiling</h2>
+</div>
+<div id="parallel-processing" class="section level2">
+<h2><span class="header-section-number">4.2</span> Parallel Processing</h2>
+<p>Most modern day computers are equiped with multiple processors (CPUs), which are in-turn equipped with multiple cores. Parallel computing makes use of these multiple processors by splitting computationally, memory, or time intensive jobs into independent parts which can run in parallel across the multiple cores of a computer.<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a> The basic process is the split the job into discrete independent parts, parallelize these jobs across the computer’s multiple process, then combine the results back together. This technique is known as ‘split-apply-combine’ and illustrated in the image below.</p>
+<p><img src="images/efficiency/split_apply_combine.png" /><!-- --> <a href="https://ljdursi.github.io/beyond-single-core-R/#/16">Image Source</a></p>
+<p>Adding additional processors doesn’t reduce the job run-time linearly. If the job takes 1 hour to run on 1 processor, it won’t necessarily take 30 min to run on 2 processors. This is because it takes time to copy the code to different processers, in addition to splitting the process in the beginning and combining the results back together in the end. Setting up a parallel processing job also takes a little bit more time, so it’s up to the analyst to determine if it’s worth the extra effort to set-up a parallel processing job to save time or if running the program serially will suffice.</p>
+<div id="hardware-terminology" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Hardware Terminology</h3>
+<table style="width:43%;">
+<colgroup>
+<col width="6%" />
+<col width="29%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Node</th>
+<th>Processor/Socket/CPU</th>
+<th>Core</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A single motherboard, with possibly multiple sockets</td>
+<td>the silicon containing likely multiple cores</td>
+<td>the unit of computation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="when-to-parallelize" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> When to parallelize</h3>
+<ul>
+<li>The job is too slow</li>
+<li>The job is too large</li>
+<li>The job has many computations, one task is reasonable, but there are many tasks</li>
+<li>Each task/job can easily be divided into discrete parts that are completely independent of the other parts</li>
+</ul>
+<div id="concrete-examples" class="section level4">
+<h4><span class="header-section-number">4.2.2.1</span> Concrete examples</h4>
+<ul>
+<li>Reading in very large data that is in multiple datasets</li>
+<li>Writing out very large data that is in multiple datasets</li>
+<li>Bootstrapping or any sampling that requires many multiple random runs</li>
+<li>Fitting models with very large data. If the data are large enough, the data maybe able to be split into random partitions, modelled, and then knit back together.</li>
+<li>Fitting multiple models with different outcomes</li>
+<li>Cross-validation</li>
+</ul>
+</div>
+</div>
+</div>
 <div id="computing-resources" class="section level2">
-<h2><span class="header-section-number">4.1</span> Computing Resources</h2>
-<p>There comes a point where even if your code is optimized and parallelized you may still run into memory issues. The data are just too big, or the model is too complex. It may be time to think about spinning up an install on a rented computer such as AWS (Amazon) or Azure (Microsoft).</p>
+<h2><span class="header-section-number">4.3</span> Computing Resources</h2>
+<p>There comes a point where even if the code is optimized and parallelized there may still be memory and computation issues. The data are just too big, or the model is too complex, or there are just too many jobs to run in a short turn-around time. Many users are turning to cloud-based infrastructure such as AWS (Amazon) and Asure (Microsoft) when they run into these issues.</p>
+<p>Cloud-base infrastructures are becoming very popular because users can “rent” computers with very large compute and memory resources for relatively inexpensive. This is a path many larger organizations are choosing to take instead of owning the infrastructure outright.</p>
 <div id="aws" class="section level3 unnumbered">
 <h3>AWS</h3>
-<p>AWS instances are virtual computers. The benefit of a virtual computer like an AWS is that the instance isn’t physically owned, but instead “rented” by the user from Amazon. We pay for the time that we are physically using the computer, rather than buying an expensive resource that wouldn’t be utilized 100% of the time.</p>
+<p>Amazon Web Services (AWS) instances are virtual computers. The benefit of using a virtual computer, like an AWS, is that the instance isn’t physically owned by the user, but instead “rented”. Users rent computer resources (CPU, Memory, etc.), rather than buying an expensive resource that wouldn’t be utilized 100% of the time.</p>
 <div id="instance-types" class="section level4 unnumbered">
 <h4>Instance Types</h4>
 <p>There are many instances available for use. The CPU on the instances ranges from 2 to 96. The memory on each instance ranges from .5 GB to 488 GB. Similarly the amount of storage on an instance differs vastly across instance. More detail on different instance types can be found <a href="https://aws.amazon.com/ec2/instance-types/">here</a>.</p>
@@ -363,6 +423,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 
+<div class="footnotes">
+<hr />
+<ol start="9">
+<li id="fn9"><p>Note optimal parallelism doesn’t always mean using all the cores available, as compute power may be necessary for other processes, running simultaneously. Often times, analysts will set the cores in use to be <code>nC - 1</code> to leave compute resources for other processes.<a href="high-performance-computing.html#fnref9">↩</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>

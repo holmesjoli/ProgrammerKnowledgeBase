@@ -3,7 +3,7 @@
 ```{r child = "profiling/main.Rmd"}
 ```
 
-```{r child = "parellel-processing/main.Rmd"}
+```{r child = "parallel-processing/main.Rmd"}
 ```
 
 ```{r child = "computing-resources/main.Rmd"}

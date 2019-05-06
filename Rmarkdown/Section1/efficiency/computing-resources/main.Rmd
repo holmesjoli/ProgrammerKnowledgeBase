@@ -1,6 +1,8 @@
 ## Computing Resources
 
-There comes a point where even if your code is optimized and parallelized you may still run into memory issues. The data are just too big, or the model is too complex. It may be time to think about spinning up an install on a rented computer such as AWS (Amazon) or Azure (Microsoft). 
+There comes a point where even if the code is optimized and parallelized there may still be memory and computation issues. The data are just too big, or the model is too complex, or there are just too many jobs to run in a short turn-around time. Many users are turning to cloud-based infrastructure such as AWS (Amazon) and Asure (Microsoft) when they run into these issues.
+
+Cloud-base infrastructures are becoming very popular because users can "rent" computers with very large compute and memory resources for relatively inexpensive. This is a path many larger organizations are choosing to take instead of owning the infrastructure outright.
 
 ```{r child = "aws/main.Rmd"}
 ```

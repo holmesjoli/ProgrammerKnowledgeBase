@@ -1,4 +1,4 @@
-AWS instances are virtual computers. The benefit of a virtual computer like an AWS is that the instance isn't physically owned, but instead "rented" by the user from Amazon. We pay for the time that we are physically using the computer, rather than buying an expensive resource that wouldn't be utilized 100% of the time.
+Amazon Web Services (AWS) instances are virtual computers. The benefit of using a virtual computer, like an AWS, is that the instance isn't physically owned by the user, but instead "rented". Users rent computer resources (CPU, Memory, etc.), rather than buying an expensive resource that wouldn't be utilized 100% of the time.
 
 #### Instance Types {-}
  
