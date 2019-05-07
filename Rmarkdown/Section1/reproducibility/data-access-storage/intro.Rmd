@@ -1,0 +1,43 @@
+### Data access workflow {-}
+
+The current data access workflow for many researchers and analysts looks like this: 
+
+1. Go to a user-interface and request specific data
+2. Downloading that data as a csv, or other file format
+3. Copy that data to a project-specific data folder
+4. Launch statistical software and hardcode file path to the data folder
+5. Read in data
+6. Get really frustrated when a code worker changes the file structure which then throws everything else off!
+
+Okay, so step 6 might now always be the case, but it often is!! If you've spent a lot of time on collaborative projects, that's almost undoubtly happened to you. 
+
+So, this isn't actually a great workflow. There are many point where things can go wrong and make the analysis not reproducible. 
+
+Reasons why this isn't a great workflow:
+
+* Step 1: I personally hate user interfaces for requesting data. It can be very challenging to reproduce analyses because it's hard to know exactly what settings the previous user set-up to request the data. Without knowing these precise settings, it's likely that the new data extract will be a little different than the previous extract.
+
+* Step 2: I always to choose to download as a .csv because it can easily be read into any statistical software: R, SAS, Stata, Python, you name it. However, large amounts of data being stored in csvs are not at all efficient. It can take time to download the data and then transfer the data from the Downloads folder to the project folder.
+
+* Step 3: Copying the data from downloads to a project-specific folder is normally manual. We want the whole data pipeline, from the initial extract to the final reporting to be as automatted as possible.
+
+* Step 4: Hardcoding!! Everyone hardcodes file paths, we have to! But it's dangerous ... how many of us have had that path change when we're in the middle of an analysis, or after we finished an analysis 3 months ago and everything has changed. If you do have to hard code file paths, put them in a config file!!
+
+* Step 5: Read in data. Is it a .csv, .xlsx, .Rdata, .dta, .dat, .sas7bdat, .tsv, etc.? There are so many different file formats and ways to read in data, it can be irratating, especially if your data is in multiple file formats.
+
+### Data storage workflow {-}
+
+1. Peform analysis
+2. Write out data as a .csv, .xlsx, .Rdata, .dta, .dat, .sas7bdat, .tsv and probably use some sort of file naming such as data_20190507.csv.
+3. Have to update paths every single time the data are used downstream.
+4. Get frustrated when the person upstream changes the naming structure.
+
+So this also isn't a great workflow. How many folks have had a data folder filed with a bunch of files with very similar sounding names, and they have extensions such as _old, _v1, _v2, _final, etc? Then it's confusing if the final deliverable came from the data versioned data_20180917 or from data_20180912? Although it's often the case that the most recently generated data is used to create the final output, it's not always the case. 
+
+Reasons why this isn't a great workflow:
+
+* Upstream processes that write out data are subject to change input names
+* Downstream processes that read in data are subject to input name changes
+* Often results in very messy Data/ folders
+* Isn't always clear which data were used to create the final deliverable
+* Different file formats mean programmers have to adapt to upstream/downstream programmers needs

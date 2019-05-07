@@ -56,12 +56,12 @@ Other packages: `Packrat/lib/32_or_64_bit_r/version_of_r`
 
 There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.
 
-#### Bundling {-}
+##### Bundling {-}
 
 1. Run `packrat::bundle()`
 2. Share the bundle with collaborators who have R. Collaborators will have to run `packrat::unbundle()` to access the code
 	
-#### Git {-}
+##### Git {-}
 
 Version control these files.^[Sources: https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat, https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ, https://www.joelnitta.com/post/packrat/]
 
@@ -73,3 +73,8 @@ Version control these files.^[Sources: https://stackoverflow.com/questions/36187
 #### Ignoring local repositories {-}
 
 Unfortunately, packrat will throw an error for local packages which cannot be found on CRAN. 
+
+Ignore local packages
+```{r, eval = F, echo = T}
+packrat::opts$ignored.packages(c("package1", "package2"))
+```

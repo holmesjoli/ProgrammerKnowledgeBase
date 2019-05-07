@@ -664,6 +664,11 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 <p>While building your new package be sure to check the option highlighted in red:</p>
 <p><img src="images/R_environments/new_r_package.png" width="75%" /></p>
 </div>
+<div id="save-snapshot" class="section level4 unnumbered">
+<h4>Save snapshot</h4>
+<p>Once all the necessary packages have been downloaded save a snapshot of the packages. Periodically update the snapshot when new dependencies are added.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">packrat<span class="op">::</span><span class="kw">snapshot</span>()</code></pre></div>
+</div>
 <div id="where-are-my-project-packages" class="section level4 unnumbered">
 <h4>Where are my project packages?</h4>
 <p>Packrat downloads the project-packages into several locations</p>
@@ -673,24 +678,29 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 <div id="sharing-package-libraries" class="section level4 unnumbered">
 <h4>Sharing package libraries</h4>
 <p>There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.</p>
-</div>
-<div id="bundling" class="section level4 unnumbered">
-<h4>Bundling</h4>
+<div id="bundling" class="section level5 unnumbered">
+<h5>Bundling</h5>
 <ol style="list-style-type: decimal">
 <li>Run <code>packrat::bundle()</code></li>
 <li>Share the bundle with collaborators who have R. Collaborators will have to run <code>packrat::unbundle()</code> to access the code</li>
 </ol>
 </div>
-<div id="git" class="section level4 unnumbered">
-<h4>Git</h4>
+<div id="git" class="section level5 unnumbered">
+<h5>Git</h5>
 <p>Version control these files.<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a></p>
 <ol style="list-style-type: decimal">
 <li><code>packrat/init.R</code></li>
 <li><code>packrat/packrat.lock</code></li>
 <li><code>packrat/packrat.opts</code></li>
-<li><code>packrat/src</code></li>
 <li><code>.Rprofile</code></li>
 </ol>
+</div>
+</div>
+<div id="ignoring-local-repositories" class="section level4 unnumbered">
+<h4>Ignoring local repositories</h4>
+<p>Unfortunately, packrat will throw an error for local packages which cannot be found on CRAN.</p>
+<p>Ignore local packages</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">packrat<span class="op">::</span>opts<span class="op">$</span><span class="kw">ignored.packages</span>(<span class="kw">c</span>(<span class="st">&quot;package1&quot;</span>, <span class="st">&quot;package2&quot;</span>))</code></pre></div>
 </div>
 </div>
 <div id="package-development-2" class="section level3 unnumbered">

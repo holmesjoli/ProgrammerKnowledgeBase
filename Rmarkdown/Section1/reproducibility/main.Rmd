@@ -15,5 +15,5 @@
 ```{r child="packages/main.Rmd"}
 ```
 
-```{r child="data-archiving/main.Rmd"}
+```{r child="data-access-storage/main.Rmd"}
 ```

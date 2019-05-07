@@ -1,7 +1,0 @@
-## Data Archiving
-
-```{r child = "intro.Rmd"}
-```
-
-```{r child = "auto_commit.Rmd"}
-```

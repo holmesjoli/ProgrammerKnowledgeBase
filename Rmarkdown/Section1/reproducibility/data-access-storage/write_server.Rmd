@@ -1,0 +1,97 @@
+### Outputting Data {-}
+
+#### Server {-}
+
+The best way to store data is in a relational database system. However, this isn't always possible for organizations that may not have access to a relational database system. The next best method is some sort of data archiving structure like the one outlined below. 
+
+Most people just write out the data to the Data/ folder. However, in large projects the data folder can quickly get messy. This creates problems like the ones outlined in the data storage workflow section. 
+
+#### Suggested folder structure {-}
+
+```
+Data/
+  Processed/
+    Current/
+    Archive/
+  Raw/
+```
+
+In the data folder there are two folders: `Processed` and `Raw`. Raw contains the raw data and processed contains the data that have been validated and managed.
+
+Within the processed file there are two folders: `Current` and `Archive`. The `Current` folder contains the most recently processed files. The files in this folder DO NOT have time specific names. There aren't any data like summary_data_20180912.csv. Instead there's just a file that says summary data.csv. 
+
+However, in the `Archive` folder, there are timestamped zipfiles containing all the data that were generated on a single day. All the zipped files in this folder are named systematically such that it's easy to tell when the data were create and maybe why!
+
+Example: 
+
+```
+Data/
+  Processed/
+    Current/
+      data.csv
+      summary_data.csv
+      summary_stats.csv
+      log.txt
+    Archive/
+      20180912.zip
+      20180917.zip
+      20180922.zip
+  Raw/
+```
+
+If we were to open up 20180912.zip it would look like this:
+
+```
+data.csv
+summary_data.csv
+summary_stats.csv
+log.txt
+```
+Wowza, this structure solves a lot of problems! We don't have to worry about filenames downstream having to get updated because they're pointed at the `Current` folder. At the same time, we have a record of all the data we created, that way if we delivered output generated from data 20180717, and the client/partner has a question about the data, we can easily open it up and access it.
+
+### Automated Commits {-}
+
+If we follow the structure outlined above, out data archiving system is going to be great. But it can actually still be improved. There is still linking the code to the data to the output.
+
+Say several months have passed and our client/partner comes back to us with a question about how a specific variable in summary_data.csv was coded in version 20180917.zip. However, the codebase has changed since we delivered the output several months ago. We can probably trace the code back, since of course all code is version controlled, and then we can checkout the old code and compare it to the new code. However, that seems like a lot of work, and we made multiple commits the day the code was created, so it's hard to know exactly what code was used to create the output. 
+
+What's the solution? 
+
+The solution is to include a commit hash in all of zip_files names in the Archive folder. So when we update the code, we make a commit to the remote repository. This commit hash is a unique identifier that points to a version of the code at a specific point in time. That hash then gets used to link the code to the data and the data to the output. 
+
+Now our Data and Output folders look like this:
+
+```
+Data/
+  Processed/
+    Current/
+      data.csv
+      summary_data.csv
+      summary_stats.csv
+      log.txt
+    Archive/
+      master_t5o985_042018.zip
+      master_5986j6_052018.zip
+      master_9jfd86_062018.zip
+  Raw/
+```
+
+```
+Output/
+  Processed/
+    Current/
+      fig1.png
+      fig2.png
+      fig3.png
+    Archive/
+      master_t5o985_042018.zip
+      master_5986j6_052018.zip
+      master_9jfd86_062018.zip
+  Raw/
+```
+
+If we send the client/partner `master_t5o985_042018.zip` and there's a question about how data or a figure got created, it's super easy for us to back track to both the data and the code. 
+
+It's recommended to set-up the archive folders as the in following format: `branchName + _ + commit hash + _ + date/description`. The date/description part makes it easy for you to find a specific version of the data/output without knowing the exact date or why the output was created.^[I worked on a project one time where we produced data from the client each month, and we named all our files as with the description as "master_commit hash_May Monthly", "master_commit hash_June Monthly", etc. Then if I need data from Jan - June, it was very easy for me to go in and figure out which data were created when.]
+
+Both R and Python have the ability to make automatted commits. 
