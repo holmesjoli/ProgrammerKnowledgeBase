@@ -1,0 +1,62 @@
+The easiest way to access data stored in another organization's server is probably through the utilization of an application programmable interface (API).
+
+#### APIs {-}
+
+##### What is an API? {-}
+
+APIs are a little hard to understand if you've never come across them before. Google defines an API as "a set of functions and procedures allowing the creation of applications that access the features or data of an operating system, application, or other service."
+
+This is a very technical, but accurate definition. Simply put, an API allows programmers to access data stored on remote servers through code. 
+
+##### Example request {-}
+
+At it's most basic an API looks something like what's outlined in code before. Generally, the user will need a token which they get from the organization they're requesting data.^[There are several ways of authenticating users, the token method is the simplest, but also less secure than other methods. If you're access confidential information that isn't publically available, you'll most likely have to go through another type of authentical called Oauth.]
+
+```{r, eval = F, echo = T}
+library(httr)
+response <- httr::GET("https://website.server/data/get=?Var1,Var2&key=token")
+```
+
+The first part of the made-up string below `https://website.server/data/get=?` is called the endpoint and tells the HTTP request which website to get data from. 
+
+The next part of the string `Var1,Var2&key=token` are different parameters. In this fake API, I'm requesting Var1 and Var2, and providing my token as authentication. Each API is set-up differently, so it's very important to read all documentation before you start. Most APIs have sample code, often in several languages, to get started!
+
+Note: the data will be returned as a list, so that additional metadata can be returned with the request. So there's a little more data processing once the data are returned from an API. 
+
+##### Why are APIs so useful? {-}
+
+At a first glance, an API may seem like an extra amount of work for a programmer. 
+
+Utilizing an API to access data combines steps 1 - 5 outlined in the data access workflow section, and completely omits step 6!
+
+The other reason we love APIs is that that code will be version controlled, so any other programmer will be able to see how you set-up the request and exactly which data were requested.^[It's important not to version control your API tokens/keys/secrets. Then anyone else can pretend to be you and access the data. Many APIs have request per hour/day limits, so don't share keys! Add keys in a separate configuration file that isn't version controlled, and then add a sample key file to your repository to show users how you set-up that configuration file.]
+
+##### API Specifics {-}
+
+###### HTTP Verbs {-}
+
+These are commonly used verbs when making requests to an API. When requesting data from a server, most users will be utilizing the GET verb. 
+
+|Verb|Interpretation|
+|----|--------------|
+|GET|read|
+|POST|create|
+|PUT|replace/update|
+|DELETE|delete|
+
+###### Status codes {-}
+
+APIs always return a status code as part of the request. When a request goes through it returns a status code of 200. The status response codes can be helpful when debugging if a request failed, which can help freuqently if the parameters are set-up exactly as the API is expecting them.
+
+|Code|Interpretation|
+|----|------------------------------------------------------------|
+|200 |OK - Response to a successful REST API action. The HTTP method can be GET, POST, PUT, PATCH or DELETE.|
+|204 |No content|
+|400 |Bad Request - The request is malformed, such as message body format error.|
+|401 |Unauthorized - Wrong or no authencation ID/password provided.|
+|403 |Forbidden - It's used when the authentication succeeded but authenticated user doesn't have permission to the request resource.|
+|404 |Not Found - When a non-existent resource is requested.|
+|405 |Method Not Allowed - The error checking for unexpected HTTP method. For example, the Rest API is expecting HTTP GET, but HTTP PUT is used.|
+|429 |Too Many Requests - The error is used when there may be DOS attack detected or the request is rejected due to rate limiting.|
+
+[Source](https://blog.restcase.com/top-5-rest-api-security-guidelines)

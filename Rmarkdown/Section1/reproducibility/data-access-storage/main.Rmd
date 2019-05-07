@@ -8,3 +8,6 @@
 
 ```{r child = "write_server.Rmd"}
 ```
+
+```{r child = "resources.Rmd"}
+```

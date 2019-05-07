@@ -1,0 +1,5 @@
+### Resources {-}
+
+#### APIs {-}
+
+* [What is an API in English please?](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82)

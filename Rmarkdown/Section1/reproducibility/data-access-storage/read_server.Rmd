@@ -1,45 +1,7 @@
 ### Accessing data {-}
 
-The easiest way to access data stored in another organization's server is probably through the utilization of an application programmable interface (API).
-
-#### APIs {-}
-
-##### What is an API? {-}
-
-APIs are a little hard to understand if you've never come across them before. Google defines an API as "a set of functions and procedures allowing the creation of applications that access the features or data of an operating system, application, or other service."
-
-This is a very technical, but accurate definition. Simply put, an API allows programmers to access data stored on remote servers through code. 
-
-##### Example request {-}
-
-At it's most basic an API looks something like what's outlined in code before. Generally, the user will need a token which they get from the organization they're requesting data.^[There are several ways of authenticating users, the token method is the simplest, but also less secure than other methods. If you're access confidential information that isn't publically available, you'll most likely have to go through another type of authentical called Oauth.]
-
-The first part of the made-up string below `https://website.server/data/get=?` is called the endpoint and tells the HTTP request which website to get data from. 
-
-The next part of the string `Var1,Var2&key=token` are different parameters. In this fake API, I'm requesting Var1 and Var2, and providing my token as authentication. Each API is set-up differently, so it's very important to read all documentation before you start. Most APIs have sample code, often in several languages, to get started!
-
-```{r, eval = F, echo = T}
-
-library(httr)
-
-request <- httr::GET("https://website.server/data/get=?Var1,Var2&key=token")
-
+```{r child = "apis.Rmd"}
 ```
 
-##### Why are APIs so useful? {-}
-
-At a first glance, an API may seem like an extra amount of work for a programmer. 
-
-Utilizing an API to access data combines steps 1 - 5 outlined in the data access workflow section, and completely omits step 6!
-
-The other reason we love APIs is that that code will be version controlled, so any other programmer will be able to see how you set-up the request and exactly which data were requested.^[It's important not to version control your API tokens/keys/secrets. Then anyone else can pretend to be you and access the data. Many APIs have request per hour/day limits, so don't share keys! Add keys in a separate configuration file that isn't version controlled, and then add a sample key file to your repository to show users how you set-up that configuration file.]
-
-#### Server Access {-}
-
-Accessing SQL servers etc.
-
-SECTION UNDER CONSTRUCTION
-
-### Resources {-}
-
-* https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82
+```{r child = "server-access.Rmd"}
+```
