@@ -1,44 +1,49 @@
-### Style Guide {-}
+### Code Style {-}
+
+#### Style Guides {-}
+
+* [Google Style Guide](https://google.github.io/styleguide/Rguide.xml)
+* [Hadley Style Guide](http://adv-r.had.co.nz/Style.html)^[This is based off of the Google Style Guide]
 
 #### General Rules {-}
 
 * Variable names and function names should be lowercase or camel case (be consistent)
 * Avoid using names of existing functions/variables
 
-#### Spacing {-}
+##### Spacing {-}
 
 * Put spaces around all infix operators (=, +, -, <-, etc.)
 * ALWAYS put a space after a comma, and never before
 * Put a space before left parentheses, except in a function call
 
-#### Curly Braces {-}
+##### Curly Braces {-}
 
 * Opening curly brace `{` NEVER goes on its own line, but should always be followed by a new line
 * ALWAYS indent code inside curly braces
 * Closing curly brace `}` always goes on its own line, unless followed by an `else`
 
-#### Line Length {-}
+##### Line Length {-}
 
 * Roughly 80 - 90 characters per line
 
-#### Indentation {-}
+##### Indentation {-}
 
 * ALWAYS use two spaces
 * NEVER mix tabs/spaces
 
-#### Assignment {-}
+##### Assignment {-}
 
 * ALWAYS `<-` not `=`
 
-####  Comments {-}
+##### Comments {-}
  
 * Comments should begin with `# `
 * Comments should explain the why not the what
 * Comments that are too lengthy indicate a function should probably be used to break up the code chunk
 
-### Styling Packages {-}
+#### Styling Packages {-}
 
-#### formatR {-}
+##### formatR {-}
 
 Automatically formats and spaces code for more human-readability. 
 
@@ -47,7 +52,7 @@ library(formatR)
 formatR::tidy_dir("R")
 ```
 
-#### styler {-}
+##### styler {-}
 
 Goal is to provide non-invasive pretty-printing of R source code while adhering to the tidyverse formatting rules.
 
@@ -61,7 +66,7 @@ style_text(ugly_code)
 # style_pkg()
 ```
 
-#### lintr {-}
+##### lintr {-}
 
 Warns you about styling errors and potential problems.
 

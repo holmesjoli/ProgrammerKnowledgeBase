@@ -162,9 +162,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#types-of-tests"><i class="fa fa-check"></i>Types of tests</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#data-validation-tests"><i class="fa fa-check"></i>Data validation tests</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.2</b> Code Review</a><ul>
+<li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-style"><i class="fa fa-check"></i><b>3.2</b> Code Style</a><ul>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#linters"><i class="fa fa-check"></i>Linters</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.3</b> Code Review</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#review-participants"><i class="fa fa-check"></i>Review participants</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#general-tips-for-success"><i class="fa fa-check"></i>General tips for success</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#codacy"><i class="fa fa-check"></i>Codacy</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
@@ -200,10 +204,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#converting-column-types"><i class="fa fa-check"></i>Converting column types</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#other-common-data-management-functions"><i class="fa fa-check"></i>Other common data management functions</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="python-1.html"><a href="python-1.html#web"><i class="fa fa-check"></i><b>5.5</b> Web</a><ul>
+<li class="chapter" data-level="5.5" data-path="python-1.html"><a href="python-1.html#command-line-interface-cli"><i class="fa fa-check"></i><b>5.5</b> Command Line Interface (CLI)</a></li>
+<li class="chapter" data-level="5.6" data-path="python-1.html"><a href="python-1.html#web"><i class="fa fa-check"></i><b>5.6</b> Web</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#web-testing"><i class="fa fa-check"></i>Web testing</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="python-1.html"><a href="python-1.html#resources-2"><i class="fa fa-check"></i><b>5.6</b> Resources</a><ul>
+<li class="chapter" data-level="5.7" data-path="python-1.html"><a href="python-1.html#resources-2"><i class="fa fa-check"></i><b>5.7</b> Resources</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#general"><i class="fa fa-check"></i>General</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#reproducibility-3"><i class="fa fa-check"></i>Reproducibility</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#quality-3"><i class="fa fa-check"></i>Quality</a></li>
@@ -217,8 +222,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#cran"><i class="fa fa-check"></i>CRAN</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow"><i class="fa fa-check"></i>Initial Workflow</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#version-control-files"><i class="fa fa-check"></i>Version control files</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#style-guide"><i class="fa fa-check"></i>Style Guide</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#styling-packages"><i class="fa fa-check"></i>Styling Packages</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>6.2</b> Reproducibility</a><ul>
@@ -231,6 +234,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="r-1.html"><a href="r-1.html#quality-4"><i class="fa fa-check"></i><b>6.3</b> Quality</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#testing-2"><i class="fa fa-check"></i>Testing</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#code-style-1"><i class="fa fa-check"></i>Code Style</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="r-1.html"><a href="r-1.html#data-management-2"><i class="fa fa-check"></i><b>6.4</b> Data Management</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages-1"><i class="fa fa-check"></i>Packages</a></li>
@@ -238,7 +242,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.5" data-path="r-1.html"><a href="r-1.html#modeling"><i class="fa fa-check"></i><b>6.5</b> Modeling</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages-2"><i class="fa fa-check"></i>Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="r-1.html"><a href="r-1.html#command-line-interface-cli"><i class="fa fa-check"></i><b>6.6</b> Command Line Interface (CLI)</a><ul>
+<li class="chapter" data-level="6.6" data-path="r-1.html"><a href="r-1.html#command-line-interface-cli-1"><i class="fa fa-check"></i><b>6.6</b> Command Line Interface (CLI)</a><ul>
 <li class="chapter" data-level="6.6.1" data-path="r-1.html"><a href="r-1.html#running-r-scripts"><i class="fa fa-check"></i><b>6.6.1</b> Running R Scripts</a></li>
 <li class="chapter" data-level="6.6.2" data-path="r-1.html"><a href="r-1.html#adding-command-line-arguments"><i class="fa fa-check"></i><b>6.6.2</b> Adding Command Line Arguments</a></li>
 </ul></li>
@@ -410,85 +414,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
     config.yaml
     README.md
     XXX.Rproj</code></pre>
-</div>
-</div>
-<div id="style-guide" class="section level3 unnumbered">
-<h3>Style Guide</h3>
-<div id="general-rules" class="section level4 unnumbered">
-<h4>General Rules</h4>
-<ul>
-<li>Variable names and function names should be lowercase or camel case (be consistent)</li>
-<li>Avoid using names of existing functions/variables</li>
-</ul>
-</div>
-<div id="spacing" class="section level4 unnumbered">
-<h4>Spacing</h4>
-<ul>
-<li>Put spaces around all infix operators (=, +, -, &lt;-, etc.)</li>
-<li>ALWAYS put a space after a comma, and never before</li>
-<li>Put a space before left parentheses, except in a function call</li>
-</ul>
-</div>
-<div id="curly-braces" class="section level4 unnumbered">
-<h4>Curly Braces</h4>
-<ul>
-<li>Opening curly brace <code>{</code> NEVER goes on its own line, but should always be followed by a new line</li>
-<li>ALWAYS indent code inside curly braces</li>
-<li>Closing curly brace <code>}</code> always goes on its own line, unless followed by an <code>else</code></li>
-</ul>
-</div>
-<div id="line-length" class="section level4 unnumbered">
-<h4>Line Length</h4>
-<ul>
-<li>Roughly 80 - 90 characters per line</li>
-</ul>
-</div>
-<div id="indentation" class="section level4 unnumbered">
-<h4>Indentation</h4>
-<ul>
-<li>ALWAYS use two spaces</li>
-<li>NEVER mix tabs/spaces</li>
-</ul>
-</div>
-<div id="assignment" class="section level4 unnumbered">
-<h4>Assignment</h4>
-<ul>
-<li>ALWAYS <code>&lt;-</code> not <code>=</code></li>
-</ul>
-</div>
-<div id="comments" class="section level4 unnumbered">
-<h4>Comments</h4>
-<ul>
-<li>Comments should begin with <code>#</code></li>
-<li>Comments should explain the why not the what</li>
-<li>Comments that are too lengthy indicate a function should probably be used to break up the code chunk</li>
-</ul>
-</div>
-</div>
-<div id="styling-packages" class="section level3 unnumbered">
-<h3>Styling Packages</h3>
-<div id="formatr" class="section level4 unnumbered">
-<h4>formatR</h4>
-<p>Automatically formats and spaces code for more human-readability.</p>
-<pre><code>library(formatR)
-formatR::tidy_dir(&quot;R&quot;)</code></pre>
-</div>
-<div id="styler" class="section level4 unnumbered">
-<h4>styler</h4>
-<p>Goal is to provide non-invasive pretty-printing of R source code while adhering to the tidyverse formatting rules.</p>
-<pre><code>library(styler)
-ugly_code &lt;- &quot;a=function( x){1+1}
-style_text(ugly_code)
-
-# style_file()
-# style_dir()
-# style_pkg()</code></pre>
-</div>
-<div id="lintr" class="section level4 unnumbered">
-<h4>lintr</h4>
-<p>Warns you about styling errors and potential problems.</p>
-<pre><code>library(lintr)
-lintr::lint(test.R)</code></pre>
 </div>
 </div>
 <div id="debugging" class="section level3 unnumbered">
@@ -769,6 +694,92 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 <p>Tests are organized hierarchically, expectations are grouping into tests which are organized into files</p>
 <p>Tests should have descriptive names, so that the message associated with the test helps you to quickly identify the problem</p>
 </div>
+<div id="code-style-1" class="section level3 unnumbered">
+<h3>Code Style</h3>
+<div id="style-guides-1" class="section level4 unnumbered">
+<h4>Style Guides</h4>
+<ul>
+<li><a href="https://google.github.io/styleguide/Rguide.xml">Google Style Guide</a></li>
+<li><a href="http://adv-r.had.co.nz/Style.html">Hadley Style Guide</a><a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a></li>
+</ul>
+</div>
+<div id="general-rules" class="section level4 unnumbered">
+<h4>General Rules</h4>
+<ul>
+<li>Variable names and function names should be lowercase or camel case (be consistent)</li>
+<li>Avoid using names of existing functions/variables</li>
+</ul>
+<div id="spacing" class="section level5 unnumbered">
+<h5>Spacing</h5>
+<ul>
+<li>Put spaces around all infix operators (=, +, -, &lt;-, etc.)</li>
+<li>ALWAYS put a space after a comma, and never before</li>
+<li>Put a space before left parentheses, except in a function call</li>
+</ul>
+</div>
+<div id="curly-braces" class="section level5 unnumbered">
+<h5>Curly Braces</h5>
+<ul>
+<li>Opening curly brace <code>{</code> NEVER goes on its own line, but should always be followed by a new line</li>
+<li>ALWAYS indent code inside curly braces</li>
+<li>Closing curly brace <code>}</code> always goes on its own line, unless followed by an <code>else</code></li>
+</ul>
+</div>
+<div id="line-length" class="section level5 unnumbered">
+<h5>Line Length</h5>
+<ul>
+<li>Roughly 80 - 90 characters per line</li>
+</ul>
+</div>
+<div id="indentation" class="section level5 unnumbered">
+<h5>Indentation</h5>
+<ul>
+<li>ALWAYS use two spaces</li>
+<li>NEVER mix tabs/spaces</li>
+</ul>
+</div>
+<div id="assignment" class="section level5 unnumbered">
+<h5>Assignment</h5>
+<ul>
+<li>ALWAYS <code>&lt;-</code> not <code>=</code></li>
+</ul>
+</div>
+<div id="comments" class="section level5 unnumbered">
+<h5>Comments</h5>
+<ul>
+<li>Comments should begin with <code>#</code></li>
+<li>Comments should explain the why not the what</li>
+<li>Comments that are too lengthy indicate a function should probably be used to break up the code chunk</li>
+</ul>
+</div>
+</div>
+<div id="styling-packages" class="section level4 unnumbered">
+<h4>Styling Packages</h4>
+<div id="formatr" class="section level5 unnumbered">
+<h5>formatR</h5>
+<p>Automatically formats and spaces code for more human-readability.</p>
+<pre><code>library(formatR)
+formatR::tidy_dir(&quot;R&quot;)</code></pre>
+</div>
+<div id="styler" class="section level5 unnumbered">
+<h5>styler</h5>
+<p>Goal is to provide non-invasive pretty-printing of R source code while adhering to the tidyverse formatting rules.</p>
+<pre><code>library(styler)
+ugly_code &lt;- &quot;a=function( x){1+1}
+style_text(ugly_code)
+
+# style_file()
+# style_dir()
+# style_pkg()</code></pre>
+</div>
+<div id="lintr" class="section level5 unnumbered">
+<h5>lintr</h5>
+<p>Warns you about styling errors and potential problems.</p>
+<pre><code>library(lintr)
+lintr::lint(test.R)</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div id="data-management-2" class="section level2">
 <h2><span class="header-section-number">6.4</span> Data Management</h2>
@@ -922,7 +933,7 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 </table>
 </div>
 </div>
-<div id="command-line-interface-cli" class="section level2">
+<div id="command-line-interface-cli-1" class="section level2">
 <h2><span class="header-section-number">6.6</span> Command Line Interface (CLI)</h2>
 <div id="running-r-scripts" class="section level3">
 <h3><span class="header-section-number">6.6.1</span> Running R Scripts</h3>
@@ -944,7 +955,7 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 <li><a href="https://www.statmethods.net/">Quick R</a> - Rob Kabacoff</li>
 <li><a href="https://www.rstudio.com/resources/cheatsheets/">R Studio Cheatsheets</a> - Rstudio</li>
 </ul>
-<div id="style-guides-1" class="section level4 unnumbered">
+<div id="style-guides-2" class="section level4 unnumbered">
 <h4>Style Guides</h4>
 <ul>
 <li><a href="http://adv-r.had.co.nz/Style.html">R Style Guide</a> - Hadley Wickham</li>
@@ -1029,6 +1040,7 @@ packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">i
 <ol start="14">
 <li id="fn14"><p>Note: download R before downloading Rstudio<a href="r-1.html#fnref14">↩</a></p></li>
 <li id="fn15"><p>Sources: <a href="https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat" class="uri">https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat</a>, <a href="https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ" class="uri">https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ</a>, <a href="https://www.joelnitta.com/post/packrat/" class="uri">https://www.joelnitta.com/post/packrat/</a><a href="r-1.html#fnref15">↩</a></p></li>
+<li id="fn16"><p>This is based off of the Google Style Guide<a href="r-1.html#fnref16">↩</a></p></li>
 </ol>
 </div>
             </section>

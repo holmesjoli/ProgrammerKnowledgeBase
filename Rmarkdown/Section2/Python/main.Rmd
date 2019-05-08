@@ -12,6 +12,9 @@
 ```{r child = "data-management/main.Rmd"}
 ```
 
+```{r child = "cli/argparse.Rmd"}
+```
+
 ```{r child = "web/main.Rmd"}
 ```
 

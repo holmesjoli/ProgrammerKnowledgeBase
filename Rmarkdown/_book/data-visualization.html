@@ -162,9 +162,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#types-of-tests"><i class="fa fa-check"></i>Types of tests</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#data-validation-tests"><i class="fa fa-check"></i>Data validation tests</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.2</b> Code Review</a><ul>
+<li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-style"><i class="fa fa-check"></i><b>3.2</b> Code Style</a><ul>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#linters"><i class="fa fa-check"></i>Linters</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.3</b> Code Review</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#review-participants"><i class="fa fa-check"></i>Review participants</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#general-tips-for-success"><i class="fa fa-check"></i>General tips for success</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#codacy"><i class="fa fa-check"></i>Codacy</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
@@ -200,10 +204,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#converting-column-types"><i class="fa fa-check"></i>Converting column types</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#other-common-data-management-functions"><i class="fa fa-check"></i>Other common data management functions</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="python-1.html"><a href="python-1.html#web"><i class="fa fa-check"></i><b>5.5</b> Web</a><ul>
+<li class="chapter" data-level="5.5" data-path="python-1.html"><a href="python-1.html#command-line-interface-cli"><i class="fa fa-check"></i><b>5.5</b> Command Line Interface (CLI)</a></li>
+<li class="chapter" data-level="5.6" data-path="python-1.html"><a href="python-1.html#web"><i class="fa fa-check"></i><b>5.6</b> Web</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#web-testing"><i class="fa fa-check"></i>Web testing</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="python-1.html"><a href="python-1.html#resources-2"><i class="fa fa-check"></i><b>5.6</b> Resources</a><ul>
+<li class="chapter" data-level="5.7" data-path="python-1.html"><a href="python-1.html#resources-2"><i class="fa fa-check"></i><b>5.7</b> Resources</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#general"><i class="fa fa-check"></i>General</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#reproducibility-3"><i class="fa fa-check"></i>Reproducibility</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#quality-3"><i class="fa fa-check"></i>Quality</a></li>
@@ -217,8 +222,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#cran"><i class="fa fa-check"></i>CRAN</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow"><i class="fa fa-check"></i>Initial Workflow</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#version-control-files"><i class="fa fa-check"></i>Version control files</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#style-guide"><i class="fa fa-check"></i>Style Guide</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#styling-packages"><i class="fa fa-check"></i>Styling Packages</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>6.2</b> Reproducibility</a><ul>
@@ -231,6 +234,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="r-1.html"><a href="r-1.html#quality-4"><i class="fa fa-check"></i><b>6.3</b> Quality</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#testing-2"><i class="fa fa-check"></i>Testing</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#code-style-1"><i class="fa fa-check"></i>Code Style</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="r-1.html"><a href="r-1.html#data-management-2"><i class="fa fa-check"></i><b>6.4</b> Data Management</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages-1"><i class="fa fa-check"></i>Packages</a></li>
@@ -238,7 +242,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.5" data-path="r-1.html"><a href="r-1.html#modeling"><i class="fa fa-check"></i><b>6.5</b> Modeling</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages-2"><i class="fa fa-check"></i>Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="r-1.html"><a href="r-1.html#command-line-interface-cli"><i class="fa fa-check"></i><b>6.6</b> Command Line Interface (CLI)</a><ul>
+<li class="chapter" data-level="6.6" data-path="r-1.html"><a href="r-1.html#command-line-interface-cli-1"><i class="fa fa-check"></i><b>6.6</b> Command Line Interface (CLI)</a><ul>
 <li class="chapter" data-level="6.6.1" data-path="r-1.html"><a href="r-1.html#running-r-scripts"><i class="fa fa-check"></i><b>6.6.1</b> Running R Scripts</a></li>
 <li class="chapter" data-level="6.6.2" data-path="r-1.html"><a href="r-1.html#adding-command-line-arguments"><i class="fa fa-check"></i><b>6.6.2</b> Adding Command Line Arguments</a></li>
 </ul></li>
@@ -317,7 +321,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="tableau-versions" class="section level4 unnumbered">
 <h4>Tableau Versions</h4>
 <p>Like any software or application, Tableau has changed and been updated overtime. However, specific functionalities, especially development functionalities, such as integration with R, Python, and Matlab and use of the Extract API depend on the version of Tableau install.</p>
-<p>Make sure that development you’re interested in doing is compatible with the version of Tableau that you have installed.<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a> To check the version go to Help &gt; About Tableau.</p>
+<p>Make sure that development you’re interested in doing is compatible with the version of Tableau that you have installed.<a href="#fn17" class="footnoteRef" id="fnref17"><sup>17</sup></a> To check the version go to Help &gt; About Tableau.</p>
 </div>
 <div id="recommended-workflow" class="section level4 unnumbered">
 <h4>Recommended Workflow</h4>
@@ -641,8 +645,8 @@ client.deploy(<span class="st">&quot;loanclassifierfull&quot;</span>, loanclassi
 
 <div class="footnotes">
 <hr />
-<ol start="16">
-<li id="fn16"><p>Tableau changed their version naming convention in 2018. Older versions are named 4.0, or 5.0, or 10.1. These go all the way from 4.0 to 10.5. In 2018, they started naming their versions after the year they released the version in. The lastest versions are named 2018.2, 2019.1, etc.<a href="data-visualization.html#fnref16">↩</a></p></li>
+<ol start="17">
+<li id="fn17"><p>Tableau changed their version naming convention in 2018. Older versions are named 4.0, or 5.0, or 10.1. These go all the way from 4.0 to 10.5. In 2018, they started naming their versions after the year they released the version in. The lastest versions are named 2018.2, 2019.1, etc.<a href="data-visualization.html#fnref17">↩</a></p></li>
 </ol>
 </div>
             </section>

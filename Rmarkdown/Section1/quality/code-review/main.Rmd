@@ -28,3 +28,8 @@ After:
 * Ask for clarification, especially if you're new to the project or software you're using. More experienced programmers know what they're doing, but they may be unaware of your confidence in a language/project
 * Once you've incorporated the feedback, make sure to ask someone to review the changes
 
+### Codacy {-}
+
+[Codacy](https://www.codacy.com/) is an automatic and free code review. Connect your source code to codacy and let it analyze potential errors, inefficiencies, and style. 
+
+One limitation of Codacy is that it's only available for more traditional development softwares. But if you're using a development software, be sure to utilize codacy.

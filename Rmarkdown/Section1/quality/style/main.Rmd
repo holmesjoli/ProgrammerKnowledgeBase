@@ -1,0 +1,11 @@
+## Code Style
+
+Part of having high-quality code is maintaining a consistent programming style across people, and repositories. Having consistent style makes code more readable, and therefore easier to catch bugs and errors. Many languages will have style guides which are maintained by organizations responsible for maintaining the code. 
+
+You should take the time to read through the style guides of the languages you program in most frequently. 
+
+### Linters {-}
+
+Once you read through select style guides, you'll find out that there's a lot to remember and keep track of! Luckily, programmers are very lazy people, and have developed packages, often known as linting packages, to help automate the process of inconsistent programming style. 
+
+If you're using a IDE such as VS, these linters often come in the form of add-on extensions.

@@ -2,3 +2,6 @@
 
 ```{r child="testing.Rmd"}
 ```
+
+```{r child="style.Rmd"}
+```

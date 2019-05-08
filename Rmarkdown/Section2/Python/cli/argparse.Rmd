@@ -1,1 +1,7 @@
+## Command Line Interface (CLI)
 
+Python can be run from the command line
+
+```
+python path_to_file/file.py
+```

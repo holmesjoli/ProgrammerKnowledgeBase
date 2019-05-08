@@ -162,9 +162,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#types-of-tests"><i class="fa fa-check"></i>Types of tests</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#data-validation-tests"><i class="fa fa-check"></i>Data validation tests</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.2</b> Code Review</a><ul>
+<li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-style"><i class="fa fa-check"></i><b>3.2</b> Code Style</a><ul>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#linters"><i class="fa fa-check"></i>Linters</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.3</b> Code Review</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#review-participants"><i class="fa fa-check"></i>Review participants</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#general-tips-for-success"><i class="fa fa-check"></i>General tips for success</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#codacy"><i class="fa fa-check"></i>Codacy</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="high-performance-computing.html"><a href="high-performance-computing.html"><i class="fa fa-check"></i><b>4</b> High Performance Computing</a><ul>
@@ -200,10 +204,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#converting-column-types"><i class="fa fa-check"></i>Converting column types</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#other-common-data-management-functions"><i class="fa fa-check"></i>Other common data management functions</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="python-1.html"><a href="python-1.html#web"><i class="fa fa-check"></i><b>5.5</b> Web</a><ul>
+<li class="chapter" data-level="5.5" data-path="python-1.html"><a href="python-1.html#command-line-interface-cli"><i class="fa fa-check"></i><b>5.5</b> Command Line Interface (CLI)</a></li>
+<li class="chapter" data-level="5.6" data-path="python-1.html"><a href="python-1.html#web"><i class="fa fa-check"></i><b>5.6</b> Web</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#web-testing"><i class="fa fa-check"></i>Web testing</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="python-1.html"><a href="python-1.html#resources-2"><i class="fa fa-check"></i><b>5.6</b> Resources</a><ul>
+<li class="chapter" data-level="5.7" data-path="python-1.html"><a href="python-1.html#resources-2"><i class="fa fa-check"></i><b>5.7</b> Resources</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#general"><i class="fa fa-check"></i>General</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#reproducibility-3"><i class="fa fa-check"></i>Reproducibility</a></li>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#quality-3"><i class="fa fa-check"></i>Quality</a></li>
@@ -217,8 +222,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#cran"><i class="fa fa-check"></i>CRAN</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow"><i class="fa fa-check"></i>Initial Workflow</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#version-control-files"><i class="fa fa-check"></i>Version control files</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#style-guide"><i class="fa fa-check"></i>Style Guide</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#styling-packages"><i class="fa fa-check"></i>Styling Packages</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>6.2</b> Reproducibility</a><ul>
@@ -231,6 +234,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="r-1.html"><a href="r-1.html#quality-4"><i class="fa fa-check"></i><b>6.3</b> Quality</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#testing-2"><i class="fa fa-check"></i>Testing</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#code-style-1"><i class="fa fa-check"></i>Code Style</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="r-1.html"><a href="r-1.html#data-management-2"><i class="fa fa-check"></i><b>6.4</b> Data Management</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages-1"><i class="fa fa-check"></i>Packages</a></li>
@@ -238,7 +242,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.5" data-path="r-1.html"><a href="r-1.html#modeling"><i class="fa fa-check"></i><b>6.5</b> Modeling</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#packages-2"><i class="fa fa-check"></i>Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="r-1.html"><a href="r-1.html#command-line-interface-cli"><i class="fa fa-check"></i><b>6.6</b> Command Line Interface (CLI)</a><ul>
+<li class="chapter" data-level="6.6" data-path="r-1.html"><a href="r-1.html#command-line-interface-cli-1"><i class="fa fa-check"></i><b>6.6</b> Command Line Interface (CLI)</a><ul>
 <li class="chapter" data-level="6.6.1" data-path="r-1.html"><a href="r-1.html#running-r-scripts"><i class="fa fa-check"></i><b>6.6.1</b> Running R Scripts</a></li>
 <li class="chapter" data-level="6.6.2" data-path="r-1.html"><a href="r-1.html#adding-command-line-arguments"><i class="fa fa-check"></i><b>6.6.2</b> Adding Command Line Arguments</a></li>
 </ul></li>
@@ -1038,10 +1042,10 @@ git pull other_branch</code></pre>
 <h5>Example request</h5>
 <p>At it’s most basic an API looks something like what’s outlined in code before. Generally, the user will need a token which they get from the organization they’re requesting data.<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(httr)
-
-request &lt;-<span class="st"> </span>httr<span class="op">::</span><span class="kw">GET</span>(<span class="st">&quot;https://website.server/data/get=?Var1,Var2&amp;key=token&quot;</span>)</code></pre></div>
+response &lt;-<span class="st"> </span>httr<span class="op">::</span><span class="kw">GET</span>(<span class="st">&quot;https://website.server/data/get=?Var1,Var2&amp;key=token&quot;</span>)</code></pre></div>
 <p>The first part of the made-up string below <code>https://website.server/data/get=?</code> is called the endpoint and tells the HTTP request which website to get data from.</p>
 <p>The next part of the string <code>Var1,Var2&amp;key=token</code> are different parameters. In this fake API, I’m requesting Var1 and Var2, and providing my token as authentication. Each API is set-up differently, so it’s very important to read all documentation before you start. Most APIs have sample code, often in several languages, to get started!</p>
+<p>Note: the data will be returned as a list, so that additional metadata can be returned with the request. So there’s a little more data processing once the data are returned from an API.</p>
 </div>
 <div id="why-are-apis-so-useful" class="section level5 unnumbered">
 <h5>Why are APIs so useful?</h5>
@@ -1051,8 +1055,8 @@ request &lt;-<span class="st"> </span>httr<span class="op">::</span><span class=
 </div>
 <div id="api-specifics" class="section level5 unnumbered">
 <h5>API Specifics</h5>
-<div id="api-verbs" class="section level6 unnumbered">
-<h6>API Verbs</h6>
+<div id="http-verbs" class="section level6 unnumbered">
+<h6>HTTP Verbs</h6>
 <p>These are commonly used verbs when making requests to an API. When requesting data from a server, most users will be utilizing the GET verb.</p>
 <table>
 <thead>

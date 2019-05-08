@@ -3,5 +3,8 @@
 ```{r child = "testing/main.Rmd"}
 ```
 
+```{r child = "style/main.Rmd"}
+```
+
 ```{r child = "code-review/main.Rmd"}
 ```
