@@ -8,3 +8,6 @@
 
 ```{r child = "code-review/main.Rmd"}
 ```
+
+```{r child = "resources.Rmd"}
+```

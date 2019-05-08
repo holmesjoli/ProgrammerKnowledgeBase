@@ -1,6 +1,6 @@
 ### Introduction {-}
 
-Very recently, I was trying to compare two lists with numpys `nan` object in both lists. I forgot that in python np.nan == np.nan returns False^[Nan stands for not a number.]. However, I didn't remember this when I was writing my code. I remembered that when I was testing my code.
+Very recently, I was trying to compare two lists with numpys `nan` object in both lists. I forgot that in python `np.nan == np.nan` returns False.^[Nan stands for not a number.] However, I didn't remember this when I was writing my code. I remembered that when I was testing my code.
 
 It's fairly easy to assume you know the behavior of a function, as I did above and accidentally introduce bugs into the code. Testing is an important way to automate the discovery of such mistakes, and shift the timeline of bug discover from later to earlier. Most programmers I know do test there code, but they often do it in an adhoc way. To ensure that we're creating output from derived from quality code, we want to test our code in consistent and standardized way.^[There's a term on github called coverage, which refers to the percent of functions which are tested in the repository. A high coverage percent is often an indicator of stable, high quality code.] 
 

@@ -1,0 +1,9 @@
+### Coverage {-}
+
+In software development the term "coverage" is a measure indicating the amount of testing performed by test set.
+
+Measuring coverage is helpful in several ways. 
+
+First, the amount of coverage a package has is a useful indicator to other programmers about the quality of the package. If a package has high coverage, then it's likely a higher quality package as the majority of the code contained in the package is being tested appropriately.  
+
+Measuring coverage is also very useful for developers. Coverage can help identify modules and functions in a package which aren't thoroughly tested.
