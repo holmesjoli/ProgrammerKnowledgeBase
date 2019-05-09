@@ -1,0 +1,13 @@
+### Continuous Integration (CI)
+
+Continuous integration is process of automattically checking
+
+The main idea behind continuous integration is that the longer a branch is checked out, the more likely there will be integration issues when it's merged back into the main code base (development, or master branches). If there are many changes made on a branch, and there are many developers working on different branches, then
+
+Continuous integration is especially useful for teams of developers, but is also useful for data scientists. Even if you're the only maintainer of a package there's a lot of automatic testing that can help catch bugs or inconsistencies in code. For example, I recently build a package in R. I used the `devtools::check()` function before I built the package and everything was passing. However, when I tried to build the package using CI software, the build failed. I forgot to update some of my function documentation when I changed the naming structure of several functions in my package. A code base can never have too much automatted testing!
+
+#### Sources of CI
+
+* [Travis-CI]()
+* [CircleCI]()
+* [AppVeyor]()

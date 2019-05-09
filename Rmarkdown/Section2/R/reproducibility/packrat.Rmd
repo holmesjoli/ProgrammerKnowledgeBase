@@ -25,8 +25,7 @@ Packrat is:
 devtools::install_github("rstudio/packrat")
 packrat::init(infer.dependencies = F)
 ```
-
-Note: the github version is more up-to-date than the version of packrat on CRAN
+Note: packrat can take a really long, sometimes frustrating long time to set-up all the packages. It's highly suggested to set-up the environment before starting a project and getting into the weeds. 
 
 #### Initialize packrat with a new package {-}
 

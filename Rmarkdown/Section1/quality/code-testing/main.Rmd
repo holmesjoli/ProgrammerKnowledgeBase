@@ -6,8 +6,8 @@
 ```{r, child = "types_of_tests.Rmd"}
 ```
 
-```{r, child = "coverage.Rmd"}
+```{r, child = "ci.Rmd"}
 ```
 
-```{r, child = "travis_ci.Rmd"}
+```{r, child = "coverage.Rmd"}
 ```

@@ -28,8 +28,16 @@ After:
 * Ask for clarification, especially if you're new to the project or software you're using. More experienced programmers know what they're doing, but they may be unaware of your confidence in a language/project
 * Once you've incorporated the feedback, make sure to ask someone to review the changes
 
-### Codacy {-}
+### Automatic Code Review {-}
 
-[Codacy](https://www.codacy.com/) is an automatic and free code review. Connect your source code to codacy and let it analyze potential errors, inefficiencies, and style. 
+There are a number of good automatic code review tools available to developers. Most of them are free to use for open-source software, but require a membership for private repositories.
 
-One limitation of Codacy is that it's only available for more traditional development softwares. But if you're using a development software, be sure to utilize codacy.
+Connect your source code to these automatted code review softwares and let them analyze potential errors, inefficiencies, and style. Using an automatted code review software can also help you discover weaknesses in your coding style and when code can be improved.
+
+* [Codacy](https://www.codacy.com/)
+* [Codebeat](https://codebeat.co/)
+* [SonarQube](https://www.sonarqube.org/)
+
+One large limitation of most (all?) automatted code review software is that it's normally only available for more traditional development softwares. But if you're using a development software, be sure to utilize an automatted code review software. For statistical softwares we're out of luck.
+
+Note, use of such software should not replace the traditional code-review process, especially for data science pipelines which often rely on very specific logic when creating new variables and running models, but it is a quick way to start developing high-quality code.

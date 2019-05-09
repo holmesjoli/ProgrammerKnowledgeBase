@@ -4,48 +4,14 @@ Follow these initial first steps to set-up your R-project.
 
 #### Start a new project {-}
 
-Start a new project or package. Hadley shows how to do this [here](https://r4ds.had.co.nz/workflow-projects.html#rstudio-projects) in section 8.4 RStudio projects.
+1.  Open a terminal which can read Rscript calls
+2.  Navigate to the folder where R packages are stored
+3.  Clone the [ProjectTemplateR](https://github.com/holmesjoli/ProjectTemplateR) package 
+4.  Run the following line the terminal, replacing `ProjName` with the name of your project
 
-The main reason to use an R project is to help keep things organized. Programmers can set-up functionalities that are specific to that project, but not others. One example is that a programmer can set-up certain packages to always be loaded for that project. 
-
-Using R Projects also allows programmers to use relative paths.
-
-#### Initiate the project with packrat {-}
-
-Packrat is a package manager for R. E.g. `packrat::init(infer.dependencies = FALSE)`. This will create a packrat folder in the project directory
-
-#### Create folders/files {-}
-
-##### R Projects {-}
-
-||Create Folders|Create Files| 
-|----------|------|-----------|
-|R projects|R/, tests/|.gitignore, config.yaml, README.md|
-|R packages|tests/|.gitignore, LICENSE, README.md|
-
-Make a folder: `mkdir R`
-
-Make a file: `echo > config.yaml`
-
-#### Install packages {-}
-
-Packages will be installed into the project's library not the global R package library, so for each project the packages will be re-install the packages. This done intentionally, so that different packages may depend on different versions of a package. 
-
-Install these packages:
-
-* devtools
-* assertthat
-* testthat
-
-Suggested install:
-
-* tidyverse
-* roxygen2
-* formatR
-
-#### Set-up the testing space {-}
-
-Run `use_this::use_testthat()` to set-up the testing space
+```r
+Rscript ProjectTemplateR/R/main.R -p "ProjName"
+```
 
 ### Version control files {-}
 
@@ -63,29 +29,10 @@ packrat/
 * src
 
 R/
-
 tests/
-
-If applicable:
+man/
 
 * DESCRIPTION
 * LICENSE
 * NAMESPACE
 * .Rbuildignore
-* man/
-	
-#### Folder structure {-}
-
-At this point the folder structure should look like this:
-
-```
-project_dir/
-	packrat/
-	R/
-	tests/
-	.gitignore
-	.Rprofile
-	config.yaml
-	README.md
-	XXX.Rproj
-```
