@@ -27,6 +27,7 @@ using R (and friends)](https://peerj.com/preprints/3192.pdf) - Marwick, Boettige
 * [R Packages](http://r-pkgs.had.co.nz/) - Hadley Wickham
 * [R extensions manual](https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages)
 * [goodrpackages](https://masalmon.eu/2017/12/11/goodrpackages/) - Maelle Salmon
+* [Remote packages](https://cran.r-project.org/web/packages/devtools/vignettes/dependencies.html) - Hadley Wickham and Jim Hester
 
 #### Environments {-}
 
