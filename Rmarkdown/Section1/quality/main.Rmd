@@ -1,6 +1,6 @@
 # Quality
 
-```{r child = "testing/main.Rmd"}
+```{r child = "code-testing/main.Rmd"}
 ```
 
 ```{r child = "style/main.Rmd"}

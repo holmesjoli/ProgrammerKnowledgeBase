@@ -13,13 +13,17 @@ This section will primarily focus on Packrat, which is maintained by RStudio. Ho
 
 Packrat is one way R users have developed to manage packages and R versions.
 
-Packrat is:
+Packrat is:^[Text [from](https://rstudio.github.io/packrat/)]
 
 * **Isolated**: Installing a new or updated package for one project won’t break your other projects, and vice versa. That’s because packrat gives each project its own private package library.
 * **Portable**: Easily transport your projects from one computer to another, even across different platforms. Packrat makes it easy to install the packages your project depends on.
 * **Reproducible**: Packrat records the exact package versions you depend on, and ensures those exact versions are the ones that get installed wherever you go.
 
-#### Initialize packrat with a current project {-}
+#### Steps {-}
+
+1. Initialize packrat 
+
+**Current project**
 
 ```r
 devtools::install_github("rstudio/packrat")
@@ -27,7 +31,7 @@ packrat::init(infer.dependencies = F)
 ```
 Note: packrat can take a really long, sometimes frustrating long time to set-up all the packages. It's highly suggested to set-up the environment before starting a project and getting into the weeds. 
 
-#### Initialize packrat with a new package {-}
+**New package**
 
 While building your new package be sure to check the option highlighted in red:
 
@@ -35,12 +39,49 @@ While building your new package be sure to check the option highlighted in red:
 knitr::include_graphics("./images/R_environments/new_r_package.png")
 ```
 
-#### Save snapshot {-}
+2. Save snapshot
 
 Once all the necessary packages have been downloaded save a snapshot of the packages. Periodically update the snapshot when new dependencies are added.
 
 ```{r, eval = F, echo = T}
 packrat::snapshot()
+```
+
+The snapshot will add the packages, versions, and package sources the the packrat.lock file.
+
+3. Update environment
+
+If you add packages after the initial snapshot is taken, then call the status and then take a new snapshot.
+
+```{r, eval = FALSE, echo = TRUE}
+packrat::status()
+packrat::snapshot()
+```
+
+4. Share package libraries
+
+There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.
+
+**Git**
+
+Version control these files:
+
+  * `packrat/init.R`
+  * `packrat/packrat.lock`
+  * `packrat/packrat.opts`
+  * `.Rprofile`
+
+This is the preferred method of sharing environments because everything can be stored in a version controlled repository and easily re-created.
+
+**Bundling**
+
+  * Run `packrat::bundle()`
+  * Share the bundle with collaborators who have R. Collaborators will have to run `packrat::unbundle()` to access the code
+	
+5. Recreate the environment
+
+```{r, eval = FALSE, echo = TRUE}
+packrat::restore()
 ```
 
 #### Where are my project packages? {-}
@@ -51,23 +92,6 @@ Base R packages: `Packrat/lib-R/32_or_64_bit_r/version_of_r`
 
 Other packages: `Packrat/lib/32_or_64_bit_r/version_of_r`
 
-#### Sharing package libraries {-}
-
-There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.
-
-##### Bundling {-}
-
-1. Run `packrat::bundle()`
-2. Share the bundle with collaborators who have R. Collaborators will have to run `packrat::unbundle()` to access the code
-	
-##### Git {-}
-
-Version control these files.^[Sources: https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat, https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ, https://www.joelnitta.com/post/packrat/]
-
-1. `packrat/init.R`
-2. `packrat/packrat.lock`
-3. `packrat/packrat.opts`
-4. `.Rprofile`
 
 #### Ignoring local repositories {-}
 

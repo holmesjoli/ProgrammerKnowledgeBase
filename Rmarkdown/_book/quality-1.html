@@ -155,13 +155,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="quality-1.html"><a href="quality-1.html"><i class="fa fa-check"></i><b>3</b> Quality</a><ul>
-<li class="chapter" data-level="3.1" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i><b>3.1</b> Testing</a><ul>
+<li class="chapter" data-level="3.1" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i><b>3.1</b> Code Testing</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#introduction-5"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#best-practices"><i class="fa fa-check"></i>Best practices</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#testing-timeline"><i class="fa fa-check"></i>Testing timeline</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#types-of-tests"><i class="fa fa-check"></i>Types of tests</a></li>
+<li class="chapter" data-level="3.1.1" data-path="quality-1.html"><a href="quality-1.html#continuous-integration-ci"><i class="fa fa-check"></i><b>3.1.1</b> Continuous Integration (CI)</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#coverage"><i class="fa fa-check"></i>Coverage</a></li>
-<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#data-validation-tests"><i class="fa fa-check"></i>Data validation tests</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-style"><i class="fa fa-check"></i><b>3.2</b> Code Style</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#linters"><i class="fa fa-check"></i>Linters</a></li>
@@ -169,7 +169,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.3</b> Code Review</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#review-participants"><i class="fa fa-check"></i>Review participants</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#general-tips-for-success"><i class="fa fa-check"></i>General tips for success</a></li>
-<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#codacy"><i class="fa fa-check"></i>Codacy</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#automatic-code-review"><i class="fa fa-check"></i>Automatic Code Review</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="quality-1.html"><a href="quality-1.html#resources-2"><i class="fa fa-check"></i><b>3.4</b> Resources</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i>Testing</a></li>
@@ -299,7 +299,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="quality-1" class="section level1">
 <h1><span class="header-section-number">3</span> Quality</h1>
 <div id="testing" class="section level2">
-<h2><span class="header-section-number">3.1</span> Testing</h2>
+<h2><span class="header-section-number">3.1</span> Code Testing</h2>
 <div id="introduction-5" class="section level3 unnumbered">
 <h3>Introduction</h3>
 <p>Very recently, I was trying to compare two lists with numpys <code>nan</code> object in both lists. I forgot that in python <code>np.nan == np.nan</code> returns False.<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a> However, I didn’t remember this when I was writing my code. I remembered that when I was testing my code.</p>
@@ -391,25 +391,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Definition from <a href="https://stackoverflow.com/questions/5357601/whats-the-difference-between-unit-tests-and-integration-tests">Stack Overflow</a></p>
 </div>
 </div>
+<div id="continuous-integration-ci" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Continuous Integration (CI)</h3>
+<p>Continuous integration is process of automattically checking</p>
+<p>The main idea behind continuous integration is that the longer a branch is checked out, the more likely there will be integration issues when it’s merged back into the main code base (development, or master branches). If there are many changes made on a branch, and there are many developers working on different branches, then</p>
+<p>Continuous integration is especially useful for teams of developers, but is also useful for data scientists. Even if you’re the only maintainer of a package there’s a lot of automatic testing that can help catch bugs or inconsistencies in code. For example, I recently build a package in R. I used the <code>devtools::check()</code> function before I built the package and everything was passing. However, when I tried to build the package using CI software, the build failed. I forgot to update some of my function documentation when I changed the naming structure of several functions in my package. A code base can never have too much automatted testing!</p>
+<div id="sources-of-ci" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> Sources of CI</h4>
+<ul>
+<li><a href="">Travis-CI</a></li>
+<li><a href="">CircleCI</a></li>
+<li><a href="">AppVeyor</a></li>
+</ul>
+</div>
+</div>
 <div id="coverage" class="section level3 unnumbered">
 <h3>Coverage</h3>
 <p>In software development the term “coverage” is a measure indicating the amount of testing performed by test set.</p>
 <p>Measuring coverage is helpful in several ways.</p>
 <p>First, the amount of coverage a package has is a useful indicator to other programmers about the quality of the package. If a package has high coverage, then it’s likely a higher quality package as the majority of the code contained in the package is being tested appropriately.</p>
 <p>Measuring coverage is also very useful for developers. Coverage can help identify modules and functions in a package which aren’t thoroughly tested.</p>
-</div>
-<div id="data-validation-tests" class="section level3 unnumbered">
-<h3>Data validation tests</h3>
-<p>Some things to test for:</p>
-<ul>
-<li>Column types</li>
-<li>Column names</li>
-<li>Null or NA values</li>
-<li>Boolean values</li>
-<li>Values within a certain range</li>
-<li>Should character vectors be a certain length</li>
-<li>Do we expect a certain range of values for a given categorical variable</li>
-</ul>
 </div>
 </div>
 <div id="code-style" class="section level2">
@@ -455,16 +456,35 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Once you’ve incorporated the feedback, make sure to ask someone to review the changes</li>
 </ul>
 </div>
-<div id="codacy" class="section level3 unnumbered">
-<h3>Codacy</h3>
-<p><a href="https://www.codacy.com/">Codacy</a> is an automatic and free code review. Connect your source code to codacy and let it analyze potential errors, inefficiencies, and style.</p>
-<p>One limitation of Codacy is that it’s only available for more traditional development softwares. But if you’re using a development software, be sure to utilize codacy.</p>
+<div id="automatic-code-review" class="section level3 unnumbered">
+<h3>Automatic Code Review</h3>
+<p>There are a number of good automatic code review tools available to developers. Most of them are free to use for open-source software, but require a membership for private repositories.</p>
+<p>Connect your source code to these automatted code review softwares and let them analyze potential errors, inefficiencies, and style. Using an automatted code review software can also help you discover weaknesses in your coding style and when code can be improved.</p>
+<ul>
+<li><a href="https://www.codacy.com/">Codacy</a></li>
+<li><a href="https://codebeat.co/">Codebeat</a></li>
+<li><a href="https://www.sonarqube.org/">SonarQube</a></li>
+</ul>
+<p>One large limitation of most (all?) automatted code review software is that it’s normally only available for more traditional development softwares. But if you’re using a development software, be sure to utilize an automatted code review software. For statistical softwares we’re out of luck.</p>
+<p>Note, use of such software should not replace the traditional code-review process, especially for data science pipelines which often rely on very specific logic when creating new variables and running models, but it is a quick way to start developing high-quality code.</p>
 </div>
 </div>
 <div id="resources-2" class="section level2">
 <h2><span class="header-section-number">3.4</span> Resources</h2>
 <div id="testing" class="section level3 unnumbered">
 <h3>Testing</h3>
+<div id="automatic-code-review-1" class="section level4 unnumbered">
+<h4>Automatic Code Review</h4>
+<ul>
+<li><a href="https://medium.com/devgurus/continuous-code-quality-and-automated-code-review-tools-aa911dd1b263">Continuous code quality and automated code review tools</a></li>
+</ul>
+</div>
+<div id="continuous-integration" class="section level4 unnumbered">
+<h4>Continuous Integration</h4>
+<ul>
+<li><a href="https://www.thoughtworks.com/continuous-integration">Continuous Integration</a></li>
+</ul>
+</div>
 <div id="coverage-1" class="section level4 unnumbered">
 <h4>Coverage</h4>
 <ul>

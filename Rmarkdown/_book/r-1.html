@@ -155,13 +155,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="quality-1.html"><a href="quality-1.html"><i class="fa fa-check"></i><b>3</b> Quality</a><ul>
-<li class="chapter" data-level="3.1" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i><b>3.1</b> Testing</a><ul>
+<li class="chapter" data-level="3.1" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i><b>3.1</b> Code Testing</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#introduction-5"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#best-practices"><i class="fa fa-check"></i>Best practices</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#testing-timeline"><i class="fa fa-check"></i>Testing timeline</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#types-of-tests"><i class="fa fa-check"></i>Types of tests</a></li>
+<li class="chapter" data-level="3.1.1" data-path="quality-1.html"><a href="quality-1.html#continuous-integration-ci"><i class="fa fa-check"></i><b>3.1.1</b> Continuous Integration (CI)</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#coverage"><i class="fa fa-check"></i>Coverage</a></li>
-<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#data-validation-tests"><i class="fa fa-check"></i>Data validation tests</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="quality-1.html"><a href="quality-1.html#code-style"><i class="fa fa-check"></i><b>3.2</b> Code Style</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#linters"><i class="fa fa-check"></i>Linters</a></li>
@@ -169,7 +169,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3" data-path="quality-1.html"><a href="quality-1.html#code-review"><i class="fa fa-check"></i><b>3.3</b> Code Review</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#review-participants"><i class="fa fa-check"></i>Review participants</a></li>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#general-tips-for-success"><i class="fa fa-check"></i>General tips for success</a></li>
-<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#codacy"><i class="fa fa-check"></i>Codacy</a></li>
+<li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#automatic-code-review"><i class="fa fa-check"></i>Automatic Code Review</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="quality-1.html"><a href="quality-1.html#resources-2"><i class="fa fa-check"></i><b>3.4</b> Resources</a><ul>
 <li class="chapter" data-level="" data-path="quality-1.html"><a href="quality-1.html#testing"><i class="fa fa-check"></i>Testing</a></li>
@@ -322,62 +322,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Follow these initial first steps to set-up your R-project.</p>
 <div id="start-a-new-project" class="section level4 unnumbered">
 <h4>Start a new project</h4>
-<p>Start a new project or package. Hadley shows how to do this <a href="https://r4ds.had.co.nz/workflow-projects.html#rstudio-projects">here</a> in section 8.4 RStudio projects.</p>
-<p>The main reason to use an R project is to help keep things organized. Programmers can set-up functionalities that are specific to that project, but not others. One example is that a programmer can set-up certain packages to always be loaded for that project.</p>
-<p>Using R Projects also allows programmers to use relative paths.</p>
-</div>
-<div id="initiate-the-project-with-packrat" class="section level4 unnumbered">
-<h4>Initiate the project with packrat</h4>
-<p>Packrat is a package manager for R. E.g. <code>packrat::init(infer.dependencies = FALSE)</code>. This will create a packrat folder in the project directory</p>
-</div>
-<div id="create-foldersfiles" class="section level4 unnumbered">
-<h4>Create folders/files</h4>
-<div id="r-projects" class="section level5 unnumbered">
-<h5>R Projects</h5>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>Create Folders</th>
-<th>Create Files</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>R projects</td>
-<td>R/, tests/</td>
-<td>.gitignore, config.yaml, README.md</td>
-</tr>
-<tr class="even">
-<td>R packages</td>
-<td>tests/</td>
-<td>.gitignore, LICENSE, README.md</td>
-</tr>
-</tbody>
-</table>
-<p>Make a folder: <code>mkdir R</code></p>
-<p>Make a file: <code>echo &gt; config.yaml</code></p>
-</div>
-</div>
-<div id="install-packages" class="section level4 unnumbered">
-<h4>Install packages</h4>
-<p>Packages will be installed into the project’s library not the global R package library, so for each project the packages will be re-install the packages. This done intentionally, so that different packages may depend on different versions of a package.</p>
-<p>Install these packages:</p>
-<ul>
-<li>devtools</li>
-<li>assertthat</li>
-<li>testthat</li>
-</ul>
-<p>Suggested install:</p>
-<ul>
-<li>tidyverse</li>
-<li>roxygen2</li>
-<li>formatR</li>
-</ul>
-</div>
-<div id="set-up-the-testing-space" class="section level4 unnumbered">
-<h4>Set-up the testing space</h4>
-<p>Run <code>use_this::use_testthat()</code> to set-up the testing space</p>
+<ol style="list-style-type: decimal">
+<li>Open a terminal which can read Rscript calls</li>
+<li>Navigate to the folder where R packages are stored</li>
+<li>Clone the <a href="https://github.com/holmesjoli/ProjectTemplateR">ProjectTemplateR</a> package</li>
+<li>Run the following line the terminal, replacing <code>ProjName</code> with the name of your project</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Rscript ProjectTemplateR<span class="op">/</span>R<span class="op">/</span>main.R <span class="op">-</span>p <span class="st">&quot;ProjName&quot;</span></code></pre></div>
 </div>
 </div>
 <div id="version-control-files" class="section level3 unnumbered">
@@ -396,29 +347,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>packrat.opts</li>
 <li>src</li>
 </ul>
-<p>R/</p>
-<p>tests/</p>
-<p>If applicable:</p>
+<p>R/ tests/ man/</p>
 <ul>
 <li>DESCRIPTION</li>
 <li>LICENSE</li>
 <li>NAMESPACE</li>
 <li>.Rbuildignore</li>
-<li>man/</li>
 </ul>
-<div id="folder-structure-1" class="section level4 unnumbered">
-<h4>Folder structure</h4>
-<p>At this point the folder structure should look like this:</p>
-<pre><code>project_dir/
-    packrat/
-    R/
-    tests/
-    .gitignore
-    .Rprofile
-    config.yaml
-    README.md
-    XXX.Rproj</code></pre>
-</div>
 </div>
 <div id="debugging" class="section level3 unnumbered">
 <h3>Debugging</h3>
@@ -580,54 +515,60 @@ usethis::use_vignette(&quot;vignette_name&quot;)</code></pre>
 <div id="packrat" class="section level3 unnumbered">
 <h3>Packrat</h3>
 <p>Packrat is one way R users have developed to manage packages and R versions.</p>
-<p>Packrat is:</p>
+<p>Packrat is<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a>:</p>
 <ul>
 <li><strong>Isolated</strong>: Installing a new or updated package for one project won’t break your other projects, and vice versa. That’s because packrat gives each project its own private package library.</li>
 <li><strong>Portable</strong>: Easily transport your projects from one computer to another, even across different platforms. Packrat makes it easy to install the packages your project depends on.</li>
 <li><strong>Reproducible</strong>: Packrat records the exact package versions you depend on, and ensures those exact versions are the ones that get installed wherever you go.</li>
 </ul>
-<div id="initialize-packrat-with-a-current-project" class="section level4 unnumbered">
-<h4>Initialize packrat with a current project</h4>
+<div id="steps" class="section level4 unnumbered">
+<h4>Steps</h4>
+<ol style="list-style-type: decimal">
+<li>Initialize packrat</li>
+</ol>
+<p><strong>Current project</strong></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;rstudio/packrat&quot;</span>)
 packrat<span class="op">::</span><span class="kw">init</span>(<span class="dt">infer.dependencies =</span> F)</code></pre></div>
-<p>Note: the github version is more up-to-date than the version of packrat on CRAN</p>
-</div>
-<div id="initialize-packrat-with-a-new-package" class="section level4 unnumbered">
-<h4>Initialize packrat with a new package</h4>
+<p>Note: packrat can take a really long, sometimes frustrating long time to set-up all the packages. It’s highly suggested to set-up the environment before starting a project and getting into the weeds.</p>
+<p><strong>New package</strong></p>
 <p>While building your new package be sure to check the option highlighted in red:</p>
 <p><img src="images/R_environments/new_r_package.png" width="75%" /></p>
-</div>
-<div id="save-snapshot" class="section level4 unnumbered">
-<h4>Save snapshot</h4>
+<ol start="2" style="list-style-type: decimal">
+<li>Save snapshot</li>
+</ol>
 <p>Once all the necessary packages have been downloaded save a snapshot of the packages. Periodically update the snapshot when new dependencies are added.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">packrat<span class="op">::</span><span class="kw">snapshot</span>()</code></pre></div>
+<p>The snapshot will add the packages, versions, and package sources the the packrat.lock file.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Update environment</li>
+</ol>
+<p>If you add packages after the initial snapshot is taken, then call the status and then take a new snapshot.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">packrat<span class="op">::</span><span class="kw">status</span>()
+packrat<span class="op">::</span><span class="kw">snapshot</span>()</code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Share package libraries</li>
+</ol>
+<p>There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.</p>
+<p><strong>Git</strong></p>
+<p>Version control these files:</p>
+<pre><code>* `packrat/init.R`
+* `packrat/packrat.lock`
+* `packrat/packrat.opts`
+* `.Rprofile`</code></pre>
+<p>This is the preferred method of sharing environments because everything can be stored in a version controlled repository and easily re-created.</p>
+<p><strong>Bundling</strong></p>
+<pre><code>* Run `packrat::bundle()`
+* Share the bundle with collaborators who have R. Collaborators will have to run `packrat::unbundle()` to access the code</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Recreate the environment</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">packrat<span class="op">::</span><span class="kw">restore</span>()</code></pre></div>
 </div>
 <div id="where-are-my-project-packages" class="section level4 unnumbered">
 <h4>Where are my project packages?</h4>
 <p>Packrat downloads the project-packages into several locations</p>
 <p>Base R packages: <code>Packrat/lib-R/32_or_64_bit_r/version_of_r</code></p>
 <p>Other packages: <code>Packrat/lib/32_or_64_bit_r/version_of_r</code></p>
-</div>
-<div id="sharing-package-libraries" class="section level4 unnumbered">
-<h4>Sharing package libraries</h4>
-<p>There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.</p>
-<div id="bundling" class="section level5 unnumbered">
-<h5>Bundling</h5>
-<ol style="list-style-type: decimal">
-<li>Run <code>packrat::bundle()</code></li>
-<li>Share the bundle with collaborators who have R. Collaborators will have to run <code>packrat::unbundle()</code> to access the code</li>
-</ol>
-</div>
-<div id="git" class="section level5 unnumbered">
-<h5>Git</h5>
-<p>Version control these files.<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a></p>
-<ol style="list-style-type: decimal">
-<li><code>packrat/init.R</code></li>
-<li><code>packrat/packrat.lock</code></li>
-<li><code>packrat/packrat.opts</code></li>
-<li><code>.Rprofile</code></li>
-</ol>
-</div>
 </div>
 <div id="ignoring-local-repositories" class="section level4 unnumbered">
 <h4>Ignoring local repositories</h4>
@@ -984,6 +925,7 @@ lintr::lint(test.R)</code></pre>
 <li><a href="http://r-pkgs.had.co.nz/">R Packages</a> - Hadley Wickham</li>
 <li><a href="https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages">R extensions manual</a></li>
 <li><a href="https://masalmon.eu/2017/12/11/goodrpackages/">goodrpackages</a> - Maelle Salmon</li>
+<li><a href="https://cran.r-project.org/web/packages/devtools/vignettes/dependencies.html">Remote packages</a> - Hadley Wickham and Jim Hester</li>
 </ul>
 </div>
 <div id="environments-3" class="section level4 unnumbered">
@@ -1043,7 +985,7 @@ lintr::lint(test.R)</code></pre>
 <hr />
 <ol start="14">
 <li id="fn14"><p>Note: download R before downloading Rstudio<a href="r-1.html#fnref14">↩</a></p></li>
-<li id="fn15"><p>Sources: <a href="https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat" class="uri">https://stackoverflow.com/questions/36187543/using-r-with-git-and-packrat</a>, <a href="https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ" class="uri">https://groups.google.com/forum/#!msg/packrat-discuss/sm46dsvLxSk/wfz3hn840swJ</a>, <a href="https://www.joelnitta.com/post/packrat/" class="uri">https://www.joelnitta.com/post/packrat/</a><a href="r-1.html#fnref15">↩</a></p></li>
+<li id="fn15"><p>Text <a href="https://rstudio.github.io/packrat/">from</a><a href="r-1.html#fnref15">↩</a></p></li>
 <li id="fn16"><p>This is based off of the Google Style Guide<a href="r-1.html#fnref16">↩</a></p></li>
 </ol>
 </div>
