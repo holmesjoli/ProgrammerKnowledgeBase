@@ -1,1 +1,9 @@
-## Debugging
+### Debugging {-}
+
+Use the `pdb` package to debug in python. Add the following line to the line before your code is erroring out. Adding the python debugger will allow you to access the variables as they are created and evaluated in the code.
+
+```{python, eval = FALSE, echo = TRUE}
+import pdb; pdb.set_trace()
+```
+
+Use the n-key to move to the next line of code and use the c-key to continue with the whole script.^[Note if you have variables defined as n= or c= in your python code, these variables can be accessed inside the debugger because it assumes n should move to the next line and c should continue.] 

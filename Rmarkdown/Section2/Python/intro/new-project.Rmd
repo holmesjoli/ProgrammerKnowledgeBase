@@ -1,4 +1,4 @@
-## Initial Workflow
+### Initial Workflow {-}
 
 1. Create a new environment
 	a. E.g.  `conda create --name NAME_OF_ENVIRONMENT`
@@ -23,7 +23,7 @@
 	d. ProjectName/*
 	e. ProjectName/tests/*
 
-### Project Folder Structure {-}
+#### Project Folder Structure {-}
 
 At this point the folder structure should look like this:
 

@@ -189,6 +189,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="python-1.html"><a href="python-1.html"><i class="fa fa-check"></i><b>5</b> Python</a><ul>
 <li class="chapter" data-level="5.1" data-path="python-1.html"><a href="python-1.html#introduction-6"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#installation"><i class="fa fa-check"></i>Installation</a></li>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#initial-workflow"><i class="fa fa-check"></i>Initial Workflow</a></li>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="python-1.html"><a href="python-1.html#reproducibility-2"><i class="fa fa-check"></i><b>5.2</b> Reproducibility</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
@@ -221,9 +223,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6" data-path="r-1.html"><a href="r-1.html"><i class="fa fa-check"></i><b>6</b> R</a><ul>
 <li class="chapter" data-level="6.1" data-path="r-1.html"><a href="r-1.html#introduction-7"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#installation-1"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow"><i class="fa fa-check"></i>Initial workflow</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow-1"><i class="fa fa-check"></i>Initial workflow</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#version-control-files"><i class="fa fa-check"></i>Version control files</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging-1"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>6.2</b> Reproducibility</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#config-files-1"><i class="fa fa-check"></i>Config files</a></li>
@@ -317,6 +319,65 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Anaconda comes with very nice environment management tools, which not only allow you to manage your package dependencies per-project, but also your python version.</li>
 </ul>
 </div>
+</div>
+<div id="initial-workflow" class="section level3 unnumbered">
+<h3>Initial Workflow</h3>
+<ol style="list-style-type: decimal">
+<li>Create a new environment
+<ol style="list-style-type: lower-alpha">
+<li>E.g. <code>conda create --name NAME_OF_ENVIRONMENT</code></li>
+<li>Activate the environment <code>source activate NAME_OF_ENVIRONMENT</code><a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a></li>
+</ol></li>
+<li>Use the command line to create several folders and files
+<ol style="list-style-type: lower-alpha">
+<li>Folders
+<ol style="list-style-type: lower-roman">
+<li>project_name/</li>
+<li>tests/</li>
+</ol></li>
+<li>Files
+<ol style="list-style-type: lower-roman">
+<li>.gitignore</li>
+<li>.travis.yaml</li>
+<li>README.md</li>
+</ol></li>
+</ol></li>
+<li>Install packages<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a>
+<ol style="list-style-type: lower-alpha">
+<li>Install local packages
+<ol style="list-style-type: lower-roman">
+<li>utilsPy, validPy, archivePy</li>
+</ol></li>
+<li>Install
+<ol style="list-style-type: lower-roman">
+<li>Suggested install: pandas, numpy, pep8</li>
+</ol></li>
+</ol></li>
+<li>Version control files
+<ol style="list-style-type: lower-alpha">
+<li>.gitignore</li>
+<li>.travis.yml</li>
+<li>README.md</li>
+<li>ProjectName/*</li>
+<li>ProjectName/tests/*</li>
+</ol></li>
+</ol>
+<div id="project-folder-structure" class="section level4 unnumbered">
+<h4>Project Folder Structure</h4>
+<p>At this point the folder structure should look like this:</p>
+<pre><code>|project_name/
+|__ project_name/*
+|  |__ tests/*
+|__ .gitignore
+|__ .travis.yml
+|__ README.md</code></pre>
+</div>
+</div>
+<div id="debugging" class="section level3 unnumbered">
+<h3>Debugging</h3>
+<p>Use the <code>pdb</code> package to debug in python. Add the following line to the line before your code is erroring out. Adding the python debugger will allow you to access the variables as they are created and evaluated in the code.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pdb<span class="op">;</span> pdb.set_trace()</code></pre></div>
+<p>Use the n-key to move to the next line of code and use the c-key to continue with the whole script.<a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a></p>
 </div>
 </div>
 <div id="reproducibility-2" class="section level2">
@@ -791,14 +852,14 @@ df[&#39;monthly&#39;] = np.where((df[&#39;X&#39;] == 1) | (df[&#39;Y&#39;] == 1)
 <div id="launching-a-selenium-driver" class="section level4 unnumbered">
 <h4>Launching a selenium driver</h4>
 <ol style="list-style-type: decimal">
-<li>The python distribution of selenium relies on downloadable webdrivers<a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a>. Chrome and Firefox drivers are preferred, though good web-testers will test across all platforms!</li>
+<li>The python distribution of selenium relies on downloadable webdrivers<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a>. Chrome and Firefox drivers are preferred, though good web-testers will test across all platforms!</li>
 </ol>
 <ul>
 <li><a href="http://chromedriver.chromium.org/downloads">Chrome</a></li>
 <li><a href="https://github.com/mozilla/geckodriver/releases">Firefox</a></li>
 <li><a href="https://download.microsoft.com/download/F/8/A/F8AF50AB-3C3A-4BC4-8773-DC27B32988DD/MicrosoftWebDriver.exe">Edge</a></li>
 <li><a href="https://goo.gl/fzqqyZ">Internet Explorer</a></li>
-<li>Safari<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a></li>
+<li>Safari<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>Test to see if selenium is set-up properly</li>
@@ -915,8 +976,11 @@ firefox_driver = webdriver.Firefox(executable_path = fpath)</code></pre>
 <div class="footnotes">
 <hr />
 <ol start="12">
-<li id="fn12"><p>If the webdriver download in a zipped file, be sure to upzip the file<a href="python-1.html#fnref12">↩</a></p></li>
-<li id="fn13"><p>Cannot be downloaded on a Windows computer<a href="python-1.html#fnref13">↩</a></p></li>
+<li id="fn12"><p>That is the command if you’re using the Bash terminal, otherwise it may just be activate environment<a href="python-1.html#fnref12">↩</a></p></li>
+<li id="fn13"><p>Note because conda environment has been activated packages will be installed into the project environment not the not the global Python package library, so for each project you will have to make a new environment an re-install the packages. This done intentionally, so that different packages may depend on different versions of a package.<a href="python-1.html#fnref13">↩</a></p></li>
+<li id="fn14"><p>Note if you have variables defined as n= or c= in your python code, these variables can be accessed inside the debugger because it assumes n should move to the next line and c should continue.<a href="python-1.html#fnref14">↩</a></p></li>
+<li id="fn15"><p>If the webdriver download in a zipped file, be sure to upzip the file<a href="python-1.html#fnref15">↩</a></p></li>
+<li id="fn16"><p>Cannot be downloaded on a Windows computer<a href="python-1.html#fnref16">↩</a></p></li>
 </ol>
 </div>
             </section>

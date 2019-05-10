@@ -189,6 +189,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="python-1.html"><a href="python-1.html"><i class="fa fa-check"></i><b>5</b> Python</a><ul>
 <li class="chapter" data-level="5.1" data-path="python-1.html"><a href="python-1.html#introduction-6"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#installation"><i class="fa fa-check"></i>Installation</a></li>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#initial-workflow"><i class="fa fa-check"></i>Initial Workflow</a></li>
+<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="python-1.html"><a href="python-1.html#reproducibility-2"><i class="fa fa-check"></i><b>5.2</b> Reproducibility</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
@@ -221,9 +223,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6" data-path="r-1.html"><a href="r-1.html"><i class="fa fa-check"></i><b>6</b> R</a><ul>
 <li class="chapter" data-level="6.1" data-path="r-1.html"><a href="r-1.html#introduction-7"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#installation-1"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow"><i class="fa fa-check"></i>Initial workflow</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow-1"><i class="fa fa-check"></i>Initial workflow</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#version-control-files"><i class="fa fa-check"></i>Version control files</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging-1"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="r-1.html"><a href="r-1.html#reproducibility-4"><i class="fa fa-check"></i><b>6.2</b> Reproducibility</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#config-files-1"><i class="fa fa-check"></i>Config files</a></li>
@@ -302,7 +304,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3>Installation</h3>
 <ol style="list-style-type: decimal">
 <li><a href="https://cran.cnr.berkeley.edu/bin/windows/base/old/3.5.2">Download R 3.5.2</a></li>
-<li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download Rstudio</a><a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a></li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download Rstudio</a><a href="#fn17" class="footnoteRef" id="fnref17"><sup>17</sup></a></li>
 <li><a href="https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe">Download Rtools35</a></li>
 </ol>
 <div id="package-repositories" class="section level4 unnumbered">
@@ -311,7 +313,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>However, like most open source-code, many people and organizations maintain code on Github. The <code>devtools</code> package allows uses to download packages directly from github.</p>
 </div>
 </div>
-<div id="initial-workflow" class="section level3 unnumbered">
+<div id="initial-workflow-1" class="section level3 unnumbered">
 <h3>Initial workflow</h3>
 <p>Follow these initial first steps to set-up your R-project.</p>
 <div id="start-a-new-project" class="section level4 unnumbered">
@@ -346,7 +348,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>R/<em> tests/</em> man/*</p>
 </div>
-<div id="debugging" class="section level3 unnumbered">
+<div id="debugging-1" class="section level3 unnumbered">
 <h3>Debugging</h3>
 <p>R offers a number of useful built-in functions for debugging, and user-contributed packages are also available to provide additional functionality. The simplest method is to insert commands into your code to print diagnostic“check points” during its execution, using functions such as <code>cat()</code>, <code>print()</code>, or <code>sink()</code>.</p>
 <p>R also has a more sophisticated debugging system, which is supported by a GUI in the RStudio IDE. The most direct way to mark a function for debugging is to use <code>debug(functionname)</code>. When this function is called, normal execution will be suspended, and you will enter the <code>browser</code> display. Commands within the debugged function can then be executed one at a time, and output can be inspected by the programmer along the way. You can set a function to begin debugging partway through its execution with <code>setBreakpoint()</code> or <code>trace()</code>. If an error is encountered (whether or not the function was being debugged), the <code>traceback()</code> command can be used to view the stack of nestedfunction calls at the time of the most recent error.</p>
@@ -506,7 +508,7 @@ usethis::use_vignette(&quot;vignette_name&quot;)</code></pre>
 <div id="packrat" class="section level3 unnumbered">
 <h3>Packrat</h3>
 <p>Packrat is one way R users have developed to manage packages and R versions.</p>
-<p>Packrat is:<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a></p>
+<p>Packrat is:<a href="#fn18" class="footnoteRef" id="fnref18"><sup>18</sup></a></p>
 <ul>
 <li><strong>Isolated</strong>: Installing a new or updated package for one project won’t break your other projects, and vice versa. That’s because packrat gives each project its own private package library.</li>
 <li><strong>Portable</strong>: Easily transport your projects from one computer to another, even across different platforms. Packrat makes it easy to install the packages your project depends on.</li>
@@ -640,7 +642,7 @@ packrat<span class="op">::</span><span class="kw">snapshot</span>()</code></pre>
 <h4>Style Guides</h4>
 <ul>
 <li><a href="https://google.github.io/styleguide/Rguide.xml">Google Style Guide</a></li>
-<li><a href="http://adv-r.had.co.nz/Style.html">Hadley Style Guide</a><a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a></li>
+<li><a href="http://adv-r.had.co.nz/Style.html">Hadley Style Guide</a><a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a></li>
 </ul>
 </div>
 <div id="general-rules" class="section level4 unnumbered">
@@ -978,10 +980,10 @@ lintr::lint(test.R)</code></pre>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="14">
-<li id="fn14"><p>Note: download R before downloading Rstudio<a href="r-1.html#fnref14">↩</a></p></li>
-<li id="fn15"><p>Text <a href="https://rstudio.github.io/packrat/">from</a><a href="r-1.html#fnref15">↩</a></p></li>
-<li id="fn16"><p>This is based off of the Google Style Guide<a href="r-1.html#fnref16">↩</a></p></li>
+<ol start="17">
+<li id="fn17"><p>Note: download R before downloading Rstudio<a href="r-1.html#fnref17">↩</a></p></li>
+<li id="fn18"><p>Text <a href="https://rstudio.github.io/packrat/">from</a><a href="r-1.html#fnref18">↩</a></p></li>
+<li id="fn19"><p>This is based off of the Google Style Guide<a href="r-1.html#fnref19">↩</a></p></li>
 </ol>
 </div>
             </section>

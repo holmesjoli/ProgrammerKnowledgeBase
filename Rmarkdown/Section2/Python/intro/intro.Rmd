@@ -1,5 +1,3 @@
-## Introduction 
-
 Python is primary used for web testing, pipelining, data management, data science, and visualization.
 
 ### Installation {-}
