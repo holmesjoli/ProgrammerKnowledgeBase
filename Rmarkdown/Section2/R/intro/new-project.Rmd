@@ -1,4 +1,4 @@
-### Initial Workflow {-}
+### Initial workflow {-}
 
 Follow these initial first steps to set-up your R-project.
 
@@ -16,8 +16,12 @@ Rscript ProjectTemplateR/R/main.R -p "ProjName"
 ### Version control files {-}
 
 * .gitignore
+* .Rbuildignore
 * .Rprofile
-* config.yaml
+* .travis.yaml
+* DESCRIPTION
+* NAMESPACE
+* LICENSE
 * README.md
 * XXX.Rproj
 
@@ -26,13 +30,7 @@ packrat/
 * init.R
 * packrat.lock
 * packrat.opts
-* src
 
-R/
-tests/
-man/
-
-* DESCRIPTION
-* LICENSE
-* NAMESPACE
-* .Rbuildignore
+R/*
+tests/*
+man/*

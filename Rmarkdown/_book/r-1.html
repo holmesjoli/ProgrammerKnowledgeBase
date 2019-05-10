@@ -189,7 +189,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="python-1.html"><a href="python-1.html"><i class="fa fa-check"></i><b>5</b> Python</a><ul>
 <li class="chapter" data-level="5.1" data-path="python-1.html"><a href="python-1.html#introduction-6"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#installation"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#anaconda-background"><i class="fa fa-check"></i>Anaconda Background</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="python-1.html"><a href="python-1.html#reproducibility-2"><i class="fa fa-check"></i><b>5.2</b> Reproducibility</a><ul>
 <li class="chapter" data-level="" data-path="python-1.html"><a href="python-1.html#config-files"><i class="fa fa-check"></i>Config files</a></li>
@@ -222,9 +221,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6" data-path="r-1.html"><a href="r-1.html"><i class="fa fa-check"></i><b>6</b> R</a><ul>
 <li class="chapter" data-level="6.1" data-path="r-1.html"><a href="r-1.html#introduction-7"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#installation-1"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#package-repository"><i class="fa fa-check"></i>Package Repository</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#cran"><i class="fa fa-check"></i>CRAN</a></li>
-<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow"><i class="fa fa-check"></i>Initial Workflow</a></li>
+<li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#initial-workflow"><i class="fa fa-check"></i>Initial workflow</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#version-control-files"><i class="fa fa-check"></i>Version control files</a></li>
 <li class="chapter" data-level="" data-path="r-1.html"><a href="r-1.html#debugging"><i class="fa fa-check"></i>Debugging</a></li>
 </ul></li>
@@ -308,17 +305,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download Rstudio</a><a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a></li>
 <li><a href="https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe">Download Rtools35</a></li>
 </ol>
+<div id="package-repositories" class="section level4 unnumbered">
+<h4>Package Repositories</h4>
+<p>R’s main package repository is CRAN (the Comprehensive R Archive Network).</p>
+<p>However, like most open source-code, many people and organizations maintain code on Github. The <code>devtools</code> package allows uses to download packages directly from github.</p>
 </div>
-<div id="package-repository" class="section level3 unnumbered">
-<h3>Package Repository</h3>
-<p>R’s main package repository is CRAN</p>
-</div>
-<div id="cran" class="section level3 unnumbered">
-<h3>CRAN</h3>
-<p>CRAN (the Comprehensive R Archive Network) is a “network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R.” Every package installed from CRAN has met the CRAN Repository Policy, been accepted into CRAN, and is currently housed there. Once a package is on CRAN, it is freely available for anyone in the world to install and use.</p>
 </div>
 <div id="initial-workflow" class="section level3 unnumbered">
-<h3>Initial Workflow</h3>
+<h3>Initial workflow</h3>
 <p>Follow these initial first steps to set-up your R-project.</p>
 <div id="start-a-new-project" class="section level4 unnumbered">
 <h4>Start a new project</h4>
@@ -335,8 +329,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3>Version control files</h3>
 <ul>
 <li>.gitignore</li>
+<li>.Rbuildignore</li>
 <li>.Rprofile</li>
-<li>config.yaml</li>
+<li>.travis.yaml</li>
+<li>DESCRIPTION</li>
+<li>NAMESPACE</li>
+<li>LICENSE</li>
 <li>README.md</li>
 <li>XXX.Rproj</li>
 </ul>
@@ -345,15 +343,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>init.R</li>
 <li>packrat.lock</li>
 <li>packrat.opts</li>
-<li>src</li>
 </ul>
-<p>R/ tests/ man/</p>
-<ul>
-<li>DESCRIPTION</li>
-<li>LICENSE</li>
-<li>NAMESPACE</li>
-<li>.Rbuildignore</li>
-</ul>
+<p>R/<em> tests/</em> man/*</p>
 </div>
 <div id="debugging" class="section level3 unnumbered">
 <h3>Debugging</h3>
@@ -515,7 +506,7 @@ usethis::use_vignette(&quot;vignette_name&quot;)</code></pre>
 <div id="packrat" class="section level3 unnumbered">
 <h3>Packrat</h3>
 <p>Packrat is one way R users have developed to manage packages and R versions.</p>
-<p>Packrat is<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a>:</p>
+<p>Packrat is:<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a></p>
 <ul>
 <li><strong>Isolated</strong>: Installing a new or updated package for one project won’t break your other projects, and vice versa. That’s because packrat gives each project its own private package library.</li>
 <li><strong>Portable</strong>: Easily transport your projects from one computer to another, even across different platforms. Packrat makes it easy to install the packages your project depends on.</li>
@@ -551,14 +542,18 @@ packrat<span class="op">::</span><span class="kw">snapshot</span>()</code></pre>
 <p>There are two ways to share environments. One is through bunding and sending the bundle to a collaborator. The more preferred way is to use git to version control several files.</p>
 <p><strong>Git</strong></p>
 <p>Version control these files:</p>
-<pre><code>* `packrat/init.R`
-* `packrat/packrat.lock`
-* `packrat/packrat.opts`
-* `.Rprofile`</code></pre>
+<ul>
+<li><code>packrat/init.R</code></li>
+<li><code>packrat/packrat.lock</code></li>
+<li><code>packrat/packrat.opts</code></li>
+<li><code>.Rprofile</code></li>
+</ul>
 <p>This is the preferred method of sharing environments because everything can be stored in a version controlled repository and easily re-created.</p>
 <p><strong>Bundling</strong></p>
-<pre><code>* Run `packrat::bundle()`
-* Share the bundle with collaborators who have R. Collaborators will have to run `packrat::unbundle()` to access the code</code></pre>
+<ul>
+<li>Run <code>packrat::bundle()</code></li>
+<li>Share the bundle with collaborators who have R. Collaborators will have to run <code>packrat::unbundle()</code> to access the code</li>
+</ul>
 <ol start="5" style="list-style-type: decimal">
 <li>Recreate the environment</li>
 </ol>

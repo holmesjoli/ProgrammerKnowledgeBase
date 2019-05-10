@@ -1,0 +1,37 @@
+## Initial Workflow
+
+1. Create a new environment
+	a. E.g.  `conda create --name NAME_OF_ENVIRONMENT`
+	b. Activate the environment `source activate NAME_OF_ENVIRONMENT`^[That is the command if you're using the Bash terminal, otherwise it may just be activate environment]
+2. Use the command line to create several folders and files
+	a. Folders
+		i. project_name/
+		ii. tests/
+	b. Files
+		i. .gitignore
+		ii. .travis.yaml
+		iii. README.md
+3. Install packages^[Note because conda environment has been activated packages will be installed into the project environment not the not the global Python package library, so for each project you will have to make a new environment an re-install the packages. This done intentionally, so that different packages may depend on different versions of a package.]
+	a. Install local packages
+		i. utilsPy, validPy, archivePy
+	b. Install 
+		i. Suggested install: pandas, numpy, pep8
+4. Version control files
+	a. .gitignore
+	b. .travis.yml
+	c. README.md
+	d. ProjectName/*
+	e. ProjectName/tests/*
+
+### Project Folder Structure {-}
+
+At this point the folder structure should look like this:
+
+```
+|project_name/
+|__ project_name/*
+|  |__ tests/*
+|__ .gitignore
+|__ .travis.yml
+|__ README.md
+```
