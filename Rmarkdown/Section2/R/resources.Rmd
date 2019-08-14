@@ -17,6 +17,8 @@
 
 * [Data wrangling cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) - Rstudio
 
+* [Tidy Eval](https://tidyeval.tidyverse.org/sec-do-you-need.html) - Hadley Wickham and Lionel Henry
+
 ### Reproducibility {-}
 
 * [Packaging data analytical work reproducibly
@@ -47,6 +49,8 @@ using R (and friends)](https://peerj.com/preprints/3192.pdf) - Marwick, Boettige
 
 ### Quality {-}
 
+* [Ten Rules of Defensive Programming](https://www.r-bloggers.com/the-ten-rules-of-defensive-programming-in-r/)
+
 #### Testing {-}
 
 * [Getting Started with Testthat](https://journal.r-project.org/archive/2011/RJ-2011-002/RJ-2011-002.pdf) - Hadley Wickham
@@ -56,7 +60,6 @@ using R (and friends)](https://peerj.com/preprints/3192.pdf) - Marwick, Boettige
 
 * [Passing arguments to an R script from command lines](https://www.r-bloggers.com/passing-arguments-to-an-r-script-from-command-lines/)
 
-
 ### Efficiency {-}
 
 #### Parallelization {-}
@@ -64,3 +67,7 @@ using R (and friends)](https://peerj.com/preprints/3192.pdf) - Marwick, Boettige
 * [Quick Intro to Parallel Computing in R](https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html) - Matt Jones
 * [Multicode Data Science with R and Python](https://blog.dominodatalab.com/multicore-data-science-r-python/)
 * [Beyond Single-Core R](https://ljdursi.github.io/beyond-single-core-R/#/16) - Jonathan Dursi
+
+### Object-Oriented Programming
+
+* [Object-Oriented Programming, Functional Programming and R](https://arxiv.org/pdf/1409.3531.pdf) - John M. Chambers

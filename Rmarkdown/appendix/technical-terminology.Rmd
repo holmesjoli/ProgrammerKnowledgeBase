@@ -1,6 +1,6 @@
 # Technical Terminology {-}
 
-|  | Term | Abbreviation|Definition                                                              | 
+|  | Term | Abbreviation|Definition                                                             | 
 |--|------|-------------|------------------------------------------------------------------------|
 |B||||
 ||Backwards compatibility||Packages that get updated are still compatible with code developed from an earlier version of that package.|
@@ -8,32 +8,55 @@
 ||Bundled package||A package that's been compressed into a single file|
 |C||||
 ||Central processing unit|CPU|Primary component of a computer that processes instructions. Contains at least one processor which is the actual chip inside the CPU which performs calculations. For many years, most CPUs had only one processor, but now it is common for a single CPU to have at least two processors of "processing cores"|
+||Class||Defines a type of object, describing what properties it possesses, how it behaves, and how it relates to other types of objects. Every object must be an instance of some class.|
 ||Compiled||A program called a compiler, takes the plaintext source file and produces a native binary executable that the computer knows how to run intrinsically. When this happens it is called compile-time, and is distinct from run-time, which is when and executable is run and the program actually does things.|
 ||Coverage||Code coverage is a percentage which indicates the amount of code (lines, functions, and branches) in the project that is tested. It's an indicator of how well maintained and stable the project is.^[https://www.gregjs.com/javascript/2016/how-to-get-a-shiny-coverage-badge-for-your-github-project/] |
 |D||||
+||Database Management System|DBMS|A relational database system for organizing data.|
+||Data-definition language|DDL|Language used to express database schema.|
+||Data-manipulation language|DML|A language that enables users to access or manipulate data as organized by the appropriate data model.|
+||Database-management system|DBMS|Collection of interrelated data and a set of programs to acces those data.|
+||Design by Contract|DBC| Documenting and agreeing to the rights and responsibilties of sofware modules to ensure program correctness. See preconditions, postconditions, and invariants.|
 ||Dynamically typed||Variable types are not explicitly declared. Among dynamically typed languages are Python, R, and JavaScript.|
 |E||||
+||Entity-relaptionship|ER|High-level data model designed to faciliate datbase design by allowing specification of an enterprise schema that represents the overall logical structure of a database.|
 ||Extract, transform, load|ETL|the pipeline of data from it's raw state into a clean, useable state.|
+|F||||
+||Functional Programming||Programming consisting largely of defining functions.|
 |G||||
 ||Global type inference||Types are inferred from context. Explicit type annotations are instead for the benefit of the programmers, and serve as machine-verified documentation.|
+||H|||
+||Higher-level language|HLL|Enables a programmer to write programs that are more or less independent of a particular type of computer.|
 |I||||
 ||In memory package||A package which has been loaded into memory and then attaches it to the search path|
 ||Installed package||Binary package that's been decompressed into a package library|
 ||Integrated Development Environment|IDE|An IDE is a software editor that provides additional facilities to developers that aren't available through traditional text editors (E.g. Notepad). |
 ||Interpreted||Interpreted languages have programs called interpreters that read plaintext source files and execute the instructions at the same moment. No native binary executable is created. Languages like Python and R are interpreted.|
+||Invariant||Something that is always true at a particular point inside a piece of code.|
 |L||||
 ||Lazily evaluated||Values are not computed until required. This allows for functions to compose together in a performant way (no more work than necessary will be done), and allows for the use of infinite data structures (you could define the list of all prime numbers and only those you actually use will be computed). However, it also makes it more difficult to reason about performance, because it is sometimes not obvious when or if a particular computation will be performed.|
+|M||||
+||Method||A generic function associated with and can be called from a particular object.|
+|O||||
+||Object-oriented databases|OODB|Databases that included object-oriented paradigms, such as abstract data types, encapsulation of operations, inheritance, etc.|
+||Object-Oriented Programming|OOP|Object-oriented programming is the idea that everything can be computed with an object. Objects are blueprints that when called are initiatialized.|
 |P||||
 ||Parallel processing||A type of processing where multiple tasks are completed at a time by different processors.|
-||Processor||See Central processing unit|
+||Preconditions||Something that must be true at the start of a function in order for it to work correctly.|
+||Postconditions||Something that the function guarantees is true when it finishes.|
+||Processor||See Central processing unit.|
 ||Purely functional||Every function is a function in the mathematical sense (IE pure). No squinting required. Rather than functions having side-effects, are first-class values governed by the type system. To put it another way, code has only expressions that are evaluated; it does not have statements that are executed.|
+|Q||||
+||Query||A statement request the retrieval of information.|
 |R||||
 ||Representation State Transfer|REST|Defines a set of rules for messages sent from the client to be interpretted by the server.|
 |S||||
+||Schema||Overall design fo the database.|
 ||Serial||A process in which one task is completed at a given point in time and all the tasks are run by a processor in sequence. The alternative is parallel processing. Also known as sequential processing.|
 ||Sequential processing||See Serial processing.|
 ||Single-threaded||Utilization of a single processor.| 
 ||Source package||A directory with all the components.|
 ||Statically typed||Every expression has a type which is determined at compile-time. If the types of any expressions don’t match up appropriately, the compiler will reject your program -- there are guaranteed to be no type errors at run-time. Statically typed languages include C#, C++, TypeScript, and Java.|
+||Stream data integration|SDI||
 |T||||
 ||Test-driven development|TDD| Software development process that requires developers to write tests for code, before writing the actual code itself.^[https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2]|

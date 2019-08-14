@@ -6,7 +6,14 @@ An assertion is statement that evaluates to `true` or `false`. If the statement 
 
 Assertions are the building blocks for unit tests and integration tests.
 
-At minimum, code should have strategically placed assertions throughout. However, it is much preferred to have an organized set of test files
+It is suggested that the assertion density of code should average to a minimum of two assertions per function.^[http://spinroot.com/gerard/pdf/P10.pdf] 
+
+At minimum, code should have strategically placed assertions throughout. However, it is much preferred to have an organized set of test files.
+
+Test for pre-conditions, post-conditions, and invariants: 
+A precondition is something that must be true at the start of a function in order for it to work correctly.
+A postcondition is something that the function guarantees is true when it finishes.
+An invariant is something that is always true at a particular point inside a piece of code.
 
 #### Unit Tests {-}
 

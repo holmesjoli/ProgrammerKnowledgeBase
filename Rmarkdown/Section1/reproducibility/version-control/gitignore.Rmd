@@ -1,6 +1,6 @@
 ### Gitignore {-}
  
-A .gitignore file tells git which files should not be tracked by version control. Common files extensions to inlucde data file extensions, binary files, executables etc.
+A .gitignore file tells git which files should not be tracked by version control. Common files extensions to include data file extensions, binary files, executables etc.
 
 If a .gitignore is included in the working directory the command `git add .` will only add files where the file extensions do NOT appear in the gitignore. 
 

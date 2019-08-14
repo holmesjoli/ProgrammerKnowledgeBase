@@ -2,3 +2,5 @@
 
 ```{r child = "testing.Rmd"}
 ```
+
+* https://www.ecalamia.com/blog/data-validation-robust-apis/

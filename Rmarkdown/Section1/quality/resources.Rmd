@@ -2,6 +2,9 @@
 
 ### Testing {-}
 
+* [The Pragmatic Programmer](https://www.nceclusters.no/globalassets/filer/nce/diverse/the-pragmatic-programmer.pdf)
+* [Defensive Programming](https://swc-osg-workshop.github.io/2017-05-17-JLAB/novice/python/05-defensive.html)
+
 #### Automatic Code Review {-}
 
 * [Continuous code quality and automated code review tools](https://medium.com/devgurus/continuous-code-quality-and-automated-code-review-tools-aa911dd1b263)
@@ -9,6 +12,7 @@
 #### Continuous Integration {-}
 
 * [Continuous Integration](https://www.thoughtworks.com/continuous-integration)
+* [Beginners Guide to Travis](https://juliasilge.com/blog/beginners-guide-to-travis/)
 
 #### Coverage {-}
 

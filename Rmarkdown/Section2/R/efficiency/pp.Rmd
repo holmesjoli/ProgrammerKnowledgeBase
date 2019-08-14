@@ -1,6 +1,5 @@
 ### Parallelization {-}
 
-There are several different libraries in R which are used to parallelize processes: `foreach` and `parallel`.
 
 ### Detecting Cores
 
@@ -8,26 +7,33 @@ To detect the number of CPU cores
 ```{r, eval = F, echo = TRUE}
 nC <- parallel::detectCores()
 print(nC)
+
+# OR
+
+nC <- future::availableCores()
+print(nC)
 ```
 
-### To slow {-}
 
-#### Parallel/multicore {-}
+### Parallelize 
 
-#### Rdsm {-}
+In order to use the future apply functions, you will often have to adjust the amount of memory that R is allowed to use. Do this by setting the future.globals.maxsize in the options as shown below. 
 
-#### GPUs {-}
+```{r, eval = FALSE, echo = TRUE}
+library(future)
+library(future.apply)
 
-### To big {-}
+mb <- 850 #850 Megabytes
 
-#### Parallel/snow {-}
+#OR
 
-#### pdbR {-}
+mb <- 1000 # 1 Gigabyte
 
-### Many computations
+#OR
 
-#### gnu-parallel {-}
+mb <- 1000*10 # 10 Gigabytes
 
-#### parallel {-}
+options(future.globals.maxsize = mb*2024^2)
 
-#### job queues
+```
+

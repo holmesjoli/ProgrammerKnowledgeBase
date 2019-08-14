@@ -37,3 +37,7 @@
 ### Data Management {-}
 
 * [Cheatsheat](https://www.dataquest.io/blog/pandas-cheat-sheet/)
+
+### API {-}
+
+* https://2.python-requests.org/en/master/user/quickstart/#custom-headers
