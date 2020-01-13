@@ -65,7 +65,7 @@ Specificially we'll talk about^[note: these topics are not listed in order of im
 
 ### Quality {-}
 
-Testing is an integral part to being a good programmer, whether you're building software for an application or building software for data analysis, it is integral to test code.
+Testing is an integral part to being a good programmer, whether you're building software for an application or building software for data analysis, it is integral to test code.Sof
 
 Specifically we'll talk about:
 

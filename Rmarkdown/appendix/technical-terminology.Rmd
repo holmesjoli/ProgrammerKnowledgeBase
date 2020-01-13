@@ -60,3 +60,4 @@
 ||Stream data integration|SDI||
 |T||||
 ||Test-driven development|TDD| Software development process that requires developers to write tests for code, before writing the actual code itself.^[https://medium.freecodecamp.org/test-driven-development-what-it-is-and-what-it-is-not-41fa6bca02a2]|
+
